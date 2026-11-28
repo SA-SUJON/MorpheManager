@@ -1,3 +1,22 @@
+## [2.9.0-dev.4](https://github.com/MorpheApp/morphe-manager/compare/v2.9.0-dev.3...v2.9.0-dev.4) (2026-11-28)
+
+### Features
+
+* Offer only the patches of the build an APK is for ([#1541](https://github.com/MorpheApp/morphe-manager/issues/1541)) ([5e3dcf7](https://github.com/MorpheApp/morphe-manager/commit/5e3dcf79dd4b4abe089f492d1fa7f227d43fb2b5))
+
+### Performance Improvements
+
+* Compile with more C2 threads on 32-bit phones ([25ac8f9](https://github.com/MorpheApp/morphe-manager/commit/25ac8f9bf9b9cf16dd0203c4bc489955a6564a13))
+
+### Bug Fixes
+
+* Fold patch options without a ripple circle left in the card ([116d535](https://github.com/MorpheApp/morphe-manager/commit/116d535f3e7e6cce140cf73f34cb9016843edc08))
+* Keep a new clone's patch selection off the original app ([d0ca3e4](https://github.com/MorpheApp/morphe-manager/commit/d0ca3e4efbc271de703ca5a35968fb896a811ade))
+* Name the app in install queue and auto download messages ([53d0243](https://github.com/MorpheApp/morphe-manager/commit/53d0243959d39f556c9d991cab50fbbb761e9286))
+* Read APKs that require a newer Android from their manifest ([#1546](https://github.com/MorpheApp/morphe-manager/issues/1546)) ([46d85d1](https://github.com/MorpheApp/morphe-manager/commit/46d85d17019010c94c6aa4e7deba21c8c192f312))
+* Show the app name of an APK that requires a newer Android ([83d2c1f](https://github.com/MorpheApp/morphe-manager/commit/83d2c1fd92b1bb772d91e9db9c1f20c5a0ecb432))
+* Stop calling batch APKs saved when they are not kept ([07ba930](https://github.com/MorpheApp/morphe-manager/commit/07ba9308088077b617157cb21bbf7534e46141c4))
+
 ## [2.9.0-dev.3](https://github.com/MorpheApp/morphe-manager/compare/v2.9.0-dev.2...v2.9.0-dev.3) (2026-11-27)
 
 ### Features
