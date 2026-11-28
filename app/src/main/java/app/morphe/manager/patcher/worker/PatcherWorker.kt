@@ -44,7 +44,6 @@ import app.morphe.manager.patcher.runtime.PatcherKilledException
 import app.morphe.manager.patcher.runtime.PatcherProcesses
 import app.morphe.manager.patcher.runtime.Runtime
 import app.morphe.manager.patcher.runtime.PatcherVm
-import app.morphe.manager.patcher.split.SplitApkPreparer
 import app.morphe.manager.service.ForegroundWork
 import app.morphe.manager.ui.model.SelectedApp
 import app.morphe.manager.ui.model.State
@@ -52,6 +51,7 @@ import app.morphe.manager.ui.screen.shared.UserMessages
 import app.morphe.manager.util.*
 import app.morphe.manager.util.PatchSelectionUtils.restrictTo
 import app.morphe.patcher.PatcherTask
+import app.morphe.patcher.apk.SplitArchive
 import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.NonCancellable
@@ -330,7 +330,7 @@ class PatcherWorker(
 
             val inputFile = when (val selectedApp = args.input) {
                 is SelectedApp.Local -> {
-                    val needsSplit = SplitApkPreparer.isSplitArchive(selectedApp.file)
+                    val needsSplit = SplitArchive.isSplitArchive(selectedApp.file)
                     args.setInputFile(selectedApp.file, needsSplit, false)
                     selectedApp.file
                 }
@@ -348,7 +348,7 @@ class PatcherWorker(
 
             val vm = patcherProcesses.preferredVm()
             val stripNativeLibs = prefs.stripUnusedNativeLibs.get()
-            val inputIsSplitArchive = SplitApkPreparer.isSplitArchive(inputFile)
+            val inputIsSplitArchive = SplitArchive.isSplitArchive(inputFile)
             // The architecture the patches were selected against, worth a line of its own now
             // that a patch can declare itself unavailable for the one the input carries. Read
             // from the app rather than from [inputFile], which for an installed one is the base

@@ -49,7 +49,6 @@ import app.morphe.manager.patcher.patch.PatchBundleInfo.Extensions.patchNamesByU
 import app.morphe.manager.patcher.patch.PatchLockState
 import app.morphe.manager.patcher.patch.PatchSourceRef
 import app.morphe.manager.patcher.split.SplitApkInspector
-import app.morphe.manager.patcher.split.SplitApkPreparer
 import app.morphe.manager.patcher.worker.PatcherWorker
 import app.morphe.manager.service.ForegroundWork
 import app.morphe.manager.ui.model.*
@@ -58,6 +57,7 @@ import app.morphe.manager.ui.screen.patcher.PatcherErrorInfo
 import app.morphe.manager.ui.screen.shared.UserMessages
 import app.morphe.manager.util.*
 import app.morphe.manager.util.PatchSelectionUtils.restrictTo
+import app.morphe.patcher.apk.SplitArchive
 import app.morphe.patcher.patch.ApkArchitecture
 import app.morphe.patcher.patch.FormFactor
 import app.morphe.patcher.patch.InstallerType
@@ -1135,7 +1135,7 @@ class PatcherViewModel(
 
     private fun initialSplitRequirement(selectedApp: SelectedApp): Boolean =
         when (selectedApp) {
-            is SelectedApp.Local -> SplitApkPreparer.isSplitArchive(selectedApp.file)
+            is SelectedApp.Local -> SplitArchive.isSplitArchive(selectedApp.file)
             else -> false
         }
 

@@ -13,10 +13,9 @@ package app.morphe.manager.patcher.split
 import app.morphe.manager.patcher.DeviceConfig
 import app.morphe.manager.patcher.logger.Logger
 import app.morphe.manager.patcher.logger.toPatcherLogger
-import app.morphe.manager.patcher.util.Abi
-import app.morphe.manager.patcher.util.NativeLibs
+import app.morphe.patcher.apk.Abi
 import app.morphe.patcher.apk.ApkMerger
-import com.reandroid.arsc.chunk.xml.AndroidManifestBlock
+import app.morphe.patcher.apk.SplitArchive
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.runInterruptible
 import kotlinx.serialization.Serializable
@@ -28,7 +27,6 @@ import java.util.Locale
 import java.util.zip.CRC32
 import java.util.zip.ZipEntry
 import java.util.zip.ZipFile
-import java.util.zip.ZipInputStream
 import java.util.zip.ZipOutputStream
 
 @Serializable
@@ -92,9 +90,6 @@ object SplitApkPreparer {
         }
     }
 
-    // Recognized split archive container extensions
-    private val SUPPORTED_EXTENSIONS = setOf("apks", "apkm", "xapk")
-
     // Ordered highest → lowest, matching Android's density fallback direction
     private val DENSITY_ORDER = listOf("xxxhdpi", "xxhdpi", "xhdpi", "hdpi", "tvdpi", "mdpi", "ldpi")
 
@@ -107,12 +102,6 @@ object SplitApkPreparer {
         320 to "xhdpi",
         480 to "xxhdpi"
     )
-
-    /** Returns `true` if [file] is a split APK bundle. */
-    fun isSplitArchive(file: File?): Boolean =
-        // Only an archive without a known extension is opened to look for modules
-        file != null && file.exists() &&
-                (file.extension.lowercase(Locale.ROOT) in SUPPORTED_EXTENSIONS || hasEmbeddedApkEntries(file))
 
     /**
      * If [source] is a split APK bundle, extracts all modules into [workspace], merges them into
@@ -130,7 +119,7 @@ object SplitApkPreparer {
         skipUnneededSplits: Boolean = false,
         onEvent: ((SplitPreparationEvent) -> Unit)? = null
     ): PreparationResult {
-        if (!isSplitArchive(source)) {
+        if (!SplitArchive.isSplitArchive(source)) {
             return PreparationResult(source, merged = false)
         }
 
@@ -151,12 +140,14 @@ object SplitApkPreparer {
             )
             logger.info("Extracted ${entries.size} split modules: ${entries.joinToString { it.name }}")
             logger.info("Module sizes: ${entries.joinToString { "${it.name}=${it.file.length()} bytes" }}")
-            Merger.merge(
-                apkDir = modulesDir.toPath(),
-                outputApk = mergedApk,
-                logger = logger,
-                onEvent = onEvent
-            )
+            runInterruptible(Dispatchers.Default) {
+                ApkMerger(logger.toPatcherLogger()).merge(
+                    inputFile = modulesDir,
+                    outputFile = mergedApk,
+                    validateResDir = false,
+                    onStep = { step -> onEvent?.invoke(step.toEvent()) }
+                )
+            }
 
             // Patches read the OBB files of the bundle, which are not part of the merged APK.
             // Most patches never read them, so a bundle whose OBB cannot be extracted is still
@@ -196,42 +187,6 @@ object SplitApkPreparer {
             throw error
         }
     }
-
-    /**
-     * ABIs [file] ships native libraries for, named as they would appear under lib/ once merged.
-     *
-     * Answered from the module names where the archive has ABI splits, which keeps it a question
-     * of reading the archive's index rather than unpacking every split in it. A bundle built for
-     * a single ABI ships no such split, so there the modules themselves have to be opened.
-     */
-    fun splitArchiveAbis(file: File): List<String> =
-        runCatching {
-            ZipFile(file).use { zip ->
-                val modules = splitModuleEntries(zip).toList()
-
-                modules.mapNotNull { Abi.namedIn(it.name) }.distinct().ifEmpty {
-                    modules
-                        .flatMap { module ->
-                            zip.getInputStream(module).use(NativeLibs::extractAbisFromStream)
-                        }
-                        .distinct()
-                }
-            }
-        }.getOrDefault(emptyList())
-
-    // Split module entries are always at the root of the archive (no path separator).
-    // Nested .apk files (e.g. res/raw/) are embedded resources, not split modules.
-    fun splitModuleEntries(zip: ZipFile): Sequence<ZipEntry> =
-        zip.entries().asSequence().filter { entry ->
-            !entry.isDirectory &&
-                    !entry.name.contains('/') &&
-                    entry.name.endsWith(".apk", ignoreCase = true)
-        }
-
-    private fun hasEmbeddedApkEntries(file: File): Boolean =
-        runCatching {
-            ZipFile(file).use { zip -> splitModuleEntries(zip).any() }
-        }.getOrDefault(false)
 
     private data class ExtractedModule(val name: String, val file: File)
 
@@ -394,23 +349,10 @@ object SplitApkPreparer {
                             localeTokens = localeTokens,
                             densityQualifier = effectiveDensity
                         )
-                unneeded && !isBaseModule(zip, entry)
+                unneeded && !SplitArchive.isBaseModule(zip, entry)
             }
             .mapTo(LinkedHashSet()) { it.name }
     }
-
-    /**
-     * Whether the manifest of the module in [entry] declares no split. The module is streamed
-     * rather than extracted, which stops early as build tools write the manifest first.
-     */
-    fun isBaseModule(zip: ZipFile, entry: ZipEntry): Boolean =
-        runCatching {
-            ZipInputStream(zip.getInputStream(entry)).use { module ->
-                generateSequence { module.nextEntry }
-                    .firstOrNull { it.name == "AndroidManifest.xml" }
-                    ?.let { !AndroidManifestBlock.load(module).isSplit }
-            }
-        }.getOrNull() == true
 
     // Modules the device has no use for are skipped only when [skipUnneededFor] names the device
     private suspend fun extractSplitEntries(
@@ -423,7 +365,7 @@ object SplitApkPreparer {
         runInterruptible(Dispatchers.IO) {
             val extracted = mutableListOf<ExtractedModule>()
             ZipFile(source).use { zip ->
-                val allEntries = splitModuleEntries(zip).toList()
+                val allEntries = SplitArchive.modules(zip).toList()
 
                 if (allEntries.isEmpty()) {
                     throw IOException("Split archive does not contain any APK entries.")
@@ -450,6 +392,11 @@ object SplitApkPreparer {
             }
             extracted
         }
+
+    private fun ApkMerger.Step.toEvent() = when (this) {
+        is ApkMerger.Step.Merging -> SplitPreparationEvent.Merging(moduleName)
+        ApkMerger.Step.Writing -> SplitPreparationEvent.Writing
+    }
 
     /**
      * Result of [prepareIfNeeded].

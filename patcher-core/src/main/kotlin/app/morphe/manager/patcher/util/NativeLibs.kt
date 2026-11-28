@@ -7,14 +7,12 @@ package app.morphe.manager.patcher.util
 
 import app.morphe.manager.domain.apk.ApkFileStamp
 import app.morphe.manager.domain.apk.apkFileStampOrNull
+import app.morphe.patcher.apk.Abi
 import app.morphe.patcher.resource.CpuArchitecture
 import com.reandroid.archive.ArchiveFile
 import com.reandroid.archive.writer.ApkFileWriter
 import java.io.File
-import java.io.InputStream
 import java.util.concurrent.ConcurrentHashMap
-import java.util.zip.ZipFile
-import java.util.zip.ZipInputStream
 
 /**
  * Which ABIs an APK ships native libraries for, and which of them a run keeps when unused
@@ -27,60 +25,15 @@ object NativeLibs {
     // Keyed by path, so a file rewritten in place replaces its entry rather than adding one
     private val abiCache = ConcurrentHashMap<String, Pair<ApkFileStamp, List<String>>>()
 
-    private fun extractAbiFromEntry(name: String): String? {
-        if (!name.startsWith("lib/")) return null
-        val secondSlash = name.indexOf('/', startIndex = 4)
-        if (secondSlash == -1) return null
-        return name.substring(4, secondSlash)
-    }
-
-    /** The ABIs [apkFile] ships native libraries for, read once until the file changes. */
-    fun extractAbisFromApk(apkFile: File): List<String> {
+    /** [Abi.of] for [apkFile], an APK or split archive, read once until the file changes. */
+    fun abisOf(apkFile: File): List<String> {
         val stamp = apkFile.apkFileStampOrNull() ?: return emptyList()
         abiCache[stamp.path]?.takeIf { it.first == stamp }?.let { return it.second }
 
-        return runCatching {
-            ZipFile(apkFile).use { zip ->
-                zip.entries().asSequence()
-                    .map { it.name }
-                    .mapNotNull(::extractAbiFromEntry)
-                    .distinct()
-                    .toList()
-            }
-        }.onSuccess { abis ->
+        return Abi.of(apkFile).also { abis ->
             // Only the revision that was read, so a file rewritten meanwhile is read again
             if (apkFile.apkFileStampOrNull() == stamp) abiCache[stamp.path] = stamp to abis
-        }.getOrDefault(emptyList())
-    }
-
-    /**
-     * The same answer as [extractAbisFromApk] for an APK that arrives on [stream], which is how
-     * a module of a split archive is reached when it has no file of its own to open.
-     *
-     * Streaming has no central directory to consult, so the walk ends with the run of lib/
-     * entries every build tool writes them as, rather than inflating the whole APK behind it.
-     * An APK that turns out unreadable is answered by whatever it yielded up to that point.
-     */
-    fun extractAbisFromStream(stream: InputStream): List<String> {
-        val abis = LinkedHashSet<String>()
-        var insideLibs = false
-
-        runCatching {
-            ZipInputStream(stream.buffered()).use { zis ->
-                while (true) {
-                    val entry = zis.nextEntry ?: break
-                    val abi = extractAbiFromEntry(entry.name)
-                    if (abi == null) {
-                        if (insideLibs) break
-                    } else {
-                        insideLibs = true
-                        abis += abi
-                    }
-                }
-            }
         }
-
-        return abis.toList()
     }
 
     /**
@@ -100,7 +53,7 @@ object NativeLibs {
      */
     fun keptArchitectures(apkFile: File, supportedAbis: List<String>): Set<CpuArchitecture> =
         setOfNotNull(
-            preferredAbi(extractAbisFromApk(apkFile).toSet(), supportedAbis)
+            preferredAbi(abisOf(apkFile).toSet(), supportedAbis)
                 ?.let(CpuArchitecture::valueOfOrNull)
         )
 
@@ -120,11 +73,11 @@ object NativeLibs {
      */
     fun writeStripped(apkFile: File, output: File, supportedAbis: List<String>): Boolean {
         val kept = keptArchitectures(apkFile, supportedAbis).singleOrNull()?.arch ?: return false
-        if (extractAbisFromApk(apkFile).all { it == kept }) return false
+        if (abisOf(apkFile).all { it == kept }) return false
 
         ArchiveFile(apkFile).use { archive ->
             val sources = archive.getInputSources { entry ->
-                entry.isFile && extractAbiFromEntry(entry.name).let { it == null || it == kept }
+                entry.isFile && Abi.ofLibraryPath(entry.name).let { it == null || it == kept }
             }
             // Closes the file itself once written
             ApkFileWriter(output, sources).apply {

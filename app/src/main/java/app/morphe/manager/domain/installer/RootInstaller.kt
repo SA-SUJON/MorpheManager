@@ -12,9 +12,9 @@ import android.os.SystemClock
 import android.util.Log
 import app.morphe.manager.domain.manager.PreferencesManager
 import app.morphe.manager.patcher.split.SplitApkInspector
-import app.morphe.manager.patcher.split.SplitApkPreparer
 import app.morphe.manager.util.PLAY_STORE_INSTALLER_PACKAGE
 import app.morphe.manager.util.PM
+import app.morphe.patcher.apk.SplitArchive
 import com.topjohnwu.superuser.Shell
 import kotlinx.coroutines.CompletableDeferred
 import kotlinx.coroutines.Dispatchers
@@ -588,12 +588,12 @@ class RootInstaller(
         val extractDir = app.cacheDir.resolve("stock-splits-$packageName")
 
         try {
-            val modules = if (SplitApkPreparer.isSplitArchive(stockApp)) {
+            val modules = if (SplitArchive.isSplitArchive(stockApp)) {
                 withContext(Dispatchers.IO) {
                     extractDir.deleteRecursively()
                     extractDir.mkdirs()
                     ZipFile(stockApp).use { zip ->
-                        SplitApkPreparer.splitModuleEntries(zip).map { entry ->
+                        SplitArchive.modules(zip).map { entry ->
                             extractDir.resolve(entry.name).also { module ->
                                 zip.getInputStream(entry).use { input -> module.outputStream().use { input.copyTo(it) } }
                             }

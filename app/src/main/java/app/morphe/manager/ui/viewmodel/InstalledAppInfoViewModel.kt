@@ -374,7 +374,7 @@ class InstalledAppInfoViewModel(
     private fun readInstalledApkAbis(apk: File?) {
         installedApkAbisJob?.cancel()
         installedApkAbisJob = viewModelScope.launch {
-            installedApkAbis = apk?.let { withContext(Dispatchers.IO) { NativeLibs.extractAbisFromApk(it) } }.orEmpty()
+            installedApkAbis = apk?.let { withContext(Dispatchers.IO) { NativeLibs.abisOf(it) } }.orEmpty()
         }
     }
 

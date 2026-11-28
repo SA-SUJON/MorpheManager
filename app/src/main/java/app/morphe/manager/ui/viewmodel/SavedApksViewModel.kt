@@ -212,7 +212,7 @@ class PatchedApksViewModel(
                         file = savedFile,
                         installType = app.installType,
                         isInstalledOnDevice = snapshot.patchState == InstalledPatchState.Patched,
-                        abis = savedFile?.let(NativeLibs::extractAbisFromApk).orEmpty(),
+                        abis = savedFile?.let(NativeLibs::abisOf).orEmpty(),
                         packageInfo = snapshot.savedPatchedApkInfo ?: resolvedData.packageInfo,
                         originalPackageName = app.originalPackageName
                     ),
@@ -288,7 +288,7 @@ class OriginalApksViewModel(
                         fileSize = apk.fileSize,
                         file = apkFile,
                         isInstalledOnDevice = pm.getPackageInfo(apk.packageName) != null,
-                        abis = apkFile?.let(NativeLibs::extractAbisFromApk).orEmpty(),
+                        abis = apkFile?.let(NativeLibs::abisOf).orEmpty(),
                         packageInfo = resolvedData.packageInfo
                     ),
                     apk = apk

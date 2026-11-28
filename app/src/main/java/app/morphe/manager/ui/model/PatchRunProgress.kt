@@ -19,12 +19,12 @@ import app.morphe.manager.patcher.runtime.ResourceMonitor.LOG_USAGE_FIELD_CPU
 import app.morphe.manager.patcher.runtime.ResourceMonitor.LOG_USAGE_FIELD_IO_READ
 import app.morphe.manager.patcher.runtime.ResourceMonitor.LOG_USAGE_FIELD_IO_WRITE
 import app.morphe.manager.patcher.runtime.ResourceMonitor.LOG_USAGE_PREFIX_CURRENT
-import app.morphe.manager.patcher.split.SplitApkPreparer
 import app.morphe.manager.ui.screen.patcher.LogItem
 import app.morphe.manager.ui.screen.patcher.LogItemAccumulator
 import app.morphe.manager.util.PATCHER_LOG_TAG
 import app.morphe.manager.util.isSlowPatchingDevice
 import app.morphe.patcher.PatcherTask
+import app.morphe.patcher.apk.SplitArchive
 import kotlinx.coroutines.*
 import kotlinx.coroutines.channels.Channel
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -315,7 +315,7 @@ class PatchRunProgress(
     ) {
         val needsSplit = needsSplitOverride
             ?: merged
-            || file?.let(SplitApkPreparer::isSplitArchive) == true
+            || file?.let(SplitArchive::isSplitArchive) == true
 
         when {
             needsSplit && !requiresSplitPreparation -> {

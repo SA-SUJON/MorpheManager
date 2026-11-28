@@ -11,10 +11,10 @@ import app.morphe.manager.data.platform.Filesystem
 import app.morphe.manager.data.room.AppDatabase
 import app.morphe.manager.data.room.apps.original.OriginalApk
 import app.morphe.manager.domain.manager.PreferencesManager
-import app.morphe.manager.patcher.split.SplitApkPreparer
 import app.morphe.manager.patcher.util.NativeLibs
 import app.morphe.manager.util.FilenameUtils
 import app.morphe.manager.util.PM
+import app.morphe.patcher.apk.SplitArchive
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.distinctUntilChanged
 import kotlinx.coroutines.flow.first
@@ -114,8 +114,8 @@ class OriginalApkRepository(
         val existing = get(packageName)?.takeIf { it.version == version } ?: return@withContext false
         val saved = File(existing.filePath).takeIf { it.exists() } ?: return@withContext false
         when {
-            SplitApkPreparer.isSplitArchive(saved) -> true
-            SplitApkPreparer.isSplitArchive(file) -> false
+            SplitArchive.isSplitArchive(saved) -> true
+            SplitArchive.isSplitArchive(file) -> false
             else -> NativeLibs.hasSigningBlock(saved) || !NativeLibs.hasSigningBlock(file)
         }
     }
@@ -172,7 +172,7 @@ class OriginalApkRepository(
 
             // A split archive is kept only for a mount or for its OBB files, both of which need it whole
             val strips = !forMount && prefs.stripUnusedNativeLibs.get() &&
-                !SplitApkPreparer.isSplitArchive(sourceFile)
+                !SplitArchive.isSplitArchive(sourceFile)
             val stripped = strips && runCatching {
                 stripThroughStaging(sourceFile, targetFile, Build.SUPPORTED_ABIS.toList())
             }.onFailure {

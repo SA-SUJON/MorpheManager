@@ -36,6 +36,7 @@ import app.morphe.manager.util.PM
 import app.morphe.manager.util.PatchSelection
 import app.morphe.manager.util.PatchSelectionUtils.sanitizeForPatcher
 import app.morphe.manager.util.exportData
+import app.morphe.patcher.apk.SplitArchive
 import kotlinx.coroutines.*
 import kotlinx.coroutines.flow.*
 import kotlinx.serialization.json.Json
@@ -757,8 +758,8 @@ class BatchPatchCoordinator(
     /** Whether the source needs merging, known before it is copied into the workspace. */
     private fun BatchApkSource.isSplitArchive(): Boolean = when (this) {
         is BatchApkSource.Installed -> isSplit
-        is BatchApkSource.SavedOriginal -> SplitApkPreparer.isSplitArchive(file)
-        is BatchApkSource.UserFile -> SplitApkPreparer.isSplitArchive(file)
+        is BatchApkSource.SavedOriginal -> SplitArchive.isSplitArchive(file)
+        is BatchApkSource.UserFile -> SplitArchive.isSplitArchive(file)
     }
 
     /** Deletes the copy [materialize] made of an installed app, the only input the queue owns. */

@@ -6,6 +6,7 @@
 package app.morphe.manager.patcher.split
 
 import app.morphe.manager.patcher.DeviceConfig
+import app.morphe.patcher.apk.SplitArchive
 import com.reandroid.arsc.chunk.xml.AndroidManifestBlock
 import java.io.ByteArrayOutputStream
 import java.io.File
@@ -64,7 +65,7 @@ class UnneededModulesTest {
             }
         }
         return ZipFile(file).use { zip ->
-            SplitApkPreparer.unneededModules(zip, SplitApkPreparer.splitModuleEntries(zip).toList(), device)
+            SplitApkPreparer.unneededModules(zip, SplitArchive.modules(zip).toList(), device)
         }
     }
 

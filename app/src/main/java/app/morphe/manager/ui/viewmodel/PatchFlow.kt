@@ -35,13 +35,13 @@ import app.morphe.manager.patcher.patch.*
 import app.morphe.manager.patcher.patch.PatchBundleInfo.Extensions.otherBuildPatchesByUid
 import app.morphe.manager.patcher.patch.PatchBundleInfo.Extensions.patchNamesByUid
 import app.morphe.manager.patcher.runtime.PatcherProcesses
-import app.morphe.manager.patcher.split.SplitApkPreparer
 import app.morphe.manager.ui.model.*
 import app.morphe.manager.ui.model.navigation.Patcher
 import app.morphe.manager.ui.screen.shared.UserMessages
 import app.morphe.manager.util.*
 import app.morphe.manager.util.PatchSelectionUtils.restrictTo
 import app.morphe.manager.util.PatchSelectionUtils.sanitizeForPatcher
+import app.morphe.patcher.apk.SplitArchive
 import app.morphe.patcher.patch.AppTarget
 import kotlinx.coroutines.*
 import kotlinx.coroutines.flow.StateFlow
@@ -697,7 +697,7 @@ class PatchFlow(
         if (selectedApp is SelectedApp.Local && !skipSplitCheck) {
             val requiredApkFileType = appMetadata[selectedApp.packageName]?.apkFileType
 
-            val isSplitFile = SplitApkPreparer.isSplitArchive(selectedApp.file)
+            val isSplitFile = SplitArchive.isSplitArchive(selectedApp.file)
 
             if (isSplitFile && requiredApkFileType?.isApk == true && requiredApkFileType.isRequired) {
                 holdFor(HomeDialog.SplitApkWarning(selectedApp.packageName), selectedApp)

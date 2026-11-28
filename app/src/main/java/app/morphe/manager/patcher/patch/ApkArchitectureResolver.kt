@@ -6,11 +6,10 @@
 package app.morphe.manager.patcher.patch
 
 import android.os.Build
-import app.morphe.manager.patcher.split.SplitApkPreparer
-import app.morphe.manager.patcher.util.Abi
 import app.morphe.manager.patcher.util.NativeLibs
 import app.morphe.manager.ui.model.SelectedApp
 import app.morphe.manager.util.PM
+import app.morphe.patcher.apk.Abi
 import app.morphe.patcher.patch.ApkArchitecture
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
@@ -43,7 +42,7 @@ object ApkArchitectureResolver {
      * splits of an installed app, whose native libraries live in a split of their own.
      */
     suspend fun resolve(files: List<File>): ApkArchitecture = withContext(Dispatchers.IO) {
-        of(files.filter { it.exists() }.flatMap(::abisOf))
+        of(files.filter { it.exists() }.flatMap(NativeLibs::abisOf))
     }
 
     /** Architecture an APK carrying [abis] under lib/ is patched for on this device. */
@@ -69,8 +68,4 @@ object ApkArchitectureResolver {
         val info = pm.getPackageInfo(packageName)?.applicationInfo ?: return emptyList()
         return (listOf(info.sourceDir) + info.splitSourceDirs?.toList().orEmpty()).map(::File)
     }
-
-    private fun abisOf(file: File): List<String> =
-        if (SplitApkPreparer.isSplitArchive(file)) SplitApkPreparer.splitArchiveAbis(file)
-        else NativeLibs.extractAbisFromApk(file)
 }
