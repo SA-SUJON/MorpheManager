@@ -29,7 +29,7 @@ import androidx.activity.result.contract.ActivityResultContract
 import androidx.core.content.pm.PackageInfoCompat
 import app.morphe.manager.domain.apk.ApkIdentity
 import app.morphe.manager.domain.apk.ApkSignatureCache
-import app.morphe.manager.domain.apk.newerSdkApkIdentityOrNull
+import app.morphe.patcher.apk.ApkManifest
 import app.morphe.patcher.apk.ApkUtils
 import app.morphe.patcher.patch.FormFactor
 import kotlinx.coroutines.currentCoroutineContext
@@ -109,10 +109,29 @@ class PM(
     /**
      * Package and version of [file] from [packageInfo], or from its manifest when the platform
      * refuses it for requiring a newer Android.
+     *
+     * @param resolveLabel Whether a read of the manifest also looks up [ApkIdentity.label].
      */
-    fun getApkIdentity(file: File, packageInfo: PackageInfo? = getPackageInfo(file)): ApkIdentity? =
+    fun getApkIdentity(
+        file: File,
+        packageInfo: PackageInfo? = getPackageInfo(file),
+        resolveLabel: Boolean = false
+    ): ApkIdentity? =
         packageInfo?.let { ApkIdentity(it.packageName, it.versionName, getVersionCode(it)) }
-            ?: file.newerSdkApkIdentityOrNull(Build.VERSION.SDK_INT)
+            ?: newerSdkApkIdentity(file, resolveLabel)
+
+    // Only an APK held back by its minimum Android version is read past the platform, so any other
+    // file the platform refuses is still not taken for an app
+    private fun newerSdkApkIdentity(file: File, resolveLabel: Boolean): ApkIdentity? {
+        val manifest = try {
+            ApkManifest.of(file, resolveLabel)
+        } catch (_: Exception) {
+            return null
+        }
+        val minSdk = manifest.minSdkVersion ?: return null
+        if (minSdk <= Build.VERSION.SDK_INT) return null
+        return ApkIdentity(manifest.packageName, manifest.versionName, manifest.versionCode, manifest.label)
+    }
 
     /** [getPackageInfo] of [file], failing when the archive cannot be read as an app. */
     fun requirePackageInfo(file: File): PackageInfo =
@@ -434,7 +453,7 @@ fun ByteArray.sha256Fingerprint(): String = MessageDigest.getInstance("SHA-256")
 
 /**
  * A short form of a [sha256Fingerprint] for people to compare, its first 8 bytes in groups of
- * four. The same form PatchBundleSignature.fingerprint gives a patch bundle key, which hashes
+ * four. The same form `PatchBundleSignature.fingerprint` gives a patch bundle key, which hashes
  * the key itself first, so the two read alike side by side.
  */
 fun shortFingerprint(fingerprint: String): String = fingerprint.take(16).chunked(4).joinToString(" ")

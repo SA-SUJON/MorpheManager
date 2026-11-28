@@ -98,7 +98,7 @@ class PatchFlowApks(
                 workspace = filesystem.uiTempDir
             ) { apk ->
                 val packageInfo = pm.getPackageInfo(apk)
-                val identity = pm.getApkIdentity(apk, packageInfo)
+                val identity = pm.getApkIdentity(apk, packageInfo, resolveLabel = true)
                 when {
                     identity == null -> ApkLoadResult.NotAnApk
                     localApkSources.isPatchedApk(apk, identity.packageName) -> ApkLoadResult.AlreadyPatched
@@ -111,7 +111,7 @@ class PatchFlowApks(
                             temporary = true
                         ),
                         icon = packageInfo?.let(appDataResolver::detachedArchiveIcon),
-                        label = packageInfo?.readableLabel(app.packageManager),
+                        label = packageInfo?.readableLabel(app.packageManager) ?: identity.label,
                         // Read while the module is unpacked, which the signature check would otherwise repeat
                         certificates = if (
                             apkSignatureCheckable(Build.VERSION.SDK_INT, declaredSignatures(identity.packageName))
