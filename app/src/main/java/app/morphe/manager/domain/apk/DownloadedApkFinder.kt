@@ -68,7 +68,7 @@ class DownloadedApkFinder(
 
         val apk = try {
             SplitApkInspector.withRepresentativeApk(file, filesystem.uiTempDir) { apk ->
-                pm.getPackageInfo(apk)?.let { DownloadedApk(file, it.packageName) }
+                pm.getApkIdentity(apk)?.let { DownloadedApk(file, it.packageName) }
             }
         } catch (e: Exception) {
             // A download written straight to its final name fails here until it is complete

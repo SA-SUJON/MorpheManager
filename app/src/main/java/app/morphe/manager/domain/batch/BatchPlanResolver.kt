@@ -5,7 +5,6 @@
 
 package app.morphe.manager.domain.batch
 
-import android.content.pm.PackageInfo
 import android.os.Build
 import android.util.Log
 import app.morphe.manager.data.platform.Filesystem
@@ -556,12 +555,12 @@ class BatchPlanResolver(
      * base entry while the queue keeps working with the archive the user actually attached.
      */
     private fun readApk(apk: File, attachedTo: File): AttachedApk {
-        val info: PackageInfo? = pm.getPackageInfo(apk)
+        val identity = pm.getApkIdentity(apk)
         return AttachedApk(
             file = attachedTo,
-            packageName = info?.packageName,
-            version = info?.versionName?.takeUnless { it.isBlank() } ?: UNSPECIFIED_VERSION,
-            versionCode = info?.let { pm.getVersionCode(it) },
+            packageName = identity?.packageName,
+            version = identity?.versionName?.takeUnless { it.isBlank() } ?: UNSPECIFIED_VERSION,
+            versionCode = identity?.versionCode,
             signatureHashes = pm.getApkFileSignatureHashes(apk)
         )
     }
@@ -587,11 +586,11 @@ class BatchPlanResolver(
     private suspend fun savedOriginalSource(packageName: String): BatchApkSource.SavedOriginal? {
         val record = originalApkRepository.get(packageName) ?: return null
         val file = File(record.filePath).takeIf { it.exists() } ?: return null
-        val info = pm.getPackageInfo(file)
+        val identity = pm.getApkIdentity(file)
         return BatchApkSource.SavedOriginal(
             file = file,
-            version = info?.versionName?.takeUnless { it.isBlank() } ?: record.version,
-            versionCode = info?.let { pm.getVersionCode(it) }
+            version = identity?.versionName?.takeUnless { it.isBlank() } ?: record.version,
+            versionCode = identity?.versionCode
         )
     }
 

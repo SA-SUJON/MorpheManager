@@ -27,7 +27,9 @@ import android.provider.Settings
 import android.util.Log
 import androidx.activity.result.contract.ActivityResultContract
 import androidx.core.content.pm.PackageInfoCompat
+import app.morphe.manager.domain.apk.ApkIdentity
 import app.morphe.manager.domain.apk.ApkSignatureCache
+import app.morphe.manager.domain.apk.newerSdkApkIdentityOrNull
 import app.morphe.patcher.apk.ApkUtils
 import app.morphe.patcher.patch.FormFactor
 import kotlinx.coroutines.currentCoroutineContext
@@ -103,6 +105,14 @@ class PM(
 
         return pkgInfo
     }
+
+    /**
+     * Package and version of [file] from [packageInfo], or from its manifest when the platform
+     * refuses it for requiring a newer Android.
+     */
+    fun getApkIdentity(file: File, packageInfo: PackageInfo? = getPackageInfo(file)): ApkIdentity? =
+        packageInfo?.let { ApkIdentity(it.packageName, it.versionName, getVersionCode(it)) }
+            ?: file.newerSdkApkIdentityOrNull(Build.VERSION.SDK_INT)
 
     /** [getPackageInfo] of [file], failing when the archive cannot be read as an app. */
     fun requirePackageInfo(file: File): PackageInfo =
