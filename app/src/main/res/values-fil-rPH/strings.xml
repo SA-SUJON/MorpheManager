@@ -9,6 +9,8 @@
     <string name="home_app_status_newer_patches">Mga bagong patch</string>
     <!-- Mark on the card of an app built for a device other than a phone -->
     <string name="form_factor_tv">TV</string>
+    <!-- Named beside the other marks when one app has a build for a phone and for another device -->
+    <string name="form_factor_mobile">Telepono</string>
     <string name="form_factor_automotive">Automotibo</string>
     <string name="home_no_patches_available">Walang patch na magagamit</string>
     <string name="home_app_hide_title">Itago ang aplikasyong ito?</string>
@@ -359,6 +361,10 @@ Pumili kung saan kukunin ang APK nito"</string>
     <string name="expert_mode_recommended">Mga inirerekomendang patch</string>
     <string name="expert_mode_reset_to_default_done">Na-apply ang mga inirerekomendang patch</string>
     <string name="expert_mode_selected_count">%1$s sa %2$s ang napili</string>
+    <!-- Which build of an app with builds for several devices the patches are for, such as TV or Wear OS -->
+    <string name="expert_mode_form_factor">Para sa %s build</string>
+    <!-- The same for the phone build, named as a common noun rather than by its mark -->
+    <string name="expert_mode_form_factor_mobile">Para sa phone build</string>
     <string name="expert_mode_saved_selection">Naka-save na pagpili</string>
     <string name="expert_mode_restore_saved_done">Naibalik ang nakasave na pagpili</string>
     <string name="expert_mode_copy_from_bundle_no_patches">Walang katugmang mga patch sa bundle na ito</string>
@@ -489,7 +495,8 @@ Para sa pinakamahusay na resulta, nirerekomenda ng app na ito na i-patch ang isa
     <string name="batch_patch_preparing_next">Inihahanda ang susunod na app…</string>
     <string name="batch_patch_progress_counter">Pag-patch ng %1$s mula sa %2$s</string>
     <string name="batch_patch_summary">%1$s na-patch, %2$s nabigo, %3$s nilaktawan</string>
-    <string name="batch_patch_saved_hint">Nai-save ang mga na-patch na app. I-install ngayon, o mamaya mula sa listahan ng na-patch na APK sa mga setting</string>
+    <string name="batch_patch_saved_hint">Naka-save ang mga patched APK. I-install ang mga ito ngayon o mamaya mula sa home screen</string>
+    <string name="batch_patch_not_kept_hint">Hindi itinatabi ang mga patched APK. I-install o i-export ang mga ito bago isara ang screen na ito</string>
     <string name="batch_patch_multiple_sources">Ang ilang app ay pinagsasama ang mga patch mula sa higit sa isang source, na maaaring magdulot ng mga conflict</string>
     <string name="batch_patch_needs_apk">Walang available na APK, mag-attach ng file</string>
     <string name="batch_patch_wrong_package">Ang naka-attach na file ay pagmamay-ari ng %s</string>
@@ -504,22 +511,22 @@ Para sa pinakamahusay na resulta, nirerekomenda ng app na ito na i-patch ang isa
     <string name="batch_patch_apk_selected">Napili na ang APK</string>
     <string name="batch_patch_auto_download_stopped">Huminto ang mga automatic APK download</string>
     <string name="batch_patch_auto_download_stop">Itigil ang mga download</string>
-    <string name="batch_patch_auto_download_kept">Hindi magamit ang na-download na APK, kaya pinanatili ang nauna</string>
+    <string name="batch_patch_auto_download_kept">Hindi magamit ang APK na na-download para sa %s, kaya ang nauna ay pinanatili</string>
     <string name="batch_patch_edit_patches">Pumili ng mga patch</string>
     <string name="batch_patch_state_no_apk">Walang APK</string>
     <string name="batch_patch_state_no_patches">Walang mga patch</string>
     <string name="batch_patch_state_no_selection">Walang napili</string>
     <string name="batch_patch_no_selection">Walang napiling available na patch</string>
     <string name="batch_patch_policy_install">I-install kapag tapos na</string>
-    <string name="batch_patch_policy_install_description">I-i-install ang bawat na-patch na app pagkatapos ng queue. Off ay nagpapanatili sa mga APK para sa ibang pagkakataon</string>
+    <string name="batch_patch_policy_install_description">I-install ang bawat patched app kapag natapos na ang queue. Ang Off ay nag-iiwan ng mga APK sa screen na ito</string>
     <string name="batch_patch_policy_mount">I-mount kapag tapos na</string>
-    <string name="batch_patch_policy_mount_description">I-ma-mount ang bawat patched app kapag natapos na ang queue. Ang Off ay nagpapanatili ng mga APK para sa susunod</string>
+    <string name="batch_patch_policy_mount_description">I-ma-mount ang bawat patched app kapag natapos na ang queue. Ang Off ay nag-iiwan ng mga APK sa screen na ito</string>
     <string name="batch_patch_policy_install_mount">I-install o i-mount kapag natapos na</string>
-    <string name="batch_patch_policy_install_mount_description">I-install o i-mount ang bawat na-patch na app kapag natapos na ang queue. Kapag Off, itatago ang mga APK para sa ibang pagkakataon.</string>
+    <string name="batch_patch_policy_install_mount_description">I-i-install o i-ma-mount ang bawat patched app kapag natapos na ang queue. Ang Off ay nag-iiwan ng mga APK sa screen na ito</string>
     <!-- Label of a footer button beside "Close". Keep it short, a longer one moves the buttons onto two rows -->
     <string name="batch_patch_start">Simula</string>
     <string name="batch_patch_stop_title">Itigil ang batch patching?</string>
-    <string name="batch_patch_stop_description">Ibabatalin ang app na inipapatch ngayon at lahat pa rin ng nasa pila</string>
+    <string name="batch_patch_stop_description">Ang kasalukuyang app at ang natitira sa queue ay kakanselahin</string>
     <!-- Label of a footer button beside "Done". Keep it short, a longer one moves the buttons onto two rows -->
     <string name="batch_patch_install_all">I-install lahat</string>
     <string name="batch_patch_install_failed">Nabigong i-install</string>
@@ -530,7 +537,7 @@ Para sa pinakamahusay na resulta, nirerekomenda ng app na ito na i-patch ang isa
     <string name="batch_queue_clear_title">Linisin ang pila?</string>
     <string name="batch_queue_clear_description">Aalisin lahat ng app mula sa pila</string>
     <string name="batch_queue_keep_title">Panatilihin ang queue?</string>
-    <string name="batch_queue_keep_description">Ang mga naka-queue na app ay maghihintay sa home screen para masimulan mamaya</string>
+    <string name="batch_queue_keep_description">Naghihintay ang queue sa home screen hanggang sa simulan mo ito</string>
     <string name="batch_queue_keep">Panatilihin</string>
     <string name="shortcut_repatch_short">I-re-patch</string>
     <string name="shortcut_repatch_long">I-re-patch ang mga hindi napapanahong app</string>
@@ -664,6 +671,8 @@ Para sa pinakamahusay na resulta, nirerekomenda ng app na ito na i-patch ang isa
     <string name="patcher_conflict_title">Salungatan sa pakete</string>
     <string name="patcher_conflict_subtitle">Kailangan mong burahin ang umiiral na bersyon</string>
     <string name="patcher_conflict_hint">Gumagamit ang patched app ng ibang certificate kaysa sa naka-install na bersyon. Ang pag-uninstall ay magbubura ng lahat ng data ng app.</string>
+    <!-- The patched APK is for another kind of device, such as TV or Wear OS, so it may not start on this one -->
+    <string name="patcher_built_for_other_device">Binuo para sa %s, kaya maaaring hindi ito mag-start dito. I-save ito para i-install sa device na iyon</string>
     <string name="patcher_installed_conflict_title">Kinakailangan ang pag-uninstall</string>
     <string name="patcher_installed_conflict_body">"Nilalagdaan ng Morphe ang mga patched app gamit ang sarili nitong sertipiko, na naiiba sa orihinal. Kinakailangan ng Android na alisin ang kasalukuyang bersyon bago mai-install ang patched app.
 
@@ -759,7 +768,7 @@ Ang pag-uninstall ay permanenteng bubura sa lahat ng data ng app."</string>
     <string name="plugin_activity_dialog_body">Kinakailangan ng pakikipag-ugnayan sa tagagamit upang magpatuloy sa plugin na ito</string>
     <string name="patcher_process_killed_message">Itinigil ng system ang patcher bago ito matapos, upang magkaroon ng sapat na memory. Isara ang ibang apps at subukan ulit</string>
     <!-- Shown once Morphe is back after it was closed in the middle of patching, for a reason other than low memory. -->
-    <string name="patcher_interrupted_message">Naisara ang Morphe bago matapos ang patching, kaya walang na-patch. Subukan muli</string>
+    <string name="patcher_interrupted_message">Nagsara ang Morphe bago natapos ang patching. Subukan muli</string>
     <!-- "%1$s" is where the setting is, such as "Settings > Patcher > Use embedded VM", built from the names on those screens. -->
     <string name="patcher_process_crashed_message">Nag-crash ang patcher bago ito natapos. Kung mangyari itong muli, i-off ang %1$s at i-report ang isyu kasama ang log</string>
     <!-- Shown when a run fills the heap it was given. "%1$s" is the heap in megabytes. -->
@@ -868,14 +877,17 @@ Ang pag-uninstall ay permanenteng bubura sa lahat ng data ng app."</string>
     <string name="settings_appearance_translations_info_title">Maaaring nawawala o hindi kumpleto ang pagsasalin-wika para sa ibang wika</string>
     <!-- Settings - Appearance Tab - Interface Scale -->
     <string name="settings_appearance_ui_scale">Sukat ng interface</string>
-    <!-- Settings - Appearance Tab - Home Screen Section -->
+    <!-- Settings - Appearance Tab - Screens Section -->
     <string name="settings_appearance_home_screen">Home screen</string>
+    <string name="settings_appearance_screens">Mga Screen</string>
     <string name="settings_appearance_greeting_phrases">Mga pagbati</string>
     <string name="settings_appearance_greeting_phrases_subtitle">Nagpapakita ng mensahe ng pagbati</string>
     <string name="settings_appearance_repatch_notice">Paunawa sa muling pag-patch</string>
     <string name="settings_appearance_repatch_notice_description">Nagpapakita ng banner kapag maaaring i-patch muli ang mga patched apps</string>
     <string name="settings_appearance_more_apps_card">Card ng higit pang mga aplikasyon</string>
     <string name="settings_appearance_more_apps_card_description">Nagpapakita ng card sa ilalim ng mga app na humahantong sa mga community patch</string>
+    <string name="settings_appearance_games_button">Button ng mga Laro</string>
+    <string name="settings_appearance_games_button_description">Nagpapakita ng button para sa mga mini-game habang nagpa-patch at sa resulta</string>
     <string name="settings_appearance_app_card_colors">Mga kulay ng card</string>
     <string name="settings_appearance_app_card_colors_default">Awtomatiko</string>
     <string name="settings_appearance_app_card_colors_default_description">Bigyan ang bawat app at source ng sarili nitong kulay</string>
@@ -1246,7 +1258,7 @@ Mga Detalye: %2$s"</string>
     <string name="settings_system_apks_delete_all_confirm">Permanenteng buburahin nito ang mga naka-save na APK file na ipinapakita dito</string>
     <string name="settings_system_apks_delete_selected_title">Burahin ang mga napiling APK?</string>
     <string name="settings_system_apks_delete_selected_confirm">Permanenteng buburahin nito ang mga napiling APK file</string>
-    <string name="settings_system_apks_deleted_all">Matagumpay na nabura ang mga APK</string>
+    <string name="settings_system_apks_deleted_all">Nabura ang mga APK</string>
     <string name="settings_system_apks_delete_failed">Hindi matanggal ang ilang APK file</string>
     <string name="settings_system_apks_export_zip_success">Na-export ang mga napiling APK</string>
     <string name="settings_system_apks_export_zip_failed">Nabigo ang pag-export ng mga napiling APK</string>
@@ -1269,8 +1281,8 @@ Mga Detalye: %2$s"</string>
     <string name="settings_system_storage_temporary_title">Mga pansamantalang file</string>
     <string name="settings_system_storage_temporary_description">Mga working file na ginawa habang nagpe-patch</string>
     <string name="settings_system_storage_clear_all">I-clear ang lahat ng cache</string>
-    <string name="settings_system_storage_clear_all_description">Nililinis ang lahat ng puwedeng mabawi na espasyo ng cache nang sabay-sabay</string>
-    <string name="settings_system_storage_clear_all_confirm">Ito ay magcle-clear ng mga na-cache na tugon ng network, mga kopya ng installer na naka-stage, at mga pansamantalang file. Ang orihinal at na-patch na mga APK ay mananatili</string>
+    <string name="settings_system_storage_clear_all_description">Lahat ng cache na nakalista sa itaas</string>
+    <string name="settings_system_storage_clear_all_confirm">Lahat ng cache sa itaas ay buburahin. Mananatili ang mga orihinal at patched na APK</string>
     <string name="settings_system_storage_cleared">Napalaya ang %s</string>
     <string name="settings_system_storage_patch_running_warning">Isinasagawa ang patch at ginagamit ang mga file na ito. Kung lilinisin ngayon, mabibigo ito</string>
     <string name="settings_system_storage_clear_anyway">Linisin pa rin</string>
@@ -1278,14 +1290,14 @@ Mga Detalye: %2$s"</string>
     <string name="settings_system_storage_open_app_info_title">Buksan ang storage ng Android app</string>
     <string name="settings_system_storage_open_app_info_description">Pamahalaan o i-clear ang lahat ng data ng Morphe sa pamamagitan ng mga setting ng system</string>
     <string name="settings_system_save_original_apks_title">Panatilihin ang orihinal na mga APK</string>
-    <string name="settings_system_save_original_apks_description">I-save ang pre-patch na APK upang magamit muli para sa pag-patch nang hindi na kailangang piliin muli ang file</string>
+    <string name="settings_system_save_original_apks_description">Gamiting muli ang orihinal na APK kapag nag-papatch muli, nang hindi na kailangang piliin ang file muli</string>
     <string name="settings_system_save_patched_apks_title">Panatilihin ang mga naka-patch na APK</string>
-    <string name="settings_system_save_patched_apks_description">I-save ang kopya ng naka-patch na APK para sa ibang pagkakataon na i-export o i-reinstall mula sa manager</string>
+    <string name="settings_system_save_patched_apks_description">Magtabi ng kopya para i-export o i-reinstall sa huli</string>
     <!-- Settings - System Tab - Storage Management - Patched APKs Management -->
     <string name="settings_system_patched_apks_title">Na-patch na mga APK</string>
     <string name="settings_system_patched_apks_empty">Wala pang naka-patch na APK</string>
     <string name="settings_system_patched_apks_delete_title">Burahin ang naka-patch na APK?</string>
-    <string name="settings_system_patched_apks_deleted">Matagumpay na nabura ang naka-patch na APK</string>
+    <string name="settings_system_patched_apks_deleted">Naka-patch na APK ay binura</string>
     <string name="settings_system_patched_apks_delete_all_title">Burahin ang lahat ng naka-patch na APK?</string>
     <!-- Settings - System Tab - Storage Management - Original APKs Management -->
     <string name="settings_system_original_apks_title">Mga orihinal na APK</string>

@@ -9,6 +9,8 @@
     <string name="home_app_status_newer_patches">Patxes noves</string>
     <!-- Mark on the card of an app built for a device other than a phone -->
     <string name="form_factor_tv">TV</string>
+    <!-- Named beside the other marks when one app has a build for a phone and for another device -->
+    <string name="form_factor_mobile">Telèfon</string>
     <string name="form_factor_automotive">Automoció</string>
     <string name="home_no_patches_available">No hi ha pegats disponibles</string>
     <string name="home_app_hide_title">Amagar aquesta aplicació?</string>
@@ -359,6 +361,10 @@ Tria d'on vols obtenir l'APK"</string>
     <string name="expert_mode_recommended">Patxes recomanades</string>
     <string name="expert_mode_reset_to_default_done">Pegats recomanats aplicats</string>
     <string name="expert_mode_selected_count">%1$s de %2$s seleccionats</string>
+    <!-- Which build of an app with builds for several devices the patches are for, such as TV or Wear OS -->
+    <string name="expert_mode_form_factor">Per a la versió %s</string>
+    <!-- The same for the phone build, named as a common noun rather than by its mark -->
+    <string name="expert_mode_form_factor_mobile">Per a la versió de telèfon</string>
     <string name="expert_mode_saved_selection">Selecció desada</string>
     <string name="expert_mode_restore_saved_done">Selecció desada restaurada</string>
     <string name="expert_mode_copy_from_bundle_no_patches">No hi ha patxes corresponents en aquest paquet</string>
@@ -489,7 +495,8 @@ Per obtenir els millors resultats, aquesta aplicació recomana patxar un &lt;b&g
     <string name="batch_patch_preparing_next">Preparant la propera aplicació…</string>
     <string name="batch_patch_progress_counter">Patxant %1$s de %2$s</string>
     <string name="batch_patch_summary">%1$s pedaçat, %2$s fallit, %3$s ometut</string>
-    <string name="batch_patch_saved_hint">Les aplicacions amb els mosaics aplicats s\'han desat. Instal·la-les ara, o més tard des de la llista d\'APK amb mosaics a la configuració</string>
+    <string name="batch_patch_saved_hint">Els APK amb mosaics s\'han desat. Instal·la-les ara o més tard des de la pantalla d\'inici</string>
+    <string name="batch_patch_not_kept_hint">Els APK amb mosaics no es conserven. Instal·la-les o exporta-les abans de tancar aquesta pantalla</string>
     <string name="batch_patch_multiple_sources">Algunes aplicacions combinen mosaics de més d\'una font, cosa que pot causar conflictes</string>
     <string name="batch_patch_needs_apk">No hi ha cap APK disponible, adjunta un arxiu</string>
     <string name="batch_patch_wrong_package">L\'arxiu adjunt pertany a %s</string>
@@ -504,22 +511,22 @@ Per obtenir els millors resultats, aquesta aplicació recomana patxar un &lt;b&g
     <string name="batch_patch_apk_selected">APK seleccionat</string>
     <string name="batch_patch_auto_download_stopped">S\'han aturat les descàrregues automàtiques d\'APK</string>
     <string name="batch_patch_auto_download_stop">Atura les descàrregues</string>
-    <string name="batch_patch_auto_download_kept">L\'APK descarregat no s\'ha pogut utilitzar, per la qual cosa s\'ha conservat el previ</string>
+    <string name="batch_patch_auto_download_kept">L\'APK descarregat per a %s no s\'ha pogut utilitzar, així que es conserva el previ</string>
     <string name="batch_patch_edit_patches">Tria els pegats</string>
     <string name="batch_patch_state_no_apk">Sense APK</string>
     <string name="batch_patch_state_no_patches">Sense patxes</string>
     <string name="batch_patch_state_no_selection">Cap seleccionat</string>
     <string name="batch_patch_no_selection">No s\'ha seleccionat cap dels patxes disponibles</string>
     <string name="batch_patch_policy_install">Instal·lar quan hagi acabat</string>
-    <string name="batch_patch_policy_install_description">Instal·la cada aplicació amb mosaics immediatament després que s\'acabi la cua. Desactivat manté els APK per a més tard</string>
+    <string name="batch_patch_policy_install_description">Instal·la cada aplicació amb mosaics un cop s\'hagi completat la cua. Si està desactivat, els APK es queden en aquesta pantalla</string>
     <string name="batch_patch_policy_mount">Munta quan hagi acabat</string>
-    <string name="batch_patch_policy_mount_description">Munta cada aplicació patxada un cop s\'hagi acabat la cua. Desactivat manté els APK per a més tard</string>
+    <string name="batch_patch_policy_mount_description">Munta cada aplicació amb mosaics un cop s\'hagi completat la cua. Si està desactivat, els APK es queden en aquesta pantalla</string>
     <string name="batch_patch_policy_install_mount">Instal·la o munta quan hagi acabat</string>
-    <string name="batch_patch_policy_install_mount_description">Instal·la o munta cada aplicació patxada un cop s\'hagi acabat la cua. Desactivat manté els APK per a més tard</string>
+    <string name="batch_patch_policy_install_mount_description">Instal·la o monta cada aplicació patxada un cop s\'acaba la cua. Si està desactivat, els APKs es queden en aquesta pantalla</string>
     <!-- Label of a footer button beside "Close". Keep it short, a longer one moves the buttons onto two rows -->
     <string name="batch_patch_start">Inicia</string>
     <string name="batch_patch_stop_title">Aturar l\'aplicació de mosaics en lot?</string>
-    <string name="batch_patch_stop_description">L\'aplicació que s\'està patxant ara i tot el que encara és a la cua es cancel·larà</string>
+    <string name="batch_patch_stop_description">L\'aplicació actual i la resta de la cua s\'annularan</string>
     <!-- Label of a footer button beside "Done". Keep it short, a longer one moves the buttons onto two rows -->
     <string name="batch_patch_install_all">Instal·lar-ho tot</string>
     <string name="batch_patch_install_failed">Error en la instal·lació</string>
@@ -530,7 +537,7 @@ Per obtenir els millors resultats, aquesta aplicació recomana patxar un &lt;b&g
     <string name="batch_queue_clear_title">Netejar la cua?</string>
     <string name="batch_queue_clear_description">Totes les aplicacions seran eliminades de la cua</string>
     <string name="batch_queue_keep_title">Conserveu la cua?</string>
-    <string name="batch_queue_keep_description">Les aplicacions en cua esperaran a la pantalla d\'inici per ser iniciades més tard</string>
+    <string name="batch_queue_keep_description">La cua espera a la pantalla d\'inici fins que l\'inicies</string>
     <string name="batch_queue_keep">Conserva</string>
     <string name="shortcut_repatch_short">Tornar a pedaçar</string>
     <string name="shortcut_repatch_long">Torna a patxar les aplicacions desactualitzades</string>
@@ -664,6 +671,8 @@ Per obtenir els millors resultats, aquesta aplicació recomana patxar un &lt;b&g
     <string name="patcher_conflict_title">Conflicte de paquet</string>
     <string name="patcher_conflict_subtitle">Has de desinstal·lar la versió existent</string>
     <string name="patcher_conflict_hint">L\'aplicació patxada utilitza un certificat diferent de la versió instal·lada. Desinstal·lar-la esborrarà totes les dades de l\'aplicació</string>
+    <!-- The patched APK is for another kind of device, such as TV or Wear OS, so it may not start on this one -->
+    <string name="patcher_built_for_other_device">Creat per a %s, així que potser no s\'iniciï aquí. Desa\'l per instal·lar-lo en aquest dispositiu</string>
     <string name="patcher_installed_conflict_title">Cal desinstal·lar</string>
     <string name="patcher_installed_conflict_body">"Morphe signa les aplicacions patxades amb el seu propi certificat, que és diferent de l'original. Android requereix eliminar la versió existent abans que es pugui instal·lar l'aplicació patxada.
 
@@ -759,7 +768,7 @@ Desinstal·lar-la esborrarà permanentment totes les dades de l'aplicació"</str
     <string name="plugin_activity_dialog_body">Es requereix la interacció de l\'usuari per procedir amb aquest plugin</string>
     <string name="patcher_process_killed_message">El sistema ha aturat el patxador abans que acabés, normalment per alliberar memòria. Tanca altres aplicacions i torna-ho a intentar</string>
     <!-- Shown once Morphe is back after it was closed in the middle of patching, for a reason other than low memory. -->
-    <string name="patcher_interrupted_message">Morphe s\'ha tancat abans que s\'acabés el procés de patch, per la qual cosa no s\'ha patchat res. Torna-ho a intentar</string>
+    <string name="patcher_interrupted_message">Morphe s\'ha tancat abans que el patxat s\'acabés. Torna-ho a intentar</string>
     <!-- "%1$s" is where the setting is, such as "Settings > Patcher > Use embedded VM", built from the names on those screens. -->
     <string name="patcher_process_crashed_message">El patxador ha fallat abans de finalitzar. Si torna a passar, desactiva %1$s i informa del problema amb el registre</string>
     <!-- Shown when a run fills the heap it was given. "%1$s" is the heap in megabytes. -->
@@ -868,14 +877,17 @@ Desinstal·lar-la esborrarà permanentment totes les dades de l'aplicació"</str
     <string name="settings_appearance_translations_info_title">És possible que faltin traduccions o que aquestes estiguin incompletes per a alguns idiomes</string>
     <!-- Settings - Appearance Tab - Interface Scale -->
     <string name="settings_appearance_ui_scale">Escala de la interfície</string>
-    <!-- Settings - Appearance Tab - Home Screen Section -->
+    <!-- Settings - Appearance Tab - Screens Section -->
     <string name="settings_appearance_home_screen">Pantalla d\'inici</string>
+    <string name="settings_appearance_screens">Pantalles</string>
     <string name="settings_appearance_greeting_phrases">Frases de salutació</string>
     <string name="settings_appearance_greeting_phrases_subtitle">Mostra un missatge de salutació</string>
     <string name="settings_appearance_repatch_notice">Avís de re-patch</string>
     <string name="settings_appearance_repatch_notice_description">Mostra un bàner quan les aplicacions patxades es poden tornar a patxar</string>
     <string name="settings_appearance_more_apps_card">Targeta de més aplicacions</string>
     <string name="settings_appearance_more_apps_card_description">Mostra una targeta sota les aplicacions que porta als patxes de la comunitat</string>
+    <string name="settings_appearance_games_button">Botó de jocs</string>
+    <string name="settings_appearance_games_button_description">Mostra un botó per als mini-jocs mentre es patcha i al resultat</string>
     <string name="settings_appearance_app_card_colors">Colors de la targeta</string>
     <string name="settings_appearance_app_card_colors_default">Per defecte</string>
     <string name="settings_appearance_app_card_colors_default_description">Assigna a cada aplicació i font un color propi</string>
@@ -1246,7 +1258,7 @@ Detalls: %2$s"</string>
     <string name="settings_system_apks_delete_all_confirm">Això eliminarà permanentment els fitxers APK desats que s\'hi mostren</string>
     <string name="settings_system_apks_delete_selected_title">Eliminar els APK seleccionats?</string>
     <string name="settings_system_apks_delete_selected_confirm">Això eliminarà permanentment els fitxers APK seleccionats</string>
-    <string name="settings_system_apks_deleted_all">APKs eliminades correctament</string>
+    <string name="settings_system_apks_deleted_all">APKs eliminats</string>
     <string name="settings_system_apks_delete_failed">Alguns fitxers APK no s\'han pogut eliminar</string>
     <string name="settings_system_apks_export_zip_success">APKs seleccionades exportades</string>
     <string name="settings_system_apks_export_zip_failed">S\'ha produït un error en exportar les APKs seleccionades</string>
@@ -1269,8 +1281,8 @@ Detalls: %2$s"</string>
     <string name="settings_system_storage_temporary_title">Fitxers temporals</string>
     <string name="settings_system_storage_temporary_description">Fitxers de treball creats durant el patxat</string>
     <string name="settings_system_storage_clear_all">Netejar totes les memòries cau</string>
-    <string name="settings_system_storage_clear_all_description">Allibera tot l\'espai de memòria cau recuperable d\'una vegada</string>
-    <string name="settings_system_storage_clear_all_confirm">Això neteja les respostes de xarxa emmagatzemades, les còpies d\'instal·lador preparades i els fitxers temporals. Es conserven els APK originals i els patxats</string>
+    <string name="settings_system_storage_clear_all_description">Tots els caches llistats a dalt</string>
+    <string name="settings_system_storage_clear_all_confirm">Es netejaran tots els caches d\'aunt. Els APKs originals i els patxats es conserven</string>
     <string name="settings_system_storage_cleared">S\'han alliberat %s</string>
     <string name="settings_system_storage_patch_running_warning">Hi ha un patxat en curs que utilitza aquests fitxers. Si els esborres ara, fallarà</string>
     <string name="settings_system_storage_clear_anyway">Esborra igualment</string>
@@ -1278,14 +1290,14 @@ Detalls: %2$s"</string>
     <string name="settings_system_storage_open_app_info_title">Obre l\'emmagatzematge de l\'aplicació Android</string>
     <string name="settings_system_storage_open_app_info_description">Gestiona o esborra totes les dades de Morphe a través dels ajustos del sistema</string>
     <string name="settings_system_save_original_apks_title">Conservar els APK originals</string>
-    <string name="settings_system_save_original_apks_description">Desa l\'APK pre-patch perquè es pugui reutilitzar per a un nou patch sense haver de seleccionar el fitxer novament</string>
+    <string name="settings_system_save_original_apks_description">Reutilitza l\'APK original en tornar a aplicar el patch, sense haver de triar el fitxer novament</string>
     <string name="settings_system_save_patched_apks_title">Conservar els APK patxats</string>
-    <string name="settings_system_save_patched_apks_description">Desa una còpia de l\'APK patxat per a una exportació posterior o per reinstal·lar-lo des del gestor</string>
+    <string name="settings_system_save_patched_apks_description">Conserva una còpia per exportar-la o reinstal·lar-la més tard</string>
     <!-- Settings - System Tab - Storage Management - Patched APKs Management -->
     <string name="settings_system_patched_apks_title">APKs patxades</string>
     <string name="settings_system_patched_apks_empty">Encara no s\'han desat APKs patxats</string>
     <string name="settings_system_patched_apks_delete_title">Esborrar l\'APK patxat?</string>
-    <string name="settings_system_patched_apks_deleted">L\'APK patxat s\'ha esborrat correctament</string>
+    <string name="settings_system_patched_apks_deleted">APK amb el patch eliminat</string>
     <string name="settings_system_patched_apks_delete_all_title">Eliminar totes les APKs retallades?</string>
     <!-- Settings - System Tab - Storage Management - Original APKs Management -->
     <string name="settings_system_original_apks_title">APKs originals</string>

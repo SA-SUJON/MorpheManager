@@ -9,6 +9,8 @@
     <string name="home_app_status_newer_patches">Paistí nua</string>
     <!-- Mark on the card of an app built for a device other than a phone -->
     <string name="form_factor_tv">Teilifís</string>
+    <!-- Named beside the other marks when one app has a build for a phone and for another device -->
+    <string name="form_factor_mobile">Guthán</string>
     <string name="form_factor_automotive">Feithicleach</string>
     <string name="home_no_patches_available">Níl aon phaistí ar fáil</string>
     <string name="home_app_hide_title">Folaigh an aip seo?</string>
@@ -359,6 +361,10 @@ Roghnaigh cá as a bhfaighfear an APK"</string>
     <string name="expert_mode_recommended">Paistí molta</string>
     <string name="expert_mode_reset_to_default_done">Paistí molta curtha i bhfeidhm</string>
     <string name="expert_mode_selected_count">%1$s de %2$s roghnaithe</string>
+    <!-- Which build of an app with builds for several devices the patches are for, such as TV or Wear OS -->
+    <string name="expert_mode_form_factor">Donn tógáil %s</string>
+    <!-- The same for the phone build, named as a common noun rather than by its mark -->
+    <string name="expert_mode_form_factor_mobile">Donn tógáil fhóin</string>
     <string name="expert_mode_saved_selection">Rogha sábháilte</string>
     <string name="expert_mode_restore_saved_done">Athchóiríodh an rogha sábháilte</string>
     <string name="expert_mode_copy_from_bundle_no_patches">Níl aon phaistí comhoiriúnacha sa phacáiste seo</string>
@@ -377,11 +383,11 @@ Roghnaigh cá as a bhfaighfear an APK"</string>
     <string name="home_invalid_signature_title">APK neamhfhíoraithe</string>
     <string name="home_invalid_signature_message">Ní hionann an APK a roghnaigh tú do &lt;b&gt;%s&lt;/b&gt; agus an deimhniú sínithe a bhfuiltear ag súil leis. Seans go bhfuil sé modhnaithe nó go bhfuil sé ó fhoinse neamhiontaofa.</string>
     <string name="home_invalid_signature_badge">B’fhéidir nach é an APK seo an bunleagan</string>
-    <string name="home_invalid_signature_broken_message">Ní tharla seiceáil sínithe don APK a roghnaigh tú do &lt;b&gt;%s&lt;/b&gt;. Tá sé damaged go háireachtach nó ní raibh sé íoslódáilte go hiomlán go fóill, mar sin íoslaodhaigh é arís nó roghnaigh comhad eile</string>
-    <string name="home_invalid_signature_broken_badge">Seacta gur damaged nó go bhfuil an APK seo neamhiomlán</string>
-    <string name="home_invalid_signature_expected">Ceadbraitheachateach iontais</string>
-    <string name="home_invalid_signature_actual">Ceadbraitheachateach an APK</string>
-    <string name="home_invalid_signature_none">Níl aon shínníú bailí ann</string>
+    <string name="home_invalid_signature_broken_message">Theipeann ar an seiceáil sínithe i gcás an chomhaid APK a roghnaigh tú do &lt;b&gt;%s&lt;/b&gt;. Is dócha go bhfuil sé damáistithe nó nár íoslódáladh go hiomlán é go fóill; mar sin, íoslódáil arís é nó roghnaigh comhad eile.</string>
+    <string name="home_invalid_signature_broken_badge">D’fhéadfadh an APK seo a bheith damáistithe nó neamhiomlán.</string>
+    <string name="home_invalid_signature_expected">Teastas ionchais</string>
+    <string name="home_invalid_signature_actual">Teastas an APK</string>
+    <string name="home_invalid_signature_none">Gan síniú bailí</string>
     <string name="home_split_apk_warning_title">APK scoilte braite</string>
     <string name="home_split_apk_warning_message">"Is pacáiste APK é an comhad seo
 (&lt;b&gt;APKM / APKS / XAPK&lt;/b&gt;).
@@ -489,7 +495,8 @@ Chun na torthaí is fearr a fháil, molann an aip seo paiste a chur ar &lt;b&gt;
     <string name="batch_patch_preparing_next">Ag ullmhú an chéad aip eile…</string>
     <string name="batch_patch_progress_counter">Ag paisteáil %1$s de %2$s</string>
     <string name="batch_patch_summary">%1$s paisteáilte, theip ar %2$s, scipeáil %3$s</string>
-    <string name="batch_patch_saved_hint">Tá na haipeanna paisteáilte sábháilte. Suiteáil iad anois, nó níos déanaí ón liosta APK paisteáilte sna socruithe.</string>
+    <string name="batch_patch_saved_hint">Tá na hAPKs paisteáilte sábháilte. Suiteáil iad anois nó níos déanaí ón scáileán baile</string>
+    <string name="batch_patch_not_kept_hint">Ní choinnítear na hAPKs paisteáilte. Suiteáil nó easportaigh iad sula ndúsann tú an scáileán seo</string>
     <string name="batch_patch_multiple_sources">Comhcheanglaíonn roinnt aipeanna paistí ó níos mó ná foinse amháin, rud a d’fhéadfadh coimhlintí a chruthú</string>
     <string name="batch_patch_needs_apk">Níl aon APK ar fáil, ceangail comhad</string>
     <string name="batch_patch_wrong_package">Is le %s an comhad ceangailte</string>
@@ -504,22 +511,22 @@ Chun na torthaí is fearr a fháil, molann an aip seo paiste a chur ar &lt;b&gt;
     <string name="batch_patch_apk_selected">Roghnóladh APK</string>
     <string name="batch_patch_auto_download_stopped">Tá íoslódálacha uathoibríocha APK stoptha</string>
     <string name="batch_patch_auto_download_stop">Stad íoslódálacha</string>
-    <string name="batch_patch_auto_download_kept">Níorbh fhéidir an APK a íoslódáladh a úsáid, mar sin coinnítear an ceann roimhe seo.</string>
+    <string name="batch_patch_auto_download_kept">Níorbh fhéidir an APK a íoslódáladh do %s a úsáid, mar sin coinnítear an ceann roimhe seo</string>
     <string name="batch_patch_edit_patches">Roghnaigh paistí</string>
     <string name="batch_patch_state_no_apk">Gan APK</string>
     <string name="batch_patch_state_no_patches">Gan paistí</string>
     <string name="batch_patch_state_no_selection">Gan aon roghnaithe</string>
     <string name="batch_patch_no_selection">Níl aon cheann de na patais atá ar fáil roghnaithe</string>
     <string name="batch_patch_policy_install">Suiteáil nuair a bheidh sé críochnaithe</string>
-    <string name="batch_patch_policy_install_description">Suiteálann sé gach aip phaisteáilte díreach tar éis don scuaine a bheith críochnaithe. Coinníonn sé na APKanna le haghaidh níos déanaí má bhíonn sé múchta.</string>
+    <string name="batch_patch_policy_install_description">Suiteálann sé gach aip a bhfuil paiste curtha uirthi nuair a bhíonn an scuaine críochnaithe. Má roghnaítear \'As\', fágfar na comhaid APK ar an scréin seo</string>
     <string name="batch_patch_policy_mount">Gléas nuair a bheidh sé críochnaithe</string>
-    <string name="batch_patch_policy_mount_description">Suiteálann sé gach aip a bhfuil paiste curtha uirthi nuair a bhíonn an scuaine críochnaithe. Má roghnaítear \'As\', coinnítear na comhaid APK le húsáid níos déanaí.</string>
+    <string name="batch_patch_policy_mount_description">Suiteálann sé gach aip a bhfuil paiste curtha uirthi nuair a bhíonn an scuaine críochnaithe. Má roghnaítear \'As\', fágfar na comhaid APK ar an scréin seo</string>
     <string name="batch_patch_policy_install_mount">Suiteáil nó gléas nuair a bheidh sé críochnaithe</string>
-    <string name="batch_patch_policy_install_mount_description">Suiteálann nó feistíonn sé gach aip a bhfuil paiste curtha i bhfeidhm uirthi nuair a bhíonn an scuaine críochnaithe. Má roghnaítear \'As\', coinnítear na comhaid APK le húsáid níos déanaí.</string>
+    <string name="batch_patch_policy_install_mount_description">Suiteálann nó feistíonn sé gach aip a bhfuil paiste curtha i bhfeidhm uirthi nuair a bhíonn an scuaine críochnaithe. Má roghnaítear \'As\', fágfar na comhaid APK ar an scáileán seo</string>
     <!-- Label of a footer button beside "Close". Keep it short, a longer one moves the buttons onto two rows -->
     <string name="batch_patch_start">Tosaigh</string>
     <string name="batch_patch_stop_title">Stop a chur le paistí baisce?</string>
-    <string name="batch_patch_stop_description">Cuirfear ar ceal an aip atá á paisteáil faoi láthair agus gach rud atá fós i scuaine</string>
+    <string name="batch_patch_stop_description">Cuirfear an current aip agus an chuid eile den scuaine ar stop</string>
     <!-- Label of a footer button beside "Done". Keep it short, a longer one moves the buttons onto two rows -->
     <string name="batch_patch_install_all">Suiteáil gach rud</string>
     <string name="batch_patch_install_failed">Theip ar an suiteáil</string>
@@ -530,7 +537,7 @@ Chun na torthaí is fearr a fháil, molann an aip seo paiste a chur ar &lt;b&gt;
     <string name="batch_queue_clear_title">Glan an scuaine?</string>
     <string name="batch_queue_clear_description">Bainfear gach aip den scuaine</string>
     <string name="batch_queue_keep_title">An líne a choinneáil?</string>
-    <string name="batch_queue_keep_description">Fanfaidh na feidhmchláir atá sa scuaine ar an scáileán baile go dtí go seolfar iad níos déanaí</string>
+    <string name="batch_queue_keep_description">Fanfaidh an scuaine ar an scáileán baile go dtí go seolfaidh tú é</string>
     <string name="batch_queue_keep">Coinnigh</string>
     <string name="shortcut_repatch_short">Athphaisteáil</string>
     <string name="shortcut_repatch_long">Athphaisteáil aipeanna atá as dáta</string>
@@ -664,6 +671,8 @@ Chun na torthaí is fearr a fháil, molann an aip seo paiste a chur ar &lt;b&gt;
     <string name="patcher_conflict_title">Coinbhleacht pacáiste</string>
     <string name="patcher_conflict_subtitle">Ní mór duit an leagan reatha a dhíshuiteáil</string>
     <string name="patcher_conflict_hint">Úsáideann an aip phaisteáilte deimhniú difriúil ón leagan suiteáilte. Scriosfaidh díshuiteáil gach sonraí aip</string>
+    <!-- The patched APK is for another kind of device, such as TV or Wear OS, so it may not start on this one -->
+    <string name="patcher_built_for_other_device">Tógtha do %s, mar sin seans go mbeidh sé gan tús anseo. Sábháil é chun é a shuíomh ar an ngírseál sin</string>
     <string name="patcher_installed_conflict_title">Díshuiteáil riachtanach</string>
     <string name="patcher_installed_conflict_body">"Síníonn Morphe aipeanna paisteáilte lena theastas féin, atá difriúil ón mbunleagan. Éilíonn Android an leagan atá ann cheana a bhaint sula bhféadfar an aip phaisteáilte a shuiteáil.
 
@@ -759,7 +768,7 @@ Scriosfaidh díshuiteáil gach sonraí aip go buan."</string>
     <string name="plugin_activity_dialog_body">Tá idirghníomhaíocht úsáideora ag teastáil chun dul ar aghaidh leis an mbreiseán seo</string>
     <string name="patcher_process_killed_message">Chuir an córas stop leis an gclár paisteála sular chríochnaigh sé, de ghnáth chun cuimhne a shaoradh. Dún aipeanna eile agus bain triail as arís.</string>
     <!-- Shown once Morphe is back after it was closed in the middle of patching, for a reason other than low memory. -->
-    <string name="patcher_interrupted_message">Dúnadh Morphe sular críochnaíodh an paisteáil, mar sin ní dhearnadh aon phaisteáil. Bain triail as arís</string>
+    <string name="patcher_interrupted_message">Dúnadh Morphe sular críochnaíodh an paisteáil. Bain triail as arís</string>
     <!-- "%1$s" is where the setting is, such as "Settings > Patcher > Use embedded VM", built from the names on those screens. -->
     <string name="patcher_process_crashed_message">Thit an uirlis paistithe as a chéile sular chríochnaigh sí. Má tharlaíonn sé arís, múch %1$s agus tuairiscigh an fhadhb, ag cur an logchomhaid san áireamh.</string>
     <!-- Shown when a run fills the heap it was given. "%1$s" is the heap in megabytes. -->
@@ -868,14 +877,17 @@ Scriosfaidh díshuiteáil gach sonraí aip go buan."</string>
     <string name="settings_appearance_translations_info_title">D’fhéadfadh aistriúcháin do roinnt teangacha a bheith ar iarraidh nó neamhiomlán</string>
     <!-- Settings - Appearance Tab - Interface Scale -->
     <string name="settings_appearance_ui_scale">Scála comhéadain</string>
-    <!-- Settings - Appearance Tab - Home Screen Section -->
+    <!-- Settings - Appearance Tab - Screens Section -->
     <string name="settings_appearance_home_screen">Home screen</string>
+    <string name="settings_appearance_screens">Scáileáin</string>
     <string name="settings_appearance_greeting_phrases">Frásaí beannachta</string>
     <string name="settings_appearance_greeting_phrases_subtitle">Taispeánann sé teachtaireacht bheannachta</string>
     <string name="settings_appearance_repatch_notice">Fógra athphaisteála</string>
     <string name="settings_appearance_repatch_notice_description">Taispeánann sé bratach nuair is féidir aipeanna paisteáilte a phaisteáil arís</string>
     <string name="settings_appearance_more_apps_card">Cárta tuilleadh aipeanna</string>
     <string name="settings_appearance_more_apps_card_description">Taispeánann sé cárta faoi na haipeanna a threoraíonn chuig paistí pobail</string>
+    <string name="settings_appearance_games_button">Cnaipe na gcluichí</string>
+    <string name="settings_appearance_games_button_description">Taispeánann sé cnaipe chuig na mionchluichí le linn an phatchála agus ag an gcéim torthaí</string>
     <string name="settings_appearance_app_card_colors">Dathanna cártaí</string>
     <string name="settings_appearance_app_card_colors_default">Réamhshocrú</string>
     <string name="settings_appearance_app_card_colors_default_description">Sann dath ar leith do gach aip agus foinse</string>
@@ -1244,7 +1256,7 @@ Sonraí: %2$s"</string>
     <string name="settings_system_apks_delete_all_confirm">Scriosfaidh sé seo na comhaid APK sábháilte a thaispeántar anseo go buan</string>
     <string name="settings_system_apks_delete_selected_title">Scrios na APKanna roghnaithe?</string>
     <string name="settings_system_apks_delete_selected_confirm">Scriosfaidh sé seo na comhaid APK roghnaithe go buan</string>
-    <string name="settings_system_apks_deleted_all">APKanna scriosta go rathúil</string>
+    <string name="settings_system_apks_deleted_all">APKanna scaipte</string>
     <string name="settings_system_apks_delete_failed">Níorbh fhéidir roinnt comhad APK a scriosadh</string>
     <string name="settings_system_apks_export_zip_success">APKanna roghnaithe easpórtáilte</string>
     <string name="settings_system_apks_export_zip_failed">Theip ar na APKanna roghnaithe a onnmhairiú</string>
@@ -1267,8 +1279,8 @@ Sonraí: %2$s"</string>
     <string name="settings_system_storage_temporary_title">Comhaid shealadacha</string>
     <string name="settings_system_storage_temporary_description">Comhaid oibre a cruthaíodh le linn paisteála</string>
     <string name="settings_system_storage_clear_all">Glan na taisceanna go léir</string>
-    <string name="settings_system_storage_clear_all_description">Saorann sé an spás taisce in-athúsáidte go léir ag an am céanna</string>
-    <string name="settings_system_storage_clear_all_confirm">Glanann sé seo freagraí líonra taisceáilte, cóipeanna suiteálaí céimnithe, agus comhaid shealadacha. Coinnítear APKanna bunaidh agus paisteáilte.</string>
+    <string name="settings_system_storage_clear_all_description">Gach cache atá liostáilte thuas</string>
+    <string name="settings_system_storage_clear_all_confirm">Glanfar gach cache thuas. Coinnfí quean APKanna arna baisteála agus na ಹೇ APKanna arna baisteála</string>
     <string name="settings_system_storage_cleared">%s saortha</string>
     <string name="settings_system_storage_patch_running_warning">Tá paiste ag rith agus úsáideann sé na comhaid seo. Má ghlanann tú iad anois, teipfidh air.</string>
     <string name="settings_system_storage_clear_anyway">Glan ar aon nós</string>
@@ -1276,14 +1288,14 @@ Sonraí: %2$s"</string>
     <string name="settings_system_storage_open_app_info_title">Oscail stóras aipeanna Android</string>
     <string name="settings_system_storage_open_app_info_description">Bainistigh nó glan na sonraí Morphe go léir trí shocruithe an chórais</string>
     <string name="settings_system_save_original_apks_title">Coinnigh na APKanna bunaidh</string>
-    <string name="settings_system_save_original_apks_description">Sábháil an APK réamhphaiste ionas gur féidir é a athúsáid le haghaidh athphaisteála gan an comhad a roghnú arís.</string>
+    <string name="settings_system_save_original_apks_description">Athúsáid an APK tundra nuair a bhíonn ag athphaisteáil, gan an comhad a roghnú arís</string>
     <string name="settings_system_save_patched_apks_title">Coinnigh na APKanna paisteáilte</string>
-    <string name="settings_system_save_patched_apks_description">Sábháil cóip den APK paisteáilte le haghaidh easpórtála níos déanaí nó le haghaidh athshuiteála ón mbainisteoir</string>
+    <string name="settings_system_save_patched_apks_description">Coinnigh cóip chun a soilsiú nó a athinsideáil níos déanaí</string>
     <!-- Settings - System Tab - Storage Management - Patched APKs Management -->
     <string name="settings_system_patched_apks_title">APKanna paisteáilte</string>
     <string name="settings_system_patched_apks_empty">Níl aon APKanna paisteáilte sábháilte fós</string>
     <string name="settings_system_patched_apks_delete_title">APK paisteáilte a scriosadh?</string>
-    <string name="settings_system_patched_apks_deleted">Scriosadh an APK paisteáilte go rathúil</string>
+    <string name="settings_system_patched_apks_deleted">APK paisteáilte scartha</string>
     <string name="settings_system_patched_apks_delete_all_title">Scrios gach APK paisteáilte?</string>
     <!-- Settings - System Tab - Storage Management - Original APKs Management -->
     <string name="settings_system_original_apks_title">APKanna Bunaidh</string>

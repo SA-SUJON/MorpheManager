@@ -9,6 +9,8 @@
     <string name="home_app_status_newer_patches">Новыя патчы</string>
     <!-- Mark on the card of an app built for a device other than a phone -->
     <string name="form_factor_tv">ТБ</string>
+    <!-- Named beside the other marks when one app has a build for a phone and for another device -->
+    <string name="form_factor_mobile">Телефон</string>
     <string name="form_factor_automotive">Аўтамабілі</string>
     <string name="home_no_patches_available">Няма даступных патчаў</string>
     <string name="home_app_hide_title">Схаваць гэтую праграму?</string>
@@ -360,6 +362,10 @@
     <string name="expert_mode_recommended">Рэкамендаваныя патчы</string>
     <string name="expert_mode_reset_to_default_done">Рэкамендаваныя патчы ўжытыя</string>
     <string name="expert_mode_selected_count">%1$s з %2$s выбрана</string>
+    <!-- Which build of an app with builds for several devices the patches are for, such as TV or Wear OS -->
+    <string name="expert_mode_form_factor">Для зборкі %s</string>
+    <!-- The same for the phone build, named as a common noun rather than by its mark -->
+    <string name="expert_mode_form_factor_mobile">Для тэлефоннай зборкі</string>
     <string name="expert_mode_saved_selection">Захаваны выбар</string>
     <string name="expert_mode_restore_saved_done">Захаваны выбар аднаўлены</string>
     <string name="expert_mode_copy_from_bundle_no_patches">У гэтым пакеце няма адпаведных патчаў</string>
@@ -490,7 +496,8 @@
     <string name="batch_patch_preparing_next">Падрыхтоўка наступнай праграмы…</string>
     <string name="batch_patch_progress_counter">Патчынг %1$s з %2$s</string>
     <string name="batch_patch_summary">%1$s патчана, %2$s памылак, %3$s прапушчана</string>
-    <string name="batch_patch_saved_hint">Патчаныя праграмы захаваны. Усталюйце іх зараз або пазней са спісу патчаных APK ў наладах</string>
+    <string name="batch_patch_saved_hint">Патчаныя APK захаваны. Усталюйце іх зараз або пазней з галоўнага экрана</string>
+    <string name="batch_patch_not_kept_hint">Патчаныя APK не захоўваюцца. Усталюйце або экспартуйце іх перад закрыццём гэтага экрана</string>
     <string name="batch_patch_multiple_sources">Некаторыя праграмы аб\'ядноўваюць патчы з некалькіх крыніц, што можа выклікаць канфлікты</string>
     <string name="batch_patch_needs_apk">APK недаступны, прыкрэпіце файл</string>
     <string name="batch_patch_wrong_package">Прыкрэплены файл належыць %s</string>
@@ -505,22 +512,22 @@
     <string name="batch_patch_apk_selected">APK выбраны</string>
     <string name="batch_patch_auto_download_stopped">Аўтаматычнае спампоўванне APK спынена</string>
     <string name="batch_patch_auto_download_stop">Спыніць спампоўванне</string>
-    <string name="batch_patch_auto_download_kept">Спампоўваны APK не ўдалося выкарыстаць, таму папярэдні застаецца</string>
+    <string name="batch_patch_auto_download_kept">APK, спампоўлены для %s, не мог быць выкарыстаны, таму захаваны папярэдні</string>
     <string name="batch_patch_edit_patches">Выберыце патчы</string>
     <string name="batch_patch_state_no_apk">Няма APK</string>
     <string name="batch_patch_state_no_patches">Няма патчаў</string>
     <string name="batch_patch_state_no_selection">Нічога не выбрана</string>
     <string name="batch_patch_no_selection">Ніводзін з даступных патчаў не выбраны</string>
     <string name="batch_patch_policy_install">Усталяваць па завяршэнні</string>
-    <string name="batch_patch_policy_install_description">Усталёўвае кожную патчаную праграму адразу пасля завяршэння чаргі. Выключэнне захавае APK для наступнага выкарыстання</string>
+    <string name="batch_patch_policy_install_description">Усталёўвае кожную патчаную праграму пасля завяршэння чаргі. Выключэнне пакідае APK на гэтым экране</string>
     <string name="batch_patch_policy_mount">Мантаваць па завяршэнні</string>
-    <string name="batch_patch_policy_mount_description">Мантуе кожную патчаную праграму пасля завяршэння чаргі. Выключэнне пакідае APK для наступнага выкарыстання</string>
+    <string name="batch_patch_policy_mount_description">Мантуе кожную патчаную праграму пасля завяршэння чаргі. Выключэнне пакідае APK на гэтым экране</string>
     <string name="batch_patch_policy_install_mount">Усталяваць або мантаваць па завяршэнні</string>
-    <string name="batch_patch_policy_install_mount_description">Усталёўвае або мантуе кожную патчаную праграму пасля завяршэння чаргі. Выключэнне пакідае APK для наступнага выкарыстання</string>
+    <string name="batch_patch_policy_install_mount_description">Усталёўвае або мантуе кожную патчаную праграму пасля завяршэння чаргі. Выключэнне пакідае APK на гэтым экране</string>
     <!-- Label of a footer button beside "Close". Keep it short, a longer one moves the buttons onto two rows -->
     <string name="batch_patch_start">Старт</string>
     <string name="batch_patch_stop_title">Спыніць пакетнае патчаванне?</string>
-    <string name="batch_patch_stop_description">Праграма, якая патчыцца ў дадзены момант, а таксама ўсе астатнія ў чарзе, будуць скасаваны</string>
+    <string name="batch_patch_stop_description">Тэкучая праграма і рэшта чаргі будуць скасаваны</string>
     <!-- Label of a footer button beside "Done". Keep it short, a longer one moves the buttons onto two rows -->
     <string name="batch_patch_install_all">Усталяваць усё</string>
     <string name="batch_patch_install_failed">Усталёўка не ўдалася</string>
@@ -531,7 +538,7 @@
     <string name="batch_queue_clear_title">Ачысціць чаргу?</string>
     <string name="batch_queue_clear_description">Усе праграмы будуць выдалены з чаргі</string>
     <string name="batch_queue_keep_title">Захаваць чаргу?</string>
-    <string name="batch_queue_keep_description">Праграмы ў чардзе будуць чакаць на галоўным экране, каб быць запушчанымі пазней</string>
+    <string name="batch_queue_keep_description">Чарга чакае на галоўным экране, пакуль вы яе не запусціце</string>
     <string name="batch_queue_keep">Захаваць</string>
     <string name="shortcut_repatch_short">Перапатчаць</string>
     <string name="shortcut_repatch_long">Перапатчыць састарэлыя праграмы</string>
@@ -665,6 +672,8 @@
     <string name="patcher_conflict_title">Канфлікт пакетаў</string>
     <string name="patcher_conflict_subtitle">Вам трэба выдаліць існуючую версію</string>
     <string name="patcher_conflict_hint">Прапатчаная праграма выкарыстоўвае іншы сертыфікат, чым усталяваная версія. Выдаленне прывядзе да сцірання ўсіх даных праграмы</string>
+    <!-- The patched APK is for another kind of device, such as TV or Wear OS, so it may not start on this one -->
+    <string name="patcher_built_for_other_device">Збірана для %s, таму можа не запусціцца тут. Захавайце яго, каб усталяваць на гэтай прыладзе</string>
     <string name="patcher_installed_conflict_title">Патрабуецца выдаленне</string>
     <string name="patcher_installed_conflict_body">"Morphe падпісвае прапатчаныя праграмы ўласным сертыфікатам, які адрозніваецца ад арыгінальнага. Android патрабуе выдалення існуючай версіі перад усталёўкай прапатчанай праграмы.
 
@@ -760,7 +769,7 @@
     <string name="plugin_activity_dialog_body">Для працягу працы з гэтым плагінам патрабуецца ўзаемадзеянне карыстальніка</string>
     <string name="patcher_process_killed_message">Сістэма спыніла патчар да яго завяршэння, звычайна для вызвалення памяці. Закрыйце іншыя праграмы і паспрабуйце зноў</string>
     <!-- Shown once Morphe is back after it was closed in the middle of patching, for a reason other than low memory. -->
-    <string name="patcher_interrupted_message">Morphe быў закрыты да завяршэння патчавання, таму нічога не было патчавана. Паспрабуйце яшчэ раз</string>
+    <string name="patcher_interrupted_message">Morphe быў закрыты да завяршэння патчынга. Паспрабуйце яшчэ раз</string>
     <!-- "%1$s" is where the setting is, such as "Settings > Patcher > Use embedded VM", built from the names on those screens. -->
     <string name="patcher_process_crashed_message">Патчар завяршыў працу з памылкай. Калі гэта паўторыцца, выключыце %1$s і паведаміце пра праблему, прыклаўшы лог</string>
     <!-- Shown when a run fills the heap it was given. "%1$s" is the heap in megabytes. -->
@@ -869,14 +878,17 @@
     <string name="settings_appearance_translations_info_title">Пераклады для некаторых моў могуць адсутнічаць або быць няпоўнымі</string>
     <!-- Settings - Appearance Tab - Interface Scale -->
     <string name="settings_appearance_ui_scale">Маштаб інтэрфейсу</string>
-    <!-- Settings - Appearance Tab - Home Screen Section -->
+    <!-- Settings - Appearance Tab - Screens Section -->
     <string name="settings_appearance_home_screen">Галоўны экран</string>
+    <string name="settings_appearance_screens">Экраны</string>
     <string name="settings_appearance_greeting_phrases">Прывітальныя фразы</string>
     <string name="settings_appearance_greeting_phrases_subtitle">Паказвае прывітальнае паведамленне</string>
     <string name="settings_appearance_repatch_notice">Паведамленне аб перапатчынгу</string>
     <string name="settings_appearance_repatch_notice_description">Паказвае банер, калі прапатчаныя праграмы можна перапатчыць</string>
     <string name="settings_appearance_more_apps_card">Больш картак праграм</string>
     <string name="settings_appearance_more_apps_card_description">Паказвае картку пад праграмамі, якая вядзе да патчаў супольнасці</string>
+    <string name="settings_appearance_games_button">Кнопка гульняў</string>
+    <string name="settings_appearance_games_button_description">Паказвае кнопку міні-гульняў падчас патчынга і ў выніках</string>
     <string name="settings_appearance_app_card_colors">Колеры карткі</string>
     <string name="settings_appearance_app_card_colors_default">Звычайны</string>
     <string name="settings_appearance_app_card_colors_default_description">Прызначыце кожнай праграме і крыніцы ўласны колер</string>
@@ -1247,7 +1259,7 @@ morphe_header_custom_dark.png
     <string name="settings_system_apks_delete_all_confirm">Гэта назаўсёды выдаліць захаваныя APK-файлы, паказаныя тут</string>
     <string name="settings_system_apks_delete_selected_title">Выдаліць выбраныя APK?</string>
     <string name="settings_system_apks_delete_selected_confirm">Гэта назаўсёды выдаліць выбраныя файлы APK</string>
-    <string name="settings_system_apks_deleted_all">APK паспяхова выдаленыя</string>
+    <string name="settings_system_apks_deleted_all">APK выдаленыя</string>
     <string name="settings_system_apks_delete_failed">Не ўдалося выдаліць некаторыя файлы APK</string>
     <string name="settings_system_apks_export_zip_success">Выбраныя APK экспартаваны</string>
     <string name="settings_system_apks_export_zip_failed">Не ўдалося экспартаваць выбраныя APK</string>
@@ -1270,8 +1282,8 @@ morphe_header_custom_dark.png
     <string name="settings_system_storage_temporary_title">Часовыя файлы</string>
     <string name="settings_system_storage_temporary_description">Працоўныя файлы, створаныя падчас патчынга</string>
     <string name="settings_system_storage_clear_all">Ачысціць усе кэшы</string>
-    <string name="settings_system_storage_clear_all_description">Адразу вызваляе ўвесь кэш, які можна ачысціць</string>
-    <string name="settings_system_storage_clear_all_confirm">Гэта ачышчае кэшаваныя адказы сеткі, часовыя копіі інсталятара і часовыя файлы. Арыгінальныя і патчаныя APK захоўваюцца</string>
+    <string name="settings_system_storage_clear_all_description">Увесь кэш, пазначаны вышэй</string>
+    <string name="settings_system_storage_clear_all_confirm">Увесь кэш вышэй будзе ачышчаны. Арыгінальныя і патчаныя APK застануцца</string>
     <string name="settings_system_storage_cleared">Вызвалена %s</string>
     <string name="settings_system_storage_patch_running_warning">Зараз выконваецца патчынг, які выкарыстоўвае гэтыя файлы. Іх ачыстка зараз прывядзе да памылкі</string>
     <string name="settings_system_storage_clear_anyway">Усё роўна ачысціць</string>
@@ -1279,14 +1291,14 @@ morphe_header_custom_dark.png
     <string name="settings_system_storage_open_app_info_title">Адкрыць сховішча праграмы Android</string>
     <string name="settings_system_storage_open_app_info_description">Кіруйце данымі Morphe або ачысціце іх праз сістэмныя налады</string>
     <string name="settings_system_save_original_apks_title">Захоўваць арыгінальныя APK</string>
-    <string name="settings_system_save_original_apks_description">Захаваць APK да патча, каб яго можна было выкарыстаць для паўторнага патчавання без паўторнага выбару файла</string>
+    <string name="settings_system_save_original_apks_description">Выкарыстоўваць арыгінальны APK пры паўторным патчынгу, без паўторнага выбару файла</string>
     <string name="settings_system_save_patched_apks_title">Захоўваць патчаныя APK</string>
-    <string name="settings_system_save_patched_apks_description">Захаваць копію патчанага APK для наступнага экспарту або пераўсталёўкі з менеджара</string>
+    <string name="settings_system_save_patched_apks_description">Захаваць копію для экспарту або паўторнай устаноўкі пазней</string>
     <!-- Settings - System Tab - Storage Management - Patched APKs Management -->
     <string name="settings_system_patched_apks_title">Патчаныя APK</string>
     <string name="settings_system_patched_apks_empty">Патчаных APK пакуль не захавана</string>
     <string name="settings_system_patched_apks_delete_title">Выдаліць патчаны APK?</string>
-    <string name="settings_system_patched_apks_deleted">Патчаны APK паспяхова выдалены</string>
+    <string name="settings_system_patched_apks_deleted">Патчаны APK выдалены</string>
     <string name="settings_system_patched_apks_delete_all_title">Выдаліць усе патчаныя APK?</string>
     <!-- Settings - System Tab - Storage Management - Original APKs Management -->
     <string name="settings_system_original_apks_title">Арыгінальныя APK</string>

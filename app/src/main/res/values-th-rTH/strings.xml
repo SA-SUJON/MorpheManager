@@ -9,6 +9,8 @@
     <string name="home_app_status_newer_patches">แพตช์ใหม่</string>
     <!-- Mark on the card of an app built for a device other than a phone -->
     <string name="form_factor_tv">ทีวี</string>
+    <!-- Named beside the other marks when one app has a build for a phone and for another device -->
+    <string name="form_factor_mobile">โทรศัพท์</string>
     <string name="form_factor_automotive">ยานยนต์</string>
     <string name="home_no_patches_available">ไม่มีแพตช์ที่ใช้งานได้</string>
     <string name="home_app_hide_title">ซ่อนแอปนี้หรือไม่?</string>
@@ -359,6 +361,10 @@
     <string name="expert_mode_recommended">แพตช์ที่แนะนำ</string>
     <string name="expert_mode_reset_to_default_done">ใช้แพตช์ที่แนะนำแล้ว</string>
     <string name="expert_mode_selected_count">เลือกแล้ว %1$s จาก %2$s</string>
+    <!-- Which build of an app with builds for several devices the patches are for, such as TV or Wear OS -->
+    <string name="expert_mode_form_factor">สำหรับบิลด์ %s</string>
+    <!-- The same for the phone build, named as a common noun rather than by its mark -->
+    <string name="expert_mode_form_factor_mobile">สำหรับบิลด์โทรศัพท์</string>
     <string name="expert_mode_saved_selection">การเลือกที่บันทึกไว้</string>
     <string name="expert_mode_restore_saved_done">การเลือกที่บันทึกไว้ได้รับการกู้คืนแล้ว</string>
     <string name="expert_mode_copy_from_bundle_no_patches">ไม่พบแพตช์ที่ตรงกันในบันเดิลนี้</string>
@@ -489,7 +495,8 @@
     <string name="batch_patch_preparing_next">กำลังเตรียมแอปถัดไป…</string>
     <string name="batch_patch_progress_counter">กำลังแพตช์ %1$s จาก %2$s</string>
     <string name="batch_patch_summary">%1$s ถูกแพตช์, %2$s ล้มเหลว, %3$s ถูกข้าม</string>
-    <string name="batch_patch_saved_hint">แอปที่แพตช์แล้วถูกบันทึกไว้ ติดตั้งเลย หรือภายหลังได้จากรายการ APK ที่แพตช์แล้วในการตั้งค่า</string>
+    <string name="batch_patch_saved_hint">บันทึก APK ที่แพตช์แล้วแล้ว ติดตั้งตอนนี้หรือภายหลังได้จากหน้าจอหลัก</string>
+    <string name="batch_patch_not_kept_hint">จะไม่มีการเก็บ APK ที่แพตช์แล้ว โปรดติดตั้งหรือส่งออกก่อนปิดหน้าจอนี้</string>
     <string name="batch_patch_multiple_sources">แอปบางตัวรวมแพตช์จากหลายแหล่ง ซึ่งอาจทำให้เกิดข้อขัดแย้ง</string>
     <string name="batch_patch_needs_apk">ไม่มี APK พร้อมใช้งาน, แนบไฟล์</string>
     <string name="batch_patch_wrong_package">ไฟล์ที่แนบมาเป็นของ %s</string>
@@ -504,22 +511,22 @@
     <string name="batch_patch_apk_selected">เลือก APK แล้ว</string>
     <string name="batch_patch_auto_download_stopped">หยุดการดาวน์โหลด APK อัตโนมัติแล้ว</string>
     <string name="batch_patch_auto_download_stop">หยุดการดาวน์โหลด</string>
-    <string name="batch_patch_auto_download_kept">ไม่สามารถใช้งาน APK ที่ดาวน์โหลดมาได้ จึงยังคงใช้ไฟล์เดิมไว้</string>
+    <string name="batch_patch_auto_download_kept">ไม่สามารถใช้ APK ที่ดาวน์โหลดสำหรับ %s ได้ จึงยังคงใช้เวอร์ชันก่อนหน้าไว้</string>
     <string name="batch_patch_edit_patches">เลือกแพตช์</string>
     <string name="batch_patch_state_no_apk">ไม่มี APK</string>
     <string name="batch_patch_state_no_patches">ไม่มีแพตช์</string>
     <string name="batch_patch_state_no_selection">ไม่มีการเลือก</string>
     <string name="batch_patch_no_selection">ไม่มีการเลือกแพตช์ที่พร้อมใช้งาน</string>
     <string name="batch_patch_policy_install">ติดตั้งเมื่อเสร็จสิ้น</string>
-    <string name="batch_patch_policy_install_description">ติดตั้งแอปที่แพตช์ทุกแอปทันทีที่คิวเสร็จสิ้น ปิดจะเก็บ APK ไว้ในภายหลัง</string>
+    <string name="batch_patch_policy_install_description">ติดตั้งทุกแอปที่แพตช์แล้วเมื่อคิวสิ้นสุดลง หากปิดไว้จะทิ้ง APK ไว้ที่หน้าจอนี้</string>
     <string name="batch_patch_policy_mount">เมานต์เมื่อเสร็จสิ้น</string>
-    <string name="batch_patch_policy_mount_description">จะเมานต์ทุกแอปที่แพตช์แล้วเมื่อคิวเสร็จสิ้น การปิดจะเก็บ APK ไว้ใช้ภายหลัง</string>
+    <string name="batch_patch_policy_mount_description">ติดตั้งแอปที่แพตช์แล้วทุกแอปเมื่อคิวสิ้นสุดลง หากปิดไว้ APK จะยังคงอยู่ในหน้าจอนี้</string>
     <string name="batch_patch_policy_install_mount">ติดตั้งหรือเมานต์เมื่อเสร็จสิ้น</string>
-    <string name="batch_patch_policy_install_mount_description">จะติดตั้งหรือเมานต์ทุกแอปที่แพตช์แล้วเมื่อคิวเสร็จสิ้น การปิดจะเก็บ APK ไว้ใช้ภายหลัง</string>
+    <string name="batch_patch_policy_install_mount_description">ติดตั้งหรือเมาท์ทุกแอปที่แพตช์แล้วเมื่อคิวเสร็จสิ้น หากปิดไว้จะทิ้ง APK ไว้ในหน้าจอนี้</string>
     <!-- Label of a footer button beside "Close". Keep it short, a longer one moves the buttons onto two rows -->
     <string name="batch_patch_start">เริ่มต้น</string>
     <string name="batch_patch_stop_title">หยุดแพตช์กลุ่ม?</string>
-    <string name="batch_patch_stop_description">แอปที่กำลังได้รับการแพตช์อยู่ตอนนี้และทุกอย่างที่ยังอยู่ในคิวจะถูกยกเลิก</string>
+    <string name="batch_patch_stop_description">แอปปัจจุบันและส่วนที่เหลือของคิวจะถูกยกเลิก</string>
     <!-- Label of a footer button beside "Done". Keep it short, a longer one moves the buttons onto two rows -->
     <string name="batch_patch_install_all">ติดตั้งทั้งหมด</string>
     <string name="batch_patch_install_failed">ติดตั้งล้มเหลว</string>
@@ -530,7 +537,7 @@
     <string name="batch_queue_clear_title">ล้างคิว?</string>
     <string name="batch_queue_clear_description">แอปทั้งหมดจะถูกนำออกจากคิว</string>
     <string name="batch_queue_keep_title">เก็บคิวไว้หรือไม่?</string>
-    <string name="batch_queue_keep_description">แอปที่อยู่ในคิวจะรออยู่ที่หน้าจอหลักเพื่อเริ่มการทำงานในภายหลัง</string>
+    <string name="batch_queue_keep_description">คิวจะรออยู่ที่หน้าจอหลักจนกว่าคุณจะเริ่มใช้งาน</string>
     <string name="batch_queue_keep">เก็บไว้</string>
     <string name="shortcut_repatch_short">แพตช์ซ้ำ</string>
     <string name="shortcut_repatch_long">แพตช์แอปที่ล้าสมัยซ้ำ</string>
@@ -664,6 +671,8 @@
     <string name="patcher_conflict_title">ข้อขัดแย้งของแพ็กเกจ</string>
     <string name="patcher_conflict_subtitle">คุณต้องถอนการติดตั้งเวอร์ชันที่มีอยู่ออกก่อน</string>
     <string name="patcher_conflict_hint">แอปที่ปรับแก้แล้วใช้ใบรับรองที่แตกต่างจากเวอร์ชันที่ติดตั้ง การถอนการติดตั้งจะลบข้อมูลแอปทั้งหมด</string>
+    <!-- The patched APK is for another kind of device, such as TV or Wear OS, so it may not start on this one -->
+    <string name="patcher_built_for_other_device">สร้างขึ้นสำหรับ %s ดังนั้นอาจไม่สามารถเริ่มทำงานที่นี่ได้ ให้บันทึกเพื่อติดตั้งในอุปกรณ์นั้น</string>
     <string name="patcher_installed_conflict_title">ต้องถอนการติดตั้ง</string>
     <string name="patcher_installed_conflict_body">"Morphe ลงนามแอปที่แพตช์ด้วยใบรับรองของตัวเอง ซึ่งแตกต่างจากใบรับรองเดิม Android กำหนดให้ถอนการติดตั้งแอปเวอร์ชันเดิมก่อนจึงจะสามารถติดตั้งแอปที่แพตช์แล้วได้
 
@@ -759,7 +768,7 @@
     <string name="plugin_activity_dialog_body">ปลั๊กอินนี้ต้องการการโต้ตอบจากผู้ใช้เพื่อดำเนินการต่อ</string>
     <string name="patcher_process_killed_message">ระบบหยุดการทำงานของตัวแพตช์ก่อนที่จะเสร็จสิ้น โดยปกติแล้วเพื่อเพิ่มพื้นที่ว่างในหน่วยความจำ โปรดปิดแอปอื่นๆ แล้วลองใหม่อีกครั้ง</string>
     <!-- Shown once Morphe is back after it was closed in the middle of patching, for a reason other than low memory. -->
-    <string name="patcher_interrupted_message">Morphe ถูกปิดก่อนที่การแพตช์จะเสร็จสิ้น ดังนั้นจึงไม่มีการแพตช์สิ่งใด โปรดลองอีกครั้ง</string>
+    <string name="patcher_interrupted_message">Morphe ถูกปิดก่อนที่การแพตช์จะเสร็จสิ้น โปรดลองอีกครั้ง</string>
     <!-- "%1$s" is where the setting is, such as "Settings > Patcher > Use embedded VM", built from the names on those screens. -->
     <string name="patcher_process_crashed_message">ตัวแพตช์หยุดทำงานก่อนที่จะเสร็จสิ้น หากเกิดขึ้นอีก ให้ปิด %1$s และรายงานปัญหาพร้อมบันทึก</string>
     <!-- Shown when a run fills the heap it was given. "%1$s" is the heap in megabytes. -->
@@ -868,14 +877,17 @@
     <string name="settings_appearance_translations_info_title">อาจมีคำแปลสำหรับบางภาษาขาดหายไปหรือไม่สมบูรณ์</string>
     <!-- Settings - Appearance Tab - Interface Scale -->
     <string name="settings_appearance_ui_scale">ขนาดอินเทอร์เฟซ</string>
-    <!-- Settings - Appearance Tab - Home Screen Section -->
+    <!-- Settings - Appearance Tab - Screens Section -->
     <string name="settings_appearance_home_screen">หน้าจอหลัก</string>
+    <string name="settings_appearance_screens">หน้าจอ</string>
     <string name="settings_appearance_greeting_phrases">วลีทักทาย</string>
     <string name="settings_appearance_greeting_phrases_subtitle">แสดงข้อความทักทาย</string>
     <string name="settings_appearance_repatch_notice">ประกาศการแพตช์ซ้ำ</string>
     <string name="settings_appearance_repatch_notice_description">แสดงแบนเนอร์เมื่อแอปที่แพตช์แล้วสามารถแพตช์ซ้ำได้</string>
     <string name="settings_appearance_more_apps_card">การ์ดแอปเพิ่มเติม</string>
     <string name="settings_appearance_more_apps_card_description">แสดงการ์ดใต้แอปที่นำไปสู่แพตช์ชุมชน</string>
+    <string name="settings_appearance_games_button">ปุ่มเกม</string>
+    <string name="settings_appearance_games_button_description">แสดงปุ่มไปยังมินิเกมขณะกำลังแพตช์และในหน้าผลลัพธ์</string>
     <string name="settings_appearance_app_card_colors">สีการ์ด</string>
     <string name="settings_appearance_app_card_colors_default">ค่าเริ่มต้น</string>
     <string name="settings_appearance_app_card_colors_default_description">กำหนดสีเฉพาะให้สำหรับแต่ละแอปและแหล่งที่มา</string>
@@ -1246,7 +1258,7 @@ morphe_header_custom_dark.png
     <string name="settings_system_apks_delete_all_confirm">การดำเนินการนี้จะลบไฟล์ APK ที่บันทึกไว้ที่แสดงไว้ที่นี่อย่างถาวร</string>
     <string name="settings_system_apks_delete_selected_title">ลบไฟล์ APK ที่เลือกหรือไม่</string>
     <string name="settings_system_apks_delete_selected_confirm">การดำเนินการนี้จะลบไฟล์ APK ที่เลือกไว้อย่างถาวร</string>
-    <string name="settings_system_apks_deleted_all">ลบไฟล์ APK สำเร็จแล้ว</string>
+    <string name="settings_system_apks_deleted_all">ลบ APK แล้ว</string>
     <string name="settings_system_apks_delete_failed">ไฟล์ APK บางไฟล์ไม่สามารถลบได้</string>
     <string name="settings_system_apks_export_zip_success">ส่งออก APK ที่เลือกแล้ว</string>
     <string name="settings_system_apks_export_zip_failed">ไม่สามารถส่งออก APK ที่เลือกได้</string>
@@ -1269,8 +1281,8 @@ morphe_header_custom_dark.png
     <string name="settings_system_storage_temporary_title">ไฟล์ชั่วคราว</string>
     <string name="settings_system_storage_temporary_description">ไฟล์ทำงานที่สร้างขึ้นระหว่างการแพตช์</string>
     <string name="settings_system_storage_clear_all">ล้างแคชทั้งหมด</string>
-    <string name="settings_system_storage_clear_all_description">ล้างพื้นที่แคชที่สามารถเรียกคืนได้ทั้งหมดในครั้งเดียว</string>
-    <string name="settings_system_storage_clear_all_confirm">การดำเนินการนี้จะล้างการตอบกลับเครือข่ายที่แคชไว้ สำเนาตัวติดตั้งที่จัดเตรียมไว้ และไฟล์ชั่วคราว ไฟล์ APK ดั้งเดิมและที่แพตช์แล้วจะถูกเก็บไว้</string>
+    <string name="settings_system_storage_clear_all_description">แคชทุกรายการที่ระบุไว้ด้านบน</string>
+    <string name="settings_system_storage_clear_all_confirm">แคชทั้งหมดด้านบนจะถูกล้างออก ไฟล์ APK ต้นฉบับและไฟล์ APK ที่แพตช์แล้วจะยังคงอยู่</string>
     <string name="settings_system_storage_cleared">พื้นที่ว่าง %s</string>
     <string name="settings_system_storage_patch_running_warning">กำลังแพตช์อยู่และใช้ไฟล์เหล่านี้ การลบตอนนี้จะทำให้ล้มเหลว</string>
     <string name="settings_system_storage_clear_anyway">ลบต่อไป</string>
@@ -1278,14 +1290,14 @@ morphe_header_custom_dark.png
     <string name="settings_system_storage_open_app_info_title">เปิดที่เก็บข้อมูลแอป Android</string>
     <string name="settings_system_storage_open_app_info_description">จัดการหรือล้างข้อมูล Morphe ทั้งหมดผ่านการตั้งค่าระบบ</string>
     <string name="settings_system_save_original_apks_title">เก็บ APK ต้นฉบับ</string>
-    <string name="settings_system_save_original_apks_description">บันทึก APK ก่อนแพตช์ เพื่อนำกลับมาแพตช์ใหม่ได้โดยไม่ต้องเลือกไฟล์อีกครั้ง</string>
+    <string name="settings_system_save_original_apks_description">ใช้ APK ต้นฉบับซ้ำเมื่อแพตช์ใหม่ โดยไม่ต้องเลือกไฟล์อีกครั้ง</string>
     <string name="settings_system_save_patched_apks_title">เก็บ APK ที่แพตช์แล้ว</string>
-    <string name="settings_system_save_patched_apks_description">บันทึกสำเนา APK ที่แพตช์แล้วสำหรับการส่งออกหรือติดตั้งภายหลังผ่านตัวจัดการ</string>
+    <string name="settings_system_save_patched_apks_description">เก็บสำเนาไว้เพื่อส่งออกหรือติดตั้งใหม่ในภายหลัง</string>
     <!-- Settings - System Tab - Storage Management - Patched APKs Management -->
     <string name="settings_system_patched_apks_title">APK ที่แพตช์แล้ว</string>
     <string name="settings_system_patched_apks_empty">ยังไม่มี APK ที่แพตช์ที่บันทึกไว้</string>
     <string name="settings_system_patched_apks_delete_title">ลบ APK ที่แพตช์?</string>
-    <string name="settings_system_patched_apks_deleted">ลบ APK ที่แพตช์สำเร็จ</string>
+    <string name="settings_system_patched_apks_deleted">ลบ APK ที่แพตช์แล้วแล้ว</string>
     <string name="settings_system_patched_apks_delete_all_title">ลบ APK ที่แพตช์ทั้งหมด?</string>
     <!-- Settings - System Tab - Storage Management - Original APKs Management -->
     <string name="settings_system_original_apks_title">APK ต้นฉบับ</string>

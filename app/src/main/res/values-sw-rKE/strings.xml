@@ -9,6 +9,8 @@
     <string name="home_app_status_newer_patches">Patch mpya</string>
     <!-- Mark on the card of an app built for a device other than a phone -->
     <string name="form_factor_tv">Runinga</string>
+    <!-- Named beside the other marks when one app has a build for a phone and for another device -->
+    <string name="form_factor_mobile">Simu</string>
     <string name="form_factor_automotive">Gari</string>
     <string name="home_no_patches_available">Hakuna viraka vinavyopatikana</string>
     <string name="home_app_hide_title">Ficha programu hii?</string>
@@ -359,6 +361,10 @@ Chagua mahali pa kuchukulia APK yake"</string>
     <string name="expert_mode_recommended">Patch zinazopendekezwa</string>
     <string name="expert_mode_reset_to_default_done">Viraka vinavyopendekezwa vimetumika</string>
     <string name="expert_mode_selected_count">%1$s kati ya %2$s vimechaguliwa</string>
+    <!-- Which build of an app with builds for several devices the patches are for, such as TV or Wear OS -->
+    <string name="expert_mode_form_factor">Kwa ajili ya build ya %s</string>
+    <!-- The same for the phone build, named as a common noun rather than by its mark -->
+    <string name="expert_mode_form_factor_mobile">Kwa ajili ya build ya simu</string>
     <string name="expert_mode_saved_selection">Uchaguzi ulihifadhiwa</string>
     <string name="expert_mode_restore_saved_done">Uteuzi uliohifadhiwa umerudishwa</string>
     <string name="expert_mode_copy_from_bundle_no_patches">Hakuna patch zinazolingana katika kifurushi hiki</string>
@@ -489,7 +495,8 @@ Kwa matokeo bora, programu hii inapendekeza kutumia &lt;b&gt;full APK&lt;/b&gt;"
     <string name="batch_patch_preparing_next">Kuandaa programu inayofuata…</string>
     <string name="batch_patch_progress_counter">Inarekebisha %1$s kati ya %2$s</string>
     <string name="batch_patch_summary">%1$s imerekebishwa, %2$s imefeli, %3$s imerukwa</string>
-    <string name="batch_patch_saved_hint">Programu zilizorekebishwa zimehifadhiwa. Sakinisha sasa, au baadaye kutoka kwenye orodha ya APK zilizorekebishwa kwenye mipangilio</string>
+    <string name="batch_patch_saved_hint">APK zilizorekebishwa zimehifadhiwa. Zisakinishe sasa au baadaye kutoka kwenye skrini ya nyumbani</string>
+    <string name="batch_patch_not_kept_hint">APK zilizorekebishwa hazihifadhiwi. Zisakinishe au uzisafirishe kabla ya kufunga skrini hii</string>
     <string name="batch_patch_multiple_sources">Baadhi ya programu huunganisha marekebisho kutoka vyanzo zaidi ya moja, jambo ambalo linaweza kusababisha migongano</string>
     <string name="batch_patch_needs_apk">Hakuna APK inayopatikana, ambatanisha faili</string>
     <string name="batch_patch_wrong_package">Faili iliyoambatishwa inamilikiwa na %s</string>
@@ -504,22 +511,22 @@ Kwa matokeo bora, programu hii inapendekeza kutumia &lt;b&gt;full APK&lt;/b&gt;"
     <string name="batch_patch_apk_selected">APK imechaguliwa</string>
     <string name="batch_patch_auto_download_stopped">Vipakuliwa vya APK vya kiotomatiki vimesimama</string>
     <string name="batch_patch_auto_download_stop">Simamisha vipakuliwa</string>
-    <string name="batch_patch_auto_download_kept">APK iliyopakuliwa haikuweza kutumika, hivyo ya awali imebaki</string>
+    <string name="batch_patch_auto_download_kept">APK iliyopakuliwa kwa ajili ya %s haikuweza kutumika, hivyo ya awali imehifadhiwa</string>
     <string name="batch_patch_edit_patches">Chagua patch</string>
     <string name="batch_patch_state_no_apk">Hakuna APK</string>
     <string name="batch_patch_state_no_patches">Hakuna patch</string>
     <string name="batch_patch_state_no_selection">Hakuna iliyochaguliwa</string>
     <string name="batch_patch_no_selection">Hakuna patch yoyote inayopatikana iliyochaguliwa</string>
     <string name="batch_patch_policy_install">Sakinisha baada ya kukamilika</string>
-    <string name="batch_patch_policy_install_description">Husakinisha kila programu iliyopatchwa mara tu foleni inapokamilika. Kuzima huweka APKs kwa ajili ya baadaye</string>
+    <string name="batch_patch_policy_install_description">Husasakinisha kila programu iliyorekebishwa mara tu foleni inapomalizika. Ikiwa imezimwa, APK zinabaki kwenye skrini hii</string>
     <string name="batch_patch_policy_mount">Weka wakati imekamilika</string>
-    <string name="batch_patch_policy_mount_description">Huweka kila programu iliyorekebishwa mara tu foleni inapokamilika. Kuzima huweka APKs kwa ajili ya baadaye</string>
+    <string name="batch_patch_policy_mount_description">Hupandisha kila programu iliyorekebishwa mara tu foleni inapomalizika. Ikiwa imezimwa, APK zinabaki kwenye skrini hii</string>
     <string name="batch_patch_policy_install_mount">Sakinisha au weka wakati imekamilika</string>
-    <string name="batch_patch_policy_install_mount_description">Husakinisha au huweka kila programu iliyorekebishwa mara tu foleni inapokamilika. Kuzima huweka APKs kwa ajili ya baadaye</string>
+    <string name="batch_patch_policy_install_mount_description">Inasakinisha au kuunganisha kila programu iliyorekebishwa mara tu foleni inapomalizika. Ikiwa imezimwa, APKs zitabaki kwenye skrini hii</string>
     <!-- Label of a footer button beside "Close". Keep it short, a longer one moves the buttons onto two rows -->
     <string name="batch_patch_start">Anza</string>
     <string name="batch_patch_stop_title">Simamisha patch ya kundi?</string>
-    <string name="batch_patch_stop_description">Programu inayofanyiwa patch sasa hivi na kila kitu kilichobaki kwenye foleni itaghairiwa</string>
+    <string name="batch_patch_stop_description">Programu ya sasa na zingine zilizobaki kwenye foleni zitaghairiwa</string>
     <!-- Label of a footer button beside "Done". Keep it short, a longer one moves the buttons onto two rows -->
     <string name="batch_patch_install_all">Sakinisha zote</string>
     <string name="batch_patch_install_failed">Usakinishaji umeshindwa</string>
@@ -530,7 +537,7 @@ Kwa matokeo bora, programu hii inapendekeza kutumia &lt;b&gt;full APK&lt;/b&gt;"
     <string name="batch_queue_clear_title">Futa foleni?</string>
     <string name="batch_queue_clear_description">Programu zote zitaondolewa kwenye foleni</string>
     <string name="batch_queue_keep_title">Weka foleni?</string>
-    <string name="batch_queue_keep_description">Programu zilizowekwa kwenye foleni zitasubiri kwenye skrini ya nyumbani ili kuanzishwa baadaye</string>
+    <string name="batch_queue_keep_description">Foleni inasubiri kwenye skrini ya kuanzia hadi uianzishe</string>
     <string name="batch_queue_keep">Weka</string>
     <string name="shortcut_repatch_short">Patch tena</string>
     <string name="shortcut_repatch_long">Patch tena app zilizopitwa na wakati</string>
@@ -664,6 +671,8 @@ Kwa matokeo bora, programu hii inapendekeza kutumia &lt;b&gt;full APK&lt;/b&gt;"
     <string name="patcher_conflict_title">Mgongano wa kifurushi</string>
     <string name="patcher_conflict_subtitle">Unapaswa kuondoa toleo lililopo</string>
     <string name="patcher_conflict_hint">Programu iliyorekebishwa inatumia cheti tofauti na toleo lililosakinishwa. Kufuta kutaondoa data zote za programu</string>
+    <!-- The patched APK is for another kind of device, such as TV or Wear OS, so it may not start on this one -->
+    <string name="patcher_built_for_other_device">Imeundwa kwa ajili ya %s, hivyo inaweza isianze hapa. Ihifadhi iliuisakinishe kwenye kifaa hicho</string>
     <string name="patcher_installed_conflict_title">Kufuta kunahitajika</string>
     <string name="patcher_installed_conflict_body">"Morphe husaini programu zilizorekebishwa kwa cheti chake mwenyewe, ambacho ni tofauti na cha asili. Android inahitaji kuondoa toleo lililopo kabla ya programu iliyorekebishwa kuweza kusakinishwa.
 
@@ -759,7 +768,7 @@ Kuondoa programu kutaondoa data zote za programu kabisa"</string>
     <string name="plugin_activity_dialog_body">Mwingiliano wa mtumiaji unahitajika ili kuendelea na plugin hii</string>
     <string name="patcher_process_killed_message">Mfumo ulisimamisha patcher kabla haijamaliza, kwa kawaida ili kuachilia kumbukumbu. Funga programu zingine na ujaribu tena</string>
     <!-- Shown once Morphe is back after it was closed in the middle of patching, for a reason other than low memory. -->
-    <string name="patcher_interrupted_message">Morphe ilifungwa kabla ya kumaliza kusasisha, hivyo hakuna kilichosasishwa. Jaribu tena</string>
+    <string name="patcher_interrupted_message">Morphe ilifungwa kabla ya urekebishaji kukamilika. Jaribu tena</string>
     <!-- "%1$s" is where the setting is, such as "Settings > Patcher > Use embedded VM", built from the names on those screens. -->
     <string name="patcher_process_crashed_message">Kipatcha kiliacha kufanya kazi kabla hakijamaliza. Ikitokea tena, zima %1$s na uripoti tatizo pamoja na logi</string>
     <!-- Shown when a run fills the heap it was given. "%1$s" is the heap in megabytes. -->
@@ -868,14 +877,17 @@ Kuondoa programu kutaondoa data zote za programu kabisa"</string>
     <string name="settings_appearance_translations_info_title">Tafsiri za baadhi ya lugha zinaweza kukosekana au kutokamilika</string>
     <!-- Settings - Appearance Tab - Interface Scale -->
     <string name="settings_appearance_ui_scale">Kiwango cha kiolesura</string>
-    <!-- Settings - Appearance Tab - Home Screen Section -->
+    <!-- Settings - Appearance Tab - Screens Section -->
     <string name="settings_appearance_home_screen">Skrini ya nyumbani</string>
+    <string name="settings_appearance_screens">Skrini</string>
     <string name="settings_appearance_greeting_phrases">Misemo ya salamu</string>
     <string name="settings_appearance_greeting_phrases_subtitle">Inaonyesha ujumbe wa salamu</string>
     <string name="settings_appearance_repatch_notice">Taarifa ya kupatch upya</string>
     <string name="settings_appearance_repatch_notice_description">Inaonyesha bango wakati programu zilizorekebishwa zinapoweza kurekebishwa tena</string>
     <string name="settings_appearance_more_apps_card">Kadi ya programu zaidi</string>
     <string name="settings_appearance_more_apps_card_description">Huonyesha kadi chini ya programu inayopeleka kwenye marekebisho ya jumuiya</string>
+    <string name="settings_appearance_games_button">Kitu cha michezo</string>
+    <string name="settings_appearance_games_button_description">Huonyesha kitufe cha michezo midogo wakati wa kufanyia marekebisho na kwenye matokeo</string>
     <string name="settings_appearance_app_card_colors">Rangi za kadi</string>
     <string name="settings_appearance_app_card_colors_default">Kawaida</string>
     <string name="settings_appearance_app_card_colors_default_description">Ipe kila programu na chanzo rangi yake mwenyewe</string>
@@ -1246,7 +1258,7 @@ Maelezo: %2$s"</string>
     <string name="settings_system_apks_delete_all_confirm">Hii itafuta moja kwa moja faili za APK zilizohifadhiwa zinazoonekana hapa</string>
     <string name="settings_system_apks_delete_selected_title">Futa APK zilizochaguliwa?</string>
     <string name="settings_system_apks_delete_selected_confirm">Hii itafuta moja kwa moja faili za APK zilizochaguliwa</string>
-    <string name="settings_system_apks_deleted_all">APK zimefutwa kwa mafanikio</string>
+    <string name="settings_system_apks_deleted_all">APKs zimefutwa</string>
     <string name="settings_system_apks_delete_failed">Baadhi ya faili za APK hazikuweza kufutwa</string>
     <string name="settings_system_apks_export_zip_success">APK zilizochaguliwa zimehamishwa</string>
     <string name="settings_system_apks_export_zip_failed">Imeshindwa kusafirisha APK zilizochaguliwa</string>
@@ -1269,8 +1281,8 @@ Maelezo: %2$s"</string>
     <string name="settings_system_storage_temporary_title">Faili za muda</string>
     <string name="settings_system_storage_temporary_description">Faili za kazi zilizoundwa wakati wa kupatch</string>
     <string name="settings_system_storage_clear_all">Futa kache zote</string>
-    <string name="settings_system_storage_clear_all_description">Huweka nafasi zote za kache zinazoweza kurudishwa mara moja</string>
-    <string name="settings_system_storage_clear_all_confirm">Hii hufuta majibu ya mtandao yaliyohifadhiwa, nakala za wasakinishaji zilizowekwa, na faili za muda. APK asili na zilizorekebishwa huhifadhiwa</string>
+    <string name="settings_system_storage_clear_all_description">Kila kashu iliyoorodheshwa hapo juu</string>
+    <string name="settings_system_storage_clear_all_confirm">Kila kashu hapo juu itafutwa. APKs asilia na zilizorekebishwa zitabaki</string>
     <string name="settings_system_storage_cleared">Imewekwa huru %s</string>
     <string name="settings_system_storage_patch_running_warning">Patch inafanya kazi na inatumia faili hizi. Kuzifuta sasa kutasababisha kushindwa</string>
     <string name="settings_system_storage_clear_anyway">Futa hata hivyo</string>
@@ -1278,14 +1290,14 @@ Maelezo: %2$s"</string>
     <string name="settings_system_storage_open_app_info_title">Fungua hifadhi ya programu ya Android</string>
     <string name="settings_system_storage_open_app_info_description">Simamia au futa data zote za Morphe kupitia mipangilio ya mfumo</string>
     <string name="settings_system_save_original_apks_title">Hifadhi APK asilia</string>
-    <string name="settings_system_save_original_apks_description">Hifadhi APK ya kabla ya patch ili iweze kutumiwa tena kwa repatching bila kuchagua faili tena</string>
+    <string name="settings_system_save_original_apks_description">Tumia tena APK ya awali wakati wa kupachia upya, bila kuchagua faili tena</string>
     <string name="settings_system_save_patched_apks_title">Weka APK zilizopatchwa</string>
-    <string name="settings_system_save_patched_apks_description">Hifadhi nakala ya APK iliyopatchwa kwa ajili ya kuhamisha baadaye au kusakinisha tena kutoka kwenye meneja</string>
+    <string name="settings_system_save_patched_apks_description">Weka nakala ili kuhamisha au kusakinisha tena baadaye</string>
     <!-- Settings - System Tab - Storage Management - Patched APKs Management -->
     <string name="settings_system_patched_apks_title">APK zilizorekebishwa</string>
     <string name="settings_system_patched_apks_empty">Hakuna APK zilizorekebishwa zilizohifadhiwa bado</string>
     <string name="settings_system_patched_apks_delete_title">Futa APK iliyorekebishwa?</string>
-    <string name="settings_system_patched_apks_deleted">APK iliyorekebishwa imefutwa kwa mafanikio</string>
+    <string name="settings_system_patched_apks_deleted">APK iliyopachiwa imefutwa</string>
     <string name="settings_system_patched_apks_delete_all_title">Futa APK zote zilizorekebishwa?</string>
     <!-- Settings - System Tab - Storage Management - Original APKs Management -->
     <string name="settings_system_original_apks_title">APK asili</string>

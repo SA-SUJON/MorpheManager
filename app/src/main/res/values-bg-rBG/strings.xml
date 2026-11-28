@@ -9,6 +9,8 @@
     <string name="home_app_status_newer_patches">Нови пачове</string>
     <!-- Mark on the card of an app built for a device other than a phone -->
     <string name="form_factor_tv">ТВ</string>
+    <!-- Named beside the other marks when one app has a build for a phone and for another device -->
+    <string name="form_factor_mobile">Телефон</string>
     <string name="form_factor_automotive">Автомобилен</string>
     <string name="home_no_patches_available">Няма достъпни патчове</string>
     <string name="home_app_hide_title">Скриване на това приложение?</string>
@@ -362,6 +364,10 @@
     <string name="expert_mode_recommended">Препоръчани пачове</string>
     <string name="expert_mode_reset_to_default_done">Приложени са препоръчаните пачове</string>
     <string name="expert_mode_selected_count">%1$s от %2$s избрани</string>
+    <!-- Which build of an app with builds for several devices the patches are for, such as TV or Wear OS -->
+    <string name="expert_mode_form_factor">За версията за %s</string>
+    <!-- The same for the phone build, named as a common noun rather than by its mark -->
+    <string name="expert_mode_form_factor_mobile">За версията за телефон</string>
     <string name="expert_mode_saved_selection">Запазен избор</string>
     <string name="expert_mode_restore_saved_done">Запазеният избор е възстановен</string>
     <string name="expert_mode_copy_from_bundle_no_patches">Няма съвпадащи пачове в този пакет</string>
@@ -492,7 +498,8 @@
     <string name="batch_patch_preparing_next">Подготвя се следващото приложение…</string>
     <string name="batch_patch_progress_counter">Патчване на %1$s от %2$s</string>
     <string name="batch_patch_summary">%1$s пачнати, %2$s неуспешни, %3$s пропуснати</string>
-    <string name="batch_patch_saved_hint">Пачнатите приложения са запазени. Инсталирайте ги сега или по-късно от списъка с пачнатите APK файлове в настройките</string>
+    <string name="batch_patch_saved_hint">Пачнатите APK файлове са запазени. Инсталирайте ги сега или по-късно от началния екран</string>
+    <string name="batch_patch_not_kept_hint">Пачнатите APK файлове не се пазят. Инсталирайте или експортирайте ги, преди да затворите този екран</string>
     <string name="batch_patch_multiple_sources">Някои приложения комбинират пачове от повече от един източник, което може да причини конфликти</string>
     <string name="batch_patch_needs_apk">Няма наличен APK файл, прикачете файл</string>
     <string name="batch_patch_wrong_package">Прикаченият файл принадлежи към %s</string>
@@ -507,22 +514,22 @@
     <string name="batch_patch_apk_selected">APK е избран</string>
     <string name="batch_patch_auto_download_stopped">Автоматичното изтегляне на APK файлове е спряно</string>
     <string name="batch_patch_auto_download_stop">Спри изтеглянията</string>
-    <string name="batch_patch_auto_download_kept">Изтегленият APK файл не можа да бъде използван, затова предишният е запазен</string>
+    <string name="batch_patch_auto_download_kept">Изтегленият APK файл за %s не можа да бъде използван, затова предишният е запазен</string>
     <string name="batch_patch_edit_patches">Избор на пачове</string>
     <string name="batch_patch_state_no_apk">Няма APK</string>
     <string name="batch_patch_state_no_patches">Няма пачове</string>
     <string name="batch_patch_state_no_selection">Не е избрано нищо</string>
     <string name="batch_patch_no_selection">Нито един от наличните патчове не е избран</string>
     <string name="batch_patch_policy_install">Инсталиране при завършване</string>
-    <string name="batch_patch_policy_install_description">Инсталира всяко закърпено приложение веднага след като приключи опашката. Изключването запазва APK файловете за по-късно</string>
+    <string name="batch_patch_policy_install_description">Инсталира всяко пачнато приложение, след като опашката приключи. Когато е изключено, APK файловете остават на този екран</string>
     <string name="batch_patch_policy_mount">Монтирай при завършване</string>
-    <string name="batch_patch_policy_mount_description">Монтира всяко пачнато приложение, след като опашката приключи. Изключеното състояние запазва APK файловете за по-късно</string>
+    <string name="batch_patch_policy_mount_description">Монтира всяко пачнато приложение, след като опашката приключи. Когато е изключено, APK файловете остават на този екран</string>
     <string name="batch_patch_policy_install_mount">Инсталирай или монтирай при завършване</string>
-    <string name="batch_patch_policy_install_mount_description">Инсталира или монтира всяко пачнато приложение, след като опашката приключи. \"Изключено\" запазва APK файловете за по-късно</string>
+    <string name="batch_patch_policy_install_mount_description">Инсталира или монтира всяко пачнато приложение след приключване на опашката. Изключването оставя APK файловете на този екран</string>
     <!-- Label of a footer button beside "Close". Keep it short, a longer one moves the buttons onto two rows -->
     <string name="batch_patch_start">Начало</string>
     <string name="batch_patch_stop_title">Спиране на пакетното закърпване?</string>
-    <string name="batch_patch_stop_description">Приложението, което в момента се модифицира, и всичко останало в опашката, ще бъдат отменени</string>
+    <string name="batch_patch_stop_description">Текущото приложение и останалата част от опашката ще бъдат отменени</string>
     <!-- Label of a footer button beside "Done". Keep it short, a longer one moves the buttons onto two rows -->
     <string name="batch_patch_install_all">Инсталиране на всички</string>
     <string name="batch_patch_install_failed">Инсталирането не успя</string>
@@ -533,7 +540,7 @@
     <string name="batch_queue_clear_title">Изчистване на опашката?</string>
     <string name="batch_queue_clear_description">Всички приложения ще бъдат премахнати от опашката</string>
     <string name="batch_queue_keep_title">Запазване на опашката?</string>
-    <string name="batch_queue_keep_description">Приложенията в опашката ще изчакват на началния екран, за да бъдат стартирани по-късно.</string>
+    <string name="batch_queue_keep_description">Опашката изчаква на началния екран, докато не я стартирате</string>
     <string name="batch_queue_keep">Запази</string>
     <string name="shortcut_repatch_short">Повторно пачване</string>
     <string name="shortcut_repatch_long">Повторно пачване на остарели приложения</string>
@@ -667,6 +674,8 @@
     <string name="patcher_conflict_title">Конфликт на пакети</string>
     <string name="patcher_conflict_subtitle">Трябва да деинсталирате текущата версия</string>
     <string name="patcher_conflict_hint">Пачнатото приложение използва различен сертификат от инсталираната версия. Деинсталирането ще изтрие всички данни на приложението.</string>
+    <!-- The patched APK is for another kind of device, such as TV or Wear OS, so it may not start on this one -->
+    <string name="patcher_built_for_other_device">Създадено за %s, така че може да не стартира тук. Запазете го, за да го инсталирате на това устройство</string>
     <string name="patcher_installed_conflict_title">Необходимо деинсталиране</string>
     <string name="patcher_installed_conflict_body">"Morphe подписва променените приложения със собствен сертификат, който се различава от оригиналния. Android изисква премахването на съществуващата версия, преди да може да бъде инсталирано промененото приложение.
 
@@ -762,7 +771,7 @@
     <string name="plugin_activity_dialog_body">Необходимо е взаимодействие с потребителя, за да продължите с този плъгин.</string>
     <string name="patcher_process_killed_message">Системата спря патчера преди той да приключи, обикновено с цел освобождаване на памет. Затворете други приложения и опитайте отново</string>
     <!-- Shown once Morphe is back after it was closed in the middle of patching, for a reason other than low memory. -->
-    <string name="patcher_interrupted_message">Morphe беше затворено преди приключването на пачването, така че нищо не беше пачнато. Опитайте отново</string>
+    <string name="patcher_interrupted_message">Morphe беше затворен преди приключване на пачването. Опитайте отново</string>
     <!-- "%1$s" is where the setting is, such as "Settings > Patcher > Use embedded VM", built from the names on those screens. -->
     <string name="patcher_process_crashed_message">Патчерът се срина преди да приключи. Ако се случи отново, изключете %1$s и докладвайте проблема с лога</string>
     <!-- Shown when a run fills the heap it was given. "%1$s" is the heap in megabytes. -->
@@ -871,14 +880,17 @@
     <string name="settings_appearance_translations_info_title">Преводите за някои езици може да липсват или да са непълни</string>
     <!-- Settings - Appearance Tab - Interface Scale -->
     <string name="settings_appearance_ui_scale">Мащаб на интерфейса</string>
-    <!-- Settings - Appearance Tab - Home Screen Section -->
+    <!-- Settings - Appearance Tab - Screens Section -->
     <string name="settings_appearance_home_screen">Начален екран</string>
+    <string name="settings_appearance_screens">Екрани</string>
     <string name="settings_appearance_greeting_phrases">Поздравителни фрази</string>
     <string name="settings_appearance_greeting_phrases_subtitle">Показва приветствено съобщение</string>
     <string name="settings_appearance_repatch_notice">Известие за повторно кръпване</string>
     <string name="settings_appearance_repatch_notice_description">Показва банер, когато пачнатите приложения могат да бъдат пачнати отново</string>
     <string name="settings_appearance_more_apps_card">Карта \"Още приложения\"</string>
     <string name="settings_appearance_more_apps_card_description">Показва карта под приложенията, водеща към общностни пачове</string>
+    <string name="settings_appearance_games_button">Бутон „Игри“</string>
+    <string name="settings_appearance_games_button_description">Показва бутон за мини-игрите по време на пачването и в резултата</string>
     <string name="settings_appearance_app_card_colors">Цветове на картите</string>
     <string name="settings_appearance_app_card_colors_default">По подразбиране</string>
     <string name="settings_appearance_app_card_colors_default_description">Присвоете собствен цвят на всяко приложение и източник</string>
@@ -1249,7 +1261,7 @@ morphe_header_custom_dark.png
     <string name="settings_system_apks_delete_all_confirm">Това ще изтрие трайно запазените APK файлове, показани тук</string>
     <string name="settings_system_apks_delete_selected_title">Изтриване на избраните APK файлове?</string>
     <string name="settings_system_apks_delete_selected_confirm">Това ще изтрие трайно избраните APK файлове</string>
-    <string name="settings_system_apks_deleted_all">APK файловете са изтрити успешно</string>
+    <string name="settings_system_apks_deleted_all">APK файловете са изтрити</string>
     <string name="settings_system_apks_delete_failed">Някои APK файлове не можаха да бъдат изтрити</string>
     <string name="settings_system_apks_export_zip_success">Експортирани избрани APK файлове</string>
     <string name="settings_system_apks_export_zip_failed">Неуспешно експортиране на избрани APK файлове</string>
@@ -1272,8 +1284,8 @@ morphe_header_custom_dark.png
     <string name="settings_system_storage_temporary_title">Временни файлове</string>
     <string name="settings_system_storage_temporary_description">Работни файлове, създадени по време на прилагането на пачове</string>
     <string name="settings_system_storage_clear_all">Изчистване на всички кешове</string>
-    <string name="settings_system_storage_clear_all_description">Освобождава цялото кеширано пространство наведнъж</string>
-    <string name="settings_system_storage_clear_all_confirm">Това изчиства кешираните мрежови отговори, подготвените копия на инсталатора и временните файлове. Оригиналните и пачнатите APK файлове се запазват</string>
+    <string name="settings_system_storage_clear_all_description">Всеки кеш, изброен по-горе</string>
+    <string name="settings_system_storage_clear_all_confirm">Всеки кеш по-горе ще бъде изчистен. Оригиналните и пачнатите APK се запазват</string>
     <string name="settings_system_storage_cleared">Освободени %s</string>
     <string name="settings_system_storage_patch_running_warning">Пачът е в процес на изпълнение и използва тези файлове. Изтриването им сега ще доведе до неуспех</string>
     <string name="settings_system_storage_clear_anyway">Изтрий въпреки това</string>
@@ -1281,14 +1293,14 @@ morphe_header_custom_dark.png
     <string name="settings_system_storage_open_app_info_title">Отваряне на хранилището на Android приложението</string>
     <string name="settings_system_storage_open_app_info_description">Управление или изчистване на всички данни на Morphe чрез системните настройки</string>
     <string name="settings_system_save_original_apks_title">Запазване на оригиналните APK файлове</string>
-    <string name="settings_system_save_original_apks_description">Запазете APK файла преди промяна, за да може да бъде използван повторно за повторно прилагане на промените, без да се избира файлът отново</string>
+    <string name="settings_system_save_original_apks_description">Повторно използвайте оригиналния APK при повторно пачване, без да избирате файла отново</string>
     <string name="settings_system_save_patched_apks_title">Запазване на променените APK файлове</string>
-    <string name="settings_system_save_patched_apks_description">Запазете копие от променения APK файл за по-късен експорт или преинсталиране от мениджъра</string>
+    <string name="settings_system_save_patched_apks_description">Запазете копие за експортиране или преинсталиране по-късно</string>
     <!-- Settings - System Tab - Storage Management - Patched APKs Management -->
     <string name="settings_system_patched_apks_title">Променени APK</string>
     <string name="settings_system_patched_apks_empty">Все още няма запазени променени APK</string>
     <string name="settings_system_patched_apks_delete_title">Изтриване на променен APK?</string>
-    <string name="settings_system_patched_apks_deleted">Промененият APK е изтрит успешно</string>
+    <string name="settings_system_patched_apks_deleted">Пачнатият APK е изтрит</string>
     <string name="settings_system_patched_apks_delete_all_title">Изтриване на всички променени APK файлове?</string>
     <!-- Settings - System Tab - Storage Management - Original APKs Management -->
     <string name="settings_system_original_apks_title">Оригинални APK</string>

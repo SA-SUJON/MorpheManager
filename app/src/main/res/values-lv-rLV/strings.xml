@@ -9,6 +9,8 @@
     <string name="home_app_status_newer_patches">Jauni labojumi</string>
     <!-- Mark on the card of an app built for a device other than a phone -->
     <string name="form_factor_tv">TV</string>
+    <!-- Named beside the other marks when one app has a build for a phone and for another device -->
+    <string name="form_factor_mobile">Tālrunis</string>
     <string name="form_factor_automotive">Autovietnišana</string>
     <string name="home_no_patches_available">Nav pieejamu labojumu</string>
     <string name="home_app_hide_title">Paslēpt šo lietotni?</string>
@@ -359,6 +361,10 @@ Izvēlieties, no kurienes ņemt tās APK"</string>
     <string name="expert_mode_recommended">Ieteiktie patchi</string>
     <string name="expert_mode_reset_to_default_done">Ieteiktie labojumi piemēroti</string>
     <string name="expert_mode_selected_count">Izvēlēts %1$s no %2$s</string>
+    <!-- Which build of an app with builds for several devices the patches are for, such as TV or Wear OS -->
+    <string name="expert_mode_form_factor">%s izphoneNumberbuildam</string>
+    <!-- The same for the phone build, named as a common noun rather than by its mark -->
+    <string name="expert_mode_form_factor_mobile">Tālruņa buildam</string>
     <string name="expert_mode_saved_selection">Saglabāta atlase</string>
     <string name="expert_mode_restore_saved_done">Saglabātā atlase atjaunota</string>
     <string name="expert_mode_copy_from_bundle_no_patches">Šajā pakotnē nav atbilstošu labojumu</string>
@@ -489,7 +495,8 @@ Lai iegūtu labākos rezultātus, šī lietotne iesaka labot &lt;b&gt;pilnu APK&
     <string name="batch_patch_preparing_next">Sagatavojam nākamo lietotni…</string>
     <string name="batch_patch_progress_counter">Labojam %1$s no %2$s</string>
     <string name="batch_patch_summary">%1$s labotas, %2$s neizdevās, %3$s izlaistas</string>
-    <string name="batch_patch_saved_hint">Pielāgotās lietotnes ir saglabātas. Instalējiet tās tagad vai vēlāk no pielāgoto APK saraksta iestatījumos</string>
+    <string name="batch_patch_saved_hint">Patchētie APK faili ir saglabāti. Instalējiet tos tagad vai vēlāk no sākuma ekrāna</string>
+    <string name="batch_patch_not_kept_hint">Patchētie APK faili netiek saglabāti. Instalējiet vai eksportējiet tos pirms šī ekrāna aizvēršanas</string>
     <string name="batch_patch_multiple_sources">Dažas lietotnes apvieno labojumus no vairāk nekā viena avota, kas var izraisīt konfliktus</string>
     <string name="batch_patch_needs_apk">APK nav pieejams, pievienojiet failu</string>
     <string name="batch_patch_wrong_package">Pievienotais fails pieder %s</string>
@@ -504,22 +511,22 @@ Lai iegūtu labākos rezultātus, šī lietotne iesaka labot &lt;b&gt;pilnu APK&
     <string name="batch_patch_apk_selected">APK atlasīts</string>
     <string name="batch_patch_auto_download_stopped">Automātiskas APK lejupielādes apturētas</string>
     <string name="batch_patch_auto_download_stop">Apturēt lejupielādes</string>
-    <string name="batch_patch_auto_download_kept">Lejupielādēto APK nevarēja izmantot, tāpēc saglabāta iepriekšējā versija</string>
+    <string name="batch_patch_auto_download_kept">APK failu, kas tika lejupielādēts %s, nevarēja izmantot, tāpēc tiek saglabāts iepriekšējais</string>
     <string name="batch_patch_edit_patches">Izvēlēties labojumus</string>
     <string name="batch_patch_state_no_apk">Nav APK</string>
     <string name="batch_patch_state_no_patches">Nav labojumu</string>
     <string name="batch_patch_state_no_selection">Nekāds nav atlasīts</string>
     <string name="batch_patch_no_selection">Neviens no pieejamajiem labojumiem nav atlasīts</string>
     <string name="batch_patch_policy_install">Instalēt, kad pabeigts</string>
-    <string name="batch_patch_policy_install_description">Instalē katru labotu lietotni tūlīt pēc tam, kad rindas apstrāde ir pabeigta. Izslēgšana saglabā APK vēlākai izmantošanai</string>
+    <string name="batch_patch_policy_install_description">Instalē katru patchētu lietotni, kad rinda beidzas. Izslēgts atstāj APK failus šajā ekrānā</string>
     <string name="batch_patch_policy_mount">Pamontēt, kad pabeigtu</string>
-    <string name="batch_patch_policy_mount_description">Montē katru patchētu lietotni, kad rinda beidzas. Izslēgts saglabā APK failus vēlākai izmantošanai</string>
+    <string name="batch_patch_policy_mount_description">Montē katru patchētu lietotni, kad rinda beidzas. Izslēgts atstāj APK failus šajā ekrānā</string>
     <string name="batch_patch_policy_install_mount">Instalēt vai montēt, kad pabeigts</string>
-    <string name="batch_patch_policy_install_mount_description">Instalē vai montē katru patchētu lietotni, kad rinda beidzas. Izslēgts saglabā APK failus vēlākai izmantošanai</string>
+    <string name="batch_patch_policy_install_mount_description">Instalē vai montē katru patchētu lietotni, kad rinda beidzas. Izslēgts atstāj APK failus šajā ekrānā</string>
     <!-- Label of a footer button beside "Close". Keep it short, a longer one moves the buttons onto two rows -->
     <string name="batch_patch_start">Sākt</string>
     <string name="batch_patch_stop_title">Apturēt grupas labošanu?</string>
-    <string name="batch_patch_stop_description">Šobrīd patchētā lietotne un viss, kas vēl ir rindā, tiks atcelts</string>
+    <string name="batch_patch_stop_description">Pašreizējā lietotne un pārējā rinda tiks atcelta</string>
     <!-- Label of a footer button beside "Done". Keep it short, a longer one moves the buttons onto two rows -->
     <string name="batch_patch_install_all">Uzstādīt visu</string>
     <string name="batch_patch_install_failed">Uzstādīšana neizdevās</string>
@@ -530,7 +537,7 @@ Lai iegūtu labākos rezultātus, šī lietotne iesaka labot &lt;b&gt;pilnu APK&
     <string name="batch_queue_clear_title">Notīrīt rindu?</string>
     <string name="batch_queue_clear_description">Visas lietotnes tiks noņemtas no rindas</string>
     <string name="batch_queue_keep_title">Saglabāt rindu?</string>
-    <string name="batch_queue_keep_description">Rindā esošās lietotnes paliks uz sākuma ekrāna, lai tās vēlāk varētu palaist</string>
+    <string name="batch_queue_keep_description">Rinda gaida mājas ekrānā, līdz to startēsit</string>
     <string name="batch_queue_keep">Atstāt</string>
     <string name="shortcut_repatch_short">Atjaunot patch</string>
     <string name="shortcut_repatch_long">Atjaunot novecojušās lietotnes</string>
@@ -664,6 +671,8 @@ Lai iegūtu labākos rezultātus, šī lietotne iesaka labot &lt;b&gt;pilnu APK&
     <string name="patcher_conflict_title">Paketes konflikts</string>
     <string name="patcher_conflict_subtitle">Jums nepieciešams atinstalēt esošo versiju</string>
     <string name="patcher_conflict_hint">Labotā lietotne izmanto citu sertifikātu nekā instalētā versija. Atinstalējot tiks dzēsti visi lietotnes dati</string>
+    <!-- The patched APK is for another kind of device, such as TV or Wear OS, so it may not start on this one -->
+    <string name="patcher_built_for_other_device">Izveidots %s, tāpēc šeit tas var nedarboties. Saglabājiet to, lai instalētu tajā ierīcē</string>
     <string name="patcher_installed_conflict_title">Nepieciešama deinstalācija</string>
     <string name="patcher_installed_conflict_body">"Morphe paraksta labotās lietotnes ar savu sertifikātu, kas atšķiras no oriģinālā. Android prasa noņemt esošo versiju, pirms labotu lietotni var instalēt.
 
@@ -759,7 +768,7 @@ Atinstalējot tiks neatgriezeniski dzēsti visi lietotnes dati"</string>
     <string name="plugin_activity_dialog_body">Lai turpinātu ar šo papildinājumu, nepieciešama lietotāja mijiedarbība</string>
     <string name="patcher_process_killed_message">Sistēma aptura patcheru, pirms tas pabeidza darbu, parasti, lai atbrīvotu atmiņu. Aizveriet citas lietotnes un mēģiniet vēlreiz</string>
     <!-- Shown once Morphe is back after it was closed in the middle of patching, for a reason other than low memory. -->
-    <string name="patcher_interrupted_message">Morphe tika aizvērts pirms patchinga pabeigšanas, tāpēc nekas netika patchedts. Mēģiniet vēlreiz</string>
+    <string name="patcher_interrupted_message">Morphe tika aizvērts pirms patchēšanas beigām. Mēģiniet vēlreiz</string>
     <!-- "%1$s" is where the setting is, such as "Settings > Patcher > Use embedded VM", built from the names on those screens. -->
     <string name="patcher_process_crashed_message">Patcher programma avarēja, pirms tā pabeidza darbu. Ja tas atkārtojas, izslēdziet %1$s un ziņojiet par problēmu, pievienojot logfailu</string>
     <!-- Shown when a run fills the heap it was given. "%1$s" is the heap in megabytes. -->
@@ -868,14 +877,17 @@ Atinstalējot tiks neatgriezeniski dzēsti visi lietotnes dati"</string>
     <string name="settings_appearance_translations_info_title">Dažām valodām tulkojumi var būt nepilnīgi vai trūkst</string>
     <!-- Settings - Appearance Tab - Interface Scale -->
     <string name="settings_appearance_ui_scale">Saskarnes mērogs</string>
-    <!-- Settings - Appearance Tab - Home Screen Section -->
+    <!-- Settings - Appearance Tab - Screens Section -->
     <string name="settings_appearance_home_screen">Sākuma ekrāns</string>
+    <string name="settings_appearance_screens">Ekrāni</string>
     <string name="settings_appearance_greeting_phrases">Sveicienu frāzes</string>
     <string name="settings_appearance_greeting_phrases_subtitle">Rāda sveiciena ziņojumu</string>
     <string name="settings_appearance_repatch_notice">Paziņojums par atkārtotu labošanu</string>
     <string name="settings_appearance_repatch_notice_description">Rāda baneri, ja patchētas lietotnes var patchēt vēlreiz</string>
     <string name="settings_appearance_more_apps_card">Vairāk lietotnes karte</string>
     <string name="settings_appearance_more_apps_card_description">Rāda karti zem lietotnēm, kas ved uz kopienas patchētām versijām</string>
+    <string name="settings_appearance_games_button">Spēļu poga</string>
+    <string name="settings_appearance_games_button_description">Rāda pogu uz mini-spēlēm patchēšanas laikā un rezultātu ekranā</string>
     <string name="settings_appearance_app_card_colors">Kartes krāsas</string>
     <string name="settings_appearance_app_card_colors_default">Pēc noklusējuma</string>
     <string name="settings_appearance_app_card_colors_default_description">Piešķiriet katrai lietotnei un avotam savu krāsu</string>
@@ -1246,7 +1258,7 @@ Sīkāk: %2$s"</string>
     <string name="settings_system_apks_delete_all_confirm">Šī darbība neatgriezeniski izdzēs šeit redzamos saglabātos APK failus</string>
     <string name="settings_system_apks_delete_selected_title">Izdzēst atlasītos APK?</string>
     <string name="settings_system_apks_delete_selected_confirm">Šī darbība neatgriezeniski izdzēs atlasītos APK failus</string>
-    <string name="settings_system_apks_deleted_all">APK veiksmīgi izdzēsts</string>
+    <string name="settings_system_apks_deleted_all">APK faili izdzēsti</string>
     <string name="settings_system_apks_delete_failed">Dažus APK failus neizdevās dzēst</string>
     <string name="settings_system_apks_export_zip_success">Atlasītie APK eksportēti</string>
     <string name="settings_system_apks_export_zip_failed">Neizdevās eksportēt izvēlētos APK</string>
@@ -1269,8 +1281,8 @@ Sīkāk: %2$s"</string>
     <string name="settings_system_storage_temporary_title">Pagaidāmie faili</string>
     <string name="settings_system_storage_temporary_description">Darba faili, kas izveidoti labošanas laikā</string>
     <string name="settings_system_storage_clear_all">Notīrīt visas kešatmiņas</string>
-    <string name="settings_system_storage_clear_all_description">Vienā reizē atbrīvo visu atgūstamo kešatmiņas vietu</string>
-    <string name="settings_system_storage_clear_all_confirm">Tas notīra kešētas tīkla atbildes, sagatavotas instalatora kopijas un pagaidāmos failus. Oriģinālie un patched APK tiek saglabāti</string>
+    <string name="settings_system_storage_clear_all_description">Visi augstāk uzskaitītie keši</string>
+    <string name="settings_system_storage_clear_all_confirm">Tiks iztīrīts viss augstāk minētais kešatrakums. Oriģinālās un patched APK tiks saglabātas</string>
     <string name="settings_system_storage_cleared">Atbrīvota %s</string>
     <string name="settings_system_storage_patch_running_warning">Šobrīd darbojas labojums, kas izmanto šos failus. To dzēšana tagad izraisīs kļūdu</string>
     <string name="settings_system_storage_clear_anyway">Tikt izdzēst jebkurā gadījumā</string>
@@ -1278,14 +1290,14 @@ Sīkāk: %2$s"</string>
     <string name="settings_system_storage_open_app_info_title">Atvērt Android lietotnes iz glabāšanu</string>
     <string name="settings_system_storage_open_app_info_description">Atvērt Android lietotnes krātuvi</string>
     <string name="settings_system_save_original_apks_title">Saglabāt oriģinālos APK</string>
-    <string name="settings_system_save_original_apks_description">Saglabājiet laboto APK, lai to varētu atkārtoti izmantot labošanai, neizvēloties failu vēlreiz</string>
+    <string name="settings_system_save_original_apks_description">Atkārtoti izmantojiet oriģinālo APK patched procesam, neizvēloties failu vēlreiz</string>
     <string name="settings_system_save_patched_apks_title">Saglabāt patched APK</string>
-    <string name="settings_system_save_patched_apks_description">Saglabāt labotā APK kopiju vēlākai eksportēšanai vai atkārtotai instalēšanai no pārvaldnieka</string>
+    <string name="settings_system_save_patched_apks_description">Saglabājiet kopiju, lai vēlāk to eksportētu vai pāriestalētu</string>
     <!-- Settings - System Tab - Storage Management - Patched APKs Management -->
     <string name="settings_system_patched_apks_title">Lāpītie APK</string>
     <string name="settings_system_patched_apks_empty">Lāpītie APK vēl nav saglabāti</string>
     <string name="settings_system_patched_apks_delete_title">Dzēst lāpīto APK?</string>
-    <string name="settings_system_patched_apks_deleted">Lāpītais APK veiksmīgi izdzēsts</string>
+    <string name="settings_system_patched_apks_deleted">Patched APK izdzēsts</string>
     <string name="settings_system_patched_apks_delete_all_title">Dzēst visus patched APK?</string>
     <!-- Settings - System Tab - Storage Management - Original APKs Management -->
     <string name="settings_system_original_apks_title">Oriģināli APK</string>

@@ -9,6 +9,8 @@
     <string name="home_app_status_newer_patches">Ama-patch amasha</string>
     <!-- Mark on the card of an app built for a device other than a phone -->
     <string name="form_factor_tv">iTV</string>
+    <!-- Named beside the other marks when one app has a build for a phone and for another device -->
+    <string name="form_factor_mobile">Ucingo</string>
     <string name="form_factor_automotive">Izimoto</string>
     <string name="home_no_patches_available">Azikho izigaba ezitholakalayo</string>
     <string name="home_app_hide_title">Fihla lolu hlelo?</string>
@@ -359,6 +361,10 @@ Khetha ukuthi uthathe i-APK yayo kuphi"</string>
     <string name="expert_mode_recommended">Ama-patch anconyelwayo</string>
     <string name="expert_mode_reset_to_default_done">Izipathi ezinekilwayo sezifakwe</string>
     <string name="expert_mode_selected_count">%1$s kwe-%2$s ukhethiwe</string>
+    <!-- Which build of an app with builds for several devices the patches are for, such as TV or Wear OS -->
+    <string name="expert_mode_form_factor">Kwe-build ey-%s</string>
+    <!-- The same for the phone build, named as a common noun rather than by its mark -->
+    <string name="expert_mode_form_factor_mobile">Kwe-build yocingo</string>
     <string name="expert_mode_saved_selection">Ukukhetha okugcinwe</string>
     <string name="expert_mode_restore_saved_done">Ukukhetha okugcinwe sekubuyiselwe</string>
     <string name="expert_mode_copy_from_bundle_no_patches">Azikho ama-patch ahambisana naleyo bundle</string>
@@ -489,7 +495,8 @@ Ukuze uthole imiphumela engcono kakhulu, lolu hlelo luhlanganisa ukulungisa i-&l
     <string name="batch_patch_preparing_next">Kulungiswa i-app elandelayo...</string>
     <string name="batch_patch_progress_counter">Kuphethwa u-%1$s we-%2$s</string>
     <string name="batch_patch_summary">%1$s kulungisiwe, %2$s kuhlulekile, %3$s kushiyiwe</string>
-    <string name="batch_patch_saved_hint">I-apps ezipatchwe zisondelwe. Zifake manje, noma kamuva kusuhlu lwe-APK ezipatchwe kuzilungiselelo</string>
+    <string name="batch_patch_saved_hint">Ama-APK e-patched agciniwe. Afake manje noma kamuva kusukela esikrinini sasekhaya</string>
+    <string name="batch_patch_not_kept_hint">Ama-APK e-patched awagcinwa. Afake noma uwexporte ngaphambi kokuvala lolu skrini</string>
     <string name="batch_patch_multiple_sources">Izinhlelo ezithile zihlanganisa ama-patch avelela emithonjeni engaphezu kweyodwa, okungabangela ukungqubuzana</string>
     <string name="batch_patch_needs_apk">Alikho i-APK etholakalayo, namathisela ifayela</string>
     <string name="batch_patch_wrong_package">Ifayela elinamathiselwe lingelika %s</string>
@@ -504,22 +511,22 @@ Ukuze uthole imiphumela engcono kakhulu, lolu hlelo luhlanganisa ukulungisa i-&l
     <string name="batch_patch_apk_selected">APK ikhethiwe</string>
     <string name="batch_patch_auto_download_stopped">Ukulanda ama-APK ngokuzenzakalelayo kumiswe</string>
     <string name="batch_patch_auto_download_stop">Misa ukulanda</string>
-    <string name="batch_patch_auto_download_kept">I-APK elandwe ayikwazanga ukusetshenziswa, ngakho eyadlula isagcinwe</string>
+    <string name="batch_patch_auto_download_kept">I-APK edownloadwe ka %s ibengakwazi ukusetshenziswa, ngakho okwamanqamu kugcinwe</string>
     <string name="batch_patch_edit_patches">Khetha ama-patch</string>
     <string name="batch_patch_state_no_apk">Ayikho i-APK</string>
     <string name="batch_patch_state_no_patches">Ayikho imiphephelo</string>
     <string name="batch_patch_state_no_selection">Akukho okukhethiwe</string>
     <string name="batch_patch_no_selection">Akukho okunye kwama-patch atholakalayo okukhethiwe</string>
     <string name="batch_patch_policy_install">Faka lapho kuqedile</string>
-    <string name="batch_patch_policy_install_description">Ifaka yonke i-app ephephelwe ngemuva kokuba i-queue iqedile. Ukucisha kugcina ama-APK ukuze asetshenziswe kamuva</string>
+    <string name="batch_patch_policy_install_description">Ifaka yonke i-app e-patched lapho uhlu seluqedile. Ukuyicima kushiya ama-APK kulolu skrini</string>
     <string name="batch_patch_policy_mount">Mount-a lapho seqedile</string>
-    <string name="batch_patch_policy_mount_description">I-mount-a yonke i-app e-patched lapho uhlu seluqedile. Ukuyicima kugcina ama-APK ukuze asetshenziswe kamuva</string>
+    <string name="batch_patch_policy_mount_description">I-mount-a yonke i-app e-patched lapho uhlu seluqedile. Ukuyicima kushiya ama-APK kulesi sikhonzi</string>
     <string name="batch_patch_policy_install_mount">Faka noma u-mount-e lapho seqedile</string>
-    <string name="batch_patch_policy_install_mount_description">Ifaka noma i-mount-a yonke i-app e-patched lapho uhlu seluqedile. Ukucisha kugcina ama-APK ukuze asetshenziswe kamuva</string>
+    <string name="batch_patch_policy_install_mount_description">Ifaka noma i-mount-a yonke i-app e-patched lapho uhlu seluqedile. Ukucisha kushiya ama-APK kulesi sikrini</string>
     <!-- Label of a footer button beside "Close". Keep it short, a longer one moves the buttons onto two rows -->
     <string name="batch_patch_start">Qala</string>
     <string name="batch_patch_stop_title">Yemisa ukuphephela ngama-batch?</string>
-    <string name="batch_patch_stop_description">Uhlelo lokusebenza oluphethwa manje nakho konke okusasele emgqeni kuzocishwa</string>
+    <string name="batch_patch_stop_description">I-app yamanje neze uhlu kuzocishwa</string>
     <!-- Label of a footer button beside "Done". Keep it short, a longer one moves the buttons onto two rows -->
     <string name="batch_patch_install_all">Faka zonke</string>
     <string name="batch_patch_install_failed">Ukufaka kwephuthelwe</string>
@@ -530,7 +537,7 @@ Ukuze uthole imiphumela engcono kakhulu, lolu hlelo luhlanganisa ukulungisa i-&l
     <string name="batch_queue_clear_title">Sula umsizi?</string>
     <string name="batch_queue_clear_description">Zonke izinhlelo zizosuswa ohlwini</string>
     <string name="batch_queue_keep_title">Gcina uhlu?</string>
-    <string name="batch_queue_keep_description">Izinhlelo ezilindile zizolinda esikrinini sasekhaya ukuze zaqale kamuva</string>
+    <string name="batch_queue_keep_description">Uhlu luzolinda esikrinini sasekhaya kuze kube yilapho uluqalisa</string>
     <string name="batch_queue_keep">Gcina</string>
     <string name="shortcut_repatch_short">Phephela futhi</string>
     <string name="shortcut_repatch_long">Phinda u-patch izinhlelo ezindala</string>
@@ -664,6 +671,8 @@ Ukuze uthole imiphumela engcono kakhulu, lolu hlelo luhlanganisa ukulungisa i-&l
     <string name="patcher_conflict_title">Ukungqubuzana kwephakheji</string>
     <string name="patcher_conflict_subtitle">Kudingeka ususe uhlobo olukhona</string>
     <string name="patcher_conflict_hint">Uhlelo olulungisiwe lusebenzisa isitifiketi esihlukile kunenguqulwana efakile. Ukususa kuzosula yonke idatha yohlelo</string>
+    <!-- The patched APK is for another kind of device, such as TV or Wear OS, so it may not start on this one -->
+    <string name="patcher_built_for_other_device">Yakhelwe i-%s, ngakho kungenzeka ingaqali lapha. Yigcine ukuze uyifake kulelo device</string>
     <string name="patcher_installed_conflict_title">Kudingeka ukususa uhlelo</string>
     <string name="patcher_installed_conflict_body">"I-Morphe isayina izinhlelo ezilungisiwe ngesitifiketi sayo, esihlukile kwesokuqala. I-Android idinga ukususa inguqulwana esikhona ngaphambi kokuba uhlelo olulungisiwe lufakwe.
 
@@ -759,7 +768,7 @@ Ukususa kuzosula uphakade yonke idatha yohlelo"</string>
     <string name="plugin_activity_dialog_body">Kudingeka ukuhlanganyela komsebenzisi ukuze kuqhubekwe nalolu plugin</string>
     <string name="patcher_process_killed_message">Uhlelo lusimise i-patcher ngaphambi kokuba iqedele, imvamisa ukuze kukhululwe inkumbulo. Vala ezinye izinhlelo uzame futhi</string>
     <!-- Shown once Morphe is back after it was closed in the middle of patching, for a reason other than low memory. -->
-    <string name="patcher_interrupted_message">uMorphe uvaliwe ngaphambi kokuba uku-patchi kuqedele, ngakho akukho okulungisiwe. Zama futhi</string>
+    <string name="patcher_interrupted_message">I-Morphe ivaliwe ngaphambi kokuba i-patching iqedele. Zama futhi</string>
     <!-- "%1$s" is where the setting is, such as "Settings > Patcher > Use embedded VM", built from the names on those screens. -->
     <string name="patcher_process_crashed_message">I-patcher iye yahluleka ngaphambi kokuba iqedele. Uma kwenzeka futhi, vala u-%1$s bese ubika inkinga ngokusebenzisa i-log</string>
     <!-- Shown when a run fills the heap it was given. "%1$s" is the heap in megabytes. -->
@@ -868,14 +877,17 @@ Ukususa kuzosula uphakade yonke idatha yohlelo"</string>
     <string name="settings_appearance_translations_info_title">Izihumushi zezinye izilimi zingase zibe khona noma zingaphelele</string>
     <!-- Settings - Appearance Tab - Interface Scale -->
     <string name="settings_appearance_ui_scale">Isayizi ye-interface</string>
-    <!-- Settings - Appearance Tab - Home Screen Section -->
+    <!-- Settings - Appearance Tab - Screens Section -->
     <string name="settings_appearance_home_screen">Isikrini sasekhaya</string>
+    <string name="settings_appearance_screens">Izikrini</string>
     <string name="settings_appearance_greeting_phrases">Amazwi okubingelela</string>
     <string name="settings_appearance_greeting_phrases_subtitle">Kukhombisa umlayezo wokubingelela</string>
     <string name="settings_appearance_repatch_notice">Isaziso sokuphinda ufake i-patch</string>
     <string name="settings_appearance_repatch_notice_description">Kukhombisa ibhena lapho izinhlelo ezipatshwe zingapatshwa kabusha</string>
     <string name="settings_appearance_more_apps_card">Ikhadi lezinhlelo eziningi</string>
     <string name="settings_appearance_more_apps_card_description">Ikhombisa ikhadi ngaphansi kwe-apps eliqondisa kuma-community patches</string>
+    <string name="settings_appearance_games_button">Inkinobho yezimidlalo</string>
+    <string name="settings_appearance_games_button_description">Ikhombisa inkinobho eyezimidlalo emincane ngesikhathi kulungiswa nasekupheleni</string>
     <string name="settings_appearance_app_card_colors">Imibala yamakadi</string>
     <string name="settings_appearance_app_card_colors_default">Okujwayelekile</string>
     <string name="settings_appearance_app_card_colors_default_description">Nika i-app ngayinye nomthombo umbala wawo owakhe</string>
@@ -1246,7 +1258,7 @@ Imininingwane: %2$s"</string>
     <string name="settings_system_apks_delete_all_confirm">Lokhu kuzosusa phukudze amafaila e-APK asindiswe akhonyiswe lapha</string>
     <string name="settings_system_apks_delete_selected_title">Suse ama-APK akhethiwe?</string>
     <string name="settings_system_apks_delete_selected_confirm">Lokhu kuzosusa phukudze amafaila e-APK akhethiwe</string>
-    <string name="settings_system_apks_deleted_all">Ama-APK asuswe ngempumelelo</string>
+    <string name="settings_system_apks_deleted_all">Ama-APK asusiwe</string>
     <string name="settings_system_apks_delete_failed">Amanye amafaili e-APK awakwazi ukusulwa</string>
     <string name="settings_system_apks_export_zip_success">Ama-APK akhethiwe akhiphiwe</string>
     <string name="settings_system_apks_export_zip_failed">Kuhlulekile ukukhipha ama-APK akhethiwe</string>
@@ -1269,8 +1281,8 @@ Imininingwane: %2$s"</string>
     <string name="settings_system_storage_temporary_title">Amafaili wesikhashana</string>
     <string name="settings_system_storage_temporary_description">Amafaili okusebenza adalwe ngesikhathi kwenziwa i-patching</string>
     <string name="settings_system_storage_clear_all">Sula zonke izikhala ze-cache</string>
-    <string name="settings_system_storage_clear_all_description">Kukhulula konke isikhala se-cache esingabuyiselwa kanye</string>
-    <string name="settings_system_storage_clear_all_confirm">Lokhu kusula izimpendulo zenetwork ezigcinwe (cached), ikhopikho zika-installer ezilungiselelwe, kanye namafayela wesikhashana. Ama-APK ayingqayizivele kanye alaphiwe agcinwa</string>
+    <string name="settings_system_storage_clear_all_description">Yonke i-cache eliseliswe ngenhla</string>
+    <string name="settings_system_storage_clear_all_confirm">Yonke i-cache engenhla izocishelwa. Ama-APK aqala kanye nalawa ahlelwe agcinwe</string>
     <string name="settings_system_storage_cleared">Kukhululwe %s</string>
     <string name="settings_system_storage_patch_running_warning">Kukhona i-patch esebenza futhi isebenzisa lezi zifayela. Ukuzisula manje kuzokwenza kuhluleke</string>
     <string name="settings_system_storage_clear_anyway">Sula noma kanjani</string>
@@ -1278,14 +1290,14 @@ Imininingwane: %2$s"</string>
     <string name="settings_system_storage_open_app_info_title">Vula isimo sokugcina i-app ye-Android</string>
     <string name="settings_system_storage_open_app_info_description">Phatha noma usule yonke idatha ye-Morphe ngokusebenzisa izilungiselelo zesistimu</string>
     <string name="settings_system_save_original_apks_title">Gcina ama-APK ayingqayizivele</string>
-    <string name="settings_system_save_original_apks_description">Londoloza i-APK engakapatchi ukuze isetshenziswe futhi ekupatcheni kabusha ngaphandle kokukhetha ifayela futhi</string>
+    <string name="settings_system_save_original_apks_description">Phinda usebenzise i-APK yokuqala lapho uphinda uhlela, ngaphandle kokukhetha ifayela futhi</string>
     <string name="settings_system_save_patched_apks_title">Gcina ama-APK apatchiwe</string>
-    <string name="settings_system_save_patched_apks_description">Londoloza ikhophi ye-APK epatchiwe ukuze iyithunyelwe phuma noma ifakwe kabusha kusukela kumenejer</string>
+    <string name="settings_system_save_patched_apks_description">Gcina ikhophi ukuze uyikhiphe noma uyifake futhi kamuva</string>
     <!-- Settings - System Tab - Storage Management - Patched APKs Management -->
     <string name="settings_system_patched_apks_title">Ama-APK alungisiwe</string>
     <string name="settings_system_patched_apks_empty">Ayikho ama-APK alungisiwe agciniwe okwamanje</string>
     <string name="settings_system_patched_apks_delete_title">Sisuze i-APK elungisiwe?</string>
-    <string name="settings_system_patched_apks_deleted">I-APK elungisiwe isuswe ngempumelelo</string>
+    <string name="settings_system_patched_apks_deleted">I-APK ehlelwe isusulwe</string>
     <string name="settings_system_patched_apks_delete_all_title">Sulashe zonke izi-APK eziphathwe?</string>
     <!-- Settings - System Tab - Storage Management - Original APKs Management -->
     <string name="settings_system_original_apks_title">Ama-APK ayoqala</string>

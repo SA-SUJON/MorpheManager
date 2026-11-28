@@ -9,6 +9,8 @@
     <string name="home_app_status_newer_patches">新修補程式</string>
     <!-- Mark on the card of an app built for a device other than a phone -->
     <string name="form_factor_tv">電視</string>
+    <!-- Named beside the other marks when one app has a build for a phone and for another device -->
+    <string name="form_factor_mobile">手機</string>
     <string name="form_factor_automotive">汽車</string>
     <string name="home_no_patches_available">沒有可用的修補程式</string>
     <string name="home_app_hide_title">要隱藏這個應用程式嗎？</string>
@@ -359,6 +361,10 @@
     <string name="expert_mode_recommended">推薦的修補程式</string>
     <string name="expert_mode_reset_to_default_done">已套用推薦的修補程式</string>
     <string name="expert_mode_selected_count">已選取 %1$s / %2$s</string>
+    <!-- Which build of an app with builds for several devices the patches are for, such as TV or Wear OS -->
+    <string name="expert_mode_form_factor">適用於 %s 版本</string>
+    <!-- The same for the phone build, named as a common noun rather than by its mark -->
+    <string name="expert_mode_form_factor_mobile">適用於手機版本</string>
     <string name="expert_mode_saved_selection">已儲存的選取項目</string>
     <string name="expert_mode_restore_saved_done">已儲存的選取已還原</string>
     <string name="expert_mode_copy_from_bundle_no_patches">此套件中沒有相符的修補程式</string>
@@ -489,7 +495,8 @@
     <string name="batch_patch_preparing_next">正在準備下一個應用程式…</string>
     <string name="batch_patch_progress_counter">正在修補 %1$s 的 %2$s</string>
     <string name="batch_patch_summary">%1$s 個已修補，%2$s 個失敗，%3$s 個已略過</string>
-    <string name="batch_patch_saved_hint">已儲存已修補的應用程式。立即安裝或稍後從設定中的已修補 APK 清單安裝</string>
+    <string name="batch_patch_saved_hint">已儲存修補後的 APK。現在或稍後從主畫面安裝</string>
+    <string name="batch_patch_not_kept_hint">修補後的 APK 不會被保留。請在關閉此畫面之前安裝或匯出</string>
     <string name="batch_patch_multiple_sources">某些應用程式合併來自多個來源的修補程式，這可能會導致衝突</string>
     <string name="batch_patch_needs_apk">沒有可用的 APK，請附加檔案</string>
     <string name="batch_patch_wrong_package">附加的檔案屬於 %s</string>
@@ -504,22 +511,22 @@
     <string name="batch_patch_apk_selected">已選取 APK</string>
     <string name="batch_patch_auto_download_stopped">自動下載 APK 已停止</string>
     <string name="batch_patch_auto_download_stop">停止下載</string>
-    <string name="batch_patch_auto_download_kept">下載的 APK 無法使用，因此保留前一個版本</string>
+    <string name="batch_patch_auto_download_kept">無法使用為 %s 下載的 APK，因此保留前一個版本</string>
     <string name="batch_patch_edit_patches">選擇修補程式</string>
     <string name="batch_patch_state_no_apk">沒有 APK</string>
     <string name="batch_patch_state_no_patches">沒有修補程式</string>
     <string name="batch_patch_state_no_selection">未選取任何項目</string>
     <string name="batch_patch_no_selection">未選取任何可用的修補程式</string>
     <string name="batch_patch_policy_install">完成後安裝</string>
-    <string name="batch_patch_policy_install_description">佇列完成後會立即安裝每個已修補的應用程式。關閉後保留 APK 以供日後使用</string>
+    <string name="batch_patch_policy_install_description">佇列結束後安裝每個修補後的應用程式。關閉則將 APK 保留在本畫面</string>
     <string name="batch_patch_policy_mount">完成後掛載</string>
-    <string name="batch_patch_policy_mount_description">一旦隊列完成，將掛載每個已修補的應用程式。關閉則保留 APK 以供後用</string>
+    <string name="batch_patch_policy_mount_description">佇列結束後掛載每個修補後的應用程式。關閉則將 APK 保留在本畫面</string>
     <string name="batch_patch_policy_install_mount">完成後安裝或掛載</string>
-    <string name="batch_patch_policy_install_mount_description">佇列處理完成後，會安裝或掛載每個已修補的應用程式。關閉時則會保留 APK 以供稍後使用。,</string>
+    <string name="batch_patch_policy_install_mount_description">佇列完成後，安裝或掛載所有已修補的應用程式。關閉後，APK 將保留在此畫面</string>
     <!-- Label of a footer button beside "Close". Keep it short, a longer one moves the buttons onto two rows -->
     <string name="batch_patch_start">開始</string>
     <string name="batch_patch_stop_title">停止批次修補？</string>
-    <string name="batch_patch_stop_description">目前正在修補的應用程式以及所有排隊中的作業都將被取消</string>
+    <string name="batch_patch_stop_description">目前應用程式和佇列中的其餘部分將被取消</string>
     <!-- Label of a footer button beside "Done". Keep it short, a longer one moves the buttons onto two rows -->
     <string name="batch_patch_install_all">全部安裝</string>
     <string name="batch_patch_install_failed">安裝失敗</string>
@@ -530,7 +537,7 @@
     <string name="batch_queue_clear_title">清除佇列？</string>
     <string name="batch_queue_clear_description">所有應用程式都將從佇列中移除</string>
     <string name="batch_queue_keep_title">要保留佇列嗎？</string>
-    <string name="batch_queue_keep_description">佇列中的應用程式將在主畫面等候並在稍後啟動</string>
+    <string name="batch_queue_keep_description">佇列將在主畫面等候，直到您啟動它</string>
     <string name="batch_queue_keep">保留</string>
     <string name="shortcut_repatch_short">重新修補</string>
     <string name="shortcut_repatch_long">重新修補過時的應用程式</string>
@@ -664,6 +671,8 @@
     <string name="patcher_conflict_title">套件衝突</string>
     <string name="patcher_conflict_subtitle">你需要解除安裝現有版本</string>
     <string name="patcher_conflict_hint">修補後的應用程式使用的憑證與已安裝版本不同。解除安裝會清除所有應用程式資料</string>
+    <!-- The patched APK is for another kind of device, such as TV or Wear OS, so it may not start on this one -->
+    <string name="patcher_built_for_other_device">此版本為 %s 所建，因此可能無法在此啟動。請將其儲存以安裝至該裝置</string>
     <string name="patcher_installed_conflict_title">需要解除安裝</string>
     <string name="patcher_installed_conflict_body">"Morphe 會使用其自己的憑證來簽署已修補的應用程式，這與原始憑證不同。Android 要求在安裝已修補的應用程式之前移除現有版本。
 
@@ -759,7 +768,7 @@
     <string name="plugin_activity_dialog_body">需要使用者互動才能繼續使用此外掛程式</string>
     <string name="patcher_process_killed_message">系統在還未完成修補時就停止了，通常是為了釋放記憶體。請關閉其他應用程式後再試一次。</string>
     <!-- Shown once Morphe is back after it was closed in the middle of patching, for a reason other than low memory. -->
-    <string name="patcher_interrupted_message">Morphe 在更新完成前已關閉，因此沒有任何內容被更新。請再試一次</string>
+    <string name="patcher_interrupted_message">Morphe 在修補完成前已關閉。請再試一次</string>
     <!-- "%1$s" is where the setting is, such as "Settings > Patcher > Use embedded VM", built from the names on those screens. -->
     <string name="patcher_process_crashed_message">修補程式在完成前當機了。如果再次發生，請關閉 %1$s 並附上日誌回報問題</string>
     <!-- Shown when a run fills the heap it was given. "%1$s" is the heap in megabytes. -->
@@ -868,14 +877,17 @@
     <string name="settings_appearance_translations_info_title">某些語言的翻譯可能遺失或不完整</string>
     <!-- Settings - Appearance Tab - Interface Scale -->
     <string name="settings_appearance_ui_scale">介面縮放</string>
-    <!-- Settings - Appearance Tab - Home Screen Section -->
+    <!-- Settings - Appearance Tab - Screens Section -->
     <string name="settings_appearance_home_screen">主螢幕</string>
+    <string name="settings_appearance_screens">螢幕</string>
     <string name="settings_appearance_greeting_phrases">問候語</string>
     <string name="settings_appearance_greeting_phrases_subtitle">顯示問候訊息</string>
     <string name="settings_appearance_repatch_notice">重新修補通知</string>
     <string name="settings_appearance_repatch_notice_description">當修補過的應用程式可再次修補時顯示橫幅通知</string>
     <string name="settings_appearance_more_apps_card">更多應用程式卡片</string>
     <string name="settings_appearance_more_apps_card_description">在應用程式下方顯示一個導向社群修補程式的卡片</string>
+    <string name="settings_appearance_games_button">遊戲按鈕</string>
+    <string name="settings_appearance_games_button_description">在修補和結果頁面中顯示指向迷你遊戲的按鈕</string>
     <string name="settings_appearance_app_card_colors">卡片顏色</string>
     <string name="settings_appearance_app_card_colors_default">預設</string>
     <string name="settings_appearance_app_card_colors_default_description">為每個應用程式和來源設定獨立的顏色</string>
@@ -1244,7 +1256,7 @@ morphe_header_custom_dark.png
     <string name="settings_system_apks_delete_all_confirm">這將永久刪除此處顯示的已儲存 APK 檔案</string>
     <string name="settings_system_apks_delete_selected_title">刪除選取的 APK？</string>
     <string name="settings_system_apks_delete_selected_confirm">這將永久刪除選取的 APK 檔案</string>
-    <string name="settings_system_apks_deleted_all">APK 刪除成功</string>
+    <string name="settings_system_apks_deleted_all">APK 已刪除</string>
     <string name="settings_system_apks_delete_failed">部份APK檔案無法刪除</string>
     <string name="settings_system_apks_export_zip_success">已匯出選取的 APK</string>
     <string name="settings_system_apks_export_zip_failed">匯出選取的 APK 失敗</string>
@@ -1267,8 +1279,8 @@ morphe_header_custom_dark.png
     <string name="settings_system_storage_temporary_title">臨時檔案</string>
     <string name="settings_system_storage_temporary_description">修補過程中建立的工作檔案</string>
     <string name="settings_system_storage_clear_all">清除所有快取</string>
-    <string name="settings_system_storage_clear_all_description">一次釋放所有可回收的快取空間</string>
-    <string name="settings_system_storage_clear_all_confirm">這會清除已快取的網路回應、已排程的安裝程式副本和臨時檔案。原始 APK 和修補後的 APK 會保留</string>
+    <string name="settings_system_storage_clear_all_description">上方列出的所有快取</string>
+    <string name="settings_system_storage_clear_all_confirm">上方所有快取將被清除。原始和已修補的 APK 將予以保留</string>
     <string name="settings_system_storage_cleared">釋放 %s</string>
     <string name="settings_system_storage_patch_running_warning">正在執行修補程式並使用這些檔案。現在清除會導致其失敗</string>
     <string name="settings_system_storage_clear_anyway">仍要清除</string>
@@ -1276,14 +1288,14 @@ morphe_header_custom_dark.png
     <string name="settings_system_storage_open_app_info_title">開啟 Android 應用程式儲存空間</string>
     <string name="settings_system_storage_open_app_info_description">透過系統設定管理或清除所有 Morphe 資料</string>
     <string name="settings_system_save_original_apks_title">保留原始 APK</string>
-    <string name="settings_system_save_original_apks_description">儲存原始 APK，以便於稍後重新修補，而無需再次選擇檔案</string>
+    <string name="settings_system_save_original_apks_description">重新修補時重複使用原始 APK，無需再次選擇檔案</string>
     <string name="settings_system_save_patched_apks_title">保留已修補的 APK</string>
-    <string name="settings_system_save_patched_apks_description">儲存已修補 APK 的副本，以便稍後匯出或透過管理員重新安裝</string>
+    <string name="settings_system_save_patched_apks_description">保留一份副本以便稍後匯出或重新安裝</string>
     <!-- Settings - System Tab - Storage Management - Patched APKs Management -->
     <string name="settings_system_patched_apks_title">已修補的 APK</string>
     <string name="settings_system_patched_apks_empty">尚未儲存已修補的 APK</string>
     <string name="settings_system_patched_apks_delete_title">刪除已修補的 APK？</string>
-    <string name="settings_system_patched_apks_deleted">已成功刪除已修補的 APK</string>
+    <string name="settings_system_patched_apks_deleted">已修補的 APK 已刪除</string>
     <string name="settings_system_patched_apks_delete_all_title">刪除所有已修補的 APK？</string>
     <!-- Settings - System Tab - Storage Management - Original APKs Management -->
     <string name="settings_system_original_apks_title">原始 APK</string>

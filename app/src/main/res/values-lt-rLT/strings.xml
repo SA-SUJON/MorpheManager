@@ -9,6 +9,8 @@
     <string name="home_app_status_newer_patches">Nauji pataisai</string>
     <!-- Mark on the card of an app built for a device other than a phone -->
     <string name="form_factor_tv">Televizorius</string>
+    <!-- Named beside the other marks when one app has a build for a phone and for another device -->
+    <string name="form_factor_mobile">Telefonas</string>
     <string name="form_factor_automotive">Automobiliai</string>
     <string name="home_no_patches_available">Nėra prieinamų pataisų</string>
     <string name="home_app_hide_title">Paslėpti šią programą?</string>
@@ -359,6 +361,10 @@ Pasirinkite, iš kur paimti jos APK"</string>
     <string name="expert_mode_recommended">Rekomenduojami pataisymai</string>
     <string name="expert_mode_reset_to_default_done">Rekomenduojami pataisymai pridėti</string>
     <string name="expert_mode_selected_count">Pasirinkta %1$s iš %2$s</string>
+    <!-- Which build of an app with builds for several devices the patches are for, such as TV or Wear OS -->
+    <string name="expert_mode_form_factor">%s versijai</string>
+    <!-- The same for the phone build, named as a common noun rather than by its mark -->
+    <string name="expert_mode_form_factor_mobile">Telefono versijai</string>
     <string name="expert_mode_saved_selection">Išsaugotas pasirinkimas</string>
     <string name="expert_mode_restore_saved_done">Išsaugotas pasirinkimas atkurtas</string>
     <string name="expert_mode_copy_from_bundle_no_patches">Šiame rinkinyje nėra atitinkančių pataisų</string>
@@ -489,7 +495,8 @@ Norint gauti geriausią rezultatą, ši programa rekomenduoja pataisyti &lt;b&gt
     <string name="batch_patch_preparing_next">Ruošiama kita programa…</string>
     <string name="batch_patch_progress_counter">Taikoma pataisa %1$s iš %2$s</string>
     <string name="batch_patch_summary">%1$s pataisyta, %2$s nepavyko, %3$s praleista</string>
-    <string name="batch_patch_saved_hint">Pataisytos programos išsaugotos. Įdiekite jas dabar arba vėliau iš pataisytų APK sąrašo nustatymuose</string>
+    <string name="batch_patch_saved_hint">Patčiuoti APK failai išsaugoti. Įsidinkite juos dabar arba vėliau iš pagrindinio ekrano</string>
+    <string name="batch_patch_not_kept_hint">Patčiuoti APK failai nesaugomi. Prieš uždarydami šį ekraną juos įsidinkite arba eksportuokite</string>
     <string name="batch_patch_multiple_sources">Kai kurios programos sujungia pataisas iš daugiau nei vieno šaltinio, o tai gali sukelti konfliktų</string>
     <string name="batch_patch_needs_apk">Nėra APK, pridėkite failą</string>
     <string name="batch_patch_wrong_package">Pridėtas failas priklauso %s</string>
@@ -504,22 +511,22 @@ Norint gauti geriausią rezultatą, ši programa rekomenduoja pataisyti &lt;b&gt
     <string name="batch_patch_apk_selected">APK pasirinkta</string>
     <string name="batch_patch_auto_download_stopped">Automatinis APK atsisiuntimas sustabdytas</string>
     <string name="batch_patch_auto_download_stop">Sustabdyti atsisiuntimus</string>
-    <string name="batch_patch_auto_download_kept">Atsisiųsto APK nepavyko naudoti, todėl išlaikyta ankstesnė versija</string>
+    <string name="batch_patch_auto_download_kept">„%s“ atsisiuntimo APK failo nepavyko naudoti, todėl išsaugotas ankstesnis</string>
     <string name="batch_patch_edit_patches">Pasirinkti pataisas</string>
     <string name="batch_patch_state_no_apk">Nėra APK</string>
     <string name="batch_patch_state_no_patches">Nėra pataisų</string>
     <string name="batch_patch_state_no_selection">Niekas nepažymėta</string>
     <string name="batch_patch_no_selection">Nė vienas iš prieinamų pataisų nėra pažymėtas</string>
     <string name="batch_patch_policy_install">Įdiegti, kai baigsis</string>
-    <string name="batch_patch_policy_install_description">Įdiegia kiekvieną pataisytą programą iškart po eilės pabaigos. Išjungus APK išsaugomi vėlesniam laikui</string>
+    <string name="batch_patch_policy_install_description">Baigę eilę, įsiddiega kiekviena patčiuota programėlė. Išjungus, APK failai lieka šiame ekrane</string>
     <string name="batch_patch_policy_mount">Montuoti pabaigus</string>
-    <string name="batch_patch_policy_mount_description">Montuoja kiekvieną pataisytą programėlę, kai eilė baigiasi. Išjungus, APK failai išlieka vėlesniam naudojimui</string>
+    <string name="batch_patch_policy_mount_description">Baigę eilę, pritvirtina kiekvieną patčiuotą programėlę. Išjungus, APK failai lieka šiame ekrane</string>
     <string name="batch_patch_policy_install_mount">Įdiegti arba montuoti pabaigus</string>
-    <string name="batch_patch_policy_install_mount_description">Baigus eilės apdorojimą, įdiegia arba sumontuoja visas pataisytas programėles. Išjungus, APK failai išsaugomi vėliau</string>
+    <string name="batch_patch_policy_install_mount_description">Baigusi eilė, kiekviena pataisyta programėlė bus įdiegta arba sumontuota. Išjungus, APK failai liks šiame ekrane</string>
     <!-- Label of a footer button beside "Close". Keep it short, a longer one moves the buttons onto two rows -->
     <string name="batch_patch_start">Pradėti</string>
     <string name="batch_patch_stop_title">Sustabdyti paketinį pataisymą?</string>
-    <string name="batch_patch_stop_description">Šiuo metu taikoma pataisa ir visos kitos eilėje laukiančios operacijos bus atšauktos</string>
+    <string name="batch_patch_stop_description">Ši programėlė ir likusi eilė bus atšauktos</string>
     <!-- Label of a footer button beside "Done". Keep it short, a longer one moves the buttons onto two rows -->
     <string name="batch_patch_install_all">Įdiegti visus</string>
     <string name="batch_patch_install_failed">Diegimas nepavyko</string>
@@ -530,7 +537,7 @@ Norint gauti geriausią rezultatą, ši programa rekomenduoja pataisyti &lt;b&gt
     <string name="batch_queue_clear_title">Išvalyti eilę?</string>
     <string name="batch_queue_clear_description">Visos programėlės bus pašalintos iš eilės</string>
     <string name="batch_queue_keep_title">Išlaikyti eilę?</string>
-    <string name="batch_queue_keep_description">Eilėje stovėsiančios programėlės paliks pagrindiniame ekrane, kol bus paleistos vėliau</string>
+    <string name="batch_queue_keep_description">Eilė palieka pagrindiniame ekrane, kol ją paleisite</string>
     <string name="batch_queue_keep">Išlaikyti</string>
     <string name="shortcut_repatch_short">Pataisyti iš naujo</string>
     <string name="shortcut_repatch_long">Iš naujo pataisyti pasenusias programas</string>
@@ -664,6 +671,8 @@ Norint gauti geriausią rezultatą, ši programa rekomenduoja pataisyti &lt;b&gt
     <string name="patcher_conflict_title">Paketų konfliktas</string>
     <string name="patcher_conflict_subtitle">Jums reikia išdiegti egzistuoja versija</string>
     <string name="patcher_conflict_hint">Pataisyta programa naudoja kitą sertifikatą nei įdiegta versija. Pašalinus bus ištrinti visi programos duomenys</string>
+    <!-- The patched APK is for another kind of device, such as TV or Wear OS, so it may not start on this one -->
+    <string name="patcher_built_for_other_device">Sukurta %s, todėl čia gali neprisileisti. Išsaugokite, kad įdiegtumėte tame įrenginyje</string>
     <string name="patcher_installed_conflict_title">Išdiegimas būtinas</string>
     <string name="patcher_installed_conflict_body">"„Morphe“ pasirašo pataisytas programas savo sertifikatu, kuris skiriasi nuo originalo. „Android“ sistemoje reikia pašalinti esamą versiją, kad būtų galima įdiegti pataisytą programą.
 
@@ -759,7 +768,7 @@ Pašalinus bus visam laikui ištrinti visi programos duomenys."</string>
     <string name="plugin_activity_dialog_body">Reikia vartotojo sąveikos, kad tęsti su šiuo įskiepiu</string>
     <string name="patcher_process_killed_message">Sistema sustabdė pataisymo įrankį, kol jis dar nebaigė veikti, paprastai dėl atminties išlaisvinimo. Uždarykite kitas programas ir bandykite dar kartą</string>
     <!-- Shown once Morphe is back after it was closed in the middle of patching, for a reason other than low memory. -->
-    <string name="patcher_interrupted_message">Morphe buvo uždaryta prieš baigiant atnaujinimą, todėl nieko nebuvo atnaujinta. Pabandykite dar kartą</string>
+    <string name="patcher_interrupted_message">Morphe buvo uždaryta prieš baigiant pataisymą. Pabandykite dar kartą</string>
     <!-- "%1$s" is where the setting is, such as "Settings > Patcher > Use embedded VM", built from the names on those screens. -->
     <string name="patcher_process_crashed_message">Pataisymo įrankis sugriuvo prieš baigdamas. Jei tai pasikartos, išjunkite %1$s ir praneškite apie problemą kartu su žurnalu</string>
     <!-- Shown when a run fills the heap it was given. "%1$s" is the heap in megabytes. -->
@@ -868,14 +877,17 @@ Pašalinus bus visam laikui ištrinti visi programos duomenys."</string>
     <string name="settings_appearance_translations_info_title">Kai kurių kalbų vertimų gali trūkti arba jie gali būti nepilni</string>
     <!-- Settings - Appearance Tab - Interface Scale -->
     <string name="settings_appearance_ui_scale">Sąsajos mastelis</string>
-    <!-- Settings - Appearance Tab - Home Screen Section -->
+    <!-- Settings - Appearance Tab - Screens Section -->
     <string name="settings_appearance_home_screen">Pagrindinis ekranas</string>
+    <string name="settings_appearance_screens">Ekranai</string>
     <string name="settings_appearance_greeting_phrases">Pasveikinimo frazės</string>
     <string name="settings_appearance_greeting_phrases_subtitle">Rodo pasisveikinimo žinutę</string>
     <string name="settings_appearance_repatch_notice">Pakartotinio pataisymo pranešimas</string>
     <string name="settings_appearance_repatch_notice_description">Rodo pranešimą, kai pataisytas programas galima pataisyti iš naujo</string>
     <string name="settings_appearance_more_apps_card">„Daugiau programų“ kortelė</string>
     <string name="settings_appearance_more_apps_card_description">Rodo kortelę po programėlėmis, vedančią į bendruomenės pataisymus</string>
+    <string name="settings_appearance_games_button">Žaidimų mygtukas</string>
+    <string name="settings_appearance_games_button_description">Rodo mygtuką į mini-žaidimus atnaujinimo metu ir rezultate</string>
     <string name="settings_appearance_app_card_colors">Kortelių spalvos</string>
     <string name="settings_appearance_app_card_colors_default">Numatytasis</string>
     <string name="settings_appearance_app_card_colors_default_description">Priskirkite kiekvienai programėliui ir šaltiniui savo spalvą</string>
@@ -1246,7 +1258,7 @@ Išsami informacija: %2$s"</string>
     <string name="settings_system_apks_delete_all_confirm">Tai visam laikui ištrins čia rodomus išsaugotus APK failus</string>
     <string name="settings_system_apks_delete_selected_title">Ištrinti pasirinktus APK?</string>
     <string name="settings_system_apks_delete_selected_confirm">Tai visam laikui ištrins pasirinktus APK failus</string>
-    <string name="settings_system_apks_deleted_all">APK sėkmingai ištrinti</string>
+    <string name="settings_system_apks_deleted_all">APK failai ištrinti</string>
     <string name="settings_system_apks_delete_failed">Kai kurių APK failų nepavyko ištrinti</string>
     <string name="settings_system_apks_export_zip_success">Pasirinkti APK sėkmingai eksportuoti</string>
     <string name="settings_system_apks_export_zip_failed">Nepavyko eksportuoti pasirinktų APK</string>
@@ -1269,8 +1281,8 @@ Išsami informacija: %2$s"</string>
     <string name="settings_system_storage_temporary_title">Laikinieji failai</string>
     <string name="settings_system_storage_temporary_description">Darbo failai, sukurti pataisymo metu</string>
     <string name="settings_system_storage_clear_all">Išvalyti visas talpyklas</string>
-    <string name="settings_system_storage_clear_all_description">Iš karto atlaisvina visą atlaisvinamą talpyklos vietą</string>
-    <string name="settings_system_storage_clear_all_confirm">Tai išvalo tinklo atsakymų talpyklą, paruoštas diegimo įrankio kopijas ir laikinuosius failus. Originalūs ir pataisyti APK išsaugomi</string>
+    <string name="settings_system_storage_clear_all_description">Visi aukščiau išvardinti grynadyviai</string>
+    <string name="settings_system_storage_clear_all_confirm">Visi aukščiau nurodyti grynadyviai bus išvalyti. Originalūs ir pataisyti APK failai bus išsaugoti</string>
     <string name="settings_system_storage_cleared">Atlaisvinta %s</string>
     <string name="settings_system_storage_patch_running_warning">Veikia pataisymas ir naudoja šiuos failus. Jei jų dabar ištrinsite, jis nepavyks</string>
     <string name="settings_system_storage_clear_anyway">Vis tiek išvalyti</string>
@@ -1278,14 +1290,14 @@ Išsami informacija: %2$s"</string>
     <string name="settings_system_storage_open_app_info_title">Atidaryti „Android“ programos saugyklą</string>
     <string name="settings_system_storage_open_app_info_description">Tvarkykite arba išvalykite visus „Morphe“ duomenis per sistemos nustatymus</string>
     <string name="settings_system_save_original_apks_title">Išsaugoti originalius APK</string>
-    <string name="settings_system_save_original_apks_description">Išsaugokite pataisymui skirtą APK, kad jį būtų galima pakartotinai naudoti pataisymui neišrenkant failo iš naujo</string>
+    <string name="settings_system_save_original_apks_description">Pakartotinai modifikuojant naudoti originalų APK, vėl nepasirenkant failo</string>
     <string name="settings_system_save_patched_apks_title">Išsaugoti pataisytus APK</string>
-    <string name="settings_system_save_patched_apks_description">Išsaugokite pataisyto APK kopiją vėlesniam eksportavimui arba pakartotiniam diegimui iš tvarkyklės</string>
+    <string name="settings_system_save_patched_apks_description">Pasaugoti kopiją, kad būtų galima eksportuoti arba persiųsti vėliau</string>
     <!-- Settings - System Tab - Storage Management - Patched APKs Management -->
     <string name="settings_system_patched_apks_title">Pataisyti APK</string>
     <string name="settings_system_patched_apks_empty">Dar nėra išsaugotų pataisytų APK</string>
     <string name="settings_system_patched_apks_delete_title">Ištrinti pataisytą APK?</string>
-    <string name="settings_system_patched_apks_deleted">Pataisytas APK sėkmingai ištrintas</string>
+    <string name="settings_system_patched_apks_deleted">Patobulintas APK ištrintas</string>
     <string name="settings_system_patched_apks_delete_all_title">Ištrinti visus pataisytus APK?</string>
     <!-- Settings - System Tab - Storage Management - Original APKs Management -->
     <string name="settings_system_original_apks_title">Originalūs APK</string>

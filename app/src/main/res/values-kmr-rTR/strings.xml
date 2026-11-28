@@ -9,6 +9,8 @@
     <string name="home_app_status_newer_patches">Patchên nû</string>
     <!-- Mark on the card of an app built for a device other than a phone -->
     <string name="form_factor_tv">TV</string>
+    <!-- Named beside the other marks when one app has a build for a phone and for another device -->
+    <string name="form_factor_mobile">Telefon</string>
     <string name="form_factor_automotive">Otomotîv</string>
     <string name="home_no_patches_available">Patch tune ne.</string>
     <string name="home_app_hide_title">Ev app veşêre?</string>
@@ -359,6 +361,10 @@ Hilbijêre ku APK ya wê ji ku derê bê"</string>
     <string name="expert_mode_recommended">Patchên pêşniyarkirî</string>
     <string name="expert_mode_reset_to_default_done">Patchên pêşniyarkirî hatin sepandin</string>
     <string name="expert_mode_selected_count">%1$s ji %2$s hatin hilbijartin</string>
+    <!-- Which build of an app with builds for several devices the patches are for, such as TV or Wear OS -->
+    <string name="expert_mode_form_factor">Ji bo avahiyê %s</string>
+    <!-- The same for the phone build, named as a common noun rather than by its mark -->
+    <string name="expert_mode_form_factor_mobile">Ji bo avahiya telefonê</string>
     <string name="expert_mode_saved_selection">Hilbijartina tomarkirî</string>
     <string name="expert_mode_restore_saved_done">Hilbijartina tomarkirî hat vegerandin</string>
     <string name="expert_mode_copy_from_bundle_no_patches">Di vê bundleyê de patchên hevgirtî tune ne</string>
@@ -489,7 +495,8 @@ Ji bo encamên çêtir, ev app pêşniyar dike ku APKya &lt;b&gt;tam&lt;/b&gt; w
     <string name="batch_patch_preparing_next">Appa din tê amadekirin…</string>
     <string name="batch_patch_progress_counter">Patchkirina %1$s ji %2$s</string>
     <string name="batch_patch_summary">%1$s hat patchkirin, %2$s têk çûn, %3$s hat derbas kirin</string>
-    <string name="batch_patch_saved_hint">Appên patchkirî hatin tomarkirin. Naha saz bike an jî paşê ji lîsteya APKyên patchkirî di mîhengan de saz bike</string>
+    <string name="batch_patch_saved_hint">APKyên patchkirî hatin tomarkirin. Naha saz bike an jî paşê ji ekrana serêke saz bike</string>
+    <string name="batch_patch_not_kept_hint">APKyên patchkirî nayên parastin. Berî ku vê ekranê bigire, wan saz bike an jî export bike</string>
     <string name="batch_patch_multiple_sources">Hinek app patchên ji çavkaniyên cuda bi hev re dicivînin, ku dikare pevçûnan çêbike</string>
     <string name="batch_patch_needs_apk">APK tune ye, pelekê zêde bike</string>
     <string name="batch_patch_wrong_package">Pela zêdekirî ji bo %s e</string>
@@ -504,22 +511,22 @@ Ji bo encamên çêtir, ev app pêşniyar dike ku APKya &lt;b&gt;tam&lt;/b&gt; w
     <string name="batch_patch_apk_selected">APK hat hilbijartin</string>
     <string name="batch_patch_auto_download_stopped">Daxistinên otomatik yên APK hatin rawezandin</string>
     <string name="batch_patch_auto_download_stop">Daxistinan rawezîne</string>
-    <string name="batch_patch_auto_download_kept">APK ya hatî daxistin nekarî hat bikaranîn, lewma ya berê hat parastin</string>
+    <string name="batch_patch_auto_download_kept">APK ya ku ji bo %s hat daxistin nekarî were bikaranîn, lewma ya berê hat parastin</string>
     <string name="batch_patch_edit_patches">Patchan hilbijêre</string>
     <string name="batch_patch_state_no_apk">APK tune ye</string>
     <string name="batch_patch_state_no_patches">Patch tune ne</string>
     <string name="batch_patch_state_no_selection">Hîç yek nayê hilbijartin</string>
     <string name="batch_patch_no_selection">Ji patchên berdest tu nayê hilbijartin</string>
     <string name="batch_patch_policy_install">Piştî qedibûna hemûyan saz bike</string>
-    <string name="batch_patch_policy_install_description">Her appa patchkirî piştî qedandina rêzê rasterast saz dike. Ji bo paşê APKan dihêle</string>
+    <string name="batch_patch_policy_install_description">Gava ku rêz bi dawî dibe, her appa patchkirî saz dike. \'Off\' APKan li ser vê ekranê dihêle</string>
     <string name="batch_patch_policy_mount">Gava bi dawî bû mount bike</string>
-    <string name="batch_patch_policy_mount_description">Gava rêz bi dawî dibe, her appekî patchkirî mount dike. \'Off\' APKyan ji bo paşê diparêze</string>
+    <string name="batch_patch_policy_mount_description">Her appa patchkirî piştî qedandina rêzê mount dike. Vegirandina wê APKan li vê ekranê dihêle</string>
     <string name="batch_patch_policy_install_mount">Gava bi dawî bû sazkirin an mount bike</string>
-    <string name="batch_patch_policy_install_mount_description">Gava rêz bi dawî dibe, her appekî patchkirî sazkirin an mount dike. \'Off\' APKyan ji bo paşê diparêze</string>
+    <string name="batch_patch_policy_install_mount_description">Her appa patchkirî piştî qedandina rêzê saz dike an mount dike. Vegirandina wê APKan li vê ekranê dihêle</string>
     <!-- Label of a footer button beside "Close". Keep it short, a longer one moves the buttons onto two rows -->
     <string name="batch_patch_start">Destpêk</string>
     <string name="batch_patch_stop_title">Patchkirina batchê bisekine?</string>
-    <string name="batch_patch_stop_description">Appa ku niha tê patchkirin û her tiştê ku di rêzê de ye dê were betalkirin</string>
+    <string name="batch_patch_stop_description">Appa niha û mayîna rêzê dê bên betalkirin</string>
     <!-- Label of a footer button beside "Done". Keep it short, a longer one moves the buttons onto two rows -->
     <string name="batch_patch_install_all">Hemûyan saz bike</string>
     <string name="batch_patch_install_failed">Sazkirin têk çû</string>
@@ -530,7 +537,7 @@ Ji bo encamên çêtir, ev app pêşniyar dike ku APKya &lt;b&gt;tam&lt;/b&gt; w
     <string name="batch_queue_clear_title">Rêzê vala bike?</string>
     <string name="batch_queue_clear_description">Hemû app dê ji rêzê bên jêbirin</string>
     <string name="batch_queue_keep_title">Rîzê biparêze?</string>
-    <string name="batch_queue_keep_description">Appên di rîzê de dê li ekranê sêwirî bimînin da ku piştre bên destpêkirin</string>
+    <string name="batch_queue_keep_description">Rêz li ser ekrana sereke li benda te dimîne heta tu wê destpêbikî</string>
     <string name="batch_queue_keep">Biparêze</string>
     <string name="shortcut_repatch_short">Dîsa patch bike</string>
     <string name="shortcut_repatch_long">Appên kevn dîsa patch bike</string>
@@ -664,6 +671,8 @@ Ji bo encamên çêtir, ev app pêşniyar dike ku APKya &lt;b&gt;tam&lt;/b&gt; w
     <string name="patcher_conflict_title">Pevçûna pakêtê</string>
     <string name="patcher_conflict_subtitle">Divê hûn guhertoya heyî jê bibin</string>
     <string name="patcher_conflict_hint">Appa patchkirî sertîfîkayeke cuda ji ya sazkirî bikar tîne. Rakirin dê hemû daneyên appê jê bibe</string>
+    <!-- The patched APK is for another kind of device, such as TV or Wear OS, so it may not start on this one -->
+    <string name="patcher_built_for_other_device">Ji bo %s hatiye avakirin, lewma dibe ku li vir dest pê neke. Ji bo ku li ser wê ampirê instalação bike, wêyî biparêze</string>
     <string name="patcher_installed_conflict_title">Jêbirin pêwist e</string>
     <string name="patcher_installed_conflict_body">"Morphe appên patchkirî bi sertîfîka xwe ya taybet îmze dike, ku ji ya orjînal cuda ye. Android hewce dike ku guhertoya heyî berî sazkirina appa patchkirî were jêbirin.
 
@@ -759,7 +768,7 @@ Jêbirin dê hemû daneyên appê bi domdarî jê bibe"</string>
     <string name="plugin_activity_dialog_body">Ji bo domandina vê pluginê bikarhêner pêdivî bi çalakiyê ye</string>
     <string name="patcher_process_killed_message">Sîstemê patcher\'î berî ku biqedîne rawestand, bi gelemperî ji bo azadkirina bîrê. Appên din bigire û dîsa biceribîne</string>
     <!-- Shown once Morphe is back after it was closed in the middle of patching, for a reason other than low memory. -->
-    <string name="patcher_interrupted_message">Morphe berî ku patching bi dawî bibe hat girtin, lewma tiştek nehat patchkirin. Careke din biceribîne</string>
+    <string name="patcher_interrupted_message">Morphe berî qedandina patchingê hat girtin. Careke din biceribîne</string>
     <!-- "%1$s" is where the setting is, such as "Settings > Patcher > Use embedded VM", built from the names on those screens. -->
     <string name="patcher_process_crashed_message">Patcher berî ku biqediye crash bûye. Ger dîsa bibe, %1$s veguherîne off û bi log-ê re pirsgirêkê rapor bike</string>
     <!-- Shown when a run fills the heap it was given. "%1$s" is the heap in megabytes. -->
@@ -868,14 +877,17 @@ Jêbirin dê hemû daneyên appê bi domdarî jê bibe"</string>
     <string name="settings_appearance_translations_info_title">Wergerandin ji bo hin zimanên kêmtir an jî ne tamkirin</string>
     <!-- Settings - Appearance Tab - Interface Scale -->
     <string name="settings_appearance_ui_scale">Mezinahiya navrûyê</string>
-    <!-- Settings - Appearance Tab - Home Screen Section -->
+    <!-- Settings - Appearance Tab - Screens Section -->
     <string name="settings_appearance_home_screen">Ekrana sereke</string>
+    <string name="settings_appearance_screens">Ekran</string>
     <string name="settings_appearance_greeting_phrases">Peyvên silavê</string>
     <string name="settings_appearance_greeting_phrases_subtitle">Payameke silavê nîşan dide</string>
     <string name="settings_appearance_repatch_notice">Agahdariya ji nû ve patchkirinê</string>
     <string name="settings_appearance_repatch_notice_description">Dema appên patchkirî dikarin dîsa patchkirin, bannerek nîşan dide</string>
     <string name="settings_appearance_more_apps_card">Karta app-ên zêdetir</string>
     <string name="settings_appearance_more_apps_card_description">Karteke bin aplikasyonan nîşan dide ku bi patchên civakê ve girêdayî ye</string>
+    <string name="settings_appearance_games_button">Bişkoja Lîban</string>
+    <string name="settings_appearance_games_button_description">Bişkojekê ya lîbanên piçûk di dema patching û li ser encaman nîşan dide</string>
     <string name="settings_appearance_app_card_colors">Rengên kartan</string>
     <string name="settings_appearance_app_card_colors_default">Bixweber</string>
     <string name="settings_appearance_app_card_colors_default_description">Ji bo her aplikasyon û çavkaniyê rengê xwe yê taybet bide</string>
@@ -1246,7 +1258,7 @@ Detay: %2$s"</string>
     <string name="settings_system_apks_delete_all_confirm">Ev ê pelên APKyên tomarkirî yên li vir nîşandayî bi domdarî jê bibe</string>
     <string name="settings_system_apks_delete_selected_title">APKyên hilbijartî jê bibin?</string>
     <string name="settings_system_apks_delete_selected_confirm">Ev ê pelên APKyên hilbijartî bi domdarî jê bibe</string>
-    <string name="settings_system_apks_deleted_all">APKyên bi serkeftî hatin jêbirin</string>
+    <string name="settings_system_apks_deleted_all">APK hatin jêbirin</string>
     <string name="settings_system_apks_delete_failed">Hin pelên APK nehatin jêbirin</string>
     <string name="settings_system_apks_export_zip_success">APKyên hilbijartî hatin exportkirin</string>
     <string name="settings_system_apks_export_zip_failed">Derxistina APK-yên hilbijartî têk çû</string>
@@ -1269,8 +1281,8 @@ Detay: %2$s"</string>
     <string name="settings_system_storage_temporary_title">Pelên demkî</string>
     <string name="settings_system_storage_temporary_description">Pelên xebatê yên di dema patchkirinê de hatine çêkirin</string>
     <string name="settings_system_storage_clear_all">Hemû cacheyan paqij bike</string>
-    <string name="settings_system_storage_clear_all_description">Hemû cîhê cacheyê yê ku were serbestkirin bi carekê azad dike</string>
-    <string name="settings_system_storage_clear_all_confirm">Ev cacheya torê, kopiyên sazkerê yên amadekirî û pelên demkî paqij dike. APKyên orîjînal û patchkirî tên parastin</string>
+    <string name="settings_system_storage_clear_all_description">Her cache\'ekî ku li jor hat listedkirin</string>
+    <string name="settings_system_storage_clear_all_confirm">Her cacheyê li jor dê were paqijkirin. APKyên orjînal û yên patchkirî tên parastin</string>
     <string name="settings_system_storage_cleared">%s hat azadkirin</string>
     <string name="settings_system_storage_patch_running_warning">Paçekek dixebite û van faylan bikar tîne. Paqijkirina wan niha dibe sedema têkçûnê</string>
     <string name="settings_system_storage_clear_anyway">Her wiha paqij bike</string>
@@ -1278,14 +1290,14 @@ Detay: %2$s"</string>
     <string name="settings_system_storage_open_app_info_title">Depoya appa Android veke</string>
     <string name="settings_system_storage_open_app_info_description">Hemû daneyên Morphe ji rêya mîhengên pergalê birêve bibe an paqij bike</string>
     <string name="settings_system_save_original_apks_title">APK-yên orîjînal biparêze</string>
-    <string name="settings_system_save_original_apks_description">APKya berî patchkirinê tomar bike da ku ji bo dîsa patchkirinê pel dîsa neyê hilbijartin</string>
+    <string name="settings_system_save_original_apks_description">Dema dîsa patch dikî, APKya orjînal dubare bikar bîne, bêyî ku pel dîsa hilbijêrî</string>
     <string name="settings_system_save_patched_apks_title">APKyên patchkirî biparêze</string>
-    <string name="settings_system_save_patched_apks_description">Kopiyeke APKya patchkirî tomar bike ji bo derxistin an sazkirina dîsa ji rêvebir</string>
+    <string name="settings_system_save_patched_apks_description">Kopiyekê bipare da ku paşê eksport bikî yan dîsa instalação bikî</string>
     <!-- Settings - System Tab - Storage Management - Patched APKs Management -->
     <string name="settings_system_patched_apks_title">APKyên patchkirî</string>
     <string name="settings_system_patched_apks_empty">Heta niha APKyên patchkirî nehatine tomarkirin</string>
     <string name="settings_system_patched_apks_delete_title">APKyên patchkirî jêbibin?</string>
-    <string name="settings_system_patched_apks_deleted">APKyên patchkirî bi serkeftî hatin jêbirin</string>
+    <string name="settings_system_patched_apks_deleted">APKya patchkirî hat jêbirin</string>
     <string name="settings_system_patched_apks_delete_all_title">Hemû APKyên patchkirî jê bibin?</string>
     <!-- Settings - System Tab - Storage Management - Original APKs Management -->
     <string name="settings_system_original_apks_title">APK\'yên orjînal</string>

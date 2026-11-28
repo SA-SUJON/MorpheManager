@@ -6,6 +6,7 @@
     <string name="home_not_patched_yet">ఇంకా ప్యాచ్ చేయలేదు </string>
     <string name="home_unpatched_version_installed">ప్యాచ్ చేయని వెర్షన్ ఇన్స్టాలయ్యింది</string>
     <!-- Mark on the card of an app built for a device other than a phone -->
+    <!-- Named beside the other marks when one app has a build for a phone and for another device -->
     <string name="home_no_patches_available">ఏ ప్యాచ్లు లేవు </string>
     <string name="home_app_hide_title">ఈ యాప్‌ని దాచలా?</string>
     <string name="home_more_apps_title">మరిన్ని యాప్లు</string>
@@ -96,6 +97,8 @@
     <!-- Home Screen - Dialog 3: File Picker Prompt -->
     <!-- %s is the name of the app whose APK was just downloaded -->
     <!-- Home Screen - Dialog 4: Expert Mode Dialog -->
+    <!-- Which build of an app with builds for several devices the patches are for, such as TV or Wear OS -->
+    <!-- The same for the phone build, named as a common noun rather than by its mark -->
     <!-- Home Screen - Home Sub-Dialogs -->
     <!-- Label of a footer button beside "Cancel". Keep it short, a longer one moves the buttons onto two rows -->
     <!-- "Build" here refers to a specific compiled version of the app (versionCode) -->
@@ -128,6 +131,7 @@
     <!-- Fastest read or write rate reached while patching, in data per second -->
     <!-- Value of "Libraries": the libraries this device cannot use were dropped from the patched APK -->
     <!-- Value of "Libraries": every library was left in the patched APK -->
+    <!-- The patched APK is for another kind of device, such as TV or Wear OS, so it may not start on this one -->
     <!-- Patcher Screen - Patcher Steps -->
     <!-- Patcher Screen - Patcher Tasks -->
     <!-- Battery optimization pre-flight dialog -->
@@ -153,7 +157,7 @@
     <!-- Settings - Appearance Tab - Theme -->
     <!-- Settings - Appearance Tab - Language Selector -->
     <!-- Settings - Appearance Tab - Interface Scale -->
-    <!-- Settings - Appearance Tab - Home Screen Section -->
+    <!-- Settings - Appearance Tab - Screens Section -->
     <!-- Settings - Appearance Tab - App Icon Selector -->
     <!-- %s is the name of the icon picked -->
     <!-- Label of a footer button beside "Cancel". Keep it short, a longer one moves the buttons onto two rows -->

@@ -9,6 +9,8 @@
     <string name="home_app_status_newer_patches">Uusia korjauksia</string>
     <!-- Mark on the card of an app built for a device other than a phone -->
     <string name="form_factor_tv">TV</string>
+    <!-- Named beside the other marks when one app has a build for a phone and for another device -->
+    <string name="form_factor_mobile">Puhelin</string>
     <string name="form_factor_automotive">Ajoneuvo</string>
     <string name="home_no_patches_available">Lisäosia ei ole saatavilla</string>
     <string name="home_app_hide_title">Piilota tämä sovellus?</string>
@@ -359,6 +361,10 @@ Valitse, mistä sen APK haetaan"</string>
     <string name="expert_mode_recommended">Suositellut korjaukset</string>
     <string name="expert_mode_reset_to_default_done">Suositellut korjaukset otettu käyttöön</string>
     <string name="expert_mode_selected_count">%1$s kpl %2$s valittu</string>
+    <!-- Which build of an app with builds for several devices the patches are for, such as TV or Wear OS -->
+    <string name="expert_mode_form_factor">Versiolle %s</string>
+    <!-- The same for the phone build, named as a common noun rather than by its mark -->
+    <string name="expert_mode_form_factor_mobile">Puhelinversiolle</string>
     <string name="expert_mode_saved_selection">Tallennettu valinta</string>
     <string name="expert_mode_restore_saved_done">Tallennusvalinta palautettu</string>
     <string name="expert_mode_copy_from_bundle_no_patches">Tästä paketista ei löytynyt vastaavia korjauksia</string>
@@ -489,7 +495,8 @@ Parhaan tuloksen saavuttamiseksi sovellus suosittelee &lt;b&gt;kokonaisen APK:n&
     <string name="batch_patch_preparing_next">Seuraavan sovelluksen valmistelu…</string>
     <string name="batch_patch_progress_counter">Paikataan %1$s / %2$s</string>
     <string name="batch_patch_summary">%1$s korjattu, %2$s epäonnistui, %3$s ohitettu</string>
-    <string name="batch_patch_saved_hint">Korjatut sovellukset on tallennettu. Asenna ne nyt tai myöhemmin korjattujen APK-tiedostojen luettelosta asetuksista</string>
+    <string name="batch_patch_saved_hint">Paikatut APK-tiedostot on tallennettu. Asenna ne nyt tai myöhemmin aloitusnäytöltä</string>
+    <string name="batch_patch_not_kept_hint">Paikattuja APK-tiedostoja ei säilytetä. Asenna tai vie ne ennen tämän näytön sulkemista</string>
     <string name="batch_patch_multiple_sources">Jotkut sovellukset yhdistävät korjauksia useista lähteistä, mikä voi aiheuttaa ristiriitoja</string>
     <string name="batch_patch_needs_apk">APK-tiedostoa ei ole saatavilla, liitä tiedosto</string>
     <string name="batch_patch_wrong_package">Liitetty tiedosto kuuluu %s:ään</string>
@@ -504,22 +511,22 @@ Parhaan tuloksen saavuttamiseksi sovellus suosittelee &lt;b&gt;kokonaisen APK:n&
     <string name="batch_patch_apk_selected">APK valittu</string>
     <string name="batch_patch_auto_download_stopped">Automaattiset APK-lataukset pysäytetty</string>
     <string name="batch_patch_auto_download_stop">Lopeta lataukset</string>
-    <string name="batch_patch_auto_download_kept">Ladattua APK-tiedostoa ei voitu käyttää, joten edellinen säilytetään</string>
+    <string name="batch_patch_auto_download_kept">Kohdetta %s varten ladattua APK-tiedostoa ei voitu käyttää, joten edellinen säilytetään</string>
     <string name="batch_patch_edit_patches">Valitse korjaukset</string>
     <string name="batch_patch_state_no_apk">APK-tiedostoa ei ole</string>
     <string name="batch_patch_state_no_patches">Ei korjauksia</string>
     <string name="batch_patch_state_no_selection">Ei mitään valittu</string>
     <string name="batch_patch_no_selection">Yhdenkään saatavilla olevan korjauksen tilaa ei ole valittu</string>
     <string name="batch_patch_policy_install">Asenna valmistuttua</string>
-    <string name="batch_patch_policy_install_description">Asentaa jokaisen paikatun sovelluksen heti jonon valmistuttua. Kun pois päältä, APK-tiedostot säilytetään myöhempää käyttöä varten</string>
+    <string name="batch_patch_policy_install_description">Asentaa jokaisen paikatun sovelluksen, kun jono on valmis. Pois päältä jättää APK-tiedostot tälle näytölle</string>
     <string name="batch_patch_policy_mount">Liitä valmistumisen jälkeen</string>
-    <string name="batch_patch_policy_mount_description">Liittää kaikki paikatut sovellukset, kun jono on valmis. Pois päältä säilyttää APK-tiedostot myöhempää käyttöä varten</string>
+    <string name="batch_patch_policy_mount_description">Liittää kaikki paikatut sovellukset, kun jono on valmis. Pois päältä jättää APK-tiedostot tälle näytölle</string>
     <string name="batch_patch_policy_install_mount">Asenna tai liitä valmistumisen jälkeen</string>
-    <string name="batch_patch_policy_install_mount_description">Asentaa tai mounttaa kaikki paikatut sovellukset heti, kun jono valmistuu. Pois-vaihtoehto säilyttää APK:t myöhempää käyttöä varten.</string>
+    <string name="batch_patch_policy_install_mount_description">Asentaa tai liittää jokaisen paikatun sovelluksen jonon valmistuttua. Pois päältä jättää APK-tiedostot tälle näytölle</string>
     <!-- Label of a footer button beside "Close". Keep it short, a longer one moves the buttons onto two rows -->
     <string name="batch_patch_start">Aloita</string>
     <string name="batch_patch_stop_title">Lopeta eräkorjaus?</string>
-    <string name="batch_patch_stop_description">Tällä hetkellä paikattava sovellus ja kaikki jonossa olevat toiminnot peruutetaan</string>
+    <string name="batch_patch_stop_description">Nykyinen sovellus ja loput jonosta peruutetaan</string>
     <!-- Label of a footer button beside "Done". Keep it short, a longer one moves the buttons onto two rows -->
     <string name="batch_patch_install_all">Asenna kaikki</string>
     <string name="batch_patch_install_failed">Asennus epäonnistui</string>
@@ -530,7 +537,7 @@ Parhaan tuloksen saavuttamiseksi sovellus suosittelee &lt;b&gt;kokonaisen APK:n&
     <string name="batch_queue_clear_title">Tyhjennetäänkö jono?</string>
     <string name="batch_queue_clear_description">Sovellukset poistetaan jonosta</string>
     <string name="batch_queue_keep_title">Säilytetäänkö jono?</string>
-    <string name="batch_queue_keep_description">Jonossa olevat sovellukset odottavat aloittamista aloitusnäytöllä</string>
+    <string name="batch_queue_keep_description">Jono odottaa aloitusnäytöllä, kunnes käynnistät sen</string>
     <string name="batch_queue_keep">Säilytä</string>
     <string name="shortcut_repatch_short">Korjaa uudelleen</string>
     <string name="shortcut_repatch_long">Korjaa vanhentuneet sovellukset</string>
@@ -664,6 +671,8 @@ Parhaan tuloksen saavuttamiseksi sovellus suosittelee &lt;b&gt;kokonaisen APK:n&
     <string name="patcher_conflict_title">Pakettiristiriita</string>
     <string name="patcher_conflict_subtitle">Sinun on poistettava olemassa oleva versio</string>
     <string name="patcher_conflict_hint">Korjattu sovellus käyttää eri sertifikaattia kuin asennettu versio. Poistaminen poistaa kaikki sovelluksen tiedot</string>
+    <!-- The patched APK is for another kind of device, such as TV or Wear OS, so it may not start on this one -->
+    <string name="patcher_built_for_other_device">Luotu versiolle %s, joten se ei välttämättä käynnisty täällä. Tallenna se asentaaksesi sen kyseiseen laitteeseen</string>
     <string name="patcher_installed_conflict_title">Poisto vaaditaan</string>
     <string name="patcher_installed_conflict_body">"Morphe allekirjoittaa korjatut sovellukset omalla sertifikaatillaan, joka poikkeaa alkuperäisestä. Android edellyttää olemassa olevan version poistamista, ennen kuin korjattua sovellusta voidaan asentaa.
 
@@ -759,7 +768,7 @@ Poistaminen poistaa pysyvästi kaikki sovelluksen tiedot."</string>
     <string name="plugin_activity_dialog_body">Tämän liitännäisen käyttöönoton jatkamiseksi tarvitaan käyttäjän toimia.</string>
     <string name="patcher_process_killed_message">Järjestelmä pysäytti paikkaajan ennen sen valmistumista, yleensä muistin vapauttamiseksi. Sulje muut sovellukset ja yritä uudelleen</string>
     <!-- Shown once Morphe is back after it was closed in the middle of patching, for a reason other than low memory. -->
-    <string name="patcher_interrupted_message">Morphe suljettiin ennen päivityksen valmistumista, joten mitään ei päivitetty. Yritä uudelleen</string>
+    <string name="patcher_interrupted_message">Morphe suljettiin ennen paikkauksen valmistumista. Yritä uudelleen</string>
     <!-- "%1$s" is where the setting is, such as "Settings > Patcher > Use embedded VM", built from the names on those screens. -->
     <string name="patcher_process_crashed_message">Paikkausohjelma kaatui ennen valmistumista. Jos näin käy uudelleen, kytke %1$s pois päältä ja raportoi ongelma lokitiedostojen kanssa</string>
     <!-- Shown when a run fills the heap it was given. "%1$s" is the heap in megabytes. -->
@@ -868,14 +877,17 @@ Poistaminen poistaa pysyvästi kaikki sovelluksen tiedot."</string>
     <string name="settings_appearance_translations_info_title">Joidenkin kielten käännökset saattavat puuttua tai olla puutteellisia</string>
     <!-- Settings - Appearance Tab - Interface Scale -->
     <string name="settings_appearance_ui_scale">Käyttöliittymän skaalaus</string>
-    <!-- Settings - Appearance Tab - Home Screen Section -->
+    <!-- Settings - Appearance Tab - Screens Section -->
     <string name="settings_appearance_home_screen">Aloitusnäyttö</string>
+    <string name="settings_appearance_screens">Ruudut</string>
     <string name="settings_appearance_greeting_phrases">Tervehdysviestit</string>
     <string name="settings_appearance_greeting_phrases_subtitle">Näyttää tervehdysviestin</string>
     <string name="settings_appearance_repatch_notice">Uudelleenkorjausilmoitus</string>
     <string name="settings_appearance_repatch_notice_description">Näyttää bannerin, kun paikattuja sovelluksia voi paikata uudelleen</string>
     <string name="settings_appearance_more_apps_card">Lisää sovelluksia -kortti</string>
     <string name="settings_appearance_more_apps_card_description">Näyttää sovellusten alapuolella kortin, joka johtaa yhteisön korjauksiin</string>
+    <string name="settings_appearance_games_button">Pelipainike</string>
+    <string name="settings_appearance_games_button_description">Näyttää painikkeen minipeleihin päivityksen aikana ja tulossivulla</string>
     <string name="settings_appearance_app_card_colors">Korttien värit</string>
     <string name="settings_appearance_app_card_colors_default">Oletus</string>
     <string name="settings_appearance_app_card_colors_default_description">Anna jokaiselle sovellukselle ja lähteelle oma värinsä</string>
@@ -1246,7 +1258,7 @@ Yksityiskohdat: %2$s"</string>
     <string name="settings_system_apks_delete_all_confirm">Tämä poistaa pysyvästi tässä näkyvät tallennetut APK-tiedostot</string>
     <string name="settings_system_apks_delete_selected_title">Poistetaanko valitut APK-tiedostot?</string>
     <string name="settings_system_apks_delete_selected_confirm">Tämä poistaa pysyvästi valitut APK-tiedostot</string>
-    <string name="settings_system_apks_deleted_all">APK-tiedostot poistettiin onnistuneesti</string>
+    <string name="settings_system_apks_deleted_all">APK-tiedostot poistettu</string>
     <string name="settings_system_apks_delete_failed">Joitakin APK-tiedostoja ei voitu poistaa</string>
     <string name="settings_system_apks_export_zip_success">Valitut APK-tiedostot viety</string>
     <string name="settings_system_apks_export_zip_failed">Valittujen APK-tiedostojen vienti epäonnistui</string>
@@ -1269,8 +1281,8 @@ Yksityiskohdat: %2$s"</string>
     <string name="settings_system_storage_temporary_title">Väliaikaistiedostot</string>
     <string name="settings_system_storage_temporary_description">Paikkauksen aikana luodut työtiedostot</string>
     <string name="settings_system_storage_clear_all">Tyhjennä kaikki välimuistit</string>
-    <string name="settings_system_storage_clear_all_description">Tyhjentää kaikki vapautettavat välimuistit kerralla</string>
-    <string name="settings_system_storage_clear_all_confirm">Tämä tyhjentää välimuistiin tallennetut verkkovastaukset, asennusohjelman välivaihekopiot ja väliaikaistiedostot. Alkuperäiset ja paikatut APK-tiedostot säilytetään.</string>
+    <string name="settings_system_storage_clear_all_description">Jokainen yllä lueteltu välimuisti</string>
+    <string name="settings_system_storage_clear_all_confirm">Kaikki yllä olevat välimuistit tyhjennetään. Alkuperäiset ja muokatut APK-tiedostot säilytetään</string>
     <string name="settings_system_storage_cleared">Vapautettu tila: %s</string>
     <string name="settings_system_storage_patch_running_warning">Paikkaus on käynnissä ja käyttää näitä tiedostoja. Niiden tyhjentäminen nyt aiheuttaa epäonnistumisen</string>
     <string name="settings_system_storage_clear_anyway">Tyhjennä joka tapauksessa</string>
@@ -1278,14 +1290,14 @@ Yksityiskohdat: %2$s"</string>
     <string name="settings_system_storage_open_app_info_title">Avaa Android-sovellustilan tallennustiedot</string>
     <string name="settings_system_storage_open_app_info_description">Hallitse tai tyhjennä kaikki Morphe-tiedot järjestelmäasetusten kautta</string>
     <string name="settings_system_save_original_apks_title">Säilytä alkuperäiset APK-tiedostot</string>
-    <string name="settings_system_save_original_apks_description">Tallenna korjaamaton APK-tiedosto, jotta sitä voidaan käyttää uudelleen korjaamiseen ilman, että tiedostoa tarvitsee valita uudelleen</string>
+    <string name="settings_system_save_original_apks_description">Käytä alkuperäistä APK-tiedostoa uudelleen muokatessa ilman, että tiedosto on valittava uudelleen</string>
     <string name="settings_system_save_patched_apks_title">Säilytä korjatut APK-tiedostot</string>
-    <string name="settings_system_save_patched_apks_description">Tallenna kopio korjatusta APK-tiedostosta myöhempää vientiä tai asennusta varten hallinnan kautta</string>
+    <string name="settings_system_save_patched_apks_description">Säilytä kopio vientiä tai myöhempää uudelleenasennusta varten</string>
     <!-- Settings - System Tab - Storage Management - Patched APKs Management -->
     <string name="settings_system_patched_apks_title">Muokatut APK:t</string>
     <string name="settings_system_patched_apks_empty">Muokattuja APK:ita ei ole vielä tallennettu</string>
     <string name="settings_system_patched_apks_delete_title">Poista muokattu APK?</string>
-    <string name="settings_system_patched_apks_deleted">Muokattu APK on poistettu</string>
+    <string name="settings_system_patched_apks_deleted">Muokattu APK poistettu</string>
     <string name="settings_system_patched_apks_delete_all_title">Poistetaanko kaikki paikatut APK-tiedostot?</string>
     <!-- Settings - System Tab - Storage Management - Original APKs Management -->
     <string name="settings_system_original_apks_title">Alkuperäiset APK:t</string>

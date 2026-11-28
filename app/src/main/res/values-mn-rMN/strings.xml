@@ -9,6 +9,8 @@
     <string name="home_app_status_newer_patches">Шинэ патчууд</string>
     <!-- Mark on the card of an app built for a device other than a phone -->
     <string name="form_factor_tv">Зурагт</string>
+    <!-- Named beside the other marks when one app has a build for a phone and for another device -->
+    <string name="form_factor_mobile">Утас</string>
     <string name="form_factor_automotive">Автомашин</string>
     <string name="home_no_patches_available">Боломжтой патч байхгүй байна</string>
     <string name="home_app_hide_title">Энэ апп-ыг нуух уу?</string>
@@ -359,6 +361,10 @@ APK-г хаанаас авахыг сонгоно уу"</string>
     <string name="expert_mode_recommended">Зөвлөмжтэй патчууд</string>
     <string name="expert_mode_reset_to_default_done">Зөвлөмжтэй патчуудыг хэрэглээд дууслаа</string>
     <string name="expert_mode_selected_count">%2$s-аас %1$s сонгогдсон</string>
+    <!-- Which build of an app with builds for several devices the patches are for, such as TV or Wear OS -->
+    <string name="expert_mode_form_factor">%s build-д зориулсан</string>
+    <!-- The same for the phone build, named as a common noun rather than by its mark -->
+    <string name="expert_mode_form_factor_mobile">Утасны build-д зориулсан</string>
     <string name="expert_mode_saved_selection">Хадгалагдсан сонголт</string>
     <string name="expert_mode_restore_saved_done">Хадгалагдсан сонголтыг сэргээлээ</string>
     <string name="expert_mode_copy_from_bundle_no_patches">Энэ багцад тохирох патч байхгүй байна</string>
@@ -489,7 +495,8 @@ APK-г хаанаас авахыг сонгоно уу"</string>
     <string name="batch_patch_preparing_next">Дараагийн апп-ыг бэлдэж байна…</string>
     <string name="batch_patch_progress_counter">%2$s-аас %1$s-ыг патчлаж байна</string>
     <string name="batch_patch_summary">%1$s засагдсан, %2$s алдаа гарсан, %3$s алгассан</string>
-    <string name="batch_patch_saved_hint">Зассан апп-уудыг хадгаллаа. Одоо суулгах эсвэл дараа нь тохиргооны зассан APK жагсаалтаас суулгана уу</string>
+    <string name="batch_patch_saved_hint">Засагдсан APK-уудыг хадгаллаа. Одоо эсвэл дараа нь нүүр дэлгэцээс суулгаарай</string>
+    <string name="batch_patch_not_kept_hint">Засагдсан APK-уудыг хадгалахгүй. Энэ дэлгэцийг хаахаас өмнө суулгах эсвэл экспорт хийнэ үү</string>
     <string name="batch_patch_multiple_sources">Зарим апп-ууд нэгээс олон эх сурвалжаас засваруудыг нэгтгэдэг бөгөөд энэ нь зөрчилдөөн үүсгэж болзошгүй</string>
     <string name="batch_patch_needs_apk">Боломжит APK байхгүй байна, файл хавсаргана уу</string>
     <string name="batch_patch_wrong_package">Хавсаргасан файл нь %s-д хамааралтай байна</string>
@@ -504,22 +511,22 @@ APK-г хаанаас авахыг сонгоно уу"</string>
     <string name="batch_patch_apk_selected">APK сонгогдсон</string>
     <string name="batch_patch_auto_download_stopped">APK автоматаар татаж авах зогслоо</string>
     <string name="batch_patch_auto_download_stop">Татаж авалтыг зогсоох</string>
-    <string name="batch_patch_auto_download_kept">Татаж авсан APK-г ашиглах боломжгүй болсон тул өмнөх хувилбарыг хадгаллаа</string>
+    <string name="batch_patch_auto_download_kept">%s-ийн хувьд татаж авсан APK-г ашиглах боломжгүй байсан тул өмнөх хувилбарыг хадгаллаа</string>
     <string name="batch_patch_edit_patches">Патчуудыг сонгох</string>
     <string name="batch_patch_state_no_apk">APK байхгүй</string>
     <string name="batch_patch_state_no_patches">Патч байхгүй</string>
     <string name="batch_patch_state_no_selection">Юу ч сонгогоогүй</string>
     <string name="batch_patch_no_selection">Боломжтой патчуудаас юу ч сонгогоогүй байна</string>
     <string name="batch_patch_policy_install">Дууссан болно суулгах</string>
-    <string name="batch_patch_policy_install_description">Дарааллын дараа патчлагдсан апп бүрийг шууд суулгана. Унтраавал APK-нуудыг дараа нь ашиглахын тулд хадгална</string>
+    <string name="batch_patch_policy_install_description">Дараалал дууссаны дараа засагдсан апп бүрийг суулгана. Унтраавал APK-ууд энэ дэлгэц дээр үлдэнэ</string>
     <string name="batch_patch_policy_mount">Дууссан хойно mount хийх</string>
-    <string name="batch_patch_policy_mount_description">Дарааллын дараа патчлагдсан апп бүрийг mount хийнэ. Унтраавал APK-нуудыг дараа нь ашиглахаар хадгална</string>
+    <string name="batch_patch_policy_mount_description">Дараалал дууссаны дараа засагдсан апп бүрийг mount хийнэ. Унтраавал APK-ууд энэ дэлгэц дээр үлдэнэ</string>
     <string name="batch_patch_policy_install_mount">Дууссаны дараа суулгах эсвэл холбох</string>
-    <string name="batch_patch_policy_install_mount_description">Дарааллын дараа патч хийсэн апп бүрийг суулгах эсвэл холбоно. Унтраавал APK-нуудыг дараа нь ашиглахын тулд хадгална</string>
+    <string name="batch_patch_policy_install_mount_description">Дараалал дууссаны дараа патч хийсэн апп бүрийг суулгах эсвэл mount хийнэ. Унтраавал APK файлууд энэ дэлгэц дээр үлдэнэ</string>
     <!-- Label of a footer button beside "Close". Keep it short, a longer one moves the buttons onto two rows -->
     <string name="batch_patch_start">Эхлүүлэх</string>
     <string name="batch_patch_stop_title">Багц патчлахыг зогсоох уу?</string>
-    <string name="batch_patch_stop_description">Одоо патчлагдаж буй апп болон дарааллын бүх зүйл цуцлагдах болно</string>
+    <string name="batch_patch_stop_description">Одоогийн апп болон дарааллын бусад бүх үйлдлүүд цуцлагдана</string>
     <!-- Label of a footer button beside "Done". Keep it short, a longer one moves the buttons onto two rows -->
     <string name="batch_patch_install_all">Бүгдийг суулгах</string>
     <string name="batch_patch_install_failed">Суулгалт амжилтгүй боллоо</string>
@@ -530,7 +537,7 @@ APK-г хаанаас авахыг сонгоно уу"</string>
     <string name="batch_queue_clear_title">Дарааллыг цэвэрлэх үү?</string>
     <string name="batch_queue_clear_description">Бүх апп-уудыг дарааллаас хасах болно</string>
     <string name="batch_queue_keep_title">Дарааллыг хадгалах уу?</string>
-    <string name="batch_queue_keep_description">Дарааллын аппликейшнүүд дараа нь эхлүүлэхийг хүлээж нүүр хуудсан дээр байх болно</string>
+    <string name="batch_queue_keep_description">Та эхлүүл 때л хүртэл дараалал нүүр дэлгэц дээр хүлээж байна</string>
     <string name="batch_queue_keep">Хадгалах</string>
     <string name="shortcut_repatch_short">Дахин патлах</string>
     <string name="shortcut_repatch_long">Хуучирсан апп-уудыг дахин патлах</string>
@@ -664,6 +671,8 @@ APK-г хаанаас авахыг сонгоно уу"</string>
     <string name="patcher_conflict_title">Багцын зөрчил</string>
     <string name="patcher_conflict_subtitle">Та одоо байгаа хувилбарыг устгах шаардлагатай</string>
     <string name="patcher_conflict_hint">Патч хийсэн апп нь суулгасан хувилбараас өөр сертификат ашиглаж байна. Устгаснаар апп-ын бүх өгөгдөл устах болно</string>
+    <!-- The patched APK is for another kind of device, such as TV or Wear OS, so it may not start on this one -->
+    <string name="patcher_built_for_other_device">%s-д зориулж бүтээгдсэн тул энд ажиллахгүй байж магадгүй. Тухайн төхөөрөмж дээр суулгахын тулд хадгална уу</string>
     <string name="patcher_installed_conflict_title">Устгах шаардлагатай</string>
     <string name="patcher_installed_conflict_body">"Morphe нь патч хийсэн аппликейшныг эх хувилбараас өөр өөрийн сертификатаар гарын үсэг зурдаг. Android систем патч хийсэн аппликейшныг суулгахын тулд одоо байгаа хувилбарыг устгахыг шаарддаг.
 
@@ -759,7 +768,7 @@ APK-г хаанаас авахыг сонгоно уу"</string>
     <string name="plugin_activity_dialog_body">Энэхүү нэмэлт програмыг ашиглахын тулд хэрэглэгчийн үйлдэл шаардлагатай</string>
     <string name="patcher_process_killed_message">Систем патчерыг дуусахаас нь өмнө зогсоолоо, энэ нь ихэвчлэн санах ойг чөлөөлөх зорилготой байдаг. Бусад апп-уудыг хааж дахин оролдоно уу</string>
     <!-- Shown once Morphe is back after it was closed in the middle of patching, for a reason other than low memory. -->
-    <string name="patcher_interrupted_message">Morphe-г патчинг дуусахаас өмнө хаасан тул юу ч патчлагдаагүй байна. Дахин оролдоно уу</string>
+    <string name="patcher_interrupted_message">Патч хийж дуусахаас өмнө Morphe хаагдсан байна. Дахин оролдоно уу</string>
     <!-- "%1$s" is where the setting is, such as "Settings > Patcher > Use embedded VM", built from the names on those screens. -->
     <string name="patcher_process_crashed_message">Пачер дуусахаас өмнө гацав. Хэрэв дахин ийм зүйл гарвал %1$s-ийг унтрааж, логтой хамт алдаагаа мэдээлнэ үү</string>
     <!-- Shown when a run fills the heap it was given. "%1$s" is the heap in megabytes. -->
@@ -868,14 +877,17 @@ APK-г хаанаас авахыг сонгоно уу"</string>
     <string name="settings_appearance_translations_info_title">Зарим хэлний орчуулга дутуу эсвэл бүрэн бус байж болно</string>
     <!-- Settings - Appearance Tab - Interface Scale -->
     <string name="settings_appearance_ui_scale">Интерфэйсийн хэмжээ</string>
-    <!-- Settings - Appearance Tab - Home Screen Section -->
+    <!-- Settings - Appearance Tab - Screens Section -->
     <string name="settings_appearance_home_screen">Нүүр дэлгэц</string>
+    <string name="settings_appearance_screens">Дэлгэцүүд</string>
     <string name="settings_appearance_greeting_phrases">Мэндчилгээний хэллэгүүд</string>
     <string name="settings_appearance_greeting_phrases_subtitle">Мэндчилгээний зурвас харуулах</string>
     <string name="settings_appearance_repatch_notice">Дахин патчлах мэдэгдэл</string>
     <string name="settings_appearance_repatch_notice_description">Зассан аппликейшнүүдийг дахин засварлах боломжтой үед баннер харуулах</string>
     <string name="settings_appearance_more_apps_card">Илүү олон апп-ын карт</string>
     <string name="settings_appearance_more_apps_card_description">Апп-уудын доор хамт олны патчууд руу хөтлөх картыг харуулна</string>
+    <string name="settings_appearance_games_button">Тоглоомын товч</string>
+    <string name="settings_appearance_games_button_description">Нэвтрүүлэг хийх болон үр дүн дээр жижиг тоглоомуудын товчийг харуулна</string>
     <string name="settings_appearance_app_card_colors">Картын өнгөнүүд</string>
     <string name="settings_appearance_app_card_colors_default">Өгөгдсөн</string>
     <string name="settings_appearance_app_card_colors_default_description">Аппликейшн болон эх сурвалж бүрт өөрийн гэсэн өнгө оноо</string>
@@ -1246,7 +1258,7 @@ morphe_header_custom_dark.png
     <string name="settings_system_apks_delete_all_confirm">Энэ нь энд харагдаж буй хадгалагдсан APK файлуудыг бүрмөсөн устгах болно</string>
     <string name="settings_system_apks_delete_selected_title">Сонгосон APK-нуудыг устгах уу?</string>
     <string name="settings_system_apks_delete_selected_confirm">Энэ нь сонгосон APK файлуудыг бүрмөсөн устгах болно</string>
-    <string name="settings_system_apks_deleted_all">APK-нуудыг амжилттай устгалаа</string>
+    <string name="settings_system_apks_deleted_all">APK-уудыг устгалаа</string>
     <string name="settings_system_apks_delete_failed">Зарим APK файлуудыг устгаж чадсангүй</string>
     <string name="settings_system_apks_export_zip_success">Сонгосон APK-нуудыг экспорт хийлээ</string>
     <string name="settings_system_apks_export_zip_failed">Сонгосон APK-уудыг экспортлох үйлдэл амжилтгүй боллоо</string>
@@ -1269,8 +1281,8 @@ morphe_header_custom_dark.png
     <string name="settings_system_storage_temporary_title">Түр зуурын файлууд</string>
     <string name="settings_system_storage_temporary_description">Патчлах явцад үүссэн ажлын файлууд</string>
     <string name="settings_system_storage_clear_all">Бүх кэшийг цэвэрлэх</string>
-    <string name="settings_system_storage_clear_all_description">Чөлөөлж болох бүх кэш зайг нэг дор чөлөөлнө</string>
-    <string name="settings_system_storage_clear_all_confirm">Энэ нь сүлжээний хариултын кэш, суулгагчийн бэлдсэн хуулбарууд болон түр зуурын файлуудыг цэвэрлэнэ. Эх хувь болон патчилсан APK-уудыг хадгална</string>
+    <string name="settings_system_storage_clear_all_description">Дээр жагсаасан бүх кэш</string>
+    <string name="settings_system_storage_clear_all_confirm">Дээрх бүх кэш цэвэрлэгдэнэ. Эх хувь болон патч хийсэн APK файлууд хадгалагдана</string>
     <string name="settings_system_storage_cleared">%s чөлөөлөгдлөө</string>
     <string name="settings_system_storage_patch_running_warning">Патч ажиллаж байгаа бөгөөд эдгээр файлуудыг ашиглаж байна. Одоо устгавал алдаа гарна</string>
     <string name="settings_system_storage_clear_anyway">Гэсэн ч устгах</string>
@@ -1278,14 +1290,14 @@ morphe_header_custom_dark.png
     <string name="settings_system_storage_open_app_info_title">Android апп-ын хадгалах зайг нээх</string>
     <string name="settings_system_storage_open_app_info_description">Системийн тохиргоогоор дамжуулан Morphe-ийн бүх өгөгдлийг удирдах эсвэл цэвэрлэх</string>
     <string name="settings_system_save_original_apks_title">Эх APK-нуудыг хадгалах</string>
-    <string name="settings_system_save_original_apks_description">Файлыг дахин сонгохгүйгээр дахин патчлах боломжтой болгохын тулд патч хийхээс өмнөх APK-г хадгалах</string>
+    <string name="settings_system_save_original_apks_description">Дахин патчлах үед файлыг дахин сонгохгүйгээр эх APK-г ашиглах</string>
     <string name="settings_system_save_patched_apks_title">Патч хийсэн APK-нуудыг хадгалах</string>
-    <string name="settings_system_save_patched_apks_description">Дараа нь экспортлох эсвэл менежерээс дахин суулгахын тулд патч хийсэн APK-гийн хуулбарыг хадгалах</string>
+    <string name="settings_system_save_patched_apks_description">Дараа нь экспортлох эсвэл дахин суулгахын тулд хуулбарыг хадгалах</string>
     <!-- Settings - System Tab - Storage Management - Patched APKs Management -->
     <string name="settings_system_patched_apks_title">Патчлагдсан APK-нууд</string>
     <string name="settings_system_patched_apks_empty">Патчлагдсан APK хараахан хадгалагдаагүй байна</string>
     <string name="settings_system_patched_apks_delete_title">Патчлагдсан APK-г устгах уу?</string>
-    <string name="settings_system_patched_apks_deleted">Патчлагдсан APK амжилттай устгагдлаа</string>
+    <string name="settings_system_patched_apks_deleted">Патчлагдсан APK-г устгалаа</string>
     <string name="settings_system_patched_apks_delete_all_title">Засварласан бүх APK-уудыг устгах уу?</string>
     <!-- Settings - System Tab - Storage Management - Original APKs Management -->
     <string name="settings_system_original_apks_title">Эх APK-нууд</string>

@@ -9,6 +9,8 @@
     <string name="home_app_status_newer_patches">Nýir plástrar</string>
     <!-- Mark on the card of an app built for a device other than a phone -->
     <string name="form_factor_tv">Sjónvarp</string>
+    <!-- Named beside the other marks when one app has a build for a phone and for another device -->
+    <string name="form_factor_mobile">Sími</string>
     <string name="form_factor_automotive">Ökutæki</string>
     <string name="home_no_patches_available">Engar breytistillingar eru til staðar</string>
     <string name="home_app_hide_title">Fela þetta app?</string>
@@ -359,6 +361,10 @@ Veldu hvaðan á að sækja APK-skrána"</string>
     <string name="expert_mode_recommended">Ráðlagðir plástrar</string>
     <string name="expert_mode_reset_to_default_done">Ráðlagðar breytistillingar hafa verið notaðar</string>
     <string name="expert_mode_selected_count">%1$s af %2$s valin</string>
+    <!-- Which build of an app with builds for several devices the patches are for, such as TV or Wear OS -->
+    <string name="expert_mode_form_factor">Fyrir %s útgáfuna</string>
+    <!-- The same for the phone build, named as a common noun rather than by its mark -->
+    <string name="expert_mode_form_factor_mobile">Fyrir símaútgáfuna</string>
     <string name="expert_mode_saved_selection">Vistað val</string>
     <string name="expert_mode_restore_saved_done">Geymt val endurheimt</string>
     <string name="expert_mode_copy_from_bundle_no_patches">Engar samsvarandi breytingar í þessum pakka</string>
@@ -488,7 +494,8 @@ Til að ná bestum árangri mælir þetta app með því að breyta &lt;b&gt;hei
     <string name="batch_patch_preparing_next">Undirbý næsta app…</string>
     <string name="batch_patch_progress_counter">Plástrar %1$s af %2$s</string>
     <string name="batch_patch_summary">%1$s plástrað, %2$s mistókst, %3$s sleppt</string>
-    <string name="batch_patch_saved_hint">Plástruðu öppin eru vistuð. Settu þau upp núna eða síðar af listanum yfir plástruð APK í stillingum</string>
+    <string name="batch_patch_saved_hint">Plástruð APK eru vistuð. Settu þau upp núna eða síðar af heimsíðunni</string>
+    <string name="batch_patch_not_kept_hint">Plástruð APK eru ekki geymd. Settu þau upp eða útgerðu þau áður en þessum skjá er lokað</string>
     <string name="batch_patch_multiple_sources">Sum öpp sameina plástra frá fleiri en einni uppsprettu, sem getur valdið árekstrum</string>
     <string name="batch_patch_needs_apk">Enginn APK tiltækur, bættu við skrá</string>
     <string name="batch_patch_wrong_package">Skráin sem bætt var við tilheyrir %s</string>
@@ -503,22 +510,22 @@ Til að ná bestum árangri mælir þetta app með því að breyta &lt;b&gt;hei
     <string name="batch_patch_apk_selected">APK valið</string>
     <string name="batch_patch_auto_download_stopped">Sjálfvirkt niðurhal APK stöðvað</string>
     <string name="batch_patch_auto_download_stop">Stöðva niðurhal</string>
-    <string name="batch_patch_auto_download_kept">Niðurhlaðna APK-skránan gekk ekki að nota, svo er sú fyrri haldin</string>
+    <string name="batch_patch_auto_download_kept">Gatkst við að nota APK sem sótt var fyrir %s, svo er sú fyrri geymd</string>
     <string name="batch_patch_edit_patches">Veldu plástra</string>
     <string name="batch_patch_state_no_apk">Enginn APK</string>
     <string name="batch_patch_state_no_patches">Engir plástrar</string>
     <string name="batch_patch_state_no_selection">Ekkert valið</string>
     <string name="batch_patch_no_selection">Engir tiltækir plástrar eru valdir</string>
     <string name="batch_patch_policy_install">Setja upp þegar lokið</string>
-    <string name="batch_patch_policy_install_description">Setur upp hvert plástrað app strax eftir að biðröðinni lýkur. Slökkt heldur APK-skránum til síðari tíma</string>
+    <string name="batch_patch_policy_install_description">Setur upp hvert plástrað app þegar biðröðinni lýkur. Slökkt skilur APK-skránum eftir á þessum skjá</string>
     <string name="batch_patch_policy_mount">Tengja þegar lokið</string>
-    <string name="batch_patch_policy_mount_description">Tengir hvert plástrað forrit þegar biðröðinni lýkur. Slökkt heldur APK-skránum til síðar.</string>
+    <string name="batch_patch_policy_mount_description">Festir hvert plástrað app þegar biðröðinni lýkur. Slökkt skilur APK-skránum eftir á þessum skjá</string>
     <string name="batch_patch_policy_install_mount">Setja upp eða tengja þegar lokið</string>
-    <string name="batch_patch_policy_install_mount_description">Setur upp eða tengir hvert plástrað forrit þegar biðröðinni lýkur. Slökkt heldur APK-skránum til síðar.</string>
+    <string name="batch_patch_policy_install_mount_description">Setur upp eða festir hvert plástrað app þegar biðröðinni lýkur. Slökkt skilur APK-skránum eftir á þessum skjá</string>
     <!-- Label of a footer button beside "Close". Keep it short, a longer one moves the buttons onto two rows -->
     <string name="batch_patch_start">Byrja</string>
     <string name="batch_patch_stop_title">Hætta hópplástrun?</string>
-    <string name="batch_patch_stop_description">Appið sem er verið að plástra núna og allt sem enn er í biðröð verður afturkallað</string>
+    <string name="batch_patch_stop_description">Núverandi app og restin af biðröðinni verða aflitin</string>
     <!-- Label of a footer button beside "Done". Keep it short, a longer one moves the buttons onto two rows -->
     <string name="batch_patch_install_all">Setja upp allt</string>
     <string name="batch_patch_install_failed">Uppsetning mistókst</string>
@@ -529,7 +536,7 @@ Til að ná bestum árangri mælir þetta app með því að breyta &lt;b&gt;hei
     <string name="batch_queue_clear_title">Hreinsa biðröðina?</string>
     <string name="batch_queue_clear_description">Öllum öppum verður fjarlægt úr biðröðinni</string>
     <string name="batch_queue_keep_title">Halda biðröðinni?</string>
-    <string name="batch_queue_keep_description">Öppin í biðröðinni bíða á heimaskjánum þar til þau verða ræst síðar</string>
+    <string name="batch_queue_keep_description">Biðröðin bíður á heimaskjánum þar til þú ræstir hana</string>
     <string name="batch_queue_keep">Halda</string>
     <string name="shortcut_repatch_short">Endurplástra</string>
     <string name="shortcut_repatch_long">Endurplástra úrelt öpp</string>
@@ -663,6 +670,8 @@ Til að ná bestum árangri mælir þetta app með því að breyta &lt;b&gt;hei
     <string name="patcher_conflict_title">Pakkaárekstur</string>
     <string name="patcher_conflict_subtitle">Þú þarft að afinstallera núverandi útgáfuna</string>
     <string name="patcher_conflict_hint">Breytta appið notar annað vottorð en uppsetta útgáfan. Með því að fjarlægja appið eyðast öll gögn þess</string>
+    <!-- The patched APK is for another kind of device, such as TV or Wear OS, so it may not start on this one -->
+    <string name="patcher_built_for_other_device">Smíðuð fyrir %s, svo hún gæti ekki rásað hér. Vistaðu hana til að uppsetja á það tæki</string>
     <string name="patcher_installed_conflict_title">Nauðsynlegt að fjarlægja</string>
     <string name="patcher_installed_conflict_body">"Morphe undirritar breytt öpp með sínu eigin vottorði, sem er frábrugðið upprunalega vottorðinu. Android krefst þess að eldri útgáfan sé fjarlægð áður en hægt er að setja upp breytta appið.
 
@@ -758,7 +767,7 @@ Með því að fjarlægja appið eyðast öll gögn þess varanlega"</string>
     <string name="plugin_activity_dialog_body">Krefst samskipta við notanda til að halda áfram með þessa viðbót</string>
     <string name="patcher_process_killed_message">Kerfið stöðvaði plástrarann áður en hann lauk, yfirleitt til að losa minni. Lokaðu öðrum öppum og reyndu aftur</string>
     <!-- Shown once Morphe is back after it was closed in the middle of patching, for a reason other than low memory. -->
-    <string name="patcher_interrupted_message">Morphe var lokað áður en uppfærsla var lokið, svo var ekkert uppfært. Reyndu aftur</string>
+    <string name="patcher_interrupted_message">Morphe var lokað áður en plöstrun lýktist. Reyndu aftur</string>
     <!-- "%1$s" is where the setting is, such as "Settings > Patcher > Use embedded VM", built from the names on those screens. -->
     <string name="patcher_process_crashed_message">Plástrarinn hrundi áður en hann lauk. Ef þetta gerist aftur skaltu slökkva á %1$s og tilkynna vandamálið með loggnum</string>
     <!-- Shown when a run fills the heap it was given. "%1$s" is the heap in megabytes. -->
@@ -867,14 +876,17 @@ Með því að fjarlægja appið eyðast öll gögn þess varanlega"</string>
     <string name="settings_appearance_translations_info_title">Þýðingar fyrir sum tungumál gætu vantað eða verið ófullkomnar</string>
     <!-- Settings - Appearance Tab - Interface Scale -->
     <string name="settings_appearance_ui_scale">Stærð viðmóts</string>
-    <!-- Settings - Appearance Tab - Home Screen Section -->
+    <!-- Settings - Appearance Tab - Screens Section -->
     <string name="settings_appearance_home_screen">Heimaskjár</string>
+    <string name="settings_appearance_screens">Skjár</string>
     <string name="settings_appearance_greeting_phrases">Kveðjusetningar</string>
     <string name="settings_appearance_greeting_phrases_subtitle">Sýnir kveðjuskilaboð</string>
     <string name="settings_appearance_repatch_notice">Tilkynning um endurplástrun</string>
     <string name="settings_appearance_repatch_notice_description">Sýnir borða þegar hægt er að endurplástra öpp</string>
     <string name="settings_appearance_more_apps_card">Kort með fleiri öppum</string>
     <string name="settings_appearance_more_apps_card_description">Sýnir kort undir öppunum sem leiðir á samfélagsplástra</string>
+    <string name="settings_appearance_games_button">Leiki hnappur</string>
+    <string name="settings_appearance_games_button_description">Sýnir hnapp fyrir smáþráleiki á meðan uppfært er og á niðurstöðusíðunni</string>
     <string name="settings_appearance_app_card_colors">Litir kortanna</string>
     <string name="settings_appearance_app_card_colors_default">Sjálfgefið</string>
     <string name="settings_appearance_app_card_colors_default_description">Gefðu hverju appi og uppsprettu sinn eigin lit</string>
@@ -1245,7 +1257,7 @@ Nánari upplýsingar: %2$s"</string>
     <string name="settings_system_apks_delete_all_confirm">Þetta mun varanlega eyða vistuðum APK-skrám sem birtast hér</string>
     <string name="settings_system_apks_delete_selected_title">Eyða völdum APK-skrám?</string>
     <string name="settings_system_apks_delete_selected_confirm">Þetta mun varanlega eyða völdum APK-skrám</string>
-    <string name="settings_system_apks_deleted_all">APK-skrám var eytt</string>
+    <string name="settings_system_apks_deleted_all">APK-skrár eyttar</string>
     <string name="settings_system_apks_delete_failed">Ekki tókst að eyða sumum APK-skrám</string>
     <string name="settings_system_apks_export_zip_success">Völdum APK-skrám flutt út</string>
     <string name="settings_system_apks_export_zip_failed">Útflutningur valdra APK-skráa tókst ekki</string>
@@ -1268,8 +1280,8 @@ Nánari upplýsingar: %2$s"</string>
     <string name="settings_system_storage_temporary_title">Tímabundnar skrár</string>
     <string name="settings_system_storage_temporary_description">Vinnuskrár sem verða til við breytingar</string>
     <string name="settings_system_storage_clear_all">Hreinsa allt skyndiminni</string>
-    <string name="settings_system_storage_clear_all_description">Losar allt skyndiminni sem hægt er að endurheimta í einu</string>
-    <string name="settings_system_storage_clear_all_confirm">Þetta hreinsar skyndiminni netsvara, uppsetningarafrit og tímabundnar skrár. Upprunaleg og breytt APK eru varðveitt</string>
+    <string name="settings_system_storage_clear_all_description">Öll vistahlaðning sem listað er að ofan</string>
+    <string name="settings_system_storage_clear_all_confirm">Öll vistahlaðning að ofan verður hreinsuð. Upprunalegar og breyttar APK-skrár varðveitast</string>
     <string name="settings_system_storage_cleared">Losaði %s</string>
     <string name="settings_system_storage_patch_running_warning">Plástrun er í gangi og notar þessar skrár. Ef þær eru hreinsaðar núna mun hún mistakast</string>
     <string name="settings_system_storage_clear_anyway">Hreinsa þrátt fyrir allt</string>
@@ -1277,14 +1289,14 @@ Nánari upplýsingar: %2$s"</string>
     <string name="settings_system_storage_open_app_info_title">Opna geymslu Android-appsins</string>
     <string name="settings_system_storage_open_app_info_description">Stjórnaðu eða hreinsaðu öll Morphe-gögn í gegnum kerfisstillingar</string>
     <string name="settings_system_save_original_apks_title">Geymtu upprunalega APK-skrár</string>
-    <string name="settings_system_save_original_apks_description">Vistaðu upprunalegu APK-skrána svo hægt sé að nota hana aftur til endurbreytinga án þess að velja skrána á ný</string>
+    <string name="settings_system_save_original_apks_description">Notaðu upprunalegu APK-skrána aftur við endurbreytingar án þess að velja skrána á ný</string>
     <string name="settings_system_save_patched_apks_title">Geymtu breyttu APK-skrár</string>
-    <string name="settings_system_save_patched_apks_description">Vistaðu afrit af breyttu APK-skránni til síðari útflutnings eða endursetningar úr stjórnandanum</string>
+    <string name="settings_system_save_patched_apks_description">Geymdu afrit til að exportersa eða uppsetja aftur síðar</string>
     <!-- Settings - System Tab - Storage Management - Patched APKs Management -->
     <string name="settings_system_patched_apks_title">Breytt APK</string>
     <string name="settings_system_patched_apks_empty">Engin breytt APK vistuð enn</string>
     <string name="settings_system_patched_apks_delete_title">Eyða breyttu APK?</string>
-    <string name="settings_system_patched_apks_deleted">Breytt APK eytt</string>
+    <string name="settings_system_patched_apks_deleted">Breytt APK-skrá eytt</string>
     <string name="settings_system_patched_apks_delete_all_title">Eyða öllum breyttu APK-skrám?</string>
     <!-- Settings - System Tab - Storage Management - Original APKs Management -->
     <string name="settings_system_original_apks_title">Upprunalegar APK-skrár</string>

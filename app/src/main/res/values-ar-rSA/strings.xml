@@ -9,6 +9,8 @@
     <string name="home_app_status_newer_patches">تعديلات جديدة</string>
     <!-- Mark on the card of an app built for a device other than a phone -->
     <string name="form_factor_tv">TV</string>
+    <!-- Named beside the other marks when one app has a build for a phone and for another device -->
+    <string name="form_factor_mobile">الجوّال</string>
     <string name="form_factor_automotive">Automotive</string>
     <string name="home_no_patches_available">لا توجد تعديلات متاحة</string>
     <string name="home_app_hide_title">إخفاء هذا التطبيق؟</string>
@@ -359,6 +361,10 @@
     <string name="expert_mode_recommended">التعديلات الموصى بها</string>
     <string name="expert_mode_reset_to_default_done">تم تطبيق التعديلات الموصى بها</string>
     <string name="expert_mode_selected_count">%1$s من %2$s محدد</string>
+    <!-- Which build of an app with builds for several devices the patches are for, such as TV or Wear OS -->
+    <string name="expert_mode_form_factor">لإصدار %s</string>
+    <!-- The same for the phone build, named as a common noun rather than by its mark -->
+    <string name="expert_mode_form_factor_mobile">لإصدار الجوّال</string>
     <string name="expert_mode_saved_selection">اختيار محفوظ</string>
     <string name="expert_mode_restore_saved_done">تم استعادة التحديد المحفوظ</string>
     <string name="expert_mode_copy_from_bundle_no_patches">لا توجد تعديلات مطابقة في هذه المجموعة</string>
@@ -489,7 +495,8 @@
     <string name="batch_patch_preparing_next">جارٍ إعداد التطبيق التالي...</string>
     <string name="batch_patch_progress_counter">جارٍ تعديل %1$s من %2$s</string>
     <string name="batch_patch_summary">تم تعديل %1$s، فشل %2$s، تم تخطي %3$s</string>
-    <string name="batch_patch_saved_hint">تم حفظ التطبيقات التي تم تعديلها. قم بتثبيتها الآن، أو لاحقًا من قائمة ملفات APK التي تم تعديلها في الإعدادات</string>
+    <string name="batch_patch_saved_hint">تم حفظ ملفات APK التي تم تعديلها. قم بتثبيتها الآن أو لاحقًا من الشاشة الرئيسية</string>
+    <string name="batch_patch_not_kept_hint">لا يتم الاحتفاظ بملفات APK التي تم تعديلها. قم بتثبيتها أو تصديرها قبل إغلاق هذه الشاشة</string>
     <string name="batch_patch_multiple_sources">تدمج بعض التطبيقات تعديلات من أكثر من مصدر، ما قد يؤدي إلى تعارضات</string>
     <string name="batch_patch_needs_apk">لا يوجد ملف APK متاح، قم بإرفاق ملف</string>
     <string name="batch_patch_wrong_package">الملف المرفق ينتمي إلى %s</string>
@@ -504,22 +511,22 @@
     <string name="batch_patch_apk_selected">تم تحديد ملف APK</string>
     <string name="batch_patch_auto_download_stopped">توقفت تنزيلات ملفات APK التلقائية</string>
     <string name="batch_patch_auto_download_stop">إيقاف التنزيلات</string>
-    <string name="batch_patch_auto_download_kept">تعذر استخدام ملف APK الذي تم تنزيله، لذا تم الاحتفاظ بالملف السابق</string>
+    <string name="batch_patch_auto_download_kept">تعذر استخدام ملف APK الذي تم تنزيله لـ %s، لذا تم الاحتفاظ بالملف السابق</string>
     <string name="batch_patch_edit_patches">اختر التعديلات</string>
     <string name="batch_patch_state_no_apk">لا يوجد ملف APK</string>
     <string name="batch_patch_state_no_patches">لا توجد تعديلات</string>
     <string name="batch_patch_state_no_selection">لم يتم تحديد أي شيء</string>
     <string name="batch_patch_no_selection">لم يتم تحديد أي من التعديلات المتاحة</string>
     <string name="batch_patch_policy_install">التثبيت عند الانتهاء</string>
-    <string name="batch_patch_policy_install_description">يقوم بتثبيت كل تطبيق تم تعديله مباشرة بعد انتهاء قائمة الإنتظار. وعند الإيقاف، تُحفظ ملفات APK للاستخدام لاحقًا</string>
+    <string name="batch_patch_policy_install_description">يقوم بتثبيت كل تطبيق تم تعديله بمجرد انتهاء قائمة الانتظار. وعند الإيقاف، تظل ملفات APK في هذه الشاشة</string>
     <string name="batch_patch_policy_mount">التركيب عند الانتهاء</string>
-    <string name="batch_patch_policy_mount_description">يقوم بتركيب كل تطبيق تم تعديله بمجرد انتهاء قائمة الانتظار. وعند الإيقاف، تُحفظ ملفات APK للاستخدام لاحقًا</string>
+    <string name="batch_patch_policy_mount_description">يقوم بتركيب كل تطبيق تم تعديله بمجرد انتهاء قائمة الانتظار. وعند الإيقاف، تظل ملفات APK في هذه الشاشة</string>
     <string name="batch_patch_policy_install_mount">التثبيت أو التركيب عند الانتهاء</string>
-    <string name="batch_patch_policy_install_mount_description">يقوم بتثبيت أو تركيب كل تطبيق تم تعديله بمجرد انتهاء قائمة الانتظار. وعند الإيقاف، تُحفظ ملفات APK للاستخدام لاحقًا</string>
+    <string name="batch_patch_policy_install_mount_description">يقوم بتثبيت أو تركيب كل تطبيق تم تعديله بمجرد انتهاء قائمة الانتظار. وعند الإيقاف، تبقى ملفات APK في هذه الشاشة</string>
     <!-- Label of a footer button beside "Close". Keep it short, a longer one moves the buttons onto two rows -->
     <string name="batch_patch_start">بدء</string>
     <string name="batch_patch_stop_title">إيقاف تعديل عدة تطبيقات؟</string>
-    <string name="batch_patch_stop_description">التطبيق الجاري تعديله الآن وكل العناصر الموجودة في قائمة الانتظار سيتم إلغاؤها</string>
+    <string name="batch_patch_stop_description">سيتم إلغاء التطبيق الحالي وبقية قائمة الانتظار</string>
     <!-- Label of a footer button beside "Done". Keep it short, a longer one moves the buttons onto two rows -->
     <string name="batch_patch_install_all">تثبيت الكل</string>
     <string name="batch_patch_install_failed">فشل التثبيت</string>
@@ -530,7 +537,7 @@
     <string name="batch_queue_clear_title">مسح قائمة الانتظار؟</string>
     <string name="batch_queue_clear_description">سيتم إزالة كل التطبيقات من قائمة الانتظار</string>
     <string name="batch_queue_keep_title">إبقاء قائمة الانتظار؟</string>
-    <string name="batch_queue_keep_description">ستظل التطبيقات في قائمة الانتظار على الشاشة الرئيسية حتى يتم تشغيلها لاحقًا</string>
+    <string name="batch_queue_keep_description">تنتظر قائمة الانتظار في الشاشة الرئيسية حتى تقوم بتشغيلها</string>
     <string name="batch_queue_keep">إبقاء</string>
     <string name="shortcut_repatch_short">إعادة التعديل</string>
     <string name="shortcut_repatch_long">إعادة تعديل التطبيقات غير المحدثة</string>
@@ -664,6 +671,8 @@
     <string name="patcher_conflict_title">تعارض الحزمة</string>
     <string name="patcher_conflict_subtitle">تحتاج إلى إلغاء تثبيت الإصدار الحالي</string>
     <string name="patcher_conflict_hint">يستخدم التطبيق الذي تم تعديله شهادة مختلفة عن الإصدار المثبت. سيؤدي إلغاء التثبيت إلى محو جميع بيانات التطبيق</string>
+    <!-- The patched APK is for another kind of device, such as TV or Wear OS, so it may not start on this one -->
+    <string name="patcher_built_for_other_device">تم البناء لـ %s، لذا قد لا يبدأ هنا. احفظه لتثبيته على ذلك الجهاز</string>
     <string name="patcher_installed_conflict_title">يتطلب إلغاء التثبيت</string>
     <string name="patcher_installed_conflict_body">"يقوم Morphe بتوقيع التطبيقات التي تم تعديلها بشهادته الخاصة، والتي تختلف عن الأصلية. يتطلب Android إزالة الإصدار الحالي قبل تثبيت التطبيق الذي تم تعديله.
 
@@ -760,7 +769,7 @@
     <string name="plugin_activity_dialog_body">يلزم تفاعل المستخدم للمتابعة باستخدام هذا المكون الإضافي</string>
     <string name="patcher_process_killed_message">أوقف النظام أداة التعديل قبل إتمام عملها، وعادةً ما يحدث ذلك لتوفير مساحة في الذاكرة. أغلق التطبيقات الأخرى وحاول مجددًا</string>
     <!-- Shown once Morphe is back after it was closed in the middle of patching, for a reason other than low memory. -->
-    <string name="patcher_interrupted_message">تم إغلاق Morphe قبل انتهاء عملية التعديل، لذا لم يتم تعديل أي شيء. حاول مرة أخرى</string>
+    <string name="patcher_interrupted_message">تم إغلاق Morphe قبل انتهاء عملية التعديل. حاول مرة أخرى</string>
     <!-- "%1$s" is where the setting is, such as "Settings > Patcher > Use embedded VM", built from the names on those screens. -->
     <string name="patcher_process_crashed_message">تعطلت أداة التعديل قبل أن تنتهي. إذا تكرر ذلك، قم بإيقاف تشغيل %1$s وأبلغ عن المشكلة مع إرفاق السجل</string>
     <!-- Shown when a run fills the heap it was given. "%1$s" is the heap in megabytes. -->
@@ -871,14 +880,17 @@
     <string name="settings_appearance_translations_info_title">قد تكون ترجمات بعض اللغات مفقودة أو غير مكتملة</string>
     <!-- Settings - Appearance Tab - Interface Scale -->
     <string name="settings_appearance_ui_scale">مقياس الواجهة</string>
-    <!-- Settings - Appearance Tab - Home Screen Section -->
+    <!-- Settings - Appearance Tab - Screens Section -->
     <string name="settings_appearance_home_screen">الشاشة الرئيسية</string>
+    <string name="settings_appearance_screens">الشاشات</string>
     <string name="settings_appearance_greeting_phrases">عبارات الترحيب</string>
     <string name="settings_appearance_greeting_phrases_subtitle">يعرض رسالة ترحيب</string>
     <string name="settings_appearance_repatch_notice">إشعار إعادة التعديل</string>
     <string name="settings_appearance_repatch_notice_description">يعرض شريطًا إعلاميًا عندما يمكن إعادة تعديل التطبيقات المعدلة</string>
     <string name="settings_appearance_more_apps_card">بطاقة المزيد من التطبيقات</string>
     <string name="settings_appearance_more_apps_card_description">يعرض بطاقة أسفل التطبيقات تؤدي إلى تعديلات المجتمع</string>
+    <string name="settings_appearance_games_button">زر الألعاب</string>
+    <string name="settings_appearance_games_button_description">يعرض زرًا للألعاب الصغيرة أثناء التعديل وفي النتيجة</string>
     <string name="settings_appearance_app_card_colors">ألوان البطاقة</string>
     <string name="settings_appearance_app_card_colors_default">الافتراضية</string>
     <string name="settings_appearance_app_card_colors_default_description">امنح كل تطبيق ومصدر لونًا خاصًا به</string>
@@ -1250,7 +1262,7 @@ morphe_adaptive_monochrome_custom.xml
     <string name="settings_system_apks_delete_all_confirm">سيؤدي هذا إلى حذف ملفات APK المحفوظة الظاهرة هنا بشكل دائم</string>
     <string name="settings_system_apks_delete_selected_title">حذف ملفات APK المحددة؟</string>
     <string name="settings_system_apks_delete_selected_confirm">سيؤدي هذا إلى حذف ملفات APK المحددة بشكل دائم</string>
-    <string name="settings_system_apks_deleted_all">تم حذف ملفات APK بنجاح</string>
+    <string name="settings_system_apks_deleted_all">تم حذف ملفات APK</string>
     <string name="settings_system_apks_delete_failed">تعذر حذف بعض ملفات APK</string>
     <string name="settings_system_apks_export_zip_success">تم تصدير ملفات APK المحددة</string>
     <string name="settings_system_apks_export_zip_failed">فشل تصدير ملفات APK المحددة</string>
@@ -1273,8 +1285,8 @@ morphe_adaptive_monochrome_custom.xml
     <string name="settings_system_storage_temporary_title">ملفات مؤقتة</string>
     <string name="settings_system_storage_temporary_description">ملفات العمل التي تم إنشاؤها أثناء التعديل</string>
     <string name="settings_system_storage_clear_all">مسح جميع ذاكرات التخزين المؤقت</string>
-    <string name="settings_system_storage_clear_all_description">يحرر كل مساحة التخزين المؤقت القابلة للاسترداد دفعة واحدة</string>
-    <string name="settings_system_storage_clear_all_confirm">يؤدي هذا إلى مسح استجابات الشبكة المخزنة مؤقتًا، نُسخ أداة التثبيت المؤقتة، والملفات المؤقتة. يتم الاحتفاظ بملفات APK الأصلية والمعدلة</string>
+    <string name="settings_system_storage_clear_all_description">كل ذاكرة التخزين المؤقت المدرجة أعلاه</string>
+    <string name="settings_system_storage_clear_all_confirm">سيتم مسح كل ذاكرة التخزين المؤقت أعلاه. سيتم الاحتفاظ بملفات APK الأصلية والمعدلة</string>
     <string name="settings_system_storage_cleared">تم تحرير %s</string>
     <string name="settings_system_storage_patch_running_warning">هناك تعديل يعمل ويستخدم هذه الملفات. مسحها الآن سيؤدي إلى الفشل</string>
     <string name="settings_system_storage_clear_anyway">مسح على أي حال</string>
@@ -1282,14 +1294,14 @@ morphe_adaptive_monochrome_custom.xml
     <string name="settings_system_storage_open_app_info_title">فتح مكان تخزين تطبيق Android</string>
     <string name="settings_system_storage_open_app_info_description">إدارة أو مسح جميع بيانات Morphe من خلال إعدادات النظام</string>
     <string name="settings_system_save_original_apks_title">احتفظ بملفات APK الأصلية</string>
-    <string name="settings_system_save_original_apks_description">حفظ ملف APK قبل التعديل حتى تتمكن من إعادة استخدامه عند إعادة التعديل دون الحاجة إلى اختيار الملف مرة أخرى</string>
+    <string name="settings_system_save_original_apks_description">إعادة استخدام ملف APK الأصلي عند إعادة التعديل، دون الحاجة إلى اختيار الملف مرة أخرى</string>
     <string name="settings_system_save_patched_apks_title">احتفظ بملفات APK المعدلة</string>
-    <string name="settings_system_save_patched_apks_description">حفظ نسخة من ملف APK المعدل للتصدير لاحقًا أو لإعادة التثبيت من خلال المدير</string>
+    <string name="settings_system_save_patched_apks_description">الاحتفاظ بنسخة لتصديرها أو إعادة تثبيتها لاحقًا</string>
     <!-- Settings - System Tab - Storage Management - Patched APKs Management -->
     <string name="settings_system_patched_apks_title">ملفات APK معدلة</string>
     <string name="settings_system_patched_apks_empty">لم يتم حفظ أي ملفات APK معدلة حتى الآن</string>
     <string name="settings_system_patched_apks_delete_title">حذف ملف APK المعدل؟</string>
-    <string name="settings_system_patched_apks_deleted">تم حذف ملف APK المعدل بنجاح</string>
+    <string name="settings_system_patched_apks_deleted">تم حذف ملف APK المعدّل</string>
     <string name="settings_system_patched_apks_delete_all_title">حذف جميع ملفات APK المعدلة؟</string>
     <!-- Settings - System Tab - Storage Management - Original APKs Management -->
     <string name="settings_system_original_apks_title">ملفات APK الأصلية</string>

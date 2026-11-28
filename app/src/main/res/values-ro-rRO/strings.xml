@@ -9,6 +9,8 @@
     <string name="home_app_status_newer_patches">Patch-uri noi</string>
     <!-- Mark on the card of an app built for a device other than a phone -->
     <string name="form_factor_tv">TV</string>
+    <!-- Named beside the other marks when one app has a build for a phone and for another device -->
+    <string name="form_factor_mobile">Telefon</string>
     <string name="form_factor_automotive">Automobil</string>
     <string name="home_no_patches_available">Niciun patch disponibil</string>
     <string name="home_app_hide_title">Ascunzi această aplicație?</string>
@@ -359,6 +361,10 @@ Selectați locul de unde să fie preluat fișierul APK"</string>
     <string name="expert_mode_recommended">Patch-uri recomandate</string>
     <string name="expert_mode_reset_to_default_done">Patch-urile recomandate au fost aplicate</string>
     <string name="expert_mode_selected_count">%1$s din %2$s selectate</string>
+    <!-- Which build of an app with builds for several devices the patches are for, such as TV or Wear OS -->
+    <string name="expert_mode_form_factor">Pentru build-ul %s</string>
+    <!-- The same for the phone build, named as a common noun rather than by its mark -->
+    <string name="expert_mode_form_factor_mobile">Pentru build-ul de telefon</string>
     <string name="expert_mode_saved_selection">Selecție salvată</string>
     <string name="expert_mode_restore_saved_done">Selecția salvată a fost restabilită</string>
     <string name="expert_mode_copy_from_bundle_no_patches">Nu există patch-uri corespunzătoare în acest pachet</string>
@@ -489,7 +495,8 @@ Pentru cele mai bune rezultate, această aplicație recomandă patch-uirea unui 
     <string name="batch_patch_preparing_next">Se pregătește următoarea aplicație…</string>
     <string name="batch_patch_progress_counter">Se patch-uiește aplicația %1$s din %2$s</string>
     <string name="batch_patch_summary">%1$s patch-uit, %2$s eșuat, %3$s omis</string>
-    <string name="batch_patch_saved_hint">Aplicațiile modificate au fost salvate. Instalați-le acum sau mai târziu din lista de aplicații modificate din setări</string>
+    <string name="batch_patch_saved_hint">Fișierele APK patch-uite au fost salvate. Instalează-le acum sau mai târziu din ecranul principal</string>
+    <string name="batch_patch_not_kept_hint">Fișierele APK patch-uite nu sunt păstrate. Instalează-le sau exportă-le înainte de a închide acest ecran</string>
     <string name="batch_patch_multiple_sources">Unele aplicații combină patch-uri din mai multe surse, ceea ce poate cauza conflicte</string>
     <string name="batch_patch_needs_apk">Nu este disponibil niciun APK, atașați un fișier</string>
     <string name="batch_patch_wrong_package">Fișierul atașat aparține lui %s</string>
@@ -504,22 +511,22 @@ Pentru cele mai bune rezultate, această aplicație recomandă patch-uirea unui 
     <string name="batch_patch_apk_selected">APK selectat</string>
     <string name="batch_patch_auto_download_stopped">Descărcările automate de APK au fost oprite</string>
     <string name="batch_patch_auto_download_stop">Oprire descărcări</string>
-    <string name="batch_patch_auto_download_kept">APK-ul descărcat nu a putut fi utilizat, așa că cel anterior a fost păstrat</string>
+    <string name="batch_patch_auto_download_kept">Fișierul APK descărcat pentru %s nu a putut fi utilizat, astfel încât versiunea anterioară a fost păstrată</string>
     <string name="batch_patch_edit_patches">Alege patch-uri</string>
     <string name="batch_patch_state_no_apk">Nu este disponibil niciun APK</string>
     <string name="batch_patch_state_no_patches">Nu sunt disponibile patch-uri</string>
     <string name="batch_patch_state_no_selection">Niciunul selectat</string>
     <string name="batch_patch_no_selection">Niciunul dintre patch-urile disponibile nu este selectat</string>
     <string name="batch_patch_policy_install">Instalează când este finalizat</string>
-    <string name="batch_patch_policy_install_description">Instalează fiecare aplicație modificată imediat ce coada se termină. Oprire păstrează APK-urile pentru mai târziu</string>
+    <string name="batch_patch_policy_install_description">Instalează fiecare aplicație patch-uită odată ce coada se termină. Opțiunea Dezactivat lasă fișierele APK pe acest ecran</string>
     <string name="batch_patch_policy_mount">Montează la finalizare</string>
-    <string name="batch_patch_policy_mount_description">Montează fiecare aplicație cu patch aplicat după ce coada se termină. Dacă este oprit, păstrează APK-urile pentru mai târziu.</string>
+    <string name="batch_patch_policy_mount_description">Montează fiecare aplicație patch-uită odată ce coada se termină. Opțiunea Dezactivat lasă fișierele APK pe acest ecran</string>
     <string name="batch_patch_policy_install_mount">Instalează sau montează la finalizare</string>
-    <string name="batch_patch_policy_install_mount_description">Instalează sau montează fiecare aplicație cu patch aplicat după ce coada se termină. Dacă este oprit, păstrează APK-urile pentru mai târziu.</string>
+    <string name="batch_patch_policy_install_mount_description">Instalează sau montează fiecare aplicație patch-uită odată ce coada se termină. Opțiunea \"Oprit\" lasă fișierele APK pe acest ecran</string>
     <!-- Label of a footer button beside "Close". Keep it short, a longer one moves the buttons onto two rows -->
     <string name="batch_patch_start">Pornire</string>
     <string name="batch_patch_stop_title">Oprește aplicarea patch-urilor în masă?</string>
-    <string name="batch_patch_stop_description">Se anulează aplicația patch-uită chiar acum și tot ce mai este în coadă</string>
+    <string name="batch_patch_stop_description">Aplicația curentă și restul cozii vor fi anulate</string>
     <!-- Label of a footer button beside "Done". Keep it short, a longer one moves the buttons onto two rows -->
     <string name="batch_patch_install_all">Instalează tot</string>
     <string name="batch_patch_install_failed">Instalare eșuată</string>
@@ -530,7 +537,7 @@ Pentru cele mai bune rezultate, această aplicație recomandă patch-uirea unui 
     <string name="batch_queue_clear_title">Golești coada?</string>
     <string name="batch_queue_clear_description">Toate aplicațiile vor fi eliminate din coadă</string>
     <string name="batch_queue_keep_title">Să păstrezi coada?</string>
-    <string name="batch_queue_keep_description">Aplicațiile din coadă vor aștepta pe ecranul principal pentru a fi pornite ulterior</string>
+    <string name="batch_queue_keep_description">Coada așteaptă pe ecranul principal până când o pornești</string>
     <string name="batch_queue_keep">Păstrare</string>
     <string name="shortcut_repatch_short">Re-patch</string>
     <string name="shortcut_repatch_long">Re-patch-uiește aplicațiile depășite</string>
@@ -664,6 +671,8 @@ Pentru cele mai bune rezultate, această aplicație recomandă patch-uirea unui 
     <string name="patcher_conflict_title">Conflict de pachet</string>
     <string name="patcher_conflict_subtitle">Trebuie să dezinstalați versiunea existentă</string>
     <string name="patcher_conflict_hint">Aplicația modificată utilizează un certificat diferit față de versiunea instalată. Dezinstalarea va șterge toate datele aplicației.</string>
+    <!-- The patched APK is for another kind of device, such as TV or Wear OS, so it may not start on this one -->
+    <string name="patcher_built_for_other_device">Creat pentru %s, deci s-ar putea să nu pornească aici. Salvează-l pentru a-l instala pe acel dispozitiv</string>
     <string name="patcher_installed_conflict_title">Dezinstalare necesară</string>
     <string name="patcher_installed_conflict_body">"Morphe semnează aplicațiile modificate cu propriul certificat, care diferă de cel original. Android necesită eliminarea versiunii existente înainte ca aplicația modificată să poată fi instalată.
 
@@ -759,7 +768,7 @@ Dezinstalarea va șterge definitiv toate datele aplicației."</string>
     <string name="plugin_activity_dialog_body">Este necesară interacțiunea utilizatorului pentru a continua cu acest plugin</string>
     <string name="patcher_process_killed_message">Sistemul a oprit patcher-ul înainte ca acesta să se încheie, de obicei pentru a elibera memorie. Închideți alte aplicații și încercați din nou</string>
     <!-- Shown once Morphe is back after it was closed in the middle of patching, for a reason other than low memory. -->
-    <string name="patcher_interrupted_message">Morphe a fost închis înainte ca patch-ul să se finalizeze, deci nimic nu a fost patch-uit. Încearcă din nou</string>
+    <string name="patcher_interrupted_message">Morphe a fost închis înainte ca patch-uirea să se termine. Încearcă din nou</string>
     <!-- "%1$s" is where the setting is, such as "Settings > Patcher > Use embedded VM", built from the names on those screens. -->
     <string name="patcher_process_crashed_message">Patcher-ul a crash-uit înainte de a termina. Dacă se întâmplă din nou, dezactivați %1$s și raportați problema împreună cu log-ul</string>
     <!-- Shown when a run fills the heap it was given. "%1$s" is the heap in megabytes. -->
@@ -868,14 +877,17 @@ Dezinstalarea va șterge definitiv toate datele aplicației."</string>
     <string name="settings_appearance_translations_info_title">Traducerile pentru unele limbi pot lipsi sau pot fi incomplete</string>
     <!-- Settings - Appearance Tab - Interface Scale -->
     <string name="settings_appearance_ui_scale">Scara interfeței</string>
-    <!-- Settings - Appearance Tab - Home Screen Section -->
+    <!-- Settings - Appearance Tab - Screens Section -->
     <string name="settings_appearance_home_screen">Ecran de pornire</string>
+    <string name="settings_appearance_screens">Ecrane</string>
     <string name="settings_appearance_greeting_phrases">Fraze de salut</string>
     <string name="settings_appearance_greeting_phrases_subtitle">Afișează un mesaj de salut</string>
     <string name="settings_appearance_repatch_notice">Notificare privind repatch-uirea</string>
     <string name="settings_appearance_repatch_notice_description">Afișează o banderolă când aplicațiile cu patch-uri pot fi repatch-uite</string>
     <string name="settings_appearance_more_apps_card">Cardul Mai multe aplicații</string>
     <string name="settings_appearance_more_apps_card_description">Afișează un card sub aplicații, care conduce către patch-urile comunității</string>
+    <string name="settings_appearance_games_button">Butonul Jocuri</string>
+    <string name="settings_appearance_games_button_description">Afișează un buton către mini-jocuri în timpul patch-ului și la rezultat</string>
     <string name="settings_appearance_app_card_colors">Culori carduri</string>
     <string name="settings_appearance_app_card_colors_default">Implicit</string>
     <string name="settings_appearance_app_card_colors_default_description">Atribuă fiecărei aplicații și surse o culoare proprie</string>
@@ -1246,7 +1258,7 @@ Detalii: %2$s"</string>
     <string name="settings_system_apks_delete_all_confirm">Aceasta va șterge definitiv fișierele APK salvate afișate aici</string>
     <string name="settings_system_apks_delete_selected_title">Ștergi APK-urile selectate?</string>
     <string name="settings_system_apks_delete_selected_confirm">Aceasta va șterge definitiv fișierele APK selectate</string>
-    <string name="settings_system_apks_deleted_all">APK-urile au fost șterse cu succes</string>
+    <string name="settings_system_apks_deleted_all">Fișierele APK au fost șterse</string>
     <string name="settings_system_apks_delete_failed">Unele fișiere APK nu au putut fi șterse</string>
     <string name="settings_system_apks_export_zip_success">APK-uri selectate exportate</string>
     <string name="settings_system_apks_export_zip_failed">Exportarea APK-urilor selectate a eșuat</string>
@@ -1269,8 +1281,8 @@ Detalii: %2$s"</string>
     <string name="settings_system_storage_temporary_title">Fișiere temporare</string>
     <string name="settings_system_storage_temporary_description">Fișiere de lucru create în timpul aplicării patch-urilor</string>
     <string name="settings_system_storage_clear_all">Șterge toate cache-urile</string>
-    <string name="settings_system_storage_clear_all_description">Eliberează tot spațiul cache recuperabil odată</string>
-    <string name="settings_system_storage_clear_all_confirm">Aceasta șterge răspunsurile de rețea stocate în cache, copiile programului de instalare în așteptare și fișierele temporare. APK-urile originale și patch-uite sunt păstrate</string>
+    <string name="settings_system_storage_clear_all_description">Fiecare cache listat mai sus</string>
+    <string name="settings_system_storage_clear_all_confirm">Fiecare cache de mai sus va fi golit. Fișierele APK originale și cele patch-uite sunt păstrate</string>
     <string name="settings_system_storage_cleared">Eliberat %s</string>
     <string name="settings_system_storage_patch_running_warning">Un patch este în curs de execuție și utilizează aceste fișiere. Ștergerea lor acum va duce la eșec</string>
     <string name="settings_system_storage_clear_anyway">Șterge oricum</string>
@@ -1278,14 +1290,14 @@ Detalii: %2$s"</string>
     <string name="settings_system_storage_open_app_info_title">Deschide stocarea aplicației Android</string>
     <string name="settings_system_storage_open_app_info_description">Gestionează sau șterge toate datele Morphe prin setările sistemului</string>
     <string name="settings_system_save_original_apks_title">Păstrează fișierele APK originale</string>
-    <string name="settings_system_save_original_apks_description">Salvează fișierul APK pre-patch pentru a-l putea refolosi pentru repatch-uire fără a selecta din nou fișierul</string>
+    <string name="settings_system_save_original_apks_description">Refolosește APK-ul original la repatch-uire, fără a selecta din nou fișierul</string>
     <string name="settings_system_save_patched_apks_title">Păstrează fișierele APK patch-uite</string>
-    <string name="settings_system_save_patched_apks_description">Salvează o copie a fișierului APK patch-uit pentru export ulterior sau reinstalare din manager</string>
+    <string name="settings_system_save_patched_apks_description">Păstrează o copie pentru a o exporta sau a o reinstala mai târziu</string>
     <!-- Settings - System Tab - Storage Management - Patched APKs Management -->
     <string name="settings_system_patched_apks_title">APK-uri patch-uite</string>
     <string name="settings_system_patched_apks_empty">Niciun APK patch-uit salvat încă</string>
     <string name="settings_system_patched_apks_delete_title">Ștergi APK-ul patch-uit?</string>
-    <string name="settings_system_patched_apks_deleted">APK-ul patch-uit a fost șters cu succes</string>
+    <string name="settings_system_patched_apks_deleted">APK-ul patch-uit a fost șters</string>
     <string name="settings_system_patched_apks_delete_all_title">Ștergi toate APK-urile modificate?</string>
     <!-- Settings - System Tab - Storage Management - Original APKs Management -->
     <string name="settings_system_original_apks_title">APK-uri originale</string>

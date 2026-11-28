@@ -9,6 +9,8 @@
     <string name="home_app_status_newer_patches">Нове закрпе</string>
     <!-- Mark on the card of an app built for a device other than a phone -->
     <string name="form_factor_tv">ТВ</string>
+    <!-- Named beside the other marks when one app has a build for a phone and for another device -->
+    <string name="form_factor_mobile">Телефон</string>
     <string name="form_factor_automotive">Аутомобилски</string>
     <string name="home_no_patches_available">Нема доступних закрпа</string>
     <string name="home_app_hide_title">Sakrij ovu aplikaciju?</string>
@@ -359,6 +361,10 @@
     <string name="expert_mode_recommended">Препоручене закрпе</string>
     <string name="expert_mode_reset_to_default_done">Примењене препоручене закрпе</string>
     <string name="expert_mode_selected_count">%1$s од %2$s изабрано</string>
+    <!-- Which build of an app with builds for several devices the patches are for, such as TV or Wear OS -->
+    <string name="expert_mode_form_factor">За %s верзију</string>
+    <!-- The same for the phone build, named as a common noun rather than by its mark -->
+    <string name="expert_mode_form_factor_mobile">За верзију за телефон</string>
     <string name="expert_mode_saved_selection">Сачувани избор</string>
     <string name="expert_mode_restore_saved_done">Враћена сачувана селекција</string>
     <string name="expert_mode_copy_from_bundle_no_patches">Нема поклапајућих закрпа у овом пакету</string>
@@ -489,7 +495,8 @@
     <string name="batch_patch_preparing_next">Припрема се следећа апликација…</string>
     <string name="batch_patch_progress_counter">Патчовање %1$s од %2$s</string>
     <string name="batch_patch_summary">%1$s закрпљено, %2$s неуспешно, %3$s прескочено</string>
-    <string name="batch_patch_saved_hint">Закрпљене апликације су сачуване. Инсталирајте их сада или касније из листе закрпљених APK-ова у подешавањима</string>
+    <string name="batch_patch_saved_hint">Закрпљени APK-ови су сачувани. Инсталирајте их сада или касније са почетног екрана</string>
+    <string name="batch_patch_not_kept_hint">Закрпљени APK-ови се не чувају. Инсталирајте их или извезите пре затварања овог екрана</string>
     <string name="batch_patch_multiple_sources">Неке апликације комбинују закрпе из више извора, што може изазвати сукобе</string>
     <string name="batch_patch_needs_apk">Нема доступног APK-а, приложите датотеку</string>
     <string name="batch_patch_wrong_package">Приложена датотека припада %s</string>
@@ -504,22 +511,22 @@
     <string name="batch_patch_apk_selected">APK је изабран</string>
     <string name="batch_patch_auto_download_stopped">Автоматско преузимање APK датотека је заустављено</string>
     <string name="batch_patch_auto_download_stop">Заустави преузимања</string>
-    <string name="batch_patch_auto_download_kept">Преузет APK није могао бити искоришћен, па је задржана претходна верзија</string>
+    <string name="batch_patch_auto_download_kept">APK преузет за %s није могао бити искоришћен, па је задржан претходни</string>
     <string name="batch_patch_edit_patches">Изаберите закрпе</string>
     <string name="batch_patch_state_no_apk">Нема APK-а</string>
     <string name="batch_patch_state_no_patches">Нема закрпа</string>
     <string name="batch_patch_state_no_selection">Није изабрано</string>
     <string name="batch_patch_no_selection">Ниједан од доступних патчева није изабран</string>
     <string name="batch_patch_policy_install">Инсталирај када се заврши</string>
-    <string name="batch_patch_policy_install_description">Инсталира сваку закрпљену апликацију одмах након што се ред заврши. Искључено задржава APK-ове за касније</string>
+    <string name="batch_patch_policy_install_description">Инсталира сваку закрпљену апликацију једном када се ред заврши. Искључено оставља APK-ове на овом екрану</string>
     <string name="batch_patch_policy_mount">Монтирај по завршетку</string>
-    <string name="batch_patch_policy_mount_description">Монтира сваку закрпљену апликацију једном када се ред заврши. Искључено чува APK-ове за касније</string>
+    <string name="batch_patch_policy_mount_description">Монтира сваку закрпљену апликацију једном када се ред заврши. Искључено оставља APK-ове на овом екрану</string>
     <string name="batch_patch_policy_install_mount">Инсталирај или монтирај када заврши</string>
-    <string name="batch_patch_policy_install_mount_description">Инсталира или монтира сваку закрпљену апликацију након завршетка реда. Искључено чува APK датотеке за касније</string>
+    <string name="batch_patch_policy_install_mount_description">Инсталира или монтира сваку закрпљену апликацију након завршетка реда. Искључено оставља APK датотеке на овом екрану</string>
     <!-- Label of a footer button beside "Close". Keep it short, a longer one moves the buttons onto two rows -->
     <string name="batch_patch_start">Početak</string>
     <string name="batch_patch_stop_title">Заустави групно печење?</string>
-    <string name="batch_patch_stop_description">Апликација која се тренутно закрпљује и све чекајуће операције ће бити отказане</string>
+    <string name="batch_patch_stop_description">Тренутна апликација и остатак реда ће бити отказани</string>
     <!-- Label of a footer button beside "Done". Keep it short, a longer one moves the buttons onto two rows -->
     <string name="batch_patch_install_all">Инсталирај све</string>
     <string name="batch_patch_install_failed">Инсталација је неуспела</string>
@@ -530,7 +537,7 @@
     <string name="batch_queue_clear_title">Брисати ред?</string>
     <string name="batch_queue_clear_description">Све апликације ће бити уклоњене из реда</string>
     <string name="batch_queue_keep_title">Зачувати ред чекања?</string>
-    <string name="batch_queue_keep_description">Апликације у реду чекања ће чекати на почетном екрану да буду покренуте касније</string>
+    <string name="batch_queue_keep_description">Ред чека на почетном екрану док га не покренете</string>
     <string name="batch_queue_keep">Зачувај</string>
     <string name="shortcut_repatch_short">Поново закрпи</string>
     <string name="shortcut_repatch_long">Поново закрпи застареле апликације</string>
@@ -664,6 +671,8 @@
     <string name="patcher_conflict_title">Конфликт пакета</string>
     <string name="patcher_conflict_subtitle">Морате деинсталирати постојећу верзију</string>
     <string name="patcher_conflict_hint">Modifikovana aplikacija koristi drugačiji sertifikat od instalirane verzije. Deinstalacija će obrisati sve podatke aplikacije.</string>
+    <!-- The patched APK is for another kind of device, such as TV or Wear OS, so it may not start on this one -->
+    <string name="patcher_built_for_other_device">Направљено за %s, тако да можда неће радити овде. Сачувајте га како бисте га инсталирали на том уређају</string>
     <string name="patcher_installed_conflict_title">Потребно је деинсталирати</string>
     <string name="patcher_installed_conflict_body">"Morphe потписује поправљене апликације сопственим сертификатом, који се разликује од оригиналног. Android захтева уклањање постојеће верзије пре него што се поправљена апликација може инсталирати.
 
@@ -759,7 +768,7 @@
     <string name="plugin_activity_dialog_body">Неопходна је корисничка интеракција да бисте наставили са овом додатком.</string>
     <string name="patcher_process_killed_message">Систем је прекинуо патчер пре него што је завршио, обично да ослободи меморију. Затворите друге апликације и покушајте поново</string>
     <!-- Shown once Morphe is back after it was closed in the middle of patching, for a reason other than low memory. -->
-    <string name="patcher_interrupted_message">Morphe је затворен пре него што је patching завршен, тако да ништа није patched. Покушајте поново</string>
+    <string name="patcher_interrupted_message">Morphe је затворен пре завршетка закрпљивања. Покушајте поново</string>
     <!-- "%1$s" is where the setting is, such as "Settings > Patcher > Use embedded VM", built from the names on those screens. -->
     <string name="patcher_process_crashed_message">Закрпљивач је пао пре него што је завршио. Ако се то понови, искључите %1$s и пријавите проблем уз лог</string>
     <!-- Shown when a run fills the heap it was given. "%1$s" is the heap in megabytes. -->
@@ -868,14 +877,17 @@
     <string name="settings_appearance_translations_info_title">Недостаје превода за неке језике</string>
     <!-- Settings - Appearance Tab - Interface Scale -->
     <string name="settings_appearance_ui_scale">Размера интерфејса</string>
-    <!-- Settings - Appearance Tab - Home Screen Section -->
+    <!-- Settings - Appearance Tab - Screens Section -->
     <string name="settings_appearance_home_screen">Почетни екран</string>
+    <string name="settings_appearance_screens">Екрани</string>
     <string name="settings_appearance_greeting_phrases">Почетне фразе</string>
     <string name="settings_appearance_greeting_phrases_subtitle">Приказује поздравну поруку</string>
     <string name="settings_appearance_repatch_notice">Обавештење о поновном закрпавању</string>
     <string name="settings_appearance_repatch_notice_description">Приказује банер када закрпљене апликације могу поново да се закрпе</string>
     <string name="settings_appearance_more_apps_card">Картица „Више апликација“</string>
     <string name="settings_appearance_more_apps_card_description">Приказује картицу испод апликација која води до закрпа заједнице</string>
+    <string name="settings_appearance_games_button">Дугме „Игре“</string>
+    <string name="settings_appearance_games_button_description">Приказује дугме за мини-игре током патчовања и на резултату</string>
     <string name="settings_appearance_app_card_colors">Боје картица</string>
     <string name="settings_appearance_app_card_colors_default">Подразумевано</string>
     <string name="settings_appearance_app_card_colors_default_description">Доделите свакој апликацији и извору сопствену боју</string>
@@ -1246,7 +1258,7 @@ morphe_header_custom_dark.png
     <string name="settings_system_apks_delete_all_confirm">Ово ће трајно избрисати сачуване APK фајлове приказане овде</string>
     <string name="settings_system_apks_delete_selected_title">Избрисати изабране APK фајлове?</string>
     <string name="settings_system_apks_delete_selected_confirm">Ово ће трајно избрисати изабране APK фајлове</string>
-    <string name="settings_system_apks_deleted_all">APK фајлови успешно избрисани</string>
+    <string name="settings_system_apks_deleted_all">APK датотеке су обрисане</string>
     <string name="settings_system_apks_delete_failed">Неке APK датотеке нису могле бити обрисане</string>
     <string name="settings_system_apks_export_zip_success">Извезени изабрани APK-ови</string>
     <string name="settings_system_apks_export_zip_failed">Извоз изабраних APK-ова није успео</string>
@@ -1269,8 +1281,8 @@ morphe_header_custom_dark.png
     <string name="settings_system_storage_temporary_title">Привремени фајлови</string>
     <string name="settings_system_storage_temporary_description">Радни фајлови креирани током подешавања</string>
     <string name="settings_system_storage_clear_all">Очисти све кешеве</string>
-    <string name="settings_system_storage_clear_all_description">Ослобађа све кеш просторе који се могу вратити одједном</string>
-    <string name="settings_system_storage_clear_all_confirm">Ово брише кеширане мрежне одговоре, спремљене копије инсталера и привремне фајлове. Оригинални и подешени АПК-ови су сачувани</string>
+    <string name="settings_system_storage_clear_all_description">Свака кеш меморија наведена изнад</string>
+    <string name="settings_system_storage_clear_all_confirm">Сви горенавети кешови ће бити очишћени. Оригинални и закрпљени APK-ови се задржавају</string>
     <string name="settings_system_storage_cleared">Ослобођено %s</string>
     <string name="settings_system_storage_patch_running_warning">Закрпљивање се извршава и користи ове датотеке. Њихово брисање сада ће довести до грешке</string>
     <string name="settings_system_storage_clear_anyway">Ипак очисти</string>
@@ -1278,14 +1290,14 @@ morphe_header_custom_dark.png
     <string name="settings_system_storage_open_app_info_title">Отвори складиште апликација за Android</string>
     <string name="settings_system_storage_open_app_info_description">Управљајте или избришите све податке Morphe-а преко подешавања система</string>
     <string name="settings_system_save_original_apks_title">Сачувај оригиналне APK фајлове</string>
-    <string name="settings_system_save_original_apks_description">Сачувај APK пре закрпљивања да би могао поново да се користи за закрпљивање без поновног бирања фајла</string>
+    <string name="settings_system_save_original_apks_description">Поново користи оригинални APK при закрпљивању, без поновног бирања фајла</string>
     <string name="settings_system_save_patched_apks_title">Сачувај закрпљене APK фајлове</string>
-    <string name="settings_system_save_patched_apks_description">Сачувај копију закрпљеног APK-а за каснији извоз или поновну инсталацију из менаџера</string>
+    <string name="settings_system_save_patched_apks_description">Задржи копију за извоз или каснију поновну инсталацију</string>
     <!-- Settings - System Tab - Storage Management - Patched APKs Management -->
     <string name="settings_system_patched_apks_title">Закрпљени APK-ови</string>
     <string name="settings_system_patched_apks_empty">Још није сачуван ниједан закрпљени APK</string>
     <string name="settings_system_patched_apks_delete_title">Обрисати закрпљени APK?</string>
-    <string name="settings_system_patched_apks_deleted">Закрпљени APK је успешно обрисан</string>
+    <string name="settings_system_patched_apks_deleted">Закрпљени APK је обрисан</string>
     <string name="settings_system_patched_apks_delete_all_title">Обрисати све закрпљене APK-ове?</string>
     <!-- Settings - System Tab - Storage Management - Original APKs Management -->
     <string name="settings_system_original_apks_title">Оригинални APK(и)</string>

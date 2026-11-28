@@ -9,6 +9,8 @@
     <string name="home_app_status_newer_patches">Нові патчі</string>
     <!-- Mark on the card of an app built for a device other than a phone -->
     <string name="form_factor_tv">ТВ</string>
+    <!-- Named beside the other marks when one app has a build for a phone and for another device -->
+    <string name="form_factor_mobile">Телефон</string>
     <string name="form_factor_automotive">Автомобільний</string>
     <string name="home_no_patches_available">Немає доступних патчів</string>
     <string name="home_app_hide_title">Приховати цей застосунок?</string>
@@ -359,6 +361,10 @@
     <string name="expert_mode_recommended">Рекомендовані патчі</string>
     <string name="expert_mode_reset_to_default_done">Рекомендовані патчі застосовано</string>
     <string name="expert_mode_selected_count">Вибрано %1$s з %2$s</string>
+    <!-- Which build of an app with builds for several devices the patches are for, such as TV or Wear OS -->
+    <string name="expert_mode_form_factor">Для збірки %s</string>
+    <!-- The same for the phone build, named as a common noun rather than by its mark -->
+    <string name="expert_mode_form_factor_mobile">Для телефонної збірки</string>
     <string name="expert_mode_saved_selection">Збережений вибір</string>
     <string name="expert_mode_restore_saved_done">Збережений вибір відновлено</string>
     <string name="expert_mode_copy_from_bundle_no_patches">Немає відповідних патчів у цьому пакеті</string>
@@ -441,12 +447,12 @@
     <!-- Hint under an image patch option. "%1$s" is the width and "%2$s" the height in pixels -->
     <string name="patch_option_recommended_size">Рекомендовано: %1$s×%2$s</string>
     <!-- Adaptive Icon Creator -->
-    <string name="adaptive_icon_create">Створити адаптивну іконку</string>
+    <string name="adaptive_icon_create">Створити адаптивний значок</string>
     <string name="adaptive_icon_select_image">Вибрати зображення</string>
     <string name="adaptive_icon_change_image">Змінити зображення</string>
     <string name="image_load_failed">Не вдалося завантажити це зображення</string>
     <!-- Card of the adaptive icon creator where the picture is placed on the icon -->
-    <string name="adaptive_icon_launcher">Іконка застосунку</string>
+    <string name="adaptive_icon_launcher">Значок застосунку</string>
     <string name="adaptive_icon_gesture_hint">Перетягуйте, щоб перемістити, зводьте пальці, щоб змінити розмір</string>
     <!-- Card of the adaptive icon creator showing the icons as the device draws them -->
     <string name="adaptive_icon_preview">Попередній перегляд</string>
@@ -456,18 +462,18 @@
     <string name="adaptive_icon_themed">Тематичний</string>
     <string name="adaptive_icon_background_color">Колір фону</string>
     <string name="adaptive_icon_reset_transform">Скинути позицію та масштаб</string>
-    <string name="adaptive_icon_no_transparency_warning">Це зображення не має прозорих пікселів, тому тематичні іконки та іконки сповіщень зберігають логотип Morphe</string>
-    <string name="adaptive_icon_created_success">Адаптивну іконку успішно створено</string>
-    <string name="adaptive_icon_creation_failed">Не вдалося створити адаптивну іконку</string>
-    <string name="adaptive_icon_guide">Інструкція зі створення іконок</string>
+    <string name="adaptive_icon_no_transparency_warning">Це зображення не має прозорих пікселів, тому тематичні значки та значки сповіщень зберігають логотип Morphe</string>
+    <string name="adaptive_icon_created_success">Адаптивний значок успішно створено</string>
+    <string name="adaptive_icon_creation_failed">Не вдалося створити адаптивний значок</string>
+    <string name="adaptive_icon_guide">Інструкція зі створення значків</string>
     <string name="adaptive_icon_guide_png_title">Використовуйте PNG з прозорим фоном</string>
-    <string name="adaptive_icon_guide_png_body">Найкраще працює логотип на прозорому фоні, з кольором фону, обраним нижче. Зображення без прозорості заповнює всю іконку, і тоді тематичні іконки та іконки сповіщень зберігають логотип Morphe.</string>
+    <string name="adaptive_icon_guide_png_body">Найкраще працює логотип на прозорому фоні, з кольором фону, обраним нижче. Зображення без прозорості заповнює весь значок, і тоді тематичні значки та значки сповіщень зберігають логотип Morphe.</string>
     <string name="adaptive_icon_guide_safe_zones_title">Безпечні зони</string>
-    <string name="adaptive_icon_guide_safe_zones_body">Контур показує форму іконки вашого лаунчера, а все, що поза ним, обрізається. Інші лаунчери використовують інші форми, тому розміщуйте важливі деталі всередині пунктирного кола, яке показує кожна форма.</string>
-    <string name="adaptive_icon_guide_notification_title">Іконка сповіщення</string>
-    <string name="adaptive_icon_guide_notification_body">Вирізається з видимої частини зображення та має розмір, як в інших іконок рядка стану, незалежно від полів файлу. Налаштуйте його повзунком під попереднім переглядом. Android показує її в одному кольорі.</string>
-    <string name="adaptive_icon_guide_monochrome_title">Тематична іконка</string>
-    <string name="adaptive_icon_guide_monochrome_body">Вирізається із зображення з тим самим положенням і розміром, що й іконка застосунку. На Android 13 і новіших лаунчери з увімкненими тематичними іконками фарбують її за кольорами шпалер.</string>
+    <string name="adaptive_icon_guide_safe_zones_body">Контур показує форму значка вашого лаунчера, а все, що поза ним, обрізається. Інші лаунчери використовують інші форми, тому розміщуйте важливі деталі всередині пунктирного кола, яке показує кожна форма.</string>
+    <string name="adaptive_icon_guide_notification_title">Значок сповіщення</string>
+    <string name="adaptive_icon_guide_notification_body">Вирізається з видимої частини зображення та має розмір, як в інших значків рядка стану, незалежно від полів файлу. Налаштуйте його повзунком під попереднім переглядом. Android показує його в одному кольорі.</string>
+    <string name="adaptive_icon_guide_monochrome_title">Тематичний значок</string>
+    <string name="adaptive_icon_guide_monochrome_body">Вирізається із зображення з тим самим положенням і розміром, що й значок застосунку. На Android 13 і новіших лаунчери з увімкненими тематичними значками фарбують його за кольорами шпалер.</string>
     <string name="notification_icon_preview">Сповіщення</string>
     <!-- Header Creator -->
     <string name="header_creator_create">Створити власний заголовок</string>
@@ -489,7 +495,8 @@
     <string name="batch_patch_preparing_next">Підготовка наступного застосунку…</string>
     <string name="batch_patch_progress_counter">Патчинг %1$s із %2$s</string>
     <string name="batch_patch_summary">%1$s пропатчено, %2$s невдало, %3$s пропущено</string>
-    <string name="batch_patch_saved_hint">Пропатчені застосунки збережено. Встановіть їх зараз або пізніше зі списку пропатчених APK у налаштуваннях</string>
+    <string name="batch_patch_saved_hint">Пропатчені файли APK збережено. Встановіть їх зараз або пізніше з головного екрана</string>
+    <string name="batch_patch_not_kept_hint">Пропатчені файли APK не зберігаються. Встановіть або експортуйте їх, перш ніж закрити цей екран</string>
     <string name="batch_patch_multiple_sources">Деякі застосунки поєднують патчі з кількох джерел, що може спричинити конфлікти</string>
     <string name="batch_patch_needs_apk">Немає доступного APK, додайте файл</string>
     <string name="batch_patch_wrong_package">Доданий файл належить %s</string>
@@ -504,22 +511,22 @@
     <string name="batch_patch_apk_selected">APK вибрано</string>
     <string name="batch_patch_auto_download_stopped">Автоматичне завантаження APK зупинено</string>
     <string name="batch_patch_auto_download_stop">Зупинити завантаження</string>
-    <string name="batch_patch_auto_download_kept">Завантажений APK не вдалося використати, тому залишено попередній</string>
+    <string name="batch_patch_auto_download_kept">Завантажений файл APK для %s не вдалося використати, тому залишено попередній</string>
     <string name="batch_patch_edit_patches">Вибрати патчі</string>
     <string name="batch_patch_state_no_apk">Немає APK</string>
     <string name="batch_patch_state_no_patches">Немає патчів</string>
     <string name="batch_patch_state_no_selection">Нічого не вибрано</string>
     <string name="batch_patch_no_selection">Жоден із доступних патчів не вибрано</string>
     <string name="batch_patch_policy_install">Встановити після завершення</string>
-    <string name="batch_patch_policy_install_description">Встановлює кожен пропатчений застосунок одразу після завершення черги. Вимкнення зберігає APK на потім</string>
+    <string name="batch_patch_policy_install_description">Встановлює кожен пропатчений застосунок, щойно черга завершиться. Якщо вимкнено, файли APK залишаються на цьому екрані</string>
     <string name="batch_patch_policy_mount">Змонтувати після завершення</string>
-    <string name="batch_patch_policy_mount_description">Монтує всі пропатчені застосунки після завершення черги. Якщо вимкнено, APK зберігаються на потім</string>
+    <string name="batch_patch_policy_mount_description">Монтує кожен пропатчений застосунок, щойно черга завершиться. Якщо вимкнено, файли APK залишаються на цьому екрані</string>
     <string name="batch_patch_policy_install_mount">Встановити або змонтувати після завершення</string>
-    <string name="batch_patch_policy_install_mount_description">Встановлює або монтує всі пропатчені застосунки після завершення черги. Якщо вимкнено, APK зберігаються на потім</string>
+    <string name="batch_patch_policy_install_mount_description">Встановлює або монтує кожен пропатчений застосунок, щойно черга завершиться. Якщо вимкнено, файли APK залишаються на цьому екрані</string>
     <!-- Label of a footer button beside "Close". Keep it short, a longer one moves the buttons onto two rows -->
     <string name="batch_patch_start">Почати</string>
     <string name="batch_patch_stop_title">Зупинити пакетний патчинг?</string>
-    <string name="batch_patch_stop_description">Застосунок, що патчиться зараз, і все, що ще в черзі, буде скасовано</string>
+    <string name="batch_patch_stop_description">Поточний застосунок і решту черги буде скасовано</string>
     <!-- Label of a footer button beside "Done". Keep it short, a longer one moves the buttons onto two rows -->
     <string name="batch_patch_install_all">Встановити всі</string>
     <string name="batch_patch_install_failed">Встановлення не вдалося</string>
@@ -530,7 +537,7 @@
     <string name="batch_queue_clear_title">Очистити чергу?</string>
     <string name="batch_queue_clear_description">Усі застосунки буде видалено з черги</string>
     <string name="batch_queue_keep_title">Зберегти чергу?</string>
-    <string name="batch_queue_keep_description">Застосунки з черги чекатимуть на головному екрані, щоб їх запустили пізніше</string>
+    <string name="batch_queue_keep_description">Черга чекатиме на головному екрані, доки ви її не запустите</string>
     <string name="batch_queue_keep">Залишити</string>
     <string name="shortcut_repatch_short">Перепатчити</string>
     <string name="shortcut_repatch_long">Перепатчити застарілі застосунки</string>
@@ -664,6 +671,8 @@
     <string name="patcher_conflict_title">Конфлікт пакетів</string>
     <string name="patcher_conflict_subtitle">Вам потрібно видалити наявну версію</string>
     <string name="patcher_conflict_hint">Патчений застосунок використовує інший підпис, ніж встановлена версія. Після видалення всі дані застосунку буде втрачено</string>
+    <!-- The patched APK is for another kind of device, such as TV or Wear OS, so it may not start on this one -->
+    <string name="patcher_built_for_other_device">Створено для %s, тому тут може не запуститися. Збережіть файл, щоб встановити його на той пристрій</string>
     <string name="patcher_installed_conflict_title">Потрібно видалити застосунок</string>
     <string name="patcher_installed_conflict_body">"Morphe підписує патчені застосунки власним сертифікатом, який відрізняється від оригінального. Android вимагає видалити наявну версію перед встановленням патченого застосунку.
 
@@ -759,7 +768,7 @@
     <string name="plugin_activity_dialog_body">Для продовження потрібна взаємодія користувача з цим плагіном</string>
     <string name="patcher_process_killed_message">Систему зупинила патчер до завершення роботи, зазвичай щоб звільнити пам\'ять. Закрийте інші застосунки та спробуйте ще раз</string>
     <!-- Shown once Morphe is back after it was closed in the middle of patching, for a reason other than low memory. -->
-    <string name="patcher_interrupted_message">Morphe закрився до завершення патчингу, тому нічого не пропатчено. Спробуйте ще раз</string>
+    <string name="patcher_interrupted_message">Morphe закрився до завершення патчингу. Спробуйте ще раз</string>
     <!-- "%1$s" is where the setting is, such as "Settings > Patcher > Use embedded VM", built from the names on those screens. -->
     <string name="patcher_process_crashed_message">Патчер аварійно завершив роботу, не закінчивши. Якщо це повториться, вимкніть %1$s і повідомте про проблему, додавши журнал</string>
     <!-- Shown when a run fills the heap it was given. "%1$s" is the heap in megabytes. -->
@@ -868,14 +877,17 @@
     <string name="settings_appearance_translations_info_title">Переклади деяких мов можуть бути відсутніми або неповними</string>
     <!-- Settings - Appearance Tab - Interface Scale -->
     <string name="settings_appearance_ui_scale">Масштаб інтерфейсу</string>
-    <!-- Settings - Appearance Tab - Home Screen Section -->
+    <!-- Settings - Appearance Tab - Screens Section -->
     <string name="settings_appearance_home_screen">Головний екран</string>
+    <string name="settings_appearance_screens">Екрани</string>
     <string name="settings_appearance_greeting_phrases">Вітальні фрази</string>
     <string name="settings_appearance_greeting_phrases_subtitle">Показує вітальне повідомлення</string>
     <string name="settings_appearance_repatch_notice">Сповіщення про перепатчинг</string>
     <string name="settings_appearance_repatch_notice_description">Показує банер, коли пропатчені застосунки можна перепатчити</string>
     <string name="settings_appearance_more_apps_card">Картка \"Більше застосунків\"</string>
     <string name="settings_appearance_more_apps_card_description">Показує картку під застосунками, що веде до патчів спільноти</string>
+    <string name="settings_appearance_games_button">Кнопка \"Ігри\"</string>
+    <string name="settings_appearance_games_button_description">Показує кнопку міні ігор під час патчингу та на екрані результату</string>
     <string name="settings_appearance_app_card_colors">Кольори карток</string>
     <string name="settings_appearance_app_card_colors_default">Стандартний</string>
     <string name="settings_appearance_app_card_colors_default_description">Надати кожному застосунку та джерелу власний колір</string>
@@ -892,9 +904,9 @@
     <string name="settings_appearance_app_card_colors_bundle">Колір пакета застосунку</string>
     <string name="settings_appearance_app_card_colors_bundle_description">Використовувати тут власний колір кожного застосунку чи джерела, автоматично відтінений для відповідності</string>
     <!-- Settings - Appearance Tab - App Icon Selector -->
-    <string name="settings_appearance_app_icon_selector_title">Іконка застосунку</string>
+    <string name="settings_appearance_app_icon_selector_title">Значок застосунку</string>
     <string name="settings_appearance_app_icon_selector_description">Як Morphe виглядає на головному екрані та в списку застосунків</string>
-    <string name="settings_appearance_app_icon_default">Стандартна</string>
+    <string name="settings_appearance_app_icon_default">Стандартний</string>
     <string name="settings_appearance_app_icon_light_2">Небо</string>
     <string name="settings_appearance_app_icon_light_3">Захід сонця</string>
     <string name="settings_appearance_app_icon_light_4">Лаванда</string>
@@ -915,11 +927,11 @@
     <string name="settings_appearance_app_icon_mark_color">Кольоровий</string>
     <string name="settings_appearance_app_icon_mark_white">Білий</string>
     <string name="settings_appearance_app_icon_mark_black">Чорний</string>
-    <string name="settings_appearance_app_icon_change_dialog_title">Змінити іконку застосунку?</string>
+    <string name="settings_appearance_app_icon_change_dialog_title">Змінити значок застосунку?</string>
     <!-- %s is the name of the icon picked -->
     <string name="settings_appearance_app_icon_change_restarts">Morphe перезапуститься, щоб перейти на &lt;b&gt;%s&lt;/b&gt;</string>
     <!-- Label of a footer button beside "Cancel". Keep it short, a longer one moves the buttons onto two rows -->
-    <string name="settings_appearance_app_icon_change_dialog_confirm">Змінити іконку</string>
+    <string name="settings_appearance_app_icon_change_dialog_confirm">Змінити значок</string>
     <!-- Settings - Advanced Tab - Updates Section -->
     <string name="settings_advanced_updates_manager_prereleases">Передрелізні оновлення</string>
     <!-- "Morphe" here is the app itself, not the patches. Do not translate this as pre-release patches -->
@@ -1013,11 +1025,11 @@
     <string name="settings_advanced_patch_options_custom_branding_app_name">Назва застосунку</string>
     <string name="settings_advanced_patch_options_custom_branding_app_name_hint">Введіть власну назву</string>
     <string name="settings_advanced_patch_options_path_gone">Ця тека більше не може бути прочитана. Виберіть її знову або очистіть, інакше патчинг зупиниться і запитає про це</string>
-    <string name="settings_advanced_patch_options_custom_branding_app_icon">Іконка застосунку</string>
-    <string name="settings_advanced_patch_options_custom_branding_app_icon_description">Іконка, з якою пропатчено застосунок, також використовується там, де її не можна змінити пізніше, наприклад в Android Auto</string>
-    <string name="settings_advanced_patch_options_custom_branding_app_icon_needs_folder">Власна іконка застосунку потребує теку із зображеннями іконок</string>
-    <string name="settings_advanced_patch_options_custom_branding_custom_icon">Власна іконка</string>
-    <string name="settings_advanced_patch_options_custom_branding_custom_icon_instruction">"Тека із зображеннями для використання як власної іконки.
+    <string name="settings_advanced_patch_options_custom_branding_app_icon">Значок застосунку</string>
+    <string name="settings_advanced_patch_options_custom_branding_app_icon_description">Значок, з яким пропатчено застосунок, також використовується там, де його не можна змінити пізніше, наприклад в Android Auto</string>
+    <string name="settings_advanced_patch_options_custom_branding_app_icon_needs_folder">Власний значок застосунку потребує теку із зображеннями значків</string>
+    <string name="settings_advanced_patch_options_custom_branding_custom_icon">Власний значок</string>
+    <string name="settings_advanced_patch_options_custom_branding_custom_icon_instruction">"Тека із зображеннями для використання як власного значка.
 
 Тека повинна містити одну або декілька з таких тек, залежно від DPI пристрою:
 - mipmap-mdpi
@@ -1037,10 +1049,10 @@ morphe_adaptive_foreground_custom.png
 - mipmap-xxhdpi: 324x324 px
 - mipmap-xxxhdpi: 432x432 px
 
-За бажанням, шлях містить теку 'drawable' з файлом іконки у монохромному зображенні:
+За бажанням, шлях містить теку 'drawable' з файлом монохромного значка:
 morphe_adaptive_monochrome_custom.xml
 
-За бажанням, шлях містить іконку сповіщення в одному з таких форматів:
+За бажанням, шлях містить значок сповіщення в одному з таких форматів:
 - XML векторне зображення в 'drawable':
   morphe_notification_icon_custom.xml
 - PNG растрові зображення в теках 'drawable-dpi':
@@ -1246,7 +1258,7 @@ morphe_header_custom_dark.png
     <string name="settings_system_apks_delete_all_confirm">Це назавжди видалить збережені файли APK, показані тут</string>
     <string name="settings_system_apks_delete_selected_title">Видалити вибрані APK?</string>
     <string name="settings_system_apks_delete_selected_confirm">Це назавжди видалить вибрані файли APK</string>
-    <string name="settings_system_apks_deleted_all">Файли APK успішно видалено</string>
+    <string name="settings_system_apks_deleted_all">Файли APK видалено</string>
     <string name="settings_system_apks_delete_failed">Деякі файли APK не вдалося видалити</string>
     <string name="settings_system_apks_export_zip_success">Вибрані APK експортовано</string>
     <string name="settings_system_apks_export_zip_failed">Не вдалося експортувати вибрані APK</string>
@@ -1269,8 +1281,8 @@ morphe_header_custom_dark.png
     <string name="settings_system_storage_temporary_title">Тимчасові файли</string>
     <string name="settings_system_storage_temporary_description">Робочі файли, створені під час патчингу</string>
     <string name="settings_system_storage_clear_all">Очистити весь кеш</string>
-    <string name="settings_system_storage_clear_all_description">Звільняє весь кеш одночасно</string>
-    <string name="settings_system_storage_clear_all_confirm">Це очищує кешовані мережеві відповіді, проміжні копії інсталятора та тимчасові файли. Оригінальні та пропатчені файли APK зберігаються</string>
+    <string name="settings_system_storage_clear_all_description">Усі кеші, перелічені вище</string>
+    <string name="settings_system_storage_clear_all_confirm">Усі кеші вище буде очищено. Оригінальні та пропатчені файли APK залишаться</string>
     <string name="settings_system_storage_cleared">Звільнено %s</string>
     <string name="settings_system_storage_patch_running_warning">Виконується патч, який використовує ці файли. Їх очищення зараз призведе до збою</string>
     <string name="settings_system_storage_clear_anyway">Усе одно очистити</string>
@@ -1278,14 +1290,14 @@ morphe_header_custom_dark.png
     <string name="settings_system_storage_open_app_info_title">Відкрити сховище застосунку Android</string>
     <string name="settings_system_storage_open_app_info_description">Керуйте або очищайте всі дані Morphe через системні налаштування</string>
     <string name="settings_system_save_original_apks_title">Зберігати оригінальні APK</string>
-    <string name="settings_system_save_original_apks_description">Зберігає APK до патчингу, щоб використати його для повторного патчингу без повторного вибору файлу</string>
+    <string name="settings_system_save_original_apks_description">Повторно використовувати оригінальний файл APK під час повторного патчингу, без повторного вибору файлу</string>
     <string name="settings_system_save_patched_apks_title">Зберігати пропатчені APK</string>
-    <string name="settings_system_save_patched_apks_description">Зберігає копію пропатченого APK для подальшого експорту або повторного встановлення з менеджера</string>
+    <string name="settings_system_save_patched_apks_description">Зберігати копію для подальшого експорту або перевстановлення</string>
     <!-- Settings - System Tab - Storage Management - Patched APKs Management -->
     <string name="settings_system_patched_apks_title">Пропатчені файли APK</string>
     <string name="settings_system_patched_apks_empty">Пропатчених файлів APK ще не збережено</string>
     <string name="settings_system_patched_apks_delete_title">Видалити пропатчений файл APK?</string>
-    <string name="settings_system_patched_apks_deleted">Пропатчений файл APK успішно видалено</string>
+    <string name="settings_system_patched_apks_deleted">Пропатчений файл APK видалено</string>
     <string name="settings_system_patched_apks_delete_all_title">Видалити всі пропатчені APK?</string>
     <!-- Settings - System Tab - Storage Management - Original APKs Management -->
     <string name="settings_system_original_apks_title">Оригінальні файли APK</string>

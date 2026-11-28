@@ -9,6 +9,8 @@
     <string name="home_app_status_newer_patches">Patch berriak</string>
     <!-- Mark on the card of an app built for a device other than a phone -->
     <string name="form_factor_tv">Telebista</string>
+    <!-- Named beside the other marks when one app has a build for a phone and for another device -->
+    <string name="form_factor_mobile">Telefonoa</string>
     <string name="form_factor_automotive">Automobila</string>
     <string name="home_no_patches_available">Ez dago patchingik eskuragarri</string>
     <string name="home_app_hide_title">Ezkutatu aplikazio hau ?</string>
@@ -359,6 +361,10 @@ Aukeratu non hartu APK-a"</string>
     <string name="expert_mode_recommended">Gomendatutako patch-ak</string>
     <string name="expert_mode_reset_to_default_done">Gomendatutako patchak aplikatu dira</string>
     <string name="expert_mode_selected_count">%2$s-tik %1$s hautatuta</string>
+    <!-- Which build of an app with builds for several devices the patches are for, such as TV or Wear OS -->
+    <string name="expert_mode_form_factor">%s buildarentzat</string>
+    <!-- The same for the phone build, named as a common noun rather than by its mark -->
+    <string name="expert_mode_form_factor_mobile">Telefonoen buildarentzat</string>
     <string name="expert_mode_saved_selection">Gordetako hautaketa</string>
     <string name="expert_mode_restore_saved_done">Gordetako hautapena berrezarri da</string>
     <string name="expert_mode_copy_from_bundle_no_patches">Ez dago patch egokirik bundle honetan</string>
@@ -489,7 +495,8 @@ Emaitza onenak lortzeko, aplikazio honek &lt;b&gt;APK osoa&lt;/b&gt; patchatzea 
     <string name="batch_patch_preparing_next">Hurrengo aplikazioa prestatzen...</string>
     <string name="batch_patch_progress_counter">%2$s-tik %1$s patchatzen</string>
     <string name="batch_patch_summary">%1$s patchatuta, %2$s huts egin ditu, %3$s salto egin ditu</string>
-    <string name="batch_patch_saved_hint">Patchatutako aplikazioak gorde dira. Instalatu orain edo geroago, ezarpenetako patchatutako APK zerrendatik</string>
+    <string name="batch_patch_saved_hint">Patchatutako APKak gorde dira. Instalatu orain edo geroago pantaila nagusitik</string>
+    <string name="batch_patch_not_kept_hint">Patchatutako APKak ez dira gordetzen. Instalatu edo esportatu pantaila hau itxi baino lehen</string>
     <string name="batch_patch_multiple_sources">Batzuk aukeratu diren aplikazioek iturri bat baino gehiagoko patchak konbinatzen dituzte, eta horrek gatazkak sortu ditzake</string>
     <string name="batch_patch_needs_apk">Ez dago APKrik eskuragarri, erantsi fitxategi bat</string>
     <string name="batch_patch_wrong_package">Erantsitako fitxategia %s-ren da</string>
@@ -504,22 +511,22 @@ Emaitza onenak lortzeko, aplikazio honek &lt;b&gt;APK osoa&lt;/b&gt; patchatzea 
     <string name="batch_patch_apk_selected">APK hautatua</string>
     <string name="batch_patch_auto_download_stopped">APK automatikoen deskargak geldi dira</string>
     <string name="batch_patch_auto_download_stop">Geldi deskargak</string>
-    <string name="batch_patch_auto_download_kept">Deskargatutako APKa ezin izan da erabili, beraz aurrekoa gordetuta utzi da</string>
+    <string name="batch_patch_auto_download_kept">%s rako deskargatutako APKa ezin da izan, beraz, aurrekoa gordetzen da</string>
     <string name="batch_patch_edit_patches">Aukeratu patch-ak</string>
     <string name="batch_patch_state_no_apk">APKik ez</string>
     <string name="batch_patch_state_no_patches">Patchik ez</string>
     <string name="batch_patch_state_no_selection">Batere ez hautatuta</string>
     <string name="batch_patch_no_selection">Eskuragarri dauden patch-etatik bat ere ez dago hautatuta</string>
     <string name="batch_patch_policy_install">Instalatu amaitutakoan</string>
-    <string name="batch_patch_policy_install_description">Patchatutako aplikazio guztiak instalatzen ditu ilara amaitu eta berehala. Desaktibatuta, APKak geroagorako gordetzen ditu</string>
+    <string name="batch_patch_policy_install_description">Patchatutako aplikazio guztiak instalatzen ditu ilara amaitu ondoren. Desaktibatuta, APKak pantaila honetan geratzen dira</string>
     <string name="batch_patch_policy_mount">Montatu amaituenean</string>
-    <string name="batch_patch_policy_mount_description">Patchatutako aplikazio guztiak montatzen ditu ilara amaitu ondoren. Desaktibatuta, APKak geroagorako gordetzen ditu</string>
+    <string name="batch_patch_policy_mount_description">Patchatutako aplikazio guztiak montatzen ditu ilara amaitu ondoren. Desaktibatuta, APKak pantaila honetan geratzen dira</string>
     <string name="batch_patch_policy_install_mount">Instalatu edo montatu amaituenean</string>
-    <string name="batch_patch_policy_install_mount_description">Patchatutako aplikazio guztiak instalatzen edo montatzen ditu ilara amaitu ondoren. Desaktibatuta, APKak geroagorako gordetzen ditu</string>
+    <string name="batch_patch_policy_install_mount_description">Patchatutako aplikazio guztiak instalatzen edo montatzen ditu ilara amaitu ondoren. Desaktibatuta, APKak pantaila honetan geratzen dira</string>
     <!-- Label of a footer button beside "Close". Keep it short, a longer one moves the buttons onto two rows -->
     <string name="batch_patch_start">Hasi</string>
     <string name="batch_patch_stop_title">Batch patching gelditu?</string>
-    <string name="batch_patch_stop_description">Orain patchatzen ari den aplikazioa eta ilaran dagoen gainerako guztia bertan behera utziko dira</string>
+    <string name="batch_patch_stop_description">Eguneko aplikazioa eta gainerako herramendu-sarra bertan utziko dira</string>
     <!-- Label of a footer button beside "Done". Keep it short, a longer one moves the buttons onto two rows -->
     <string name="batch_patch_install_all">Denak instalatu</string>
     <string name="batch_patch_install_failed">Instalazioa huts egin du</string>
@@ -530,7 +537,7 @@ Emaitza onenak lortzeko, aplikazio honek &lt;b&gt;APK osoa&lt;/b&gt; patchatzea 
     <string name="batch_queue_clear_title">Ilara hustu?</string>
     <string name="batch_queue_clear_description">Ilaratik aplikazio guztiak kenduko dira</string>
     <string name="batch_queue_keep_title">Ilara mantendu?</string>
-    <string name="batch_queue_keep_description">Ilaran dauden aplikazioak hasierako pantailan itxaroten geratuko dira geroago hasteko</string>
+    <string name="batch_queue_keep_description">Ilarak hasierako pantailan itxaroten du zu hasi arte</string>
     <string name="batch_queue_keep">Mantendu</string>
     <string name="shortcut_repatch_short">Berriz patchatu</string>
     <string name="shortcut_repatch_long">Berriz patchatu zaharkitutako aplikazioak</string>
@@ -664,6 +671,8 @@ Emaitza onenak lortzeko, aplikazio honek &lt;b&gt;APK osoa&lt;/b&gt; patchatzea 
     <string name="patcher_conflict_title">Paketeen gatazka</string>
     <string name="patcher_conflict_subtitle">Lehendik dagoen bertsioa desinstalatu behar duzu</string>
     <string name="patcher_conflict_hint">Patchatutako aplikazioak instalatutako bertsioaren ziurtagiri desberdina erabiltzen du. Desinstalatzeak aplikazioaren datu guztiak ezabatuko ditu</string>
+    <!-- The patched APK is for another kind of device, such as TV or Wear OS, so it may not start on this one -->
+    <string name="patcher_built_for_other_device">%s rarentzat buildatuta dago, beraz agian hemen ez dabil. Gorde gailu horretan instalatzeko</string>
     <string name="patcher_installed_conflict_title">Desinstalazioa beharrezkoa da</string>
     <string name="patcher_installed_conflict_body">"Morphe-k patchatutako aplikazioak bere ziurtagiriarekin sinatzen ditu, jatorrizkoarekin bat ez datorrena. Androidek lehendik dagoen bertsioa kentzea behar du patchatutako aplikazioa instalatu aurretik.
 
@@ -759,7 +768,7 @@ Desinstalatzeak aplikazioaren datu guztiak betiko ezabatuko ditu"</string>
     <string name="plugin_activity_dialog_body">Plugin hau aurrera eramateko erabiltzailearen parte-hartzea behar da</string>
     <string name="patcher_process_killed_message">Sistemak patchera utzi du amaitu aurretik, normalean memoria askatzeko. Itxi beste aplikazioak eta saiatu berriz</string>
     <!-- Shown once Morphe is back after it was closed in the middle of patching, for a reason other than low memory. -->
-    <string name="patcher_interrupted_message">Morphe itxi zen patching prozesua amaitu aurretik, beraz, ezer ez zen patchatu. Saiatu berriz</string>
+    <string name="patcher_interrupted_message">Morphe itxi zen patchatzea amaitu aurretik. Saiatu berriro</string>
     <!-- "%1$s" is where the setting is, such as "Settings > Patcher > Use embedded VM", built from the names on those screens. -->
     <string name="patcher_process_crashed_message">Patcher-ak huts egin du amaitu aurretik. Berriz gertatzen bada, desaktibatu %1$s eta jakinarazi arazoa logarekin</string>
     <!-- Shown when a run fills the heap it was given. "%1$s" is the heap in megabytes. -->
@@ -868,14 +877,17 @@ Desinstalatzeak aplikazioaren datu guztiak betiko ezabatuko ditu"</string>
     <string name="settings_appearance_translations_info_title">Hizkuntza batzuen itzulpenak falta edo osatugabeak izan daitezke</string>
     <!-- Settings - Appearance Tab - Interface Scale -->
     <string name="settings_appearance_ui_scale">Interfazearen eskala</string>
-    <!-- Settings - Appearance Tab - Home Screen Section -->
+    <!-- Settings - Appearance Tab - Screens Section -->
     <string name="settings_appearance_home_screen">Hasierako pantaila</string>
+    <string name="settings_appearance_screens">Pantailak</string>
     <string name="settings_appearance_greeting_phrases">Agurtzeko esaldiak</string>
     <string name="settings_appearance_greeting_phrases_subtitle">Agur-mezu bat erakusten du</string>
     <string name="settings_appearance_repatch_notice">Berriz patchatzearen abisua</string>
     <string name="settings_appearance_repatch_notice_description">Patchatutako aplikazioak berriz patchatu daitezkeenean banner bat erakusten du</string>
     <string name="settings_appearance_more_apps_card">Aplikazio gehiagoko txartela</string>
     <string name="settings_appearance_more_apps_card_description">Komunitateko patchetara eramaten duen txartela erakusten du aplikazioen azpian</string>
+    <string name="settings_appearance_games_button">Jokoen botoia</string>
+    <string name="settings_appearance_games_button_description">Patching egiten ari den bitartean eta emaitzan mini-jokoen botoi bat erakutsi</string>
     <string name="settings_appearance_app_card_colors">Karta-koloreak</string>
     <string name="settings_appearance_app_card_colors_default">Lehenetsua</string>
     <string name="settings_appearance_app_card_colors_default_description">Eman aplikazio eta iturri bakoitzari bere kolorea</string>
@@ -1246,7 +1258,7 @@ Xehetasunak: %2$s"</string>
     <string name="settings_system_apks_delete_all_confirm">Honek betiko ezabatuko ditu hemen erakusten diren gordetako APK fitxategiak</string>
     <string name="settings_system_apks_delete_selected_title">Ezabatu hautatutako APKak?</string>
     <string name="settings_system_apks_delete_selected_confirm">Honek betiko ezabatuko ditu hautatutako APK fitxategiak</string>
-    <string name="settings_system_apks_deleted_all">APKak ongi ezabatu dira</string>
+    <string name="settings_system_apks_deleted_all">APKak ezabatu dira</string>
     <string name="settings_system_apks_delete_failed">APK fitxategi batzuk ezin izan dira ezabatu</string>
     <string name="settings_system_apks_export_zip_success">APK hautatuak esportatuta</string>
     <string name="settings_system_apks_export_zip_failed">APK hautatuak esportatzea huts egin du</string>
@@ -1269,8 +1281,8 @@ Xehetasunak: %2$s"</string>
     <string name="settings_system_storage_temporary_title">Fitxategi temporaleak</string>
     <string name="settings_system_storage_temporary_description">Patching prozesuan sortutako lan-fitxategiak</string>
     <string name="settings_system_storage_clear_all">Garbitu cache guztia</string>
-    <string name="settings_system_storage_clear_all_description">Berreskuratu daitekeen cache-espazio guztia une batean askatzen du</string>
-    <string name="settings_system_storage_clear_all_confirm">Honek sare-erantzun cachetuak, instalatzaileentzako kopia prestatuak eta aldi baterako fitxategiak garbituko ditu. Jatorrizko eta patch-atutako APKak gordeta geratuko dira</string>
+    <string name="settings_system_storage_clear_all_description">Goian zerrendatutako 모든 cache-ak</string>
+    <string name="settings_system_storage_clear_all_confirm">Goiko cache guztiak garbituko dira. APK originalak eta patchatutakoak gordetzen dira</string>
     <string name="settings_system_storage_cleared">%s askatu da</string>
     <string name="settings_system_storage_patch_running_warning">Patch bat exekutatzen ari da eta fitxategi hauek erabiltzen ditu. Orain garbitzeak huts eginaraziko luke</string>
     <string name="settings_system_storage_clear_anyway">Garbitu hala ere</string>
@@ -1278,14 +1290,14 @@ Xehetasunak: %2$s"</string>
     <string name="settings_system_storage_open_app_info_title">Ireki Android aplikazioaren biltegia</string>
     <string name="settings_system_storage_open_app_info_description">Kudeatu edo garbitu Morphe-ren datu guztiak sistemaren ezarpenen bidez</string>
     <string name="settings_system_save_original_apks_title">Gorde jatorrizko APK-ak</string>
-    <string name="settings_system_save_original_apks_description">Gorde patching aurreko APKa, berriro patchatzeko fitxategia berriro hautatu gabe berrerabili ahal izateko</string>
+    <string name="settings_system_save_original_apks_description">Berrerabili APK originala berriro patchatzeko, fitxategia berriro hautatu gabe</string>
     <string name="settings_system_save_patched_apks_title">Gorde patch-atutako APKak</string>
-    <string name="settings_system_save_patched_apks_description">Gorde patch-atutako APKaren kopia bat geroago esportatzeko edo kudeatzailetik berriz instalatzeko</string>
+    <string name="settings_system_save_patched_apks_description">Gorde kopia bat gero exportatzeko edo berriro instalatzeko</string>
     <!-- Settings - System Tab - Storage Management - Patched APKs Management -->
     <string name="settings_system_patched_apks_title">Patch-atutako APKak</string>
     <string name="settings_system_patched_apks_empty">Oraindik ez da patch-atutako APKrik gorde</string>
     <string name="settings_system_patched_apks_delete_title">Patch-atutako APKa ezabatu?</string>
-    <string name="settings_system_patched_apks_deleted">Patch-atutako APKa ongi ezabatu da</string>
+    <string name="settings_system_patched_apks_deleted">Patchatutako APKaezabatuta</string>
     <string name="settings_system_patched_apks_delete_all_title">Patch-atutako APK guztiak ezabatu?</string>
     <!-- Settings - System Tab - Storage Management - Original APKs Management -->
     <string name="settings_system_original_apks_title">Jatorrizko APKak</string>

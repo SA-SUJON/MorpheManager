@@ -9,6 +9,8 @@
     <string name="home_app_status_newer_patches">Új módosítások</string>
     <!-- Mark on the card of an app built for a device other than a phone -->
     <string name="form_factor_tv">TV</string>
+    <!-- Named beside the other marks when one app has a build for a phone and for another device -->
+    <string name="form_factor_mobile">Telefon</string>
     <string name="form_factor_automotive">Autó</string>
     <string name="home_no_patches_available">Nincsenek elérhető módosítások</string>
     <string name="home_app_hide_title">Elrejted az alkalmazást?</string>
@@ -360,6 +362,10 @@ Válaszd ki, honnan szerezd be az APK-t"</string>
     <string name="expert_mode_recommended">Ajánlott javítások</string>
     <string name="expert_mode_reset_to_default_done">A javasolt patch-ek alkalmazva</string>
     <string name="expert_mode_selected_count">%1$s/%2$s módosítás kiválasztva</string>
+    <!-- Which build of an app with builds for several devices the patches are for, such as TV or Wear OS -->
+    <string name="expert_mode_form_factor">A %s buildhez</string>
+    <!-- The same for the phone build, named as a common noun rather than by its mark -->
+    <string name="expert_mode_form_factor_mobile">A telefon buildhez</string>
     <string name="expert_mode_saved_selection">Mentett kiválasztás</string>
     <string name="expert_mode_restore_saved_done">A mentett kijelölés visszaállítva</string>
     <string name="expert_mode_copy_from_bundle_no_patches">Nincs megfelelő patch ehhez a csomaghoz</string>
@@ -490,7 +496,8 @@ A legjobb eredmény érdekében az alkalmazás javasolja a &lt;b&gt;teljes APK&l
     <string name="batch_patch_preparing_next">A következő alkalmazás előkészítése…</string>
     <string name="batch_patch_progress_counter">%1$s patchelése a %2$s-ból</string>
     <string name="batch_patch_summary">%1$s javítva, %2$s sikertelen, %3$s kihagyva</string>
-    <string name="batch_patch_saved_hint">A javított alkalmazások elmentve. Telepítse őket most, vagy később a javított APK listából a beállításokban</string>
+    <string name="batch_patch_saved_hint">A módosított APK-k mentve vannak. Telepítsd őket most, vagy később a kezdőképernyőről</string>
+    <string name="batch_patch_not_kept_hint">A módosított APK-kat nem őrizzük meg. Telepítsd vagy exportáld őket a képernyő bezárása előtt</string>
     <string name="batch_patch_multiple_sources">Néhány alkalmazás több forrásból származó javításokat kombinál, ami konfliktusokat okozhat</string>
     <string name="batch_patch_needs_apk">Nincs elérhető APK, csatoljon egy fájlt</string>
     <string name="batch_patch_wrong_package">A csatolt fájl a(z) %s alkalmazáshoz tartozik</string>
@@ -505,22 +512,22 @@ A legjobb eredmény érdekében az alkalmazás javasolja a &lt;b&gt;teljes APK&l
     <string name="batch_patch_apk_selected">APK kiválasztva</string>
     <string name="batch_patch_auto_download_stopped">Az automatikus APK letöltések leállítva</string>
     <string name="batch_patch_auto_download_stop">Letöltések leállítása</string>
-    <string name="batch_patch_auto_download_kept">A letöltött APK nem használható volt, ezért az előző megmaradt</string>
+    <string name="batch_patch_auto_download_kept">A %s számára letöltött APK nem volt használható, ezért az előző megmaradt</string>
     <string name="batch_patch_edit_patches">Válassza ki a javításokat</string>
     <string name="batch_patch_state_no_apk">Nincs APK</string>
     <string name="batch_patch_state_no_patches">Nincs javítás</string>
     <string name="batch_patch_state_no_selection">Egyik sem kiválasztva</string>
     <string name="batch_patch_no_selection">A rendelkezésre álló javítások közül egyik sem lett kiválasztva</string>
     <string name="batch_patch_policy_install">Telepítés a befejezés után</string>
-    <string name="batch_patch_policy_install_description">Minden javított alkalmazás a soron következő befejezése után azonnal települ. A kikapcsolás esetén az APK-k későbbre megmaradnak</string>
+    <string name="batch_patch_policy_install_description">Telepíti minden módosított alkalmazást a sor befejezése után. A kikapcsolás esetén az APK-k ezen a képernyőn maradnak</string>
     <string name="batch_patch_policy_mount">Helyezze csatolítással a befejezés után</string>
-    <string name="batch_patch_policy_mount_description">Minden módosított alkalmazást csatolít, amint a sor befejeződik. A kikapcsolás megőrzi az APK-kat későbbi időpontra</string>
+    <string name="batch_patch_policy_mount_description">Kicsatol minden módosított alkalmazást a sor befejezése után. A kikapcsolás esetén az APK-k ezen a képernyőn maradnak</string>
     <string name="batch_patch_policy_install_mount">Telepítse vagy csatolítsa a befejezés után</string>
-    <string name="batch_patch_policy_install_mount_description">Telepíti vagy csatolja minden módosított alkalmazást a sor befejezése után. A Kikapcsolva beállítással az APK-k később lesznek kezelve</string>
+    <string name="batch_patch_policy_install_mount_description">Telepíti vagy csatolja minden módosított alkalmazást a sor befejezése után. A kikapcsolás esetén az APK-k ezen a képernyőn maradnak</string>
     <!-- Label of a footer button beside "Close". Keep it short, a longer one moves the buttons onto two rows -->
     <string name="batch_patch_start">Indítás</string>
     <string name="batch_patch_stop_title">Megállítsa a csoportos javítást?</string>
-    <string name="batch_patch_stop_description">A jelenleg javított app és a sorban várakozó összes többi művelet megszakad</string>
+    <string name="batch_patch_stop_description">Az aktuális alkalmazás és a sor fennmaradó elemei törölésre kerülnek</string>
     <!-- Label of a footer button beside "Done". Keep it short, a longer one moves the buttons onto two rows -->
     <string name="batch_patch_install_all">Mindet telepítse</string>
     <string name="batch_patch_install_failed">A telepítés sikertelen</string>
@@ -531,7 +538,7 @@ A legjobb eredmény érdekében az alkalmazás javasolja a &lt;b&gt;teljes APK&l
     <string name="batch_queue_clear_title">Várólista törlése?</string>
     <string name="batch_queue_clear_description">Minden alkalmazás eltávolításra kerül a várólistáról</string>
     <string name="batch_queue_keep_title">Tartsd meg a sorot?</string>
-    <string name="batch_queue_keep_description">A sorban várakozó alkalmazások a kezdőképernyőn maradnak, hogy később belelehessen kezdeni őket</string>
+    <string name="batch_queue_keep_description">A sor a kezdőképernyőn vár, amíg elindítod</string>
     <string name="batch_queue_keep">Megtartás</string>
     <string name="shortcut_repatch_short">Újra javítás</string>
     <string name="shortcut_repatch_long">Régi alkalmazások újra javítása</string>
@@ -665,6 +672,8 @@ A legjobb eredmény érdekében az alkalmazás javasolja a &lt;b&gt;teljes APK&l
     <string name="patcher_conflict_title">Csomagütközés</string>
     <string name="patcher_conflict_subtitle">El kell távolítanod a meglévő verziót</string>
     <string name="patcher_conflict_hint">Az eltávolítás törli az alkalmazás összes adatát.</string>
+    <!-- The patched APK is for another kind of device, such as TV or Wear OS, so it may not start on this one -->
+    <string name="patcher_built_for_other_device">A %s eszközhöz készült, így lehet, hogy itt nem indul el. Mentse el, hogy telepíthesse azon az eszközön</string>
     <string name="patcher_installed_conflict_title">Eltávolítás szükséges</string>
     <string name="patcher_installed_conflict_body">"A Morphe saját tanúsítvánnyal írja alá a javított alkalmazásokat, ami eltér az eredetitől. Az Androidnak el kell távolítani a meglévő verziót, mielőtt a javított alkalmazást telepíteni lehet.
 
@@ -760,7 +769,7 @@ Az eltávolítás véglegesen törli az alkalmazás összes adatát."</string>
     <string name="plugin_activity_dialog_body">A bővítmény használatához felhasználói beavatkozásra van szükség</string>
     <string name="patcher_process_killed_message">A rendszer leállította a javítót mielőtt befejezte, általában a memória felszabadítása érdekében. Zárja be a többi alkalmazást, és próbálja újra</string>
     <!-- Shown once Morphe is back after it was closed in the middle of patching, for a reason other than low memory. -->
-    <string name="patcher_interrupted_message">A Morphe bezáratása miatt a javítás nem fejeződött be, így semmi sem került javítva. Próbálja újra</string>
+    <string name="patcher_interrupted_message">A Morphe lezárult a módosítás befejezése előtt. Próbáld újra</string>
     <!-- "%1$s" is where the setting is, such as "Settings > Patcher > Use embedded VM", built from the names on those screens. -->
     <string name="patcher_process_crashed_message">A patchelő összeomlott a befejezés előtt. Ha ez újra előfordul, kapcsold ki a(z) %1$s opciót, és jelezd a hibát a naplóval</string>
     <!-- Shown when a run fills the heap it was given. "%1$s" is the heap in megabytes. -->
@@ -869,14 +878,17 @@ Az eltávolítás véglegesen törli az alkalmazás összes adatát."</string>
     <string name="settings_appearance_translations_info_title">Egyes nyelvek fordításai hiányozhatnak vagy hiányosak lehetnek</string>
     <!-- Settings - Appearance Tab - Interface Scale -->
     <string name="settings_appearance_ui_scale">Felület mérete</string>
-    <!-- Settings - Appearance Tab - Home Screen Section -->
+    <!-- Settings - Appearance Tab - Screens Section -->
     <string name="settings_appearance_home_screen">Kezdőképernyő</string>
+    <string name="settings_appearance_screens">Képernyők</string>
     <string name="settings_appearance_greeting_phrases">Üdvözlő szövegek</string>
     <string name="settings_appearance_greeting_phrases_subtitle">Üdvözlő üzenet megjelenítése</string>
     <string name="settings_appearance_repatch_notice">Újrajavítási értesítés</string>
     <string name="settings_appearance_repatch_notice_description">Riasztó sáv megjelenítése, ha a módosított alkalmazások újra módosíthatók</string>
     <string name="settings_appearance_more_apps_card">További alkalmazások kártya</string>
     <string name="settings_appearance_more_apps_card_description">Kártyát jelenít az alkalmazások alatt, amely a közösségi javításokhoz vezet</string>
+    <string name="settings_appearance_games_button">Játékok gomb</string>
+    <string name="settings_appearance_games_button_description">Gombot jelenít a mini-játékokhoz a patchelés során és az eredménynél</string>
     <string name="settings_appearance_app_card_colors">Kártyaszínek</string>
     <string name="settings_appearance_app_card_colors_default">Alapértelmezett</string>
     <string name="settings_appearance_app_card_colors_default_description">Adjon egy saját színt minden alkalmazásnak és forrásnak</string>
@@ -1247,7 +1259,7 @@ Részletek: %2$s"</string>
     <string name="settings_system_apks_delete_all_confirm">Ez véglegesen törli a megjelenített APK fájlokat.</string>
     <string name="settings_system_apks_delete_selected_title">Kiválasztott APK-k törlése?</string>
     <string name="settings_system_apks_delete_selected_confirm">Ez véglegesen törli a kiválasztott APK fájlokat.</string>
-    <string name="settings_system_apks_deleted_all">Az APK-k sikeresen törölve lettek.</string>
+    <string name="settings_system_apks_deleted_all">APK-k törölve</string>
     <string name="settings_system_apks_delete_failed">Néhány APK-fájl törlése sikertelen.</string>
     <string name="settings_system_apks_export_zip_success">A kiválasztott APK-k exportálva</string>
     <string name="settings_system_apks_export_zip_failed">A kiválasztott APK-k exportálása sikertelen</string>
@@ -1270,8 +1282,8 @@ Részletek: %2$s"</string>
     <string name="settings_system_storage_temporary_title">Ideiglenes fájlok</string>
     <string name="settings_system_storage_temporary_description">A módosítás során létrehozott munkafájlok</string>
     <string name="settings_system_storage_clear_all">Az összes gyorsítótár törlése</string>
-    <string name="settings_system_storage_clear_all_description">Egyszerre törli az összes visszanyerhető gyorsítótár-területet</string>
-    <string name="settings_system_storage_clear_all_confirm">Ez törli a gyorsítótárazott hálózati válaszokat, a telepítők által használt példányokat és az ideiglenes fájlokat. Az eredeti és a módosított APK-k megőrizve maradnak</string>
+    <string name="settings_system_storage_clear_all_description">Minden fent felsorolt gyorsítótár</string>
+    <string name="settings_system_storage_clear_all_confirm">Minden fenti gyorsítótár törölve lesz. Az eredeti és a módosított APK-k megmaradnak</string>
     <string name="settings_system_storage_cleared">Felszabadítva: %s</string>
     <string name="settings_system_storage_patch_running_warning">Egy javítás fut, és ezeket a fájlokat használja. Ha most törli őket, a javítás hibával leáll</string>
     <string name="settings_system_storage_clear_anyway">Töröljen mindent</string>
@@ -1279,14 +1291,14 @@ Részletek: %2$s"</string>
     <string name="settings_system_storage_open_app_info_title">Android alkalmazástár megnyitása</string>
     <string name="settings_system_storage_open_app_info_description">Morphe adatok kezelése vagy törlése a rendszerbeállításokon keresztül</string>
     <string name="settings_system_save_original_apks_title">Tartsd meg az eredeti APK fájlokat</string>
-    <string name="settings_system_save_original_apks_description">Mentsd el a patch-elés előtti APK fájlt, hogy újrahasználd a későbbi patch-elésekhez anélkül, hogy újra ki kellene választanod a fájlt.</string>
+    <string name="settings_system_save_original_apks_description">Használja újra az eredeti APK-t a مجátomáskor, anélkül hogy újra ki kellene választania a fájlt</string>
     <string name="settings_system_save_patched_apks_title">Tartsd meg a patch-elt APK fájlokat</string>
-    <string name="settings_system_save_patched_apks_description">Mentsd el a patch-elt APK fájl egy másolatát későbbi exportáláshoz vagy a kezelőből való újratelepítéshez.</string>
+    <string name="settings_system_save_patched_apks_description">Tartson egy másolatot a későbbi exportáláshoz vagy újratelepítéshez</string>
     <!-- Settings - System Tab - Storage Management - Patched APKs Management -->
     <string name="settings_system_patched_apks_title">Módosított APK-k</string>
     <string name="settings_system_patched_apks_empty">Még nincsenek mentett módosított APK-k</string>
     <string name="settings_system_patched_apks_delete_title">Törlöd a módosított APK-t?</string>
-    <string name="settings_system_patched_apks_deleted">A módosított APK sikeresen törölve</string>
+    <string name="settings_system_patched_apks_deleted">Módosított APK törölve</string>
     <string name="settings_system_patched_apks_delete_all_title">Törlöm az összes módosított APK-t?</string>
     <!-- Settings - System Tab - Storage Management - Original APKs Management -->
     <string name="settings_system_original_apks_title">Eredeti APK-k</string>

@@ -9,6 +9,8 @@
     <string name="home_app_status_newer_patches">Uued parandused</string>
     <!-- Mark on the card of an app built for a device other than a phone -->
     <string name="form_factor_tv">TV</string>
+    <!-- Named beside the other marks when one app has a build for a phone and for another device -->
+    <string name="form_factor_mobile">Telefon</string>
     <string name="form_factor_automotive">Auto</string>
     <string name="home_no_patches_available">Parandused pole saadaval</string>
     <string name="home_app_hide_title">Kas peidata see rakendus?</string>
@@ -359,6 +361,10 @@ Vali, kust selle APK võtta"</string>
     <string name="expert_mode_recommended">Soovitatud paigad</string>
     <string name="expert_mode_reset_to_default_done">Soovitatud paigad on rakendatud</string>
     <string name="expert_mode_selected_count">Valitud %1$s / %2$s</string>
+    <!-- Which build of an app with builds for several devices the patches are for, such as TV or Wear OS -->
+    <string name="expert_mode_form_factor">Versioonile %s</string>
+    <!-- The same for the phone build, named as a common noun rather than by its mark -->
+    <string name="expert_mode_form_factor_mobile">Telefoni versiooni jaoks</string>
     <string name="expert_mode_saved_selection">Salvestatud valik</string>
     <string name="expert_mode_restore_saved_done">Salvestatud valik on taastatud</string>
     <string name="expert_mode_copy_from_bundle_no_patches">Sellest paketist ei leidu sobivaid paiku</string>
@@ -489,7 +495,8 @@ Parimate tulemuste saamiseks soovitab see rakendus kasutada &lt;b&gt;täielikku 
     <string name="batch_patch_preparing_next">Valmistatakse ette järgmist rakendust…</string>
     <string name="batch_patch_progress_counter">Paigatakse %1$s / %2$s</string>
     <string name="batch_patch_summary">%1$s paigatud, %2$s nurjus, %3$s jäeti vahele</string>
-    <string name="batch_patch_saved_hint">Paiatud rakendused on salvestatud. Installi need kohe või hiljem paigutatud APK-de loendist seadetes</string>
+    <string name="batch_patch_saved_hint">Paiatud APK-d on salvestatud. Installi need kohe või hiljem avakuvalt ekraanilt</string>
+    <string name="batch_patch_not_kept_hint">Paiatud APK-did ei hoitakse. Installi või eksporteeri need enne selle ekraani sulgemist</string>
     <string name="batch_patch_multiple_sources">Mõned rakendused kombineerivad paiku mitmest allikast, mis võib põhjustada konflikte</string>
     <string name="batch_patch_needs_apk">APK ei ole saadaval, lisa fail</string>
     <string name="batch_patch_wrong_package">Lisatud fail kuulub elemendile %s</string>
@@ -504,22 +511,22 @@ Parimate tulemuste saamiseks soovitab see rakendus kasutada &lt;b&gt;täielikku 
     <string name="batch_patch_apk_selected">APK valitud</string>
     <string name="batch_patch_auto_download_stopped">Automaatsed APK allalaadimised on peatatud</string>
     <string name="batch_patch_auto_download_stop">Peata allalaadimised</string>
-    <string name="batch_patch_auto_download_kept">Allalaaditud APK-d ei saanud kasutada, seega on alles jäatud eelmine</string>
+    <string name="batch_patch_auto_download_kept">%s jaoks allalaaditud APK-d ei saanud kasutada, seega hoitakse eelmist</string>
     <string name="batch_patch_edit_patches">Vali paigad</string>
     <string name="batch_patch_state_no_apk">APK-faili pole</string>
     <string name="batch_patch_state_no_patches">Paiku pole</string>
     <string name="batch_patch_state_no_selection">Midagi ei ole valitud</string>
     <string name="batch_patch_no_selection">Ükski saadaval olev paik ei ole valitud</string>
     <string name="batch_patch_policy_install">Installi lõppedes</string>
-    <string name="batch_patch_policy_install_description">Installib iga paigatud rakenduse kohe pärast järjekorra lõpetamist. Väljalülitatud olekus jäävad APK-failid hilisemaks</string>
+    <string name="batch_patch_policy_install_description">Installib iga paiatud rakenduse pärast järjekorra lõppemist. Väljalülitatud olekus jäävad APK-d sellele ekraanile</string>
     <string name="batch_patch_policy_mount">Haagi lõpetamisel</string>
-    <string name="batch_patch_policy_mount_description">Haagib iga paigatud rakenduse pärast järjekorra lõppemist. Väljalülitatud olekus jäävad APK-d hilisemaks</string>
+    <string name="batch_patch_policy_mount_description">Haagib iga paigatud rakenduse pärast järjekorra lõppemist. Väljalülitatud olekus jäävad APK-d sellele ekraanile</string>
     <string name="batch_patch_policy_install_mount">Installi või haagi lõpetamisel</string>
-    <string name="batch_patch_policy_install_mount_description">Installib või haagib iga paigatud rakenduse pärast järjekorra lõppemist. Väljalülitatud olekus jäävad APK-d hilisemaks</string>
+    <string name="batch_patch_policy_install_mount_description">Installib või haagib iga paigatud rakenduse pärast järjekorra lõppemist. Väljalülitatud olekus jäävad APK-d sellele ekraanile</string>
     <!-- Label of a footer button beside "Close". Keep it short, a longer one moves the buttons onto two rows -->
     <string name="batch_patch_start">Alusta</string>
     <string name="batch_patch_stop_title">Kas lõpetada masspaikamine?</string>
-    <string name="batch_patch_stop_description">Praegu paigatav rakendus ja kõik järjekorras olevad toimingud katkestatakse</string>
+    <string name="batch_patch_stop_description">Käesolev rakendus ja ülejäänud järjekord tühistatakse</string>
     <!-- Label of a footer button beside "Done". Keep it short, a longer one moves the buttons onto two rows -->
     <string name="batch_patch_install_all">Installi kõik</string>
     <string name="batch_patch_install_failed">Installimine ebaõnnestus</string>
@@ -530,7 +537,7 @@ Parimate tulemuste saamiseks soovitab see rakendus kasutada &lt;b&gt;täielikku 
     <string name="batch_queue_clear_title">Kas tühjendada järjekord?</string>
     <string name="batch_queue_clear_description">Kõik rakendused eemaldatakse järjekorrast</string>
     <string name="batch_queue_keep_title">Kas säilitada järjekord?</string>
-    <string name="batch_queue_keep_description">Järjekorda ootavad rakendused jäävad avakuvale hilisemaks käivitamiseks</string>
+    <string name="batch_queue_keep_description">Järjekord ootab avakuval, kuni käivitate selle</string>
     <string name="batch_queue_keep">Säilita</string>
     <string name="shortcut_repatch_short">Paika uuesti</string>
     <string name="shortcut_repatch_long">Paika aegunud rakendused uuesti</string>
@@ -664,6 +671,8 @@ Parimate tulemuste saamiseks soovitab see rakendus kasutada &lt;b&gt;täielikku 
     <string name="patcher_conflict_title">Paketi konflikt</string>
     <string name="patcher_conflict_subtitle">Pead olemasoleva versiooni eemaldama</string>
     <string name="patcher_conflict_hint">Paigatud rakendus kasutab erinevat sertifikaati kui installitud versioon. Eemaldamine kustutab kõik rakenduse andmed</string>
+    <!-- The patched APK is for another kind of device, such as TV or Wear OS, so it may not start on this one -->
+    <string name="patcher_built_for_other_device">Koostatud seadmele %s, seega ei prugu see siin käivituda. Salvestage see, et installida vastavale seadmele</string>
     <string name="patcher_installed_conflict_title">Vajalik on eemaldamine</string>
     <string name="patcher_installed_conflict_body">"Morphe allkirjastab paigatud rakendused oma sertifikaadiga, mis erineb algsest. Android nõuab olemasoleva versiooni eemaldamist enne, kui paigatud rakendust saab installida.
 
@@ -759,7 +768,7 @@ Rakenduse eemaldamine kustutab kõik rakenduse andmed jäädavalt"</string>
     <string name="plugin_activity_dialog_body">Selle lisamooduliga jätkamiseks on vaja kasutaja sekkumist</string>
     <string name="patcher_process_killed_message">Süsteem katkestas paikamise enne lõppemist, tavaliselt mälu vabastamiseks. Sulge teised rakendused ja proovi uuesti</string>
     <!-- Shown once Morphe is back after it was closed in the middle of patching, for a reason other than low memory. -->
-    <string name="patcher_interrupted_message">Morphe suletagi enne paikuletamise lõpust, seega ei paigutatud midagi. Proovige uuesti</string>
+    <string name="patcher_interrupted_message">Morphe suletigi enne paigutamise lõpust. Proovige uuesti</string>
     <!-- "%1$s" is where the setting is, such as "Settings > Patcher > Use embedded VM", built from the names on those screens. -->
     <string name="patcher_process_crashed_message">Paikaja jooksis enne lõpetamist kokku. Kui see kordub, lülita %1$s välja ja teata veast koos logifailiga</string>
     <!-- Shown when a run fills the heap it was given. "%1$s" is the heap in megabytes. -->
@@ -868,14 +877,17 @@ Rakenduse eemaldamine kustutab kõik rakenduse andmed jäädavalt"</string>
     <string name="settings_appearance_translations_info_title">Mõne keele tõlked võivad puududa või olla mittäielikud</string>
     <!-- Settings - Appearance Tab - Interface Scale -->
     <string name="settings_appearance_ui_scale">Liidese mastaap</string>
-    <!-- Settings - Appearance Tab - Home Screen Section -->
+    <!-- Settings - Appearance Tab - Screens Section -->
     <string name="settings_appearance_home_screen">Avakuva</string>
+    <string name="settings_appearance_screens">Ekranid</string>
     <string name="settings_appearance_greeting_phrases">Tervituslaused</string>
     <string name="settings_appearance_greeting_phrases_subtitle">Kuvab tervitussõnumi</string>
     <string name="settings_appearance_repatch_notice">Uuesti paikamise teavitus</string>
     <string name="settings_appearance_repatch_notice_description">Kuvab teavituse, kui paigatud rakendusi saab uuesti paigata</string>
     <string name="settings_appearance_more_apps_card">Kaart \'Rohkem rakendusi\'</string>
     <string name="settings_appearance_more_apps_card_description">Näitab rakenduste all kaarti, mis viib kogukonna paikade juurde</string>
+    <string name="settings_appearance_games_button">Mängude nupp</string>
+    <string name="settings_appearance_games_button_description">Kuvab nupu minimängude juurde ownumiseks uuendamise ajal ja tulemuse ekraanil</string>
     <string name="settings_appearance_app_card_colors">Kaardi värvid</string>
     <string name="settings_appearance_app_card_colors_default">Vaikimisi</string>
     <string name="settings_appearance_app_card_colors_default_description">Määra igale rakendusele ja allikale oma värv</string>
@@ -1246,7 +1258,7 @@ Piltide mõõtmed peavad olema järgmised:
     <string name="settings_system_apks_delete_all_confirm">See kustutab jäädavalt siin kuvatud salvestatud APK-failid</string>
     <string name="settings_system_apks_delete_selected_title">Kas kustutada valitud APK-d?</string>
     <string name="settings_system_apks_delete_selected_confirm">See kustutab valitud APK-failid jäädavalt</string>
-    <string name="settings_system_apks_deleted_all">APK-d kustutati edukalt</string>
+    <string name="settings_system_apks_deleted_all">APK-d kustutatud</string>
     <string name="settings_system_apks_delete_failed">Mõningaid APK-faile ei õnnestunud kustutada</string>
     <string name="settings_system_apks_export_zip_success">Valitud APK-d eksporditi</string>
     <string name="settings_system_apks_export_zip_failed">Valitud APK-de eksportimine nurjus</string>
@@ -1269,8 +1281,8 @@ Piltide mõõtmed peavad olema järgmised:
     <string name="settings_system_storage_temporary_title">Ajutised failid</string>
     <string name="settings_system_storage_temporary_description">Paikamise käigus loodud töötlusfailid</string>
     <string name="settings_system_storage_clear_all">Tühjenda kõik vahemälud</string>
-    <string name="settings_system_storage_clear_all_description">Tühjendab kogu vabastatava vahemälu ruumi ühe korraga</string>
-    <string name="settings_system_storage_clear_all_confirm">See tühjendab vahemällu salvestatud võrguvastused, ettevalmistatud paigaldusfailide koopiad ja ajutised failid. Algsed ja paigatud APK-failid jäetakse alles</string>
+    <string name="settings_system_storage_clear_all_description">Kõik ülal loetletud vahemälud</string>
+    <string name="settings_system_storage_clear_all_confirm">Kõik ülaltoodud vahemälud tühendatakse. Algsed ja paigatud APK-d jäävad alles</string>
     <string name="settings_system_storage_cleared">Vabastatud %s</string>
     <string name="settings_system_storage_patch_running_warning">Paikamine on käigus ja kasutab neid faile. Nende tühjendamine põhjustab tõrke</string>
     <string name="settings_system_storage_clear_anyway">Tühjenda siiski</string>
@@ -1278,14 +1290,14 @@ Piltide mõõtmed peavad olema järgmised:
     <string name="settings_system_storage_open_app_info_title">Ava Androidi rakenduse salvestusruum</string>
     <string name="settings_system_storage_open_app_info_description">Halda või tühjenda kõik Morphe andmeid süsteemi seadete kaudu</string>
     <string name="settings_system_save_original_apks_title">Säilita algsed APK-d</string>
-    <string name="settings_system_save_original_apks_description">Salvesta eelpaigatud APK, et seda saaks uuesti kasutada faili uuesti valimata</string>
+    <string name="settings_system_save_original_apks_description">Kasuta uuesti paigutamisel algset APK-d, ilma et peaksid faili uuesti valima</string>
     <string name="settings_system_save_patched_apks_title">Säilita paigatud APK-d</string>
-    <string name="settings_system_save_patched_apks_description">Salvesta paigatud APK koopia hilisemaks eksportimiseks või halduri kaudu uuesti installimiseks</string>
+    <string name="settings_system_save_patched_apks_description">Hoidke koopia, et seda hiljem eksportida või uuesti installida</string>
     <!-- Settings - System Tab - Storage Management - Patched APKs Management -->
     <string name="settings_system_patched_apks_title">Paigatud APK-d</string>
     <string name="settings_system_patched_apks_empty">Paigatud APK-faile pole veel salvestatud</string>
     <string name="settings_system_patched_apks_delete_title">Kas kustutada paigatud APK?</string>
-    <string name="settings_system_patched_apks_deleted">Paigatud APK on edukalt kustutatud</string>
+    <string name="settings_system_patched_apks_deleted">Paigutatud APK kustutatud</string>
     <string name="settings_system_patched_apks_delete_all_title">Kas kustutada kõik paigatud APK-d?</string>
     <!-- Settings - System Tab - Storage Management - Original APKs Management -->
     <string name="settings_system_original_apks_title">Algsed APK-d</string>

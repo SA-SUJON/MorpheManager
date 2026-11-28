@@ -9,6 +9,8 @@
     <string name="home_app_status_newer_patches">Nové záplaty</string>
     <!-- Mark on the card of an app built for a device other than a phone -->
     <string name="form_factor_tv">Televízor</string>
+    <!-- Named beside the other marks when one app has a build for a phone and for another device -->
+    <string name="form_factor_mobile">Telefón</string>
     <string name="form_factor_automotive">Automobil</string>
     <string name="home_no_patches_available">Neboli nájdené žiadne záplaty</string>
     <string name="home_app_hide_title">Skryť túto aplikáciu?</string>
@@ -359,6 +361,10 @@ Vyberte, odkiaľ má aplikácia stiahnuť APK"</string>
     <string name="expert_mode_recommended">Odporúčané záplaty</string>
     <string name="expert_mode_reset_to_default_done">Odporúčané záplaty boli použité</string>
     <string name="expert_mode_selected_count">%1$s z %2$s vybraných</string>
+    <!-- Which build of an app with builds for several devices the patches are for, such as TV or Wear OS -->
+    <string name="expert_mode_form_factor">Pre build %s</string>
+    <!-- The same for the phone build, named as a common noun rather than by its mark -->
+    <string name="expert_mode_form_factor_mobile">Pre build pre telefón</string>
     <string name="expert_mode_saved_selection">Uložený výber</string>
     <string name="expert_mode_restore_saved_done">Obnovená uložená voľba</string>
     <string name="expert_mode_copy_from_bundle_no_patches">V tomto balíku sa nenašli žiadne zhodné záplaty</string>
@@ -489,7 +495,8 @@ Pre najlepšie výsledky sa odporúča záplatovať &lt;b&gt;úplný APK&lt;/b&g
     <string name="batch_patch_preparing_next">Pripravuje sa ďalšia aplikácia…</string>
     <string name="batch_patch_progress_counter">Patchovanie %1$s z %2$s</string>
     <string name="batch_patch_summary">%1$s opravených, %2$s zlyhaných, %3$s preskočených</string>
-    <string name="batch_patch_saved_hint">Záplatované aplikácie boli uložené. Nainštalujte ich teraz alebo neskôr zo zoznamu záplatovaných APK v nastaveniach</string>
+    <string name="batch_patch_saved_hint">Záplatované APK boli uložené. Nainštalujte ich teraz alebo neskôr z domovkej obrazovky</string>
+    <string name="batch_patch_not_kept_hint">Záplatované APK sa neuchovávajú. Pred zatvorením tejto obrazovky ich nainštalujte alebo exportujte</string>
     <string name="batch_patch_multiple_sources">Niektoré aplikácie kombinujú záplaty z viac ako jedného zdroja, čo môže spôsobiť konflikty</string>
     <string name="batch_patch_needs_apk">Žiadny dostupný APK, priložte súbor</string>
     <string name="batch_patch_wrong_package">Priložený súbor patrí k %s</string>
@@ -504,22 +511,22 @@ Pre najlepšie výsledky sa odporúča záplatovať &lt;b&gt;úplný APK&lt;/b&g
     <string name="batch_patch_apk_selected">APK vybrané</string>
     <string name="batch_patch_auto_download_stopped">Automatické sťahovanie súborov APK bolo zastavené</string>
     <string name="batch_patch_auto_download_stop">Zastaviť sťahovanie</string>
-    <string name="batch_patch_auto_download_kept">Sťahovaný súbor APK sa nedal použiť, preto sa zachová predchádzajúci</string>
+    <string name="batch_patch_auto_download_kept">APK stiahnuté pre %s sa nedalo použiť, preto sa zachová predchádzajúce</string>
     <string name="batch_patch_edit_patches">Vyberte záplaty</string>
     <string name="batch_patch_state_no_apk">Žiadny APK</string>
     <string name="batch_patch_state_no_patches">Žiadne záplaty</string>
     <string name="batch_patch_state_no_selection">Nevybrané</string>
     <string name="batch_patch_no_selection">Žiadny z dostupných záplat nie je vybraný</string>
     <string name="batch_patch_policy_install">Inštalovať po dokončení</string>
-    <string name="batch_patch_policy_install_description">Inštaluje každú záplatanú aplikáciu ihneď po dokončení fronty. Vypnutie ponechá APK pre neskôr</string>
+    <string name="batch_patch_policy_install_description">Po dokončení fronty nainštaluje každú záplatovanú aplikáciu. Vypnutie ponechá APK na tejto obrazovke</string>
     <string name="batch_patch_policy_mount">Pripojiť po dokončení</string>
-    <string name="batch_patch_policy_mount_description">Po dokončení fronty pripojí každú upravenú aplikáciu. Vypnutie ponechá súbory APK na neskôr</string>
+    <string name="batch_patch_policy_mount_description">Po dokončení fronty primontuje každú záplatovanú aplikáciu. Vypnutie ponechá APK na tejto obrazovke</string>
     <string name="batch_patch_policy_install_mount">Inštalovať alebo pripojiť po dokončení</string>
-    <string name="batch_patch_policy_install_mount_description">Po dokončení fronty nainštaluje alebo namontuje každú upravenú aplikáciu. Vypnuté ponechá súbory APK na neskôr</string>
+    <string name="batch_patch_policy_install_mount_description">Po dokončení fronty nainštaluje alebo namontuje každú upravenú aplikáciu. Vypnutie ponechá súbory APK na tejto obrazovke</string>
     <!-- Label of a footer button beside "Close". Keep it short, a longer one moves the buttons onto two rows -->
     <string name="batch_patch_start">Začiatok</string>
     <string name="batch_patch_stop_title">Zrušiť dávkové záplatovanie?</string>
-    <string name="batch_patch_stop_description">Aktuálne upravovaná aplikácia a všetky položky čakajúce v rade budú zrušené</string>
+    <string name="batch_patch_stop_description">Aktuálna aplikácia a zvyšok fronty budú zrušené</string>
     <!-- Label of a footer button beside "Done". Keep it short, a longer one moves the buttons onto two rows -->
     <string name="batch_patch_install_all">Inštalovať všetky</string>
     <string name="batch_patch_install_failed">Inštalácia zlyhala</string>
@@ -530,7 +537,7 @@ Pre najlepšie výsledky sa odporúča záplatovať &lt;b&gt;úplný APK&lt;/b&g
     <string name="batch_queue_clear_title">Vymazať frontu?</string>
     <string name="batch_queue_clear_description">Všetky aplikácie budú odstránené z fronty</string>
     <string name="batch_queue_keep_title">Ponechať vo fronte?</string>
-    <string name="batch_queue_keep_description">Aplikácie vo fronte budú na hlavnej obrazovke čakať na neskoršie spustenie</string>
+    <string name="batch_queue_keep_description">Fronta čaká na hlavnej obrazovke, kým ju nespustíte</string>
     <string name="batch_queue_keep">Ponechať</string>
     <string name="shortcut_repatch_short">Zopakovať záplatu</string>
     <string name="shortcut_repatch_long">Znova záplatať zastarané aplikácie</string>
@@ -664,6 +671,8 @@ Pre najlepšie výsledky sa odporúča záplatovať &lt;b&gt;úplný APK&lt;/b&g
     <string name="patcher_conflict_title">Konflikt balíkov</string>
     <string name="patcher_conflict_subtitle">Musíte odinštalovať existujúcu verziu</string>
     <string name="patcher_conflict_hint">Upravená aplikácia používa iný certifikát ako nainštalovaná verzia. Odinštalovaním sa vymažú všetky údaje aplikácie.</string>
+    <!-- The patched APK is for another kind of device, such as TV or Wear OS, so it may not start on this one -->
+    <string name="patcher_built_for_other_device">Vytvorené pre %s, takže sa tu nemusí spustiť. Uložte to s cieľom nainštalovať na danom zariadení</string>
     <string name="patcher_installed_conflict_title">Vyžaduje sa odinštalovanie</string>
     <string name="patcher_installed_conflict_body">"Aplikácia Morphe podpisuje upravené aplikácie vlastným certifikátom, ktorý sa líši od pôvodného. Android vyžaduje odstránenie existujúcej verzie pred inštaláciou upravenej aplikácie.
 
@@ -759,7 +768,7 @@ Odinštalovanie trvalo vymaže všetky údaje aplikácie."</string>
     <string name="plugin_activity_dialog_body">Vyžaduje sa interakcia používateľa, aby bolo možné pokračovať s týmto pluginom</string>
     <string name="patcher_process_killed_message">Systém ukončil patcher pred dokončením, zvyčajne kvôli uvoľneniu pamäte. Zatvorte iné aplikácie a skúste to znova</string>
     <!-- Shown once Morphe is back after it was closed in the middle of patching, for a reason other than low memory. -->
-    <string name="patcher_interrupted_message">Aplikácia Morphe bola zatvorená pred dokončením patchovania, takže nič nebolo patchované. Skúste to znova</string>
+    <string name="patcher_interrupted_message">Aplikácia Morphe bola zatvorená pred dokončením patchovania. Skúste to znova</string>
     <!-- "%1$s" is where the setting is, such as "Settings > Patcher > Use embedded VM", built from the names on those screens. -->
     <string name="patcher_process_crashed_message">Záplatovateľ prepadol skôr, než skončil. Ak sa to zopakuje, vypnite %1$s a nahláste problém spolu s protokolom</string>
     <!-- Shown when a run fills the heap it was given. "%1$s" is the heap in megabytes. -->
@@ -868,14 +877,17 @@ Odinštalovanie trvalo vymaže všetky údaje aplikácie."</string>
     <string name="settings_appearance_translations_info_title">Preklady pre niektoré jazyky sa môžu byť neúplné</string>
     <!-- Settings - Appearance Tab - Interface Scale -->
     <string name="settings_appearance_ui_scale">Mierka rozhrania</string>
-    <!-- Settings - Appearance Tab - Home Screen Section -->
+    <!-- Settings - Appearance Tab - Screens Section -->
     <string name="settings_appearance_home_screen">Domovská obrazovka</string>
+    <string name="settings_appearance_screens">Obrazovky</string>
     <string name="settings_appearance_greeting_phrases">Pozdravné frázy</string>
     <string name="settings_appearance_greeting_phrases_subtitle">Zobrazuje privítaciu správu</string>
     <string name="settings_appearance_repatch_notice">Upozornenie na opätovné záplatovanie</string>
     <string name="settings_appearance_repatch_notice_description">Zobrazuje banner, keď je možné znovu opraviť opravené aplikácie</string>
     <string name="settings_appearance_more_apps_card">Karta Ďalšie aplikácie</string>
     <string name="settings_appearance_more_apps_card_description">Zobrazí kartu pod aplikáciami, ktorá vedie k záplatám komunity</string>
+    <string name="settings_appearance_games_button">Tlačidlo Games</string>
+    <string name="settings_appearance_games_button_description">Zobrazuje tlačidlo pre minihry počas patchovania a pri výsledku</string>
     <string name="settings_appearance_app_card_colors">Farby kariet</string>
     <string name="settings_appearance_app_card_colors_default">Predvolená</string>
     <string name="settings_appearance_app_card_colors_default_description">Pridelte každej aplikácii a zdroju vlastnú farbu</string>
@@ -1246,7 +1258,7 @@ Podrobnosti: %2$s"</string>
     <string name="settings_system_apks_delete_all_confirm">Týmto trvalo vymažete uložené APK súbory zobrazené tu</string>
     <string name="settings_system_apks_delete_selected_title">Vymazať vybrané APK súbory?</string>
     <string name="settings_system_apks_delete_selected_confirm">Týmto trvalo vymažete vybrané APK súbory</string>
-    <string name="settings_system_apks_deleted_all">APK súbory boli úspešne vymazané</string>
+    <string name="settings_system_apks_deleted_all">Súbory APK boli vymazané</string>
     <string name="settings_system_apks_delete_failed">Niektoré súbory APK sa nepodarilo odstrániť.</string>
     <string name="settings_system_apks_export_zip_success">Exportované APK súbory</string>
     <string name="settings_system_apks_export_zip_failed">Nepodarilo sa exportovať vybrané APK súbory</string>
@@ -1269,8 +1281,8 @@ Podrobnosti: %2$s"</string>
     <string name="settings_system_storage_temporary_title">Dočasné súbory</string>
     <string name="settings_system_storage_temporary_description">Pracovné súbory vytvorené počas patchovania</string>
     <string name="settings_system_storage_clear_all">Vymazať všetky cache</string>
-    <string name="settings_system_storage_clear_all_description">Vymaže všetok reclaimovateľný priestor cache naraz</string>
-    <string name="settings_system_storage_clear_all_confirm">Toto vymaže uložené sieťové odpovede, priebežne inštalované kópie a dočasné súbory. Pôvodné a opatchované APK zostanú zachované</string>
+    <string name="settings_system_storage_clear_all_description">Každá vy أعلى uvedená vy cache</string>
+    <string name="settings_system_storage_clear_all_confirm">Každá vyššie uvedená vy cache bude vymazaná. Pôvodné a upravené súbory APK zostanú zachované</string>
     <string name="settings_system_storage_cleared">Uvoľnené miesto: %s</string>
     <string name="settings_system_storage_patch_running_warning">Prebieha záplatovanie, ktoré používa tieto súbory. Ich okamžité vymazanie spôsobí zlyhanie</string>
     <string name="settings_system_storage_clear_anyway">Vymazať aj tak</string>
@@ -1278,14 +1290,14 @@ Podrobnosti: %2$s"</string>
     <string name="settings_system_storage_open_app_info_title">Otvoriť úložisko aplikácie Android</string>
     <string name="settings_system_storage_open_app_info_description">Spravujte alebo vymažte všetky dáta Morphe cez systémové nastavenia</string>
     <string name="settings_system_save_original_apks_title">Zachovať pôvodné APK súbory</string>
-    <string name="settings_system_save_original_apks_description">Uložiť predzmenený APK súbor, aby ho bolo možné znova použiť na opätovné záplatovanie bez opätovného výberu súboru</string>
+    <string name="settings_system_save_original_apks_description">Pri opätovnom záplátovaní použite pôvodné APK bez nutnosti znova vyberať súbor</string>
     <string name="settings_system_save_patched_apks_title">Zachovať zaplátané APK súbory</string>
-    <string name="settings_system_save_patched_apks_description">Uložiť kópiu zaplátaného APK súboru na neskorší export alebo preinštalovanie z manažéra</string>
+    <string name="settings_system_save_patched_apks_description">Uložte si kópiu na export alebo neskoršiu reinstaláciu</string>
     <!-- Settings - System Tab - Storage Management - Patched APKs Management -->
     <string name="settings_system_patched_apks_title">Zaplátané APK súbory</string>
     <string name="settings_system_patched_apks_empty">Nie sú uložené žiadne zaplátané APK súbory</string>
     <string name="settings_system_patched_apks_delete_title">Vymazať zaplátaný APK súbor?</string>
-    <string name="settings_system_patched_apks_deleted">Zaplátaný APK súbor bol vymazaný</string>
+    <string name="settings_system_patched_apks_deleted">Zaplátaný súbor APK bol vymazaný</string>
     <string name="settings_system_patched_apks_delete_all_title">Vymazať všetky zaplátané APK súbory?</string>
     <!-- Settings - System Tab - Storage Management - Original APKs Management -->
     <string name="settings_system_original_apks_title">Pôvodné APK súbory</string>

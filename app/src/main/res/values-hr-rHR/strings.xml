@@ -9,6 +9,8 @@
     <string name="home_app_status_newer_patches">Novi patchevi</string>
     <!-- Mark on the card of an app built for a device other than a phone -->
     <string name="form_factor_tv">TV</string>
+    <!-- Named beside the other marks when one app has a build for a phone and for another device -->
+    <string name="form_factor_mobile">Telefon</string>
     <string name="form_factor_automotive">Automobilni</string>
     <string name="home_no_patches_available">Nema dostupnih patcheva</string>
     <string name="home_app_hide_title">Sakriti ovu aplikaciju?</string>
@@ -42,7 +44,7 @@
     <!-- Asked when a .mpp file opened from a file manager is another version of a local source, %s being its name -->
     <string name="mpp_import_update_message">Ovo je nova verzija %s. Želite li je ažurirati?</string>
     <string name="mpp_import_unreadable">Ova datoteka se ne može pročitati</string>
-    <string name="incoming_file_not_patch_source">Ova datoteka nije izvor zakrpe</string>
+    <string name="incoming_file_not_patch_source">Ova datoteka nije izvor patcha</string>
     <!-- Home Screen - Update Notifications -->
     <string name="home_update_available">Dostupno ažuriranje aplikacije</string>
     <string name="home_update_available_subtitle">Nova verzija spremna za instalaciju</string>
@@ -191,7 +193,7 @@
     <string name="sources_management_prerelease_toggle_description">Primite rani pristup novoj verziji eksperimentalnih patcheva</string>
     <string name="sources_prerelease_warning_title">Omogućiti predizdanja patcheva?</string>
     <string name="sources_prerelease_warning_message">Predizdanja su još uvijek u razvoju. Patchevi mogu propasti ili prekinuti rad aplikacije, a značajke se mogu promijeniti bez upozorenja.</string>
-    <string name="expert_mode_unstable_notice">Predizdanja ili eksperimentalne zakrpe mogu biti nestabilne</string>
+    <string name="expert_mode_unstable_notice">Predizdanja ili eksperimentalni patchevi mogu biti nestabilni</string>
     <string name="sources_management_experimental_versions_toggle">Eksperimentalne verzije aplikacije</string>
     <string name="sources_management_experimental_versions_toggle_description">Prikazuje i patcha eksperimentalne ciljne aplikacije</string>
     <!-- Actions of the panel for several selected sources at once -->
@@ -270,7 +272,7 @@
     <string name="home_apk_availability_unpatched_label">Nepatchano</string>
     <string name="home_apk_availability_incompatible_label">Nekompatibilno</string>
     <!-- %1$s is the app name, %2$s the version of the unpatched app installed on the device, such as v21.18.164 -->
-    <string name="home_apk_availability_newer_original">Izvorni %1$s na ovom uređaju je %2$s, noviji od onog koji zakrpe podržavaju</string>
+    <string name="home_apk_availability_newer_original">Izvorni %1$s na ovom uređaju je %2$s, noviji od onog kojeg patchevi podržavaju</string>
     <string name="home_apk_availability_find">Da, pomozi mi pronaći aplikaciju</string>
     <string name="home_apk_availability_have">Ne, već imam aplikaciju</string>
     <string name="home_apk_helper_download">Koristite pomoćnu aplikaciju</string>
@@ -358,9 +360,13 @@ Odaberite odakle ćete preuzeti APK datoteku"</string>
     <string name="expert_mode_enable_all_universal_pending">Dodirnite ponovno za univerzalne patcheve</string>
     <string name="expert_mode_universal_all_warning_title">Omogućiti sve univerzalne patcheve?</string>
     <string name="expert_mode_universal_all_warning_message">Univerzalni patchevi se ne testiraju zajedno. Omogućavanje svih odjednom može uzrokovati sukobe, neuspješno instaliranje patchanje ili rušenje</string>
-    <string name="expert_mode_recommended">Preporučene zakrpe</string>
+    <string name="expert_mode_recommended">Preporučeni patchevi</string>
     <string name="expert_mode_reset_to_default_done">Preporučeni patchevi su primjenjeni</string>
     <string name="expert_mode_selected_count">odabrano %1$s od %2$s</string>
+    <!-- Which build of an app with builds for several devices the patches are for, such as TV or Wear OS -->
+    <string name="expert_mode_form_factor">Za %s verziju</string>
+    <!-- The same for the phone build, named as a common noun rather than by its mark -->
+    <string name="expert_mode_form_factor_mobile">Za verziju za telefon</string>
     <string name="expert_mode_saved_selection">Spremljen odabir</string>
     <string name="expert_mode_restore_saved_done">Spremljeni odabir vraćen</string>
     <string name="expert_mode_copy_from_bundle_no_patches">Nema podudarnih patcheva u ovom paketu</string>
@@ -491,7 +497,8 @@ Za najbolje rezultate,  patchanje ove aplikacija preporučuje &lt;b&gt;cijeli AP
     <string name="batch_patch_preparing_next">Priprema sljedeće aplikacije…</string>
     <string name="batch_patch_progress_counter">Patchanje %1$s od %2$s</string>
     <string name="batch_patch_summary">%1$s patchano, %2$s nije uspjelo, %3$s preskočeno</string>
-    <string name="batch_patch_saved_hint">Patchane aplikacije su spremljene. Instalirajte ih sada ili kasnije s popisa patchanih APK-ova u postavkama</string>
+    <string name="batch_patch_saved_hint">Patchani APK-ovi su spremljeni. Instalirajte ih sada ili kasnije s početnog zaslona</string>
+    <string name="batch_patch_not_kept_hint">Patchani APK-ovi se ne čuvaju. Instalirajte ih ili izvezite prije zatvaranja ovog zaslona</string>
     <string name="batch_patch_multiple_sources">Neke aplikacije kombiniraju patcheve iz više izvora, što može uzrokovati sukobe</string>
     <string name="batch_patch_needs_apk">Nema dostupnog APK-a, priložite datoteku</string>
     <string name="batch_patch_wrong_package">Priložena datoteka pripada %s</string>
@@ -506,22 +513,22 @@ Za najbolje rezultate,  patchanje ove aplikacija preporučuje &lt;b&gt;cijeli AP
     <string name="batch_patch_apk_selected">Odabran APK</string>
     <string name="batch_patch_auto_download_stopped">Automatsko preuzimanje APK-ova je zaustavljeno</string>
     <string name="batch_patch_auto_download_stop">Zaustavi preuzimanje</string>
-    <string name="batch_patch_auto_download_kept">Preuzeti APK nije moguće koristiti, stoga je zadržana prethodna verzija</string>
+    <string name="batch_patch_auto_download_kept">APK preuzet za %s nije mogao biti korišten, stoga je prethodni zadržan</string>
     <string name="batch_patch_edit_patches">Odaberite patcheve</string>
     <string name="batch_patch_state_no_apk">Nema APK-a</string>
     <string name="batch_patch_state_no_patches">Nema patcheva </string>
     <string name="batch_patch_state_no_selection">Ništa nije odabrano</string>
     <string name="batch_patch_no_selection">Nijedan od dostupnih patcheva nije odabran</string>
     <string name="batch_patch_policy_install">Instaliraj kada je gotovo</string>
-    <string name="batch_patch_policy_install_description">Instalira svaku patchanu aplikaciju odmah nakon završetka reda čekanja. Isključeno čuva APK-ove za kasnije.</string>
+    <string name="batch_patch_policy_install_description">Instalira svaku patchanu aplikaciju nakon što red završi. Isključeno ostavlja APK-ove na ovom zaslonu</string>
     <string name="batch_patch_policy_mount">Montiraj kada je gotovo</string>
-    <string name="batch_patch_policy_mount_description">Montira svaku patchanu aplikaciju nakon završetka reda čekanja. Isključeno čuva APK-ove za kasnije</string>
+    <string name="batch_patch_policy_mount_description">Montira svaku patchanu aplikaciju nakon što red završi. Isključeno ostavlja APK-ove na ovom zaslonu</string>
     <string name="batch_patch_policy_install_mount">Instaliraj ili montiraj kada je gotovo</string>
-    <string name="batch_patch_policy_install_mount_description">Instalira ili montira svaku patchanu aplikaciju nakon što red završi. Isključeno čuva APK-ove za kasnije.</string>
+    <string name="batch_patch_policy_install_mount_description">Instalira ili montira svaku patchanu aplikaciju nakon što red završi. Isključeno ostavlja APK-ove na ovom zaslonu</string>
     <!-- Label of a footer button beside "Close". Keep it short, a longer one moves the buttons onto two rows -->
     <string name="batch_patch_start">Početak</string>
     <string name="batch_patch_stop_title">Zaustaviti grupno patchanje?</string>
-    <string name="batch_patch_stop_description">Aplikacija koja se trenutno patcha i sve što je još u redu čekanja bit će otkazano</string>
+    <string name="batch_patch_stop_description">Trenutna aplikacija i ostatak reda bit će otkazani</string>
     <!-- Label of a footer button beside "Done". Keep it short, a longer one moves the buttons onto two rows -->
     <string name="batch_patch_install_all">Instaliraj sve</string>
     <string name="batch_patch_install_failed">Instalacija nije uspjela</string>
@@ -532,7 +539,7 @@ Za najbolje rezultate,  patchanje ove aplikacija preporučuje &lt;b&gt;cijeli AP
     <string name="batch_queue_clear_title">Očistiti red čekanja?</string>
     <string name="batch_queue_clear_description">Sve aplikacije bit će uklonjene iz reda čekanja</string>
     <string name="batch_queue_keep_title">Zadržati red čekanja?</string>
-    <string name="batch_queue_keep_description">Aplikacije u redu čekanja će stajati na početnom zaslonu kako bi bile pokrenute kasnije</string>
+    <string name="batch_queue_keep_description">Red čeka na početnom zaslonu dok ga ne pokrenete</string>
     <string name="batch_queue_keep">Zadrži</string>
     <string name="shortcut_repatch_short">Patchaj opet</string>
     <string name="shortcut_repatch_long">Ponovno patchaj zastarjele aplikacije</string>
@@ -605,7 +612,7 @@ Za najbolje rezultate,  patchanje ove aplikacija preporučuje &lt;b&gt;cijeli AP
     <string name="root_pre_patch_installer_description">Vaš uređaj ima root pristup. Odaberite treba li ova aplikacija biti patchana za root montiranje ili standardnu ​​instalaciju</string>
     <string name="root_pre_patch_installer_mount_title">Root mount način</string>
     <string name="root_pre_patch_installer_mount_description">Patchevi za root montiranje, a zatim montira APK preko odgovarajuće standardne aplikacije. Nije potreban GmsCore</string>
-    <string name="root_mount_module_unmount_warning">Ako KernelSU ima uključeno \"Unmount modules by default\", otvorite KernelSU &gt; Superuser &gt; aplikaciju koju ste montirali &gt; Profile &gt; Custom i isključite \"Unmount modules\". Inače montirani zakrpani APK možda neće djelovati, čak i ako ga Morphe prikazuje kao montiranog</string>
+    <string name="root_mount_module_unmount_warning">Ako KernelSU ima uključeno \"Unmount modules by default\", otvorite KernelSU &gt; Superuser &gt; aplikaciju koju ste montirali &gt; Profile &gt; Custom i isključite \"Unmount modules\". Inače montirana patchana APK možda neće djelovati, čak i ako ga Morphe prikazuje kao montiranog</string>
     <string name="root_pre_patch_installer_standard_title">Standardni način instalacije</string>
     <string name="root_pre_patch_installer_standard_description">Patchevi kao obični APK s podrškom za GmsCore. Vaša postavka programa za instalaciju koristi se nakon patchanja</string>
     <!-- "%1$s" is where the setting is, such as "Settings > Installation > Patch mode", built from the names on those screens. "%2$s" is the option it is set to, such as "Ask every time". -->
@@ -667,6 +674,8 @@ Za najbolje rezultate,  patchanje ove aplikacija preporučuje &lt;b&gt;cijeli AP
     <string name="patcher_conflict_title">Konflikt paketa</string>
     <string name="patcher_conflict_subtitle">Morate deinstalirati postojeću verziju</string>
     <string name="patcher_conflict_hint">Patchana aplikacija koristi drugačiji certifikat od instalirane verzije. Deinstaliranjem će se izbrisati svi podaci aplikacije</string>
+    <!-- The patched APK is for another kind of device, such as TV or Wear OS, so it may not start on this one -->
+    <string name="patcher_built_for_other_device">Izgrađeno za %s, stoga se možda neće pokrenuti ovdje. Spremite ga za instalaciju na taj uređaj</string>
     <string name="patcher_installed_conflict_title">Potrebna je deinstalacija</string>
     <string name="patcher_installed_conflict_body">"Morphe potpisuje patchane aplikacije vlastitim certifikatom, što se razlikuje od originala. Android zahtijeva uklanjanje postojeće verzije prije nego što se patchana aplikacija može instalirati.
 
@@ -762,7 +771,7 @@ Deinstaliranje će trajno izbrisati sve podatke aplikacije"</string>
     <string name="plugin_activity_dialog_body">Za nastavak rada s ovim dodatkom potrebna je interakcija korisnika</string>
     <string name="patcher_process_killed_message">Sustav je prekinuo patcher prije nego što je završio, obično kako bi oslobodio memoriju. Zatvorite druge aplikacije i pokušajte ponovno</string>
     <!-- Shown once Morphe is back after it was closed in the middle of patching, for a reason other than low memory. -->
-    <string name="patcher_interrupted_message">Morphe je zatvoren prije završetka zakrpljivanja, stoga ništa nije zakrpljeno. Pokušajte ponovno</string>
+    <string name="patcher_interrupted_message">Morphe je zatvoren prije završetka patchanja. Pokušajte ponovno</string>
     <!-- "%1$s" is where the setting is, such as "Settings > Patcher > Use embedded VM", built from the names on those screens. -->
     <string name="patcher_process_crashed_message">Patcher je srušio prije završetka. Ako se to ponovi, isključite %1$s i prijavite problem s logom</string>
     <!-- Shown when a run fills the heap it was given. "%1$s" is the heap in megabytes. -->
@@ -871,14 +880,17 @@ Deinstaliranje će trajno izbrisati sve podatke aplikacije"</string>
     <string name="settings_appearance_translations_info_title">Prijevodi za neke jezike mogu nedostajati ili biti nepotpuni</string>
     <!-- Settings - Appearance Tab - Interface Scale -->
     <string name="settings_appearance_ui_scale">Skala sučelja</string>
-    <!-- Settings - Appearance Tab - Home Screen Section -->
+    <!-- Settings - Appearance Tab - Screens Section -->
     <string name="settings_appearance_home_screen">Početni zaslon</string>
+    <string name="settings_appearance_screens">Zasloni</string>
     <string name="settings_appearance_greeting_phrases">Pozdravne fraze</string>
     <string name="settings_appearance_greeting_phrases_subtitle">Prikazuje pozdravnu poruku</string>
     <string name="settings_appearance_repatch_notice">Obavijest o ponovnom patchanju</string>
     <string name="settings_appearance_repatch_notice_description">Prikazuje baner kada se patchane aplikacije mogu ponovno patchati</string>
     <string name="settings_appearance_more_apps_card">Kartica Više aplikacija</string>
     <string name="settings_appearance_more_apps_card_description">Prikazuje karticu ispod aplikacija koja vodi do zajednice patcheva</string>
+    <string name="settings_appearance_games_button">Tipka Igre</string>
+    <string name="settings_appearance_games_button_description">Prikazuje tipku za mini-igre tijekom patchanja i na rezultatu</string>
     <string name="settings_appearance_app_card_colors">Boje kartica</string>
     <string name="settings_appearance_app_card_colors_default">Zadano</string>
     <string name="settings_appearance_app_card_colors_default_description">Dodijelite svakoj aplikaciji i izvoru vlastitu boju</string>
@@ -984,7 +996,7 @@ Patchevi nisu pogođeni: omogućite predizdanja patcheva za svaki izvor na popis
     <string name="settings_advanced_expert_mode_dialog_title">Omogućiti Napredni način?</string>
     <string name="settings_advanced_expert_mode_dialog_message">Napredni način rada daje veću kontrolu nad načinom primjene patcha, ali pogrešno konfiguriranje postavki u naprednom načinu rada može rezultirati nefunkcionalnom aplikacijom.</string>
     <string name="settings_advanced_strip_unused_libs">Optimiziraj za arhitekturu uređaja</string>
-    <string name="settings_advanced_strip_unused_libs_description">Uklanja nekorištene izvorne knjižnice i APK splitove iz zakrpljenih aplikacija i spremljenih izvornika</string>
+    <string name="settings_advanced_strip_unused_libs_description">Uklanja nekorištene izvorne knjižnice i APK splitove iz patchanih aplikacija i spremljenih originala</string>
     <!-- Settings - Advanced Tab - GitHub PAT Settings -->
     <string name="settings_advanced_github_pat_summary">Otključava izvore pull requestova i privatne repozitorije</string>
     <string name="settings_advanced_github_pat_description">Za izvore pull requestova, privatne repozitorije i viši GitHub limit stope</string>
@@ -1222,9 +1234,9 @@ Detalji: %2$s"</string>
     <string name="settings_system_auto_backup_folder_failed">Nije moguće koristiti ovu mapu: %s</string>
     <string name="settings_system_auto_backup_interval">Učestalost sigurnosnog kopiranja</string>
     <string name="settings_system_auto_backup_signing_key">Uključi ključ za potpisivanje</string>
-    <string name="settings_system_auto_backup_signing_key_description">Sprema ključ kojim se potpisuju zakrpljene aplikacije pored postavki</string>
+    <string name="settings_system_auto_backup_signing_key_description">Sprema ključ kojim se potpisuju patchane aplikacije pored postavki</string>
     <string name="settings_system_auto_backup_signing_key_warning_title">Napraviti sigurnosnu kopiju ključa za potpisivanje?</string>
-    <string name="settings_system_auto_backup_signing_key_warning_message">Svatko tko dođe do ove datoteke može potpisati ažuriranja koja se instaliraju preko vaših zakrpljenih aplikacija. Mapu držite privatnom i dijelite je samo sa svojim uređajima</string>
+    <string name="settings_system_auto_backup_signing_key_warning_message">Svatko tko dođe do ove datoteke može potpisati ažuriranja koja se instaliraju preko vaših patchanih aplikacija. Mapu držite privatnom i dijelite je samo sa svojim uređajima</string>
     <string name="settings_system_auto_backup_footer">Kopija se sprema kada napustite Morphe nakon promjene nečega. Zadržavat će se najnoviji %s</string>
     <string name="settings_system_auto_backup_failed">Zadnja sigurnosna kopija nije mogla biti spremljena. Ponovno odaberite mapu</string>
     <string name="settings_system_import_manager_settings_fail">Uvoz postavki Morphea nije uspio: %s</string>
@@ -1249,7 +1261,7 @@ Detalji: %2$s"</string>
     <string name="settings_system_apks_delete_all_confirm">Ovo će trajno izbrisati spremljene APK datoteke prikazane ovdje</string>
     <string name="settings_system_apks_delete_selected_title">Izbrisati odabrane aplikacije?</string>
     <string name="settings_system_apks_delete_selected_confirm">Ovo će trajno izbrisati odabrane APK datoteke</string>
-    <string name="settings_system_apks_deleted_all">APK-ovi su uspješno izbrisani</string>
+    <string name="settings_system_apks_deleted_all">APK-ovi izbrisani</string>
     <string name="settings_system_apks_delete_failed">Neke APK datoteke nisu mogle biti izbrisane</string>
     <string name="settings_system_apks_export_zip_success">Odabrane APK datoteke izvezene</string>
     <string name="settings_system_apks_export_zip_failed">Nije uspjelo izvesti odabrane APK datoteke</string>
@@ -1272,8 +1284,8 @@ Detalji: %2$s"</string>
     <string name="settings_system_storage_temporary_title">Privremene datoteke</string>
     <string name="settings_system_storage_temporary_description">Radne datoteke stvorene tijekom patchanja</string>
     <string name="settings_system_storage_clear_all">Izbriši sve predmemorije</string>
-    <string name="settings_system_storage_clear_all_description">Oslobađa sav prostor predmemorije koji se može osloboditi odjednom</string>
-    <string name="settings_system_storage_clear_all_confirm">Ovim se brišu predmemorirani mrežni odgovori, kopije instalacijskog programa i privremene datoteke. Originalne i patchane APK datoteke se čuvaju.</string>
+    <string name="settings_system_storage_clear_all_description">Svaki predviđeni predmemorija iznad</string>
+    <string name="settings_system_storage_clear_all_confirm">Svaki predmemorija iznad bit će izbrisan. Originalni i patchani APK-ovi su zadržani</string>
     <string name="settings_system_storage_cleared">Oslobođeno %s</string>
     <string name="settings_system_storage_patch_running_warning">Patchanje je u tijeku i koristi ove datoteke. Brisanje ih sada uzrokuje neuspjeh</string>
     <string name="settings_system_storage_clear_anyway">Ipak očisti</string>
@@ -1281,14 +1293,14 @@ Detalji: %2$s"</string>
     <string name="settings_system_storage_open_app_info_title">Otvorite pohranu aplikacija Androida</string>
     <string name="settings_system_storage_open_app_info_description">Upravljajte ili obrišite sve Morphe podatke putem postavki sustava</string>
     <string name="settings_system_save_original_apks_title">Zadrži originalne APK-ove</string>
-    <string name="settings_system_save_original_apks_description">Spremite APK datoteku prije patchanja kako biste je mogli ponovno upotrijebiti za ponovno patchanja bez ponovnog odabira datoteke</string>
+    <string name="settings_system_save_original_apks_description">Ponovno upotrijebite originalni APK pri ponovnom patchanju, bez ponovnog odabira datoteke</string>
     <string name="settings_system_save_patched_apks_title">Zadrži patchane APK-ove</string>
-    <string name="settings_system_save_patched_apks_description">Spremite kopiju patchane APK datoteke za kasniji izvoz ili ponovnu instalaciju iz upravitelja</string>
+    <string name="settings_system_save_patched_apks_description">Zadržite kopiju za izvoz ili ponovnu instalaciju kasnije</string>
     <!-- Settings - System Tab - Storage Management - Patched APKs Management -->
     <string name="settings_system_patched_apks_title">Patchane aplikacije</string>
     <string name="settings_system_patched_apks_empty">Još nema spremljenih patchanih aplikacija</string>
     <string name="settings_system_patched_apks_delete_title">Izbrisati patchanu aplikaciju?</string>
-    <string name="settings_system_patched_apks_deleted">Uspješno izbrisana patchirana aplikacija</string>
+    <string name="settings_system_patched_apks_deleted">Patchani APK izbrisan</string>
     <string name="settings_system_patched_apks_delete_all_title">Izbrisati sve patchane APK-ove?</string>
     <!-- Settings - System Tab - Storage Management - Original APKs Management -->
     <string name="settings_system_original_apks_title">Originalne aplikacije</string>
@@ -1345,7 +1357,7 @@ Detalji: %2$s"</string>
     <string name="settings_system_apk_download_helper_open_directly">Odmah otvori pomoćnika</string>
     <string name="settings_system_apk_download_helper_open_directly_description">Preskače upute za preuzimanje i otvara pouzdanog pomoćnika</string>
     <string name="settings_system_apk_download_helper_auto_batch">Automatski preuzmi APK-ove u skupu</string>
-    <string name="settings_system_apk_download_helper_auto_batch_description">Provjerava svaku aplikaciju u redu čekanja za najnoviju verziju koju njezini zakrpe podržavaju i preuzima je pomoću prvog pouzdanog pomoćnika kada nedostaje ili je zastarjela</string>
+    <string name="settings_system_apk_download_helper_auto_batch_description">Provjerava svaku aplikaciju u redu čekanja za najnoviju verziju koju njezini patchevi podržavaju i preuzima je pomoću prvog pouzdanog pomoćnika kada nedostaje ili je zastarjela</string>
     <!-- File Picker -->
     <string name="file_picker_no_files">Nema datoteka ovdje</string>
     <string name="file_picker_read_error">Nije moguće pročitati ovu mapu</string>
@@ -1608,7 +1620,7 @@ Detalji: %2$s"</string>
     <string name="onboarding_sources_desc">Upravljajte izvorima patcheva. Svaki izvor pruža patcheve koje se mogu primijeniti na vaše aplikacije</string>
     <string name="onboarding_other_apps_desc">Primijenite patch na aplikaciju koja nije na popisu, koristeći APK datoteku ili aplikaciju instaliranu na vašem uređaju</string>
     <string name="onboarding_add_source_desc">Dodaj izvor patcha s poveznice ili datoteke paketa patcheva</string>
-    <string name="onboarding_signing_key_desc">Napravi sigurnosnu kopiju ključa kojim potpisuješ svoje zakrpljene aplikacije. Bez njega ih se može ažurirati samo nakon deinstalacije</string>
+    <string name="onboarding_signing_key_desc">Napravi sigurnosnu kopiju ključa kojim potpisuješ svoje patchane aplikacije. Bez nje se mogu ažurirati tek nakon što ih se deinstalira</string>
     <string name="onboarding_swipe_title">Geste povlačenja</string>
     <string name="onboarding_swipe_desc">Povucite desno preko kartice aplikacije kako biste vidjeli dostupne patcheve. Povucite lijevo kako biste sakrili karticu s početnog zaslona</string>
     <string name="onboarding_settings_desc">Prilagodite Morphe: izgled, napredne opcije i alate sustava</string>

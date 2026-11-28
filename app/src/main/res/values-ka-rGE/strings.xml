@@ -9,6 +9,8 @@
     <string name="home_app_status_newer_patches">ახალი პატჩები</string>
     <!-- Mark on the card of an app built for a device other than a phone -->
     <string name="form_factor_tv">ტელევიზორი</string>
+    <!-- Named beside the other marks when one app has a build for a phone and for another device -->
+    <string name="form_factor_mobile">ტელეფონი</string>
     <string name="form_factor_automotive">ავტომობილი</string>
     <string name="home_no_patches_available">პატჩები ხელმისაწვდომი არ არის</string>
     <string name="home_app_hide_title">ამის დამალვა?</string>
@@ -359,6 +361,10 @@
     <string name="expert_mode_recommended">რეკომენდებული პატჩები</string>
     <string name="expert_mode_reset_to_default_done">გამოყენებულია რეკომენდებული პატჩები</string>
     <string name="expert_mode_selected_count">%1$s შერჩეულია %2$s-დან</string>
+    <!-- Which build of an app with builds for several devices the patches are for, such as TV or Wear OS -->
+    <string name="expert_mode_form_factor">%s ბილდისთვის</string>
+    <!-- The same for the phone build, named as a common noun rather than by its mark -->
+    <string name="expert_mode_form_factor_mobile">ტელეფონის ბილდისთვის</string>
     <string name="expert_mode_saved_selection">შენახული არჩევანი</string>
     <string name="expert_mode_restore_saved_done">აღდგენილია შენახული არჩევანი</string>
     <string name="expert_mode_copy_from_bundle_no_patches">ამ ბანდელში შესაბამისი პატჩები არ მოიპოვება</string>
@@ -489,7 +495,8 @@
     <string name="batch_patch_preparing_next">შემდეგი აპლიკაციის მომზადება…</string>
     <string name="batch_patch_progress_counter">პატჩირება %1$s %2$s-დან</string>
     <string name="batch_patch_summary">%1$s პატჩირებული, %2$s ჩავარდნილი, %3$s გამოტოვებული</string>
-    <string name="batch_patch_saved_hint">პატჩირებული აპლიკაციები შენახულია. დააინსტალირეთ ისინი ახლავე, ან მოგვიანებით პარამეტრებში, პატჩირებული APK-ების სიიდან</string>
+    <string name="batch_patch_saved_hint">შესწორებული APK-ები შენახულია. დააინსტალირეთ ისინი ახლა ან მოგვიანებით მთავარი ეკრანიდან</string>
+    <string name="batch_patch_not_kept_hint">შესწორებული APK-ები არ ინახება. დააინსტალირეთ ან მოახდინეთ მათი ექსპორტი ამ ეკრანის დახურვამდე</string>
     <string name="batch_patch_multiple_sources">ზოგიერთი აპლიკაცია აერთიანებს პატჩებს რამდენიმე წყაროსგან, რასაც შესაძლოა კონფლიქტები გამოიწვიოს</string>
     <string name="batch_patch_needs_apk">APK არ არის ხელმისაწვდომი, მიაბით ფაილი</string>
     <string name="batch_patch_wrong_package">მიბმული ფაილი ეკუთვნის %s-ს</string>
@@ -504,22 +511,22 @@
     <string name="batch_patch_apk_selected">APK არჩეულია</string>
     <string name="batch_patch_auto_download_stopped">APK-ის ავტომატური ჩამოტვირთვები შეჩერდა</string>
     <string name="batch_patch_auto_download_stop">ჩამოტვირთვების შეჩერება</string>
-    <string name="batch_patch_auto_download_kept">ჩამოტვირთული APK-ის გამოყენება ვერ მოხერხდა, ამიტომ შენახულია წინა ვერსია</string>
+    <string name="batch_patch_auto_download_kept">%s-ისთვის გადმოწერილი APK-ის გამოყენება ვერ მოხერხდა, ამიტომ შენარჩუნებულია წინა ვერსია</string>
     <string name="batch_patch_edit_patches">აირჩიეთ პატჩები</string>
     <string name="batch_patch_state_no_apk">APK არ არის</string>
     <string name="batch_patch_state_no_patches">პატჩები არ არის</string>
     <string name="batch_patch_state_no_selection">არაფერი არ არის არჩეული</string>
     <string name="batch_patch_no_selection">არცერთი ხელმისაწვდომი პატჩი არ არის არჩეული</string>
     <string name="batch_patch_policy_install">დააინსტალირეთ დასრულების შემდეგ</string>
-    <string name="batch_patch_policy_install_description">ინსტალირებს ყველა პატჩირებულ აპლიკაციას რიგის დასრულებისთანავე. გამორთვრის შემთხვევაში APK ფაილები შენახული იქნება მოგვიანებით გამოყენებისთვის</string>
+    <string name="batch_patch_policy_install_description">ინსტალირებს ყველა პატჩირებულ აპლიკაციას რიგის დასრულების შემდეგ. გამორთვის შემთხვევაში APK-ები დარჩება ამ ეკრანზე</string>
     <string name="batch_patch_policy_mount">დამონტაჟება დასრულების შემდეგ</string>
-    <string name="batch_patch_policy_mount_description">ამონტაჟებს ყველა პატჩირებულ აპლიკაციას რიგის დასრულების შემდეგ. გამორთვის შემთხვევაში APK-ები შეინახება მოგვიანებით გამოყენებისთვის</string>
+    <string name="batch_patch_policy_mount_description">ამონტაჟებს ყველა პატჩირებულ აპლიკაციას რიგის დასრულების შემდეგ. გამორთვის შემთხვევაში APK-ები რჩება ამ ეკრანზე</string>
     <string name="batch_patch_policy_install_mount">ინსტალაცია ან დამონტაჟება დასრულების შემდეგ</string>
-    <string name="batch_patch_policy_install_mount_description">ინსტალირებს ან ამონტაჟებს ყველა პატჩირებულ აპლიკაციას რიგის დასრულების შემდეგ. გამორთვის შემთხვევაში APK-ები შეინახება მოგვიანებით გამოყენებისთვის</string>
+    <string name="batch_patch_policy_install_mount_description">ინსტალირებს ან ამონტაჟებს ყველა პატჩირებულ აპლიკაციას რიგის დასრულების შემდეგ. გამორთვის შემთხვევაში APK-ები დარჩება ამ ეკრანზე</string>
     <!-- Label of a footer button beside "Close". Keep it short, a longer one moves the buttons onto two rows -->
     <string name="batch_patch_start">დაწყება</string>
     <string name="batch_patch_stop_title">გააჩეროთ მასიური პატჩინგი?</string>
-    <string name="batch_patch_stop_description">აპლიკაცია, რომელიც ამჟამად პატჩდება და ყველაფერი, რაც ჯერ კიდევ რიგშია, გაუქმდება</string>
+    <string name="batch_patch_stop_description">მიმდინარე აპლიკაცია და რიგის დანარჩენი ნაწილი გაუქმდება</string>
     <!-- Label of a footer button beside "Done". Keep it short, a longer one moves the buttons onto two rows -->
     <string name="batch_patch_install_all">ყველას ინსტალირება</string>
     <string name="batch_patch_install_failed">ინსტალირება ჩაიშალა</string>
@@ -530,7 +537,7 @@
     <string name="batch_queue_clear_title">გსურთ რიგის გასუფთავება?</string>
     <string name="batch_queue_clear_description">ყველა აპლიკაცია ამოიშლება რიგიდან</string>
     <string name="batch_queue_keep_title">შეინახოთ რიგი?</string>
-    <string name="batch_queue_keep_description">რიგში ჩადგმული აპლიკაციები დაელოდებიან მთავარ ეკრანზე მოგვიანებით გაშვებას</string>
+    <string name="batch_queue_keep_description">რიგი ელოდება მთავარ ეკრანზე, სანამ მას გა uruchebთ</string>
     <string name="batch_queue_keep">შენახვა</string>
     <string name="shortcut_repatch_short">გადაპატჩვა</string>
     <string name="shortcut_repatch_long">მოძველებული აპლიკაციების გადაპატჩვა</string>
@@ -664,6 +671,8 @@
     <string name="patcher_conflict_title">პაკეტების კონფლიქტი</string>
     <string name="patcher_conflict_subtitle">თქვენ უნდა წაშალოთ არსებული ვერსია</string>
     <string name="patcher_conflict_hint">პატჩირებული აპლიკაცია იყენებს განსხვავებულ სერტიფიკატს, ვიდრე დაინსტალირებული ვერსია. დეინსტალაცია წაშლის აპლიკაციის ყველა მონაცემს</string>
+    <!-- The patched APK is for another kind of device, such as TV or Wear OS, so it may not start on this one -->
+    <string name="patcher_built_for_other_device">შექმნილია %s-ისთვის, ამიტომ შესაძლოა აქ არ ჩაირთოს. შეინახეთ ამ მოწყობილობაზე დასაინსტალირებლად</string>
     <string name="patcher_installed_conflict_title">საჭიროა დეინსტალაცია</string>
     <string name="patcher_installed_conflict_body">"Morphe პატჩირებულ აპლიკაციებს თავისი სერტიფიკატით ხელმოწერს, რომელიც განსხვავდება ორიგინალისგან. Android მოითხოვს არსებული ვერსიის წაშლას, სანამ პატჩირებული აპლიკაცია დაინსტალირდება.
 
@@ -759,7 +768,7 @@
     <string name="plugin_activity_dialog_body">ამ პლაგინის გამოსაყენებლად საჭიროა მომხმარებლის ინტერაქცია</string>
     <string name="patcher_process_killed_message">სისტემამ შეაჩერა პატჩერის მუშაობა დასრულებამდე, როგორც წესი, მეხსიერების გასათავისუფლებლად. დახურეთ სხვა აპლიკაციები და სცადეთ ხელახლა</string>
     <!-- Shown once Morphe is back after it was closed in the middle of patching, for a reason other than low memory. -->
-    <string name="patcher_interrupted_message">Morphe დაიხურა პატჩინგის დასრულებამდე, ამიტომ არაფერი განახლდა. სცადეთ ხელახლა</string>
+    <string name="patcher_interrupted_message">Morphe დაიხურა პატჩინგის დასრულებამდე. სცადეთ თავიდან</string>
     <!-- "%1$s" is where the setting is, such as "Settings > Patcher > Use embedded VM", built from the names on those screens. -->
     <string name="patcher_process_crashed_message">Patcher გაითიშა დასრულებამდე. თუ ეს კვლავ მოხდება, გამორთეთ %1$s და შეგვატყობინეთ პრობლემის შესახებ ლოგის თანხლებით</string>
     <!-- Shown when a run fills the heap it was given. "%1$s" is the heap in megabytes. -->
@@ -868,14 +877,17 @@
     <string name="settings_appearance_translations_info_title">ზოგიერთი ენის თარგმანები შესაძლოა იყოს გამოტოვებული ან არასრული</string>
     <!-- Settings - Appearance Tab - Interface Scale -->
     <string name="settings_appearance_ui_scale">ინტერფეისის მასშტაბი</string>
-    <!-- Settings - Appearance Tab - Home Screen Section -->
+    <!-- Settings - Appearance Tab - Screens Section -->
     <string name="settings_appearance_home_screen">მთავარი ეკრანი</string>
+    <string name="settings_appearance_screens">ეკრანები</string>
     <string name="settings_appearance_greeting_phrases">მისალმების ფრაზები</string>
     <string name="settings_appearance_greeting_phrases_subtitle">აჩვენებს მისალმების შეტყობინებას</string>
     <string name="settings_appearance_repatch_notice">ხელახალი პატჩირების შეტყობინება</string>
     <string name="settings_appearance_repatch_notice_description">აჩვენებს ბანერს, როდესაც დაპატჩული აპლიკაციების ხელახალი პატჩირებაა შესაძლებელი</string>
     <string name="settings_appearance_more_apps_card">მეტი აპლიკაციის ბარათი</string>
     <string name="settings_appearance_more_apps_card_description">აჩვენებს ბარათს აპლიკაციების ქვემოთ, რომელიც მიდის საზოგადოების პატჩებისკენ</string>
+    <string name="settings_appearance_games_button">თამაშების ღილაკი</string>
+    <string name="settings_appearance_games_button_description">აჩვენებს მინი-თამაშების ღილაკს განახლებისას და შედეგების გვერდზე</string>
     <string name="settings_appearance_app_card_colors">ბარათების ფერები</string>
     <string name="settings_appearance_app_card_colors_default">ნაგულისხმები</string>
     <string name="settings_appearance_app_card_colors_default_description">მიანიჭეთ თითოეულ აპლიკაციას და წყაროს საკუთარი ფერი</string>
@@ -1246,7 +1258,7 @@ morphe_header_custom_dark.png
     <string name="settings_system_apks_delete_all_confirm">ეს სამუდამოდ წაშლის აქ ჩვენებულ შენახულ APK ფაილებს</string>
     <string name="settings_system_apks_delete_selected_title">წაშალოთ არჩეული APK-ები?</string>
     <string name="settings_system_apks_delete_selected_confirm">ეს სამუდამოდ წაშლის არჩეულ APK ფაილებს</string>
-    <string name="settings_system_apks_deleted_all">APK-ები წარმატებით წაიშალა</string>
+    <string name="settings_system_apks_deleted_all">APK-ები წაიშალა</string>
     <string name="settings_system_apks_delete_failed">ზოგიერთი APK ფაილის წაშლა ვერ მოხერხდა</string>
     <string name="settings_system_apks_export_zip_success">არჩეული APK-ები ექსპორტირებულია</string>
     <string name="settings_system_apks_export_zip_failed">არჩეული APK-ების ექსპორტი ვერ მოხერხდა</string>
@@ -1269,8 +1281,8 @@ morphe_header_custom_dark.png
     <string name="settings_system_storage_temporary_title">დროებითი ფაილები</string>
     <string name="settings_system_storage_temporary_description">პატჩინგის დროს შექმნილი სამუშაო ფაილები</string>
     <string name="settings_system_storage_clear_all">ყველა ქეშის გასუფთავება</string>
-    <string name="settings_system_storage_clear_all_description">ერთიანად გაათავისუფლებს ქეშის ყველა აღდგენად ადგილს</string>
-    <string name="settings_system_storage_clear_all_confirm">ეს წაშლის ქეშირებულ ქსელურ პასუხებს, ინსტალატორის მომზადებულ ასლებს და დროებით ფაილებს. ორიგინალი და პატჩირებული APK-ები შენარჩუნდება</string>
+    <string name="settings_system_storage_clear_all_description">ყველა ზემოთ ჩამოთვლილი ქეში</string>
+    <string name="settings_system_storage_clear_all_confirm">ყველა ზემოთ მოცემული ქეში გასუფთავდება. ორიგინალი და პატჩირებული APK-ები შენარჩუნდება</string>
     <string name="settings_system_storage_cleared">გათავისუფლებულია %s</string>
     <string name="settings_system_storage_patch_running_warning">მუშაობს პატჩი, რომელიც იყენებს ამ ფაილებს. მათი წაშლა ახლა გამოიწვევს შეცდომას</string>
     <string name="settings_system_storage_clear_anyway">გასუფთავება მაინც</string>
@@ -1278,14 +1290,14 @@ morphe_header_custom_dark.png
     <string name="settings_system_storage_open_app_info_title">გახსენით Android-ის აპლიკაციის მეხსიერება</string>
     <string name="settings_system_storage_open_app_info_description">მართეთ ან წაშალეთ Morphe-ის ყველა მონაცემი სისტემური პარამეტრების მეშვეობით</string>
     <string name="settings_system_save_original_apks_title">ორიგინალი APK-ების შენახვა</string>
-    <string name="settings_system_save_original_apks_description">შეინახეთ პატჩირებამდე არსებული APK, რათა მისი ხელახალი გამოყენება იყოს შესაძლებელი პატჩირებისას ფაილის ხელახალი არჩევის გარეშე</string>
+    <string name="settings_system_save_original_apks_description">გამოიყენეთ ორიგინალი APK ხელახალი პატჩინგისას, ფაილის ხელახალი არჩევის გარეშე</string>
     <string name="settings_system_save_patched_apks_title">პატჩირებული APK-ების შენახვა</string>
-    <string name="settings_system_save_patched_apks_description">შეინახეთ პატჩირებული APK-ის ასლი მოგვიანებით ექსპორტისთვის ან მენეჯერიდან ხელახალი ინსტალაციისთვის</string>
+    <string name="settings_system_save_patched_apks_description">შეინახეთ ასლი მოგვიანებით ექსპორტისთვის ან ხელახალი ინსტალაციისთვის</string>
     <!-- Settings - System Tab - Storage Management - Patched APKs Management -->
     <string name="settings_system_patched_apks_title">პატჩირებული APK-ები</string>
     <string name="settings_system_patched_apks_empty">პატჩირებული APK-ები ჯერ არ არის შენახული</string>
     <string name="settings_system_patched_apks_delete_title">წაშალოთ შესწორებული APK?</string>
-    <string name="settings_system_patched_apks_deleted">შესწორებული APK წარმატებით წაიშალა</string>
+    <string name="settings_system_patched_apks_deleted">მოდიფიცირებული APK წაშლილია</string>
     <string name="settings_system_patched_apks_delete_all_title">წაშალოს ყველა პატჩირებული APK?</string>
     <!-- Settings - System Tab - Storage Management - Original APKs Management -->
     <string name="settings_system_original_apks_title">ორიგინალი APK-ები</string>

@@ -9,6 +9,8 @@
     <string name="home_app_status_newer_patches">Yeni yamalar</string>
     <!-- Mark on the card of an app built for a device other than a phone -->
     <string name="form_factor_tv">TV</string>
+    <!-- Named beside the other marks when one app has a build for a phone and for another device -->
+    <string name="form_factor_mobile">Telefon</string>
     <string name="form_factor_automotive">Otomotiv</string>
     <string name="home_no_patches_available">Yama mevcut değil</string>
     <string name="home_app_hide_title">Uygulama gizlensin mi?</string>
@@ -359,6 +361,10 @@ APK'nin nereden alınacağını seçin"</string>
     <string name="expert_mode_recommended">Önerilen yamalar</string>
     <string name="expert_mode_reset_to_default_done">Önerilen yamalar uygulandı</string>
     <string name="expert_mode_selected_count">%1$s / %2$s seçildi</string>
+    <!-- Which build of an app with builds for several devices the patches are for, such as TV or Wear OS -->
+    <string name="expert_mode_form_factor">%s sürümü için</string>
+    <!-- The same for the phone build, named as a common noun rather than by its mark -->
+    <string name="expert_mode_form_factor_mobile">Telefon sürümü için</string>
     <string name="expert_mode_saved_selection">Kaydedilen seçim</string>
     <string name="expert_mode_restore_saved_done">Kaydedilmiş seçim geri yüklendi</string>
     <string name="expert_mode_copy_from_bundle_no_patches">Bu bundle\'da eşleşen yama yok</string>
@@ -489,7 +495,8 @@ En iyi sonuçlar için bu uygulama, &lt;b&gt;tam APK&lt;/b&gt; dosyasını yamal
     <string name="batch_patch_preparing_next">Bir sonraki uygulama hazırlanıyor…</string>
     <string name="batch_patch_progress_counter">%1$s/%2$s yamalanıyor</string>
     <string name="batch_patch_summary">%1$s yamalandı, %2$s başarısız oldu, %3$s atlandı</string>
-    <string name="batch_patch_saved_hint">Yamalanan uygulamalar kaydedildi. Şimdi kurun veya ayarlar bölümündeki yamalı APK listesinden daha sonra kurun</string>
+    <string name="batch_patch_saved_hint">Yamalanmış APK\'ler kaydedildi. Şimdi veya daha sonra ana ekrandan yükleyin</string>
+    <string name="batch_patch_not_kept_hint">Yamalanmış APK\'ler saklanmaz. Bu ekranı kapatmadan önce yükleyin veya dışa aktarın</string>
     <string name="batch_patch_multiple_sources">Bazı uygulamalar yamaları birden fazla kaynaktan birleştirir, bu da çakışmalara neden olabilir</string>
     <string name="batch_patch_needs_apk">APK mevcut değil, bir dosya ekleyin</string>
     <string name="batch_patch_wrong_package">Ekli dosya %s\'ye ait</string>
@@ -504,22 +511,22 @@ En iyi sonuçlar için bu uygulama, &lt;b&gt;tam APK&lt;/b&gt; dosyasını yamal
     <string name="batch_patch_apk_selected">APK seçildi</string>
     <string name="batch_patch_auto_download_stopped">Otomatik APK indirmeleri durduruldu</string>
     <string name="batch_patch_auto_download_stop">İndirmeleri durdur</string>
-    <string name="batch_patch_auto_download_kept">İndirilen APK kullanılamadı, bu nedenle önceki APK korundu</string>
+    <string name="batch_patch_auto_download_kept">%s için indirilen APK kullanılamadı, bu nedenle önceki APK saklandı</string>
     <string name="batch_patch_edit_patches">Yamaları seç</string>
     <string name="batch_patch_state_no_apk">APK yok</string>
     <string name="batch_patch_state_no_patches">Yama yok</string>
     <string name="batch_patch_state_no_selection">Hiçbiri seçilmedi</string>
     <string name="batch_patch_no_selection">Kullanılabilir yamaların hiçbiri seçili değil</string>
     <string name="batch_patch_policy_install">Tamamlandığında kur</string>
-    <string name="batch_patch_policy_install_description">Sıra bittikten hemen sonra her yamalı uygulamayı kurar. Kapalı bırakmak, APK\'ları daha sonra kullanmak üzere saklar</string>
+    <string name="batch_patch_policy_install_description">Kuyruk bittiğinde her yamalanmış uygulamayı yükler. Kapalıyken APK\'ler bu ekranda kalır</string>
     <string name="batch_patch_policy_mount">Bittiğinde bağla</string>
-    <string name="batch_patch_policy_mount_description">Sıra tamamlandığında yamalanmış her uygulamayı bağlar. Kapalıysa APK\'ları daha sonra kullanmak üzere saklar.</string>
+    <string name="batch_patch_policy_mount_description">Kuyruk bittiğinde her yamalanmış uygulamayı bağlar. Kapalıyken APK\'ler bu ekranda kalır</string>
     <string name="batch_patch_policy_install_mount">Bittiğinde yükle veya bağla</string>
-    <string name="batch_patch_policy_install_mount_description">Sıra tamamlandığında yamalanmış her uygulamayı yükler veya bağlar. Kapalıysa APK\'ları daha sonra kullanmak üzere saklar.</string>
+    <string name="batch_patch_policy_install_mount_description">Kuyruk bittiğinde her yamalanmış uygulamayı yükler veya bağlar. Kapalıyken APK\'lar bu ekranda kalır</string>
     <!-- Label of a footer button beside "Close". Keep it short, a longer one moves the buttons onto two rows -->
     <string name="batch_patch_start">Başla</string>
     <string name="batch_patch_stop_title">Toplu yamalamayı durdur?</string>
-    <string name="batch_patch_stop_description">Şu anda yamalanmakta olan uygulama ve kuyruktaki tüm işlemler iptal edilecek</string>
+    <string name="batch_patch_stop_description">Mevcut uygulama ve kuyruğun geri kalanı iptal edilecek</string>
     <!-- Label of a footer button beside "Done". Keep it short, a longer one moves the buttons onto two rows -->
     <string name="batch_patch_install_all">Tümünü kur</string>
     <string name="batch_patch_install_failed">Kurulum başarısız oldu</string>
@@ -530,7 +537,7 @@ En iyi sonuçlar için bu uygulama, &lt;b&gt;tam APK&lt;/b&gt; dosyasını yamal
     <string name="batch_queue_clear_title">Kuyruk temizlensin mi?</string>
     <string name="batch_queue_clear_description">Tüm uygulamalar kuyruktan kaldırılacak</string>
     <string name="batch_queue_keep_title">Kuyruk korunsun mu?</string>
-    <string name="batch_queue_keep_description">Kuyruktaki uygulamalar daha sonra başlatılmak üzere ana ekranda bekleyecektir</string>
+    <string name="batch_queue_keep_description">Siz başlatana kadar kuyruk ana ekranda bekler</string>
     <string name="batch_queue_keep">Koru</string>
     <string name="shortcut_repatch_short">Yeniden yama</string>
     <string name="shortcut_repatch_long">Güncel olmayan uygulamaları yeniden yama</string>
@@ -664,6 +671,8 @@ En iyi sonuçlar için bu uygulama, &lt;b&gt;tam APK&lt;/b&gt; dosyasını yamal
     <string name="patcher_conflict_title">Paket çakışması</string>
     <string name="patcher_conflict_subtitle">Mevcut sürümü kaldırmanız gerekiyor</string>
     <string name="patcher_conflict_hint">Yamalanmış uygulama, yüklü sürümden farklı bir sertifika kullanıyor. Kaldırma işlemi, tüm uygulama verilerini silecektir</string>
+    <!-- The patched APK is for another kind of device, such as TV or Wear OS, so it may not start on this one -->
+    <string name="patcher_built_for_other_device">%s için oluşturuldu, bu nedenle burada başlamayabilir. O cihaza yüklemek için kaydedin</string>
     <string name="patcher_installed_conflict_title">Kaldırma gerekli</string>
     <string name="patcher_installed_conflict_body">"Morphe, yamalanmış uygulamaları orijinalinden farklı olan kendi sertifikasıyla imzalar. Android, yamalanmış uygulamanın yüklenebilmesi için mevcut sürümün kaldırılmasını gerektirir.
 
@@ -759,7 +768,7 @@ Kaldırma işlemi tüm uygulama verilerini kalıcı olarak silecektir"</string>
     <string name="plugin_activity_dialog_body">Bu eklentinin çalışmaya devam edebilmesi için kullanıcı etkileşimi gereklidir</string>
     <string name="patcher_process_killed_message">Sistem, genellikle bellek açmak için, yama işlemini tamamlanmadan durdurdu. Diğer uygulamaları kapatın ve tekrar deneyin</string>
     <!-- Shown once Morphe is back after it was closed in the middle of patching, for a reason other than low memory. -->
-    <string name="patcher_interrupted_message">Morphe, yamalama işlemi tamamlanmadan kapatıldı, bu nedenle hiçbir şey yamalanmadı. Tekrar deneyin</string>
+    <string name="patcher_interrupted_message">Morphe yamalama işlemi bitmeden kapatıldı. Tekrar deneyin</string>
     <!-- "%1$s" is where the setting is, such as "Settings > Patcher > Use embedded VM", built from the names on those screens. -->
     <string name="patcher_process_crashed_message">Yamalayıcı tamamlanmadan çöktü. Tekrar ederse, %1$s seçeneğini kapatın ve sorunu günlükle birlikte bildirin</string>
     <!-- Shown when a run fills the heap it was given. "%1$s" is the heap in megabytes. -->
@@ -868,14 +877,17 @@ Kaldırma işlemi tüm uygulama verilerini kalıcı olarak silecektir"</string>
     <string name="settings_appearance_translations_info_title">Çeviriler bazı diller için eksik veya tamamlanmamış olabilir</string>
     <!-- Settings - Appearance Tab - Interface Scale -->
     <string name="settings_appearance_ui_scale">Arayüz ölçeği</string>
-    <!-- Settings - Appearance Tab - Home Screen Section -->
+    <!-- Settings - Appearance Tab - Screens Section -->
     <string name="settings_appearance_home_screen">Ana ekran</string>
+    <string name="settings_appearance_screens">Ekranlar</string>
     <string name="settings_appearance_greeting_phrases">Selamlama cümleleri</string>
     <string name="settings_appearance_greeting_phrases_subtitle">Bir karşılama mesajı gösterir</string>
     <string name="settings_appearance_repatch_notice">Yeniden yama bildirimi</string>
     <string name="settings_appearance_repatch_notice_description">Yamalanmış uygulamalar yeniden yamalanabilir olduğunda bir başlık gösterir.</string>
     <string name="settings_appearance_more_apps_card">Daha fazla uygulama kartı</string>
     <string name="settings_appearance_more_apps_card_description">Uygulamaların altında topluluk yamalarına yönlendiren bir kart gösterir</string>
+    <string name="settings_appearance_games_button">Oyunlar düğmesi</string>
+    <string name="settings_appearance_games_button_description">Yama yapılırken ve sonuç ekranında mini oyunlar için bir düğme gösterir</string>
     <string name="settings_appearance_app_card_colors">Kart renkleri</string>
     <string name="settings_appearance_app_card_colors_default">Varsayılan</string>
     <string name="settings_appearance_app_card_colors_default_description">Her uygulama ve kaynağa kendi rengini ver</string>
@@ -1246,7 +1258,7 @@ Ayrıntılar: %2$s"</string>
     <string name="settings_system_apks_delete_all_confirm">Bu, burada gösterilen kaydedilmiş APK dosyalarını kalıcı olarak silecektir</string>
     <string name="settings_system_apks_delete_selected_title">Seçili APK\'ler silinsin mi?</string>
     <string name="settings_system_apks_delete_selected_confirm">Bu, seçili APK dosyalarını kalıcı olarak silecektir</string>
-    <string name="settings_system_apks_deleted_all">APK\'ler başarıyla silindi</string>
+    <string name="settings_system_apks_deleted_all">APK\'lar silindi</string>
     <string name="settings_system_apks_delete_failed">Bazı APK dosyaları silinemedi</string>
     <string name="settings_system_apks_export_zip_success">Seçili APK\'ler dışa aktarıldı</string>
     <string name="settings_system_apks_export_zip_failed">Seçili APK\'lerin dışa aktarılması başarısız oldu</string>
@@ -1269,8 +1281,8 @@ Ayrıntılar: %2$s"</string>
     <string name="settings_system_storage_temporary_title">Geçici dosyalar</string>
     <string name="settings_system_storage_temporary_description">Yamalamada oluşturulan çalışma dosyaları</string>
     <string name="settings_system_storage_clear_all">Tüm önbellekleri temizle</string>
-    <string name="settings_system_storage_clear_all_description">Tek seferde tüm geri kazanılabilir önbellek alanını boşaltır</string>
-    <string name="settings_system_storage_clear_all_confirm">Bu, önbelleğe alınmış ağ yanıtlarını, aşamalı yükleyici kopyalarını ve geçici dosyaları temizler. Orijinal ve yamalı APK\'ler korunur</string>
+    <string name="settings_system_storage_clear_all_description">Yukarıda listelenen tüm önbellekler</string>
+    <string name="settings_system_storage_clear_all_confirm">Yukarıdaki tüm önbellekler temizlenecek. Orijinal ve yamalanmış APK\'lar tutulur</string>
     <string name="settings_system_storage_cleared">%s boşaltıldı</string>
     <string name="settings_system_storage_patch_running_warning">Bir yama çalışıyor ve bu dosyaları kullanıyor. Şimdi temizlemek başarısız olmasına neden olur</string>
     <string name="settings_system_storage_clear_anyway">Yine de temizle</string>
@@ -1278,14 +1290,14 @@ Ayrıntılar: %2$s"</string>
     <string name="settings_system_storage_open_app_info_title">Android uygulama depolamasını aç</string>
     <string name="settings_system_storage_open_app_info_description">Morphe verilerinin tamamını sistem ayarları aracılığıyla yönetin veya temizleyin</string>
     <string name="settings_system_save_original_apks_title">Orijinal APK\'ları sakla</string>
-    <string name="settings_system_save_original_apks_description">Yeniden yama yapmak için APK\'yı yeniden seçmeden tekrar kullanabilmeniz için yama öncesi APK\'yı kaydedin</string>
+    <string name="settings_system_save_original_apks_description">Dosyayı tekrar seçmeden, yeniden yamalarken orijinal APK\'yı yeniden kullan</string>
     <string name="settings_system_save_patched_apks_title">Yamalı APK\'ları sakla</string>
-    <string name="settings_system_save_patched_apks_description">Yönetici üzerinden daha sonra dışa aktarmak veya yeniden yüklemek için yamalı APK\'nın bir kopyasını kaydedin</string>
+    <string name="settings_system_save_patched_apks_description">Dışa aktarmak veya daha sonra yeniden yüklemek için bir kopya tut</string>
     <!-- Settings - System Tab - Storage Management - Patched APKs Management -->
     <string name="settings_system_patched_apks_title">Yamalanmış APK\'ler</string>
     <string name="settings_system_patched_apks_empty">Henüz hiç yamalanmış APK kaydedilmedi</string>
     <string name="settings_system_patched_apks_delete_title">Yamalanmış APK silinsin mi?</string>
-    <string name="settings_system_patched_apks_deleted">Yamalanmış APK başarıyla silindi</string>
+    <string name="settings_system_patched_apks_deleted">Yamalanmış APK silindi</string>
     <string name="settings_system_patched_apks_delete_all_title">Tüm yamalanmış APK\'ler silinsin mi?</string>
     <!-- Settings - System Tab - Storage Management - Original APKs Management -->
     <string name="settings_system_original_apks_title">Orijinal APK\'ler</string>

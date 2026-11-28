@@ -9,6 +9,8 @@
     <string name="home_app_status_newer_patches">پاتچی نوێ</string>
     <!-- Mark on the card of an app built for a device other than a phone -->
     <string name="form_factor_tv">تەلەڤیژن</string>
+    <!-- Named beside the other marks when one app has a build for a phone and for another device -->
+    <string name="form_factor_mobile">مۆبایل</string>
     <string name="form_factor_automotive">ئۆتۆمبێل</string>
     <string name="home_no_patches_available">هیچ پینەیەک بەردەست نیە</string>
     <string name="home_app_hide_title">شاردنەوەی ئەم ئەپە ؟</string>
@@ -360,6 +362,10 @@
     <string name="expert_mode_recommended">پینە پێشنیارکراوەکان</string>
     <string name="expert_mode_reset_to_default_done">پینە پێشنیارکراوەکان جێبەجێ کراون</string>
     <string name="expert_mode_selected_count">%1$s لە %2$s هەڵبژێردراوە</string>
+    <!-- Which build of an app with builds for several devices the patches are for, such as TV or Wear OS -->
+    <string name="expert_mode_form_factor">بۆ بونیاتی %s</string>
+    <!-- The same for the phone build, named as a common noun rather than by its mark -->
+    <string name="expert_mode_form_factor_mobile">بۆ بونیاتی مۆبایل</string>
     <string name="expert_mode_saved_selection">دەستنیشانکردنی هەڵگیراو</string>
     <string name="expert_mode_restore_saved_done">دەستنیشانکردنی هەڵگیراو گەڕێندرایەوە</string>
     <string name="expert_mode_copy_from_bundle_no_patches">هیچ پاتچێکی گونجاو لەم باندڵەدا نییە</string>
@@ -490,7 +496,8 @@
     <string name="batch_patch_preparing_next">ئامادەکردنی بەرنامەی داهاتوو…</string>
     <string name="batch_patch_progress_counter">پاتچکردنی %1$s لە %2$s</string>
     <string name="batch_patch_summary">%1$s پاتچکرا، %2$s شکستی هێنا، %3$s تێپەڕێنرا</string>
-    <string name="batch_patch_saved_hint">بەرنامە پاتچکراوەکان پاشکەوت کران. ئێستا دامەزرێنن، یان دواتر لە لیستی APK پاتچکراوەکان لە ڕێکخستنەکاندا</string>
+    <string name="batch_patch_saved_hint">APK پاتچکراوەکان پاشکەوت کران. ئێستا دامەزرێنن یان دواتر لە شاشەی سەرەکییەوە</string>
+    <string name="batch_patch_not_kept_hint">APK پاتچکراوەکان پاشکەوت ناکرێن. پێش داخستنی ئەم شاشەیە، دامەزرێنە یان ئیدارەکەیان بکە</string>
     <string name="batch_patch_multiple_sources">هەندێک بەرنامە پاتچەکانی زیاتر لە یەک سەرچاوە تێکەڵ دەکەن، کە دەبێتە هۆی ڕوودانی دژایەتی</string>
     <string name="batch_patch_needs_apk">هیچ APKێک بەردەست نییە، فایلێک هاوپێچ بکە</string>
     <string name="batch_patch_wrong_package">فایلی هاوپێچکراو هی %sـە</string>
@@ -505,22 +512,22 @@
     <string name="batch_patch_apk_selected">APK هەڵبژێردرا</string>
     <string name="batch_patch_auto_download_stopped">داگرتنی خۆکارەکانی APK ڕایگیرا</string>
     <string name="batch_patch_auto_download_stop">داگرتنییەکان ڕاگرە</string>
-    <string name="batch_patch_auto_download_kept">نەتوانرا APKـی داگرتراو بەکاربهێنرێت، بۆیە پێشوەختەکەی پارێزرا</string>
+    <string name="batch_patch_auto_download_kept">ئەو APKـەی بۆ %s داگرتبوو نەکراوە بەکارهێنان، بۆیە پێشینەکەی هەڵگرتبێت</string>
     <string name="batch_patch_edit_patches">پاتچەکان هەڵبژێرە</string>
     <string name="batch_patch_state_no_apk">هیچ APKێک نییە</string>
     <string name="batch_patch_state_no_patches">هیچ پاتچێک نییە</string>
     <string name="batch_patch_state_no_selection">هیچ کامیان هەڵنەبژێردراوە</string>
     <string name="batch_patch_no_selection">هیچ کام لە پاتچە بەردەستەکان هەڵنەبژێردراوە</string>
     <string name="batch_patch_policy_install">دامەزرێنە کاتێک تەواو بوو</string>
-    <string name="batch_patch_policy_install_description">هەموو ئەپڵیکەیشنە پاتچکراوەکان ڕاستەوخۆ دوای تەواوبوونی ڕیزەکە دامەزرێنێت. کاتێک کوژاوە بێت، APK-ەکان بۆ دواتر دەهێڵێتەوە</string>
+    <string name="batch_patch_policy_install_description">هەر ئەپێکی پاتچکراو دایبنا و پاشەکەوت دەکات هەر کاتێک ڕیزبەندییەکە تەواو بوو. کوژاندنەوەی ئەم بژاردەیە APK-ەکان لەم شاشەیەدا دەهێڵێتەوە</string>
     <string name="batch_patch_policy_mount">ببەستە کاتێک تەواو بوو</string>
-    <string name="batch_patch_policy_mount_description">هەر ئەپێکی پاتچکراو دەبەستێت هەر کاتێک ڕیزبەندییەکە تەواو بوو. کوژاندنەوەی ئەم بژاردەیە APK-ەکان بۆ دواتر دەهێڵێتەوە</string>
+    <string name="batch_patch_policy_mount_description">هەر ئەپێکی پاتچکراو دەبەستێت هەر کاتێک ڕیزبەندییەکە تەواو بوو. کوژاندنەوەی ئەم بژاردەیە APK-ەکان لەم شاشەیەدا دەهێڵێتەوە</string>
     <string name="batch_patch_policy_install_mount">دامەزراندن یان بەستن کاتێک تەواو بوو</string>
-    <string name="batch_patch_policy_install_mount_description">هەموو ئەپێکی پاتچکراو دادەمەزرێنێت یان ماونت دەکات کاتێک ڕیزبەندییەکە تەواو بوو. کوژاندنەوەی ئەم بژاردەیە APK-ەکان بۆ دواتر دەهێڵێتەوە</string>
+    <string name="batch_patch_policy_install_mount_description">هەموو ئەپێکی پاتچکراو دادەمەزرێنێت یان ماونت دەکات کاتێک ڕیزبەندییەکە تەواو بوو. کوژاندنەوەی ئەم بژاردەیە APK-ەکان لەم شاشەیەدا دەهێڵێتەوە</string>
     <!-- Label of a footer button beside "Close". Keep it short, a longer one moves the buttons onto two rows -->
     <string name="batch_patch_start">دەستپێکردن</string>
     <string name="batch_patch_stop_title">ڕاگرتنی پاتچی کۆمەڵەیی؟</string>
-    <string name="batch_patch_stop_description">ئەو ئەپەی کە ئێستا پاتچ دەکرێت و هەموو ئەوانەی هێشتا لە ڕیزەکاندان دەسڕێنەوە</string>
+    <string name="batch_patch_stop_description">ئەپی ئێستا و ئەوەی تری ڕیزبەندییەکە هەڵوەشێنرێن</string>
     <!-- Label of a footer button beside "Done". Keep it short, a longer one moves the buttons onto two rows -->
     <string name="batch_patch_install_all">هەموویان دامەزرێنە</string>
     <string name="batch_patch_install_failed">دامەزراندنەکە شکستی هێنا</string>
@@ -531,7 +538,7 @@
     <string name="batch_queue_clear_title">ڕێزەکەی بسڕینەوە؟</string>
     <string name="batch_queue_clear_description">هەموو بەرنامەکان لە ڕێزەکە لادەبرێن</string>
     <string name="batch_queue_keep_title">ڕیزبەندییەکە بهێڵیتەوە؟</string>
-    <string name="batch_queue_keep_description">ئەپەکانی ڕیزبەندی کراو دواتر لە شاشەی سەرەکی دەمێننەوە بۆ ئەوەی دەستپێبکرێن</string>
+    <string name="batch_queue_keep_description">ڕیزبەندییەکە لە شاشەی سەرەکی دەمێنێتەوە تاوەکو تۆ دەستپێی بکەیت</string>
     <string name="batch_queue_keep">بهێڵەوە</string>
     <string name="shortcut_repatch_short">دووبارە پاتچ بکەرەوە</string>
     <string name="shortcut_repatch_long">دووبارە پاتچکردنی ئەپە کۆنەکان</string>
@@ -665,6 +672,8 @@
     <string name="patcher_conflict_title">ناکۆکی پاکەت</string>
     <string name="patcher_conflict_subtitle">پێویستە وەشانی بەردەست لاببەیت</string>
     <string name="patcher_conflict_hint">ئەپە پینەکراوەکە بڕوانامەیەکی جیاواز لە وەشانی دامەزراو بەکاردێنێت. لابردنی داتای ئەپ هەموو داتای ئەپ دەسڕێتەوە</string>
+    <!-- The patched APK is for another kind of device, such as TV or Wear OS, so it may not start on this one -->
+    <string name="patcher_built_for_other_device">بۆ %s دروستکراوە، بۆیە ڕەنگە لێرە دەستپێنەکات. بۆ ئەوەی لەسەر ئەو ئامێرە دایبنێیت، پاشکەوتی بکە</string>
     <string name="patcher_installed_conflict_title">سڕینەوەی دامەزراندن پێویستە</string>
     <string name="patcher_installed_conflict_body">"Morphe ئەپە پینەکراوەکان بە بڕوانامەی تایبەت بە خۆی واژۆ دەکات، کە جیاوازە لە بنەڕەتی. ئەندرۆید پێویستی بە دامەزراندنی وەشانی ئێستا هەیە پێش ئەوەی کاربەرنامە پینەکراوەکە دابمەزرێنێت.
 
@@ -760,7 +769,7 @@
     <string name="plugin_activity_dialog_body">کارلێکردنی بەکارهێنەر پێویستە بۆ ئەوەی بەردەوام بیت لەگەڵ ئەم پێوەکراوە</string>
     <string name="patcher_process_killed_message">سیستەمەکە پاتچەرەکەی ڕاگرت پێش ئەوەی تەواو ببێت، بەزۆری بۆ بەتاڵکردنی میمۆری. ئەپەکانی تر دابخە و دووبارە هەوڵ بدەوە</string>
     <!-- Shown once Morphe is back after it was closed in the middle of patching, for a reason other than low memory. -->
-    <string name="patcher_interrupted_message">Morphe پێش کۆتاییهاتنی پاتچەکە داخرا، بۆیە هیچ شتێک پاتچ نەکرا. دووبارە هەوڵ بدەرەوە</string>
+    <string name="patcher_interrupted_message">Morphe پێش تەواوبوونی پاتچکردن داخرا. دووبارە هەوڵ بدەرەوە</string>
     <!-- "%1$s" is where the setting is, such as "Settings > Patcher > Use embedded VM", built from the names on those screens. -->
     <string name="patcher_process_crashed_message">پاتچەرەکە پێش تەواوبوون ڕاوەستا. ئەگەر دووبارە ڕوویدا، %1$s کوژێنەرەوە و کێشەکە لەگەڵ لۆگەکە ڕاپۆرت بکە</string>
     <!-- Shown when a run fills the heap it was given. "%1$s" is the heap in megabytes. -->
@@ -869,14 +878,17 @@
     <string name="settings_appearance_translations_info_title">وەرگێڕانەکان بۆ هەندێک زمانەکان لەوانەیە وون یان ناتەواو بن</string>
     <!-- Settings - Appearance Tab - Interface Scale -->
     <string name="settings_appearance_ui_scale">قەبارەی ڕووکاری بەکارهێنەر</string>
-    <!-- Settings - Appearance Tab - Home Screen Section -->
+    <!-- Settings - Appearance Tab - Screens Section -->
     <string name="settings_appearance_home_screen">شاشەی ماڵەوە</string>
+    <string name="settings_appearance_screens">شاشەکان</string>
     <string name="settings_appearance_greeting_phrases">دەستەواژەی بەخێرهاتن</string>
     <string name="settings_appearance_greeting_phrases_subtitle">نامەیەکی بەخێرهاتن پیشان دەدات</string>
     <string name="settings_appearance_repatch_notice">ئاگاداری دووبارە پاتچکردن</string>
     <string name="settings_appearance_repatch_notice_description">بەنەرێکی پیشان دەدات کاتێک ئەپەکانی پاتچکراو دەتوانرێن دووبارە پاتچ بکرێنەوە</string>
     <string name="settings_appearance_more_apps_card">کارتی زیاتر لە ئەپەکان</string>
     <string name="settings_appearance_more_apps_card_description">کارتێکی لەژێر ئەپەکان دەردەکەوێت کە دەبات بۆ پاتچەکانی کۆمەڵگە</string>
+    <string name="settings_appearance_games_button">دوگمەی یارییەکان</string>
+    <string name="settings_appearance_games_button_description">دوگمەیەک بۆ یارییە بچووکەکان نیشان دەدات لە کاتی نوێکردنەوە و لە ئەنجامەکاندا</string>
     <string name="settings_appearance_app_card_colors">ڕەنگەکانی کارت</string>
     <string name="settings_appearance_app_card_colors_default">بنەڕەت</string>
     <string name="settings_appearance_app_card_colors_default_description">ڕەنگێکی تایبەت بە هەر ئەپ و سەرچاوەیەک بدە</string>
@@ -1247,7 +1259,7 @@ morphe_header_custom_dark.png
     <string name="settings_system_apks_delete_all_confirm">ئەمە بەشێوەیەکی هەمیشەیی هەموو فایلەکانی APK کە لێرە نیشان دەدرێن دەسڕێتەوە</string>
     <string name="settings_system_apks_delete_selected_title">APK-ەکانی هەڵبژێردراو بسڕینەوە؟</string>
     <string name="settings_system_apks_delete_selected_confirm">ئەمە فایلەکانی APK-ی هەڵبژێردراو بە شێوەیەکی هەتاهەتایە دەسڕێتەوە</string>
-    <string name="settings_system_apks_deleted_all">APK-ەکان بە سەرکەوتوویی سڕانەوە</string>
+    <string name="settings_system_apks_deleted_all">APK-ەکان سڕایەوە</string>
     <string name="settings_system_apks_delete_failed">هەندێک لە فایلەکانی APK نەتوانرا بسڕێنەوە</string>
     <string name="settings_system_apks_export_zip_success">APK-ەکانی هەڵبژێردراو هەناردەکران</string>
     <string name="settings_system_apks_export_zip_failed">هەناردەکردنی APK-ەکانی هەڵبژێردراو سەرکەوتوو نەبوو</string>
@@ -1270,8 +1282,8 @@ morphe_header_custom_dark.png
     <string name="settings_system_storage_temporary_title">فایلە کاتییەکان</string>
     <string name="settings_system_storage_temporary_description">فایلەکانی کارکردن کە لە کاتی پاتچکردن دروست دەکرێن</string>
     <string name="settings_system_storage_clear_all">سڕینەوەی هەموو کاشەکان</string>
-    <string name="settings_system_storage_clear_all_description">هەموو بۆشایی کاشەکە یەکجار ئازاد دەکات</string>
-    <string name="settings_system_storage_clear_all_confirm">ئەمە وەڵامە کاشکراوەکانی تۆڕ، کۆپییەکانی ئامادەکراوی دامەزرێنەر، و فایلە کاتییەکان دەسڕێتەوە. APK-ە ڕەسەنەکان و پاتچکراوەکان دەمێننەوە</string>
+    <string name="settings_system_storage_clear_all_description">هەموو کەشەکانی لیستکراوی سەرەوە</string>
+    <string name="settings_system_storage_clear_all_confirm">هەموو کەشی سەرەوە دەسڕێنرێنەوە. APK-ە ئەسڵ و پاتچکراوەکان دەمێننەوە</string>
     <string name="settings_system_storage_cleared">%s ئازادکرا</string>
     <string name="settings_system_storage_patch_running_warning">پاتچێک لە پراسەیە و ئەم فایلانە بەکاردەهێنێت. سڕینەوەیان لە ئێستادا دەبێتە هۆی شکستی پراسەکە</string>
     <string name="settings_system_storage_clear_anyway">بە هەر شێوەیەک سڕینەوە</string>
@@ -1279,14 +1291,14 @@ morphe_header_custom_dark.png
     <string name="settings_system_storage_open_app_info_title">کردنەوەی کۆگای ئەپەکانی ئەندرۆید</string>
     <string name="settings_system_storage_open_app_info_description">بەڕێوەبردن یان سڕینەوەی هەموو داتاکانی Morphe لە ڕێگەی ڕێکخستنەکانی سیستمەوە</string>
     <string name="settings_system_save_original_apks_title">پاشەکەوتکردنی APK ڕەسەنەکان</string>
-    <string name="settings_system_save_original_apks_description">پاراستنی APKی پێش پاتچکردن بۆ ئەوەی بتوانرێت دووبارە بەکاربێتەوە بۆ پاتچکردنەوە بێ ئەوەی دووبارە فایلەکە هەڵبژێردرێت</string>
+    <string name="settings_system_save_original_apks_description">دووبارە بەکارهێنانی APK-ی ئەسڵ لە کاتی پاتچکردنەوە، بەبێ هەڵبژاردنەوەی فایلیەکە بۆ جارێکی تر</string>
     <string name="settings_system_save_patched_apks_title">پاشەکەوتکردنی APK پاتچکراوەکان</string>
-    <string name="settings_system_save_patched_apks_description">کۆپییەکی APKی پاتچکراو پاشکەوت بکە بۆ دەرکردنی دواتر یان دووبارە دامەزراندن لە ڕێگەی بەڕێوەبەرییەوە</string>
+    <string name="settings_system_save_patched_apks_description">کۆپییەک بهێڵەوە بۆhەناردن یان دووبارە دامەزاندن لە داهاتوودا</string>
     <!-- Settings - System Tab - Storage Management - Patched APKs Management -->
     <string name="settings_system_patched_apks_title">APK پاتچکراوەکان</string>
     <string name="settings_system_patched_apks_empty">هیچ APK-ی پاتچکراو پاشەکەوت نەکراوە</string>
     <string name="settings_system_patched_apks_delete_title">سڕینەوەی APK پاتچکراوەکە؟</string>
-    <string name="settings_system_patched_apks_deleted">APK پاتچکراوەکە بە سەرکەوتوویی سڕایەوە</string>
+    <string name="settings_system_patched_apks_deleted">APK-ی پاتچکراو سڕایەوە</string>
     <string name="settings_system_patched_apks_delete_all_title">سڕینی هەموو APK-کانی پاتچکراو؟</string>
     <!-- Settings - System Tab - Storage Management - Original APKs Management -->
     <string name="settings_system_original_apks_title">APK ڕەسەنەکان</string>

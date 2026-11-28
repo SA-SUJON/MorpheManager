@@ -9,6 +9,8 @@
     <string name="home_app_status_newer_patches">ແພັດຊ໌ໃໝ່</string>
     <!-- Mark on the card of an app built for a device other than a phone -->
     <string name="form_factor_tv">ທີວີ</string>
+    <!-- Named beside the other marks when one app has a build for a phone and for another device -->
+    <string name="form_factor_mobile">ໂທລະສັບ</string>
     <string name="form_factor_automotive">ຍານພາຫະນະ</string>
     <string name="home_no_patches_available">ບໍ່ມີຊຸດແພດພ້ອມໃຊ້</string>
     <string name="home_app_hide_title">ເຊື່ອງແອັບນີ້ບໍ?</string>
@@ -359,6 +361,10 @@
     <string name="expert_mode_recommended">ແພັດທີ່ແນະນຳ</string>
     <string name="expert_mode_reset_to_default_done">ນຳໃຊ້ຊຸດແພດທີ່ແນະນຳແລ້ວ</string>
     <string name="expert_mode_selected_count">ເລືອກແລ້ວ %1$s ຈາກ %2$s</string>
+    <!-- Which build of an app with builds for several devices the patches are for, such as TV or Wear OS -->
+    <string name="expert_mode_form_factor">ສຳລັບບਿਲ୍ %s</string>
+    <!-- The same for the phone build, named as a common noun rather than by its mark -->
+    <string name="expert_mode_form_factor_mobile">ສຳລັບບਿਲ୍ໂທລະສັບ</string>
     <string name="expert_mode_saved_selection">ການເລືອກທີ່ບັນທຶກໄວ້</string>
     <string name="expert_mode_restore_saved_done">ກູ້ຄືນການເລືອກທີ່ບັນທຶກໄວ້ແລ້ວ</string>
     <string name="expert_mode_copy_from_bundle_no_patches">ບໍ່ມີ patch ທີ່ກົງກັນໃນ bundle ນີ້</string>
@@ -489,7 +495,8 @@
     <string name="batch_patch_preparing_next">ກຳລັງກຽມແອັບຖັດໄປ…</string>
     <string name="batch_patch_progress_counter">ກຳລັງປັບປຸງ %1$s ຈາກ %2$s</string>
     <string name="batch_patch_summary">ແພັດຊ໌ແລ້ວ %1$s, ຜິດພາດ %2$s, ຂ້າມ %3$s</string>
-    <string name="batch_patch_saved_hint">ແອັບທີ່ຖືກ patch ແລ້ວຖືກບັນທຶກໄວ້. ຕິດຕັ້ງພວກມັນຕອນນີ້, ຫຼື ຕິດຕັ້ງພາຍຫຼັງຈາກລາຍການ APK ທີ່ຖືກ patch ໃນການຕັ້ງຄ່າ</string>
+    <string name="batch_patch_saved_hint">ບັນທຶກ APK ທີ່ແປງແລ້ວ. ຕິດຕັ້ງພວກມັນຕອນນີ້ ຫຼື ພາຍຫຼັງຈາກໜ້າຈໍຫຼັກ</string>
+    <string name="batch_patch_not_kept_hint">APK ທີ່ແປງແລ້ວຈະບໍ່ຖືກເກັບໄວ້. ກະລຸນາຕິດຕັ້ງ ຫຼື ສົ່ງອອກພວກມັນກ່ອນປິດໜ້າຈໍນີ້</string>
     <string name="batch_patch_multiple_sources">ບາງແອັບລວມ patch ຈາກຫຼາຍແຫຼ່ງ, ເຊິ່ງອາດເຮັດໃຫ້ເກີດຂໍ້ຂັດແຍ່ງໄດ້</string>
     <string name="batch_patch_needs_apk">ບໍ່ມີ APK ທີ່ສາມາດໃຊ້ໄດ້, ກະລຸນາຄັດຕິດໄຟລ໌</string>
     <string name="batch_patch_wrong_package">ໄຟລ໌ທີ່ຄັດຕິດແມ່ນເປັນຂອງ %s</string>
@@ -504,22 +511,22 @@
     <string name="batch_patch_apk_selected">ເລືອກ APK ແລ້ວ</string>
     <string name="batch_patch_auto_download_stopped">ຢຸດການດາວໂຫຼດ APK ອັດຕະໂນມັດແລ້ວ</string>
     <string name="batch_patch_auto_download_stop">ຢຸດການດາວໂຫຼດ</string>
-    <string name="batch_patch_auto_download_kept">ບໍ່ສາມາດໃຊ້ APK ທີ່ດາວໂຫຼດມາໄດ້, ດັ່ງນັ້ນຈຶ່ງເກັບຮັກສາໄຟລ໌ກ່ອນໜ້ານີ້ໄວ້</string>
+    <string name="batch_patch_auto_download_kept">APK ທີ່ດາວໂຫຼດສຳລັບ %s ບໍ່ສາມາດນຳໃຊ້ໄດ້, ດັ່ງນັ້ນຈຶ່ງເກັບໄຟລ໌ກ່ອນໜ້ານີ້ໄວ້</string>
     <string name="batch_patch_edit_patches">ເລືອກ patch</string>
     <string name="batch_patch_state_no_apk">ບໍ່ມີ APK</string>
     <string name="batch_patch_state_no_patches">ບໍ່ມີ patch</string>
     <string name="batch_patch_state_no_selection">ບໍ່ມີການເລືອກ</string>
     <string name="batch_patch_no_selection">ບໍ່ມີການເລືອກ patch ໃດທີ່ມີໃຫ້ໃຊ້ງານ</string>
     <string name="batch_patch_policy_install">ຕິດຕັ້ງເມື່ອສຳເລັດ</string>
-    <string name="batch_patch_policy_install_description">ຕິດຕັ້ງທຸກແອັບທີ່ patch ແລ້ວທັນທີຫຼັງຈາກຄິວສຳເລັດ. ປິດໄວ້ເພື່ອເກັບ APK ໄວ້ໃຊ້ພາຍຫຼັງ</string>
+    <string name="batch_patch_policy_install_description">ຕິດຕັ້ງທຸກແອັບທີ່ແປງແລ້ວເມື່ອຄິວສິ້ນສຸດ. ຖ້າປິດ ຈະປ່ອຍໃຫ້ APK ຢູ່ໜ້າຈໍນີ້</string>
     <string name="batch_patch_policy_mount">Mount ເມື່ອສຳເລັດ</string>
-    <string name="batch_patch_policy_mount_description">Mount ທຸກແອັບທີ່ຖືກປັບແກ້ເມື່ອຄິວສຳເລັດ. ປິດ ຈະເກັບ APK ໄວ້ໃຊ້ພາຍຫຼັງ</string>
+    <string name="batch_patch_policy_mount_description">Mount ທຸກແອັບທີ່ແປງແລ້ວເມື່ອຄິວສິ້ນສຸດ. ຖ້າປິດ ຈະປ່ອຍໃຫ້ APK ຢູ່ໜ້າຈໍນີ້</string>
     <string name="batch_patch_policy_install_mount">ຕິດຕັ້ງ ຫຼື mount ເມື່ອສຳເລັດ</string>
-    <string name="batch_patch_policy_install_mount_description">ຕິດຕັ້ງ ຫຼື mount ທຸກແອັບທີ່ຖືກປັບແກ້ເມື່ອຄິວສຳເລັດ. ປິດ ຈະເກັບ APK ໄວ້ໃຊ້ພາຍຫຼັງ</string>
+    <string name="batch_patch_policy_install_mount_description">ຕິດຕັ້ງ ຫຼື mount ທຸກແອັບທີ່ຖືກ patch ແລ້ວເມື່ອຄິວສິ້ນສຸດ. ຖ້າປິດ ຈະປ່ອຍໃຫ້ APK ຢູ່ໜ້ານີ້</string>
     <!-- Label of a footer button beside "Close". Keep it short, a longer one moves the buttons onto two rows -->
     <string name="batch_patch_start">ເລີ່ມຕົ້ນ</string>
     <string name="batch_patch_stop_title">ຢຸດການ patch ແບບກຸ່ມບໍ?</string>
-    <string name="batch_patch_stop_description">ແອັບທີ່ກໍາລັງຖືກ patch ຢູ່ໃນຂະນະນີ້ ແລະ ທຸກຢ່າງທີ່ຍັງຢູ່ໃນຄິວຈະຖືກຍົກເລີກ</string>
+    <string name="batch_patch_stop_description">ແອັບປັດຈຸບັນ ແລະ ສ່ວນທີ່ເຫຼືອຂອງຄິວຈະຖືກຍົກເລີກ</string>
     <!-- Label of a footer button beside "Done". Keep it short, a longer one moves the buttons onto two rows -->
     <string name="batch_patch_install_all">ຕິດຕັ້ງທັງໝົດ</string>
     <string name="batch_patch_install_failed">ການຕິດຕັ້ງລົ້ມເຫຼວ</string>
@@ -530,7 +537,7 @@
     <string name="batch_queue_clear_title">ລ້າງຄິວບໍ?</string>
     <string name="batch_queue_clear_description">ແອັບທັງໝົດຈະຖືກລຶບອອກຈາກຄິວ</string>
     <string name="batch_queue_keep_title">ເກັບຄິວໄວ້ບໍ?</string>
-    <string name="batch_queue_keep_description">ແອັບໃນຄິວຈະລໍຖ້າຢູ່ໜ້າຈໍຫຼັກເພື່ອເລີ່ມຕົ້ນໃນພາຍຫຼັງ</string>
+    <string name="batch_queue_keep_description">ຄິວຈະລໍຖ້າຢູ່ໜ້າຈໍຫຼັກຈົນກວ່າທ່ານຈະເລີ່ມມັນ</string>
     <string name="batch_queue_keep">ເກັບໄວ້</string>
     <string name="shortcut_repatch_short">Patch ຄືນ</string>
     <string name="shortcut_repatch_long">ແພັດແອັບທີ່ລ້າສະໄໝຄືນໃໝ່</string>
@@ -664,6 +671,8 @@
     <string name="patcher_conflict_title">ຊຸດແພັກເກັດຂັດກັນ</string>
     <string name="patcher_conflict_subtitle">ທ່ານຕ້ອງຖອນການຕິດຕັ້ງເວີຊັນທີ່ມີຢູ່ກ່ອນ</string>
     <string name="patcher_conflict_hint">ແອັບທີ່ແພດແລ້ວໃຊ້ໃບຮັບຮອງທີ່ແຕກຕ່າງຈາກເວີຊັນທີ່ຕິດຕັ້ງໄວ້. ການຖອນການຕິດຕັ້ງຈະລຶບຂໍ້ມູນແອັບທັງໝົດ</string>
+    <!-- The patched APK is for another kind of device, such as TV or Wear OS, so it may not start on this one -->
+    <string name="patcher_built_for_other_device">ຖືກສ້າງຂຶ້ນສຳລັບ %s, ດັ່ງນັ້ນມັນອາດຈະບໍ່ສາມາດເລີ່ມເຮັດວຽກໄດ້ທີ່ນີ້. ບັນທຶກມັນໄວ້ເພື່ອຕິດຕັ້ງໃນອຸປະກອນນັ້ນ</string>
     <string name="patcher_installed_conflict_title">ຕ້ອງຖອນການຕິດຕັ້ງ</string>
     <string name="patcher_installed_conflict_body">"Morphe ເຊັນແອັບທີ່ແພດແລ້ວດ້ວຍໃບຮັບຮອງຂອງມັນເອງ, ເຊິ່ງແຕກຕ່າງຈາກຕົ້ນສະບັບ. Android ຮຽກຮ້ອງໃຫ້ລຶບເວີຊັນທີ່ມີຢູ່ກ່ອນອອກກ່ອນຈຶ່ງຈະຕິດຕັ້ງແອັບທີ່ແພດແລ້ວໄດ້.
 
@@ -759,7 +768,7 @@
     <string name="plugin_activity_dialog_body">ຕ້ອງມີການໂຕ້ຕອບຈາກຜູ້ໃຊ້ເພື່ອດຳເນີນການກັບປລັກອິນນີ້</string>
     <string name="patcher_process_killed_message">ລະບົບໄດ້ຢຸດ patcher ກ່ອນທີ່ມັນຈະສຳເລັດ, ປົກກະຕິແມ່ນເພື່ອຄືນໜ່ວຍຄວາມຈຳ. ກະລຸນາປິດແອັບອື່ນໆ ແລະ ລອງໃໝ່</string>
     <!-- Shown once Morphe is back after it was closed in the middle of patching, for a reason other than low memory. -->
-    <string name="patcher_interrupted_message">Morphe ຖືກປິດກ່ອນທີ່ການແປັດຊ໌ຈະສຳເລັດ, ດັ່ງນັ້ນຈຶ່ງບໍ່ມີສິ່ງໃດຖືກແປັດຊ໌. ກະລຸນາລອງໃໝ່</string>
+    <string name="patcher_interrupted_message">Morphe ຖືກປິດກ່ອນທີ່ການ patch ຈະສຳເລັດ. ກະລຸນາລອງໃໝ່</string>
     <!-- "%1$s" is where the setting is, such as "Settings > Patcher > Use embedded VM", built from the names on those screens. -->
     <string name="patcher_process_crashed_message">ຕົວແພັດຢຸດເຮັດວຽກກ່ອນທີ່ຈະສຳເລັດ. ຖ້າຫາກເກີດຂຶ້ນອີກ, ໃຫ້ປິດ %1$s ແລະ ລາຍງານບັນຫານີ້ພ້ອມກັບບົດບັນທຶກ</string>
     <!-- Shown when a run fills the heap it was given. "%1$s" is the heap in megabytes. -->
@@ -868,14 +877,17 @@
     <string name="settings_appearance_translations_info_title">ຄຳແປສຳລັບບາງພາສາອາດຂາດຫາຍ ຫຼືບໍ່ຄົບຖ້ວນ</string>
     <!-- Settings - Appearance Tab - Interface Scale -->
     <string name="settings_appearance_ui_scale">ຂະໜາດຂອງອິນເຕີເຟສ</string>
-    <!-- Settings - Appearance Tab - Home Screen Section -->
+    <!-- Settings - Appearance Tab - Screens Section -->
     <string name="settings_appearance_home_screen">ໜ້າຫຼັກ</string>
+    <string name="settings_appearance_screens">ໜ້າຈໍ</string>
     <string name="settings_appearance_greeting_phrases">ປະໂຫຍກທັກທາຍ</string>
     <string name="settings_appearance_greeting_phrases_subtitle">ສະແດງຂໍ້ຄວາມທັກທາຍ</string>
     <string name="settings_appearance_repatch_notice">ແຈ້ງເຕືອນການແພັດຊ໌ຄືນ</string>
     <string name="settings_appearance_repatch_notice_description">ສະແດງແຖບແຈ້ງເຕືອນເມື່ອແອັບທີ່ປັບແກ້ແລ້ວສາມາດປັບແກ້ຄືນໃໝ່ໄດ້</string>
     <string name="settings_appearance_more_apps_card">ບັດແອັບເພີ່ມເຕີມ</string>
     <string name="settings_appearance_more_apps_card_description">ສະແດງບັດຢູ່ກຸ່ມແອັບ ເຊິ່ງຈະນຳໄປສູ່ການປັບປຸງຈາກຊຸມຊົນ</string>
+    <string name="settings_appearance_games_button">ປຸ່ມເກມ</string>
+    <string name="settings_appearance_games_button_description">ສະແດງປຸ່ມໄປຫາເກມຍ່ອຍໃນຂະນະທີ່ກຳລັງແປັດ ແລະ ໃນໜ້າຜົນລັດ</string>
     <string name="settings_appearance_app_card_colors">ສີຂອງບັດ</string>
     <string name="settings_appearance_app_card_colors_default">ຄ່າເລີ່ມຕົ້ນ</string>
     <string name="settings_appearance_app_card_colors_default_description">ກຳນົດສີໃຫ້ແຕ່ລະແອັບ ແລະ ແຫຼ່ງທີ່ມາຂອງຕົນເອງ</string>
@@ -1246,7 +1258,7 @@ morphe_header_custom_dark.png
     <string name="settings_system_apks_delete_all_confirm">ອັນນີ້ຈະລຶບໄຟລ໌ APK ທີ່ບັນທຶກໄວ້ທີ່ສະແດງຢູ່ນີ້ຖາວອນ</string>
     <string name="settings_system_apks_delete_selected_title">ລຶບ APK ທີ່ເລືອກບໍ?</string>
     <string name="settings_system_apks_delete_selected_confirm">ອັນນີ້ຈະລຶບໄຟລ໌ APK ທີ່ເລືອກຖາວອນ</string>
-    <string name="settings_system_apks_deleted_all">ລຶບ APK ສຳເລັດ</string>
+    <string name="settings_system_apks_deleted_all">ລຶບ APK ແລ້ວ</string>
     <string name="settings_system_apks_delete_failed">ບາງໄຟລ໌ APK ບໍ່ສາມາດລຶບໄດ້</string>
     <string name="settings_system_apks_export_zip_success">ສົ່ງອອກ APK ທີ່ເລືອກແລ້ວ</string>
     <string name="settings_system_apks_export_zip_failed">ສົ່ງອອກ APK ທີ່ເລືອກລົ້ມເຫຼວ</string>
@@ -1269,8 +1281,8 @@ morphe_header_custom_dark.png
     <string name="settings_system_storage_temporary_title">ໄຟລ໌ຊົ່ວຄາວ</string>
     <string name="settings_system_storage_temporary_description">ໄຟລ໌ເຮັດວຽກທີ່ສ້າງຂຶ້ນໃນລະຫວ່າງການແພດ</string>
     <string name="settings_system_storage_clear_all">ລ້າງແຄດທັງໝົດ</string>
-    <string name="settings_system_storage_clear_all_description">ປ່ອຍພື້ນທີ່ແຄດທີ່ສາມາດກູ້ຄືນໄດ້ທັງໝົດໃນຄັ້ງດຽວ</string>
-    <string name="settings_system_storage_clear_all_confirm">ອັນນີ້ລ້າງການຕອບສະໜອງເຄືອຂ່າຍທີ່ແຄດໄວ້, ສຳເນົາຕົວຕິດຕັ້ງທີ່ກຽມໄວ້, ແລະໄຟລ໌ຊົ່ວຄາວ. APK ຕົ້ນສະບັບ ແລະທີ່ແພດແລ້ວຈະຖືກເກັບໄວ້</string>
+    <string name="settings_system_storage_clear_all_description">ທຸກໆ cache ທີ່ລະບຸໄວ້ຂ້າງເທິງ</string>
+    <string name="settings_system_storage_clear_all_confirm">ທຸກໆ cache ຂ້າງເທິງຈະຖືກລ້າງ. APK ຕົ້ນສະບັບ ແລະ APK ທີ່ຖືກ patch ແລ້ວຈະຖືກເກັບໄວ້</string>
     <string name="settings_system_storage_cleared">ປ່ອຍພື້ນທີ່ %s</string>
     <string name="settings_system_storage_patch_running_warning">ມີການປັບປຸງກຳລັງເຮັດວຽກຢູ່ ແລະ ໃຊ້ໄຟລ໌ເຫຼົ່ານີ້. ຖ້າລຶບພວກມັນອອກໃນຕອນນີ້ ຈະເຮັດໃຫ້ການເຮັດວຽກລົ້ມເຫຼວ</string>
     <string name="settings_system_storage_clear_anyway">ລຶບອອກທັງໝົດ</string>
@@ -1278,14 +1290,14 @@ morphe_header_custom_dark.png
     <string name="settings_system_storage_open_app_info_title">ເປີດທີ່ເກັບຂໍ້ມູນແອັບ Android</string>
     <string name="settings_system_storage_open_app_info_description">ຈັດການ ຫຼືລ້າງຂໍ້ມູນ Morphe ທັງໝົດຜ່ານການຕັ້ງຄ່າລະບົບ</string>
     <string name="settings_system_save_original_apks_title">ເກັບ APK ຕົ້ນສະບັບໄວ້</string>
-    <string name="settings_system_save_original_apks_description">ບັນທຶກ APK ກ່ອນແພດເພື່ອໃຫ້ສາມາດນຳມາໃຊ້ໃໝ່ສຳລັບການແພດໂດຍບໍ່ຕ້ອງເລືອກໄຟລ໌ອີກ</string>
+    <string name="settings_system_save_original_apks_description">ນຳໃຊ້ APK ຕົ້ນສະບັບຄືນໃໝ່ເມື່ອເຮັດການ patch ຄືນ, ໂດຍບໍ່ຕ້ອງເລືອກໄຟລ໌ອີກຄັ້ງ</string>
     <string name="settings_system_save_patched_apks_title">ເກັບ APK ທີ່ແພດແລ້ວໄວ້</string>
-    <string name="settings_system_save_patched_apks_description">ບັນທຶກສຳເນົາ APK ທີ່ແພດແລ້ວເພື່ອສົ່ງອອກ ຫຼືຕິດຕັ້ງໃໝ່ຈາກຕົວຈັດການໃນພາຍຫຼັງ</string>
+    <string name="settings_system_save_patched_apks_description">ເກັບສຳເນົາໄວ້ເພື່ອສົ່ງອອກ ຫຼື ຕິດຕັ້ງຄືນໃນພາຍຫຼັງ</string>
     <!-- Settings - System Tab - Storage Management - Patched APKs Management -->
     <string name="settings_system_patched_apks_title">APK ທີ່ແພດແລ້ວ</string>
     <string name="settings_system_patched_apks_empty">ຍັງບໍ່ມີ APK ທີ່ແພດແລ້ວຖືກບັນທຶກ</string>
     <string name="settings_system_patched_apks_delete_title">ລຶບ APK ທີ່ແພດແລ້ວບໍ?</string>
-    <string name="settings_system_patched_apks_deleted">ລຶບ APK ທີ່ແພດແລ້ວສຳເລັດ</string>
+    <string name="settings_system_patched_apks_deleted">ລຶບ APK ທີ່ຖືກ patch ແລ້ວ</string>
     <string name="settings_system_patched_apks_delete_all_title">ລຶບ APK ທີ່ແພດແລ້ວທັງໝົດບໍ?</string>
     <!-- Settings - System Tab - Storage Management - Original APKs Management -->
     <string name="settings_system_original_apks_title">APK ຕົ້ນສະບັບ</string>

@@ -9,6 +9,8 @@
     <string name="home_app_status_newer_patches">Yeni yamaqlar</string>
     <!-- Mark on the card of an app built for a device other than a phone -->
     <string name="form_factor_tv">TV</string>
+    <!-- Named beside the other marks when one app has a build for a phone and for another device -->
+    <string name="form_factor_mobile">Telefon</string>
     <string name="form_factor_automotive">Avtomobil</string>
     <string name="home_no_patches_available">Yamaqlar əlçatan deyil</string>
     <string name="home_app_hide_title">Bu tətbiq gizlədilsin?</string>
@@ -359,6 +361,10 @@ APK-nı haradan götürəcəyinizi seçin"</string>
     <string name="expert_mode_recommended">Tövsiyə olunan yamaqlar</string>
     <string name="expert_mode_reset_to_default_done">Tövsiyə olunan yamaqlar tətbiq olundu</string>
     <string name="expert_mode_selected_count">%2$s - dan %1$s ədəd seçildi</string>
+    <!-- Which build of an app with builds for several devices the patches are for, such as TV or Wear OS -->
+    <string name="expert_mode_form_factor">%s quruluşu üçün</string>
+    <!-- The same for the phone build, named as a common noun rather than by its mark -->
+    <string name="expert_mode_form_factor_mobile">Telefon quruluşu üçün</string>
     <string name="expert_mode_saved_selection">Saxlanılan seçim</string>
     <string name="expert_mode_restore_saved_done">Saxlanılan seçim bərpa olundu</string>
     <string name="expert_mode_copy_from_bundle_no_patches">Bu paketdəki yamaqlar uyğun deyil</string>
@@ -489,7 +495,8 @@ APK-nı haradan götürəcəyinizi seçin"</string>
     <string name="batch_patch_preparing_next">Növbəti tətbiq hazırlanır...</string>
     <string name="batch_patch_progress_counter">%2$s tətbiqdən %1$s-i yamaqlanır</string>
     <string name="batch_patch_summary">%1$s yamaqlandı, %2$s uğursuz oldu, %3$s ötürüldü</string>
-    <string name="batch_patch_saved_hint">Yamaqlanmış tətbiqlər saxlanılır. Onları indi və ya daha sonra tənzimləmələrdəki yamaqlanmış APK siyahısından quraşdır</string>
+    <string name="batch_patch_saved_hint">Yamaqlanmış APK-lar saxlanıldı. Onları indi və ya daha sonra əsas ekrandan quraşdır</string>
+    <string name="batch_patch_not_kept_hint">Yamaqlanmış APK-lar saxlanılmır. Bu ekranı bağlamazdan əvvəl onları quraşdır və ya ixrac et</string>
     <string name="batch_patch_multiple_sources">Bəzi tətbiqlər birdən çox mənbədən yamaqları birləşdirir ki, bu da toqquşmalara səbəb ola bilər</string>
     <string name="batch_patch_needs_apk">APK mövcud deyil, fayl əlavə et</string>
     <string name="batch_patch_wrong_package">Əlavə olunmuş fayl %s tətbiqinə aiddir</string>
@@ -504,22 +511,22 @@ APK-nı haradan götürəcəyinizi seçin"</string>
     <string name="batch_patch_apk_selected">APK seçildi</string>
     <string name="batch_patch_auto_download_stopped">Avtomatik APK yükləmələri dayandırıldı</string>
     <string name="batch_patch_auto_download_stop">Yükləmələri dayandır</string>
-    <string name="batch_patch_auto_download_kept">Yüklənmiş APK istifadə edilə bilmədi, ona görə də əvvəlki saxlanıldı</string>
+    <string name="batch_patch_auto_download_kept">%s üçün yüklənilmiş APK istifadə edilə bilmədi, ona görə də əvvəlki saxlanıldı</string>
     <string name="batch_patch_edit_patches">Yamaqları seç</string>
     <string name="batch_patch_state_no_apk">APK Yoxdur</string>
     <string name="batch_patch_state_no_patches">Yamaq yoxdur</string>
     <string name="batch_patch_state_no_selection">Heç biri seçilməyib</string>
     <string name="batch_patch_no_selection">Mövcud yamaqlardan heç biri seçilməyib</string>
     <string name="batch_patch_policy_install">Bitdikdə quraşdır</string>
-    <string name="batch_patch_policy_install_description">Növbə bitdikdən dərhal sonra hər bir yamaqlanmış tətbiqi quraşdırır. Qapalıdırsa, APK-lar daha sonra üçün saxlanılır</string>
+    <string name="batch_patch_policy_install_description">Növbə bitdikdə hər yamaqlanmış tətbiqi quraşdırır. Bağlandıqda APK-lar bu ekranda qalır</string>
     <string name="batch_patch_policy_mount">Bitdikdə montajla</string>
-    <string name="batch_patch_policy_mount_description">Növbə bitdikdə hər bir yamaqlanmış tətbiqi montaj edir. Qapadılarsa, APK-lar daha sonra üçün saxlanılır</string>
+    <string name="batch_patch_policy_mount_description">Növbə bitdikdə hər yamaqlanmış tətbiqi montajlayır. Bağlandıqda APK-lar bu ekranda qalır</string>
     <string name="batch_patch_policy_install_mount">Bitdikdə quraşdır və ya montajla</string>
-    <string name="batch_patch_policy_install_mount_description">Növbə bitdikdə hər bir yamaqlanmış tətbiqi quraşdırır və ya montajlayır. Qapadılarsa, APK-lar daha sonra üçün saxlanılır</string>
+    <string name="batch_patch_policy_install_mount_description">Növbə bitdikdə hər yamaqlanmış tətbiqi quraşdırır və ya montajlayır. Bağlandıqda APK-lar bu ekranda qalır</string>
     <!-- Label of a footer button beside "Close". Keep it short, a longer one moves the buttons onto two rows -->
     <string name="batch_patch_start">Başlat</string>
     <string name="batch_patch_stop_title">Toplu yamaqlama dayandırılsın?</string>
-    <string name="batch_patch_stop_description">Hal-hazırda yamaqlanan tətbiq və növbədə olan hər şey ləğv ediləcək</string>
+    <string name="batch_patch_stop_description">Cari tətbiq və növbənin qalanı ləğv ediləcək</string>
     <!-- Label of a footer button beside "Done". Keep it short, a longer one moves the buttons onto two rows -->
     <string name="batch_patch_install_all">Hamısını quraşdır</string>
     <string name="batch_patch_install_failed">Quraşdırma uğursuz oldu</string>
@@ -530,7 +537,7 @@ APK-nı haradan götürəcəyinizi seçin"</string>
     <string name="batch_queue_clear_title">Növbəni təmizləsin?</string>
     <string name="batch_queue_clear_description">Bütün tətbiqlər növbədən silinəcək</string>
     <string name="batch_queue_keep_title">Növbəni saxlasın?</string>
-    <string name="batch_queue_keep_description">Növbəyə qoyulmuş tətbiqlər daha sonra başladılmaq üçün əsas ekranda gözlədiləcək</string>
+    <string name="batch_queue_keep_description">Növbə siz onu başladana qədər əsas ekranda gözləyir</string>
     <string name="batch_queue_keep">Saxla</string>
     <string name="shortcut_repatch_short">Yenidən yamaqla</string>
     <string name="shortcut_repatch_long">Köhnəlmiş tətbiqləri yenidən yamaqla</string>
@@ -664,6 +671,8 @@ APK-nı haradan götürəcəyinizi seçin"</string>
     <string name="patcher_conflict_title">Paket ziddiyyəti</string>
     <string name="patcher_conflict_subtitle">Mövcud versiyanı silməlisiniz</string>
     <string name="patcher_conflict_hint">Yamaqlanan tətbiq quraşdırılan versiyadan fərqli sertifikat istifadə edir. Quraşdırma ləğvi bütün tətbiq məlumatını siləcək</string>
+    <!-- The patched APK is for another kind of device, such as TV or Wear OS, so it may not start on this one -->
+    <string name="patcher_built_for_other_device">%s üçün qurulub, ona görə də burada başlamaya bilər. Həmin cihazda quraşdırmaq üçün saxla</string>
     <string name="patcher_installed_conflict_title">Silinmə tələb olunur</string>
     <string name="patcher_installed_conflict_body">"Morphe, yamaqlanan tətbiqləri orijinaldan fərqlənən öz sertifikatı ilə imzalayır. Android yamaqlanan tətbiqi quraşdıra bilməsi öncəsi mövcud versiyanı silməyi tələb edir.
 
@@ -759,7 +768,7 @@ Quraşdırma ləğvi bütün tətbiq məlumatını qalıcı siləcək"</string>
     <string name="plugin_activity_dialog_body">Bu qoşmayla davam etmək üçün istifadəçi reaksiyası tələb olunur</string>
     <string name="patcher_process_killed_message">Sistem yamaqlayıcını işini bitirmədən dayandırdı, bu adətən yaddaşı boşaltmaq üçün olur. Digər tətbiqləri bağla və təkrar cəhd et</string>
     <!-- Shown once Morphe is back after it was closed in the middle of patching, for a reason other than low memory. -->
-    <string name="patcher_interrupted_message">Morphe yamaqlama bitmədən bağlanmışdı, ona görə də heç nə yamaqlanmadı. Yenidən cəhd et</string>
+    <string name="patcher_interrupted_message">Morphe yamaqlama bitməmişdən əvvəl bağlandı. Yenidən cəhd et</string>
     <!-- "%1$s" is where the setting is, such as "Settings > Patcher > Use embedded VM", built from the names on those screens. -->
     <string name="patcher_process_crashed_message">Yamaqlayıcı bitmədən çökdü. Bu hal təkrarlanarsa, %1$s -i qapat və log qeydi ilə birlikdə problemi bildir</string>
     <!-- Shown when a run fills the heap it was given. "%1$s" is the heap in megabytes. -->
@@ -868,14 +877,17 @@ Quraşdırma ləğvi bütün tətbiq məlumatını qalıcı siləcək"</string>
     <string name="settings_appearance_translations_info_title">Bəzi dillər üçün tərcümələr əskik və ya nöqsanlı ola bilər.</string>
     <!-- Settings - Appearance Tab - Interface Scale -->
     <string name="settings_appearance_ui_scale">İnterfeys miqyası</string>
-    <!-- Settings - Appearance Tab - Home Screen Section -->
+    <!-- Settings - Appearance Tab - Screens Section -->
     <string name="settings_appearance_home_screen">Əsas ekran</string>
+    <string name="settings_appearance_screens">Ekranlar</string>
     <string name="settings_appearance_greeting_phrases">Salamlaşma ifadələri</string>
     <string name="settings_appearance_greeting_phrases_subtitle">Salamlama mesajını göstərir</string>
     <string name="settings_appearance_repatch_notice">Yenidən yamaqlama bildirişi</string>
     <string name="settings_appearance_repatch_notice_description">Yamaqlanmış tətbiqlər yenidən yamaqlana bildikdə etiket göstərir</string>
     <string name="settings_appearance_more_apps_card">Daha çox tətbiq kartı</string>
     <string name="settings_appearance_more_apps_card_description">Tətbiqlərin altında icma yamaqlarına yönləndirən kart göstərir</string>
+    <string name="settings_appearance_games_button">Oyunlar düyməsi</string>
+    <string name="settings_appearance_games_button_description">Yamaqlama zamanı və nəticədə kiçik oyunlar üçün düymə göstərir</string>
     <string name="settings_appearance_app_card_colors">Kart rəngləri</string>
     <string name="settings_appearance_app_card_colors_default">İlkin</string>
     <string name="settings_appearance_app_card_colors_default_description">Hər tətbiqə və mənbəyə özünəməxsus rəng ver</string>
@@ -1245,7 +1257,7 @@ Təfərrüatlar: %2$s"</string>
     <string name="settings_system_apks_delete_all_confirm">Bu, burada görünən saxlanılmış APK fayllarını həmişəlik siləcək</string>
     <string name="settings_system_apks_delete_selected_title">Seçilmiş APK-lar silinsin?</string>
     <string name="settings_system_apks_delete_selected_confirm">Bu, seçilmiş APK fayllarını həmişəlik siləcək</string>
-    <string name="settings_system_apks_deleted_all">APK-lar uğurla silindi</string>
+    <string name="settings_system_apks_deleted_all">APK-lar silindi</string>
     <string name="settings_system_apks_delete_failed">Bəzi APK faylları silinə bilmədi</string>
     <string name="settings_system_apks_export_zip_success">Seçilmiş APK-lar köçürüldü</string>
     <string name="settings_system_apks_export_zip_failed">Seçilmiş APK-ları köçürmək olmadı</string>
@@ -1268,8 +1280,8 @@ Təfərrüatlar: %2$s"</string>
     <string name="settings_system_storage_temporary_title">Müvəqqəti fayllar</string>
     <string name="settings_system_storage_temporary_description">Yamaqlama müddətində yaradılan işçi faylları</string>
     <string name="settings_system_storage_clear_all">Bütün keşləri təmizlə</string>
-    <string name="settings_system_storage_clear_all_description">Geri qazanıla bilən bütün keş sahəsini bir dəfəyə boşaldır</string>
-    <string name="settings_system_storage_clear_all_confirm">Bu, keşlənmiş şəbəkə cavablarını, mərhələli quraşdırıcı nüsxələrini və müvəqqəti faylları təmizləyir. Orijinal və yamaqlanmış APK-lar saxlanılır</string>
+    <string name="settings_system_storage_clear_all_description">Yuxarıda sadalanan hər keş</string>
+    <string name="settings_system_storage_clear_all_confirm">Yuxarıdakı hər bir keş təmizlənəcək. Orijinal və yamaqlanmış APK-lar saxlanılır</string>
     <string name="settings_system_storage_cleared">%s boşaldıldı</string>
     <string name="settings_system_storage_patch_running_warning">Yamaq icra olunur və bu faylları istifadə edir. İndi onları silmək onun uğursuzluğuna səbəb olur</string>
     <string name="settings_system_storage_clear_anyway">Yenə də təmizlə</string>
@@ -1277,14 +1289,14 @@ Təfərrüatlar: %2$s"</string>
     <string name="settings_system_storage_open_app_info_title">Android tətbiq saxlama yerini aç</string>
     <string name="settings_system_storage_open_app_info_description">Bütün Morphe məlumatlarını sistem tənzimləmələri vasitəsilə idarə et və ya təmizlə</string>
     <string name="settings_system_save_original_apks_title">Orijinal APK-ları saxla</string>
-    <string name="settings_system_save_original_apks_description">Fayl təkrar seçilmədən yenidən yamaqlamaq üçün istifadə oluna bilsin deyə yamaq öncəsi APK-nı saxla</string>
+    <string name="settings_system_save_original_apks_description">Faylı təkrar seçmədən, yenidən yamaqlamada orijinal APK-nı yenidən istifadə et</string>
     <string name="settings_system_save_patched_apks_title">Yamaqlanmış APK-ları saxla</string>
-    <string name="settings_system_save_patched_apks_description">İdarəedicidən daha sonra ixrac etmək və ya yenidən quraşdırmaq üçün yamaqlanmış APK-nın nüsxəsini saxla</string>
+    <string name="settings_system_save_patched_apks_description">Daha sonra ixrac etmək və ya yenidən quraşdırmaq üçün nüsxə saxla</string>
     <!-- Settings - System Tab - Storage Management - Patched APKs Management -->
     <string name="settings_system_patched_apks_title">Yamaqlanan APK-lar</string>
     <string name="settings_system_patched_apks_empty">Hələ saxlanılan yamaqlanmış APK-lar yoxdur</string>
     <string name="settings_system_patched_apks_delete_title">Yamaqlanan APK silinsin?</string>
-    <string name="settings_system_patched_apks_deleted">Yamaqlanan APK uğurla silindi</string>
+    <string name="settings_system_patched_apks_deleted">Yamaqlanmış APK silindi</string>
     <string name="settings_system_patched_apks_delete_all_title">Bütün yamaqlanmış APK-lar silinsin?</string>
     <!-- Settings - System Tab - Storage Management - Original APKs Management -->
     <string name="settings_system_original_apks_title">Əsil APK-lar</string>

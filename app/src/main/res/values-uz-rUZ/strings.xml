@@ -9,6 +9,8 @@
     <string name="home_app_status_newer_patches">Yangi patchlar</string>
     <!-- Mark on the card of an app built for a device other than a phone -->
     <string name="form_factor_tv">TV</string>
+    <!-- Named beside the other marks when one app has a build for a phone and for another device -->
+    <string name="form_factor_mobile">Telefon</string>
     <string name="form_factor_automotive">Avtomobillar</string>
     <string name="home_no_patches_available">Hozircha patch yo\'q</string>
     <string name="home_app_hide_title">Ushbu ilovani yashirasizmi?</string>
@@ -359,6 +361,10 @@ Uning APK faylini qayerdan olishni tanlang"</string>
     <string name="expert_mode_recommended">Tavsiya etilgan patchlar</string>
     <string name="expert_mode_reset_to_default_done">Tavsiya etilgan patchlar qo‘llandi</string>
     <string name="expert_mode_selected_count">%2$s dan %1$s ta tanlandi</string>
+    <!-- Which build of an app with builds for several devices the patches are for, such as TV or Wear OS -->
+    <string name="expert_mode_form_factor">%s versiyasi uchun</string>
+    <!-- The same for the phone build, named as a common noun rather than by its mark -->
+    <string name="expert_mode_form_factor_mobile">Telefon versiyasi uchun</string>
     <string name="expert_mode_saved_selection">Saqlangan tanlov</string>
     <string name="expert_mode_restore_saved_done">Saqlangan tanlov tiklandi</string>
     <string name="expert_mode_copy_from_bundle_no_patches">Ushbu paketda mos keladigan patchlar yo‘q</string>
@@ -489,7 +495,8 @@ Eng yaxshi natijalar uchun ushbu ilova to‘liq &lt;b&gt;APK&lt;/b&gt;ni patchla
     <string name="batch_patch_preparing_next">Keyingi ilova tayyorlanmoqda…</string>
     <string name="batch_patch_progress_counter">%2$s dan %1$s patchlanmoqda</string>
     <string name="batch_patch_summary">%1$s ta tuzatildi, %2$s ta muvaffaqiyatsiz, %3$s ta o‘tkazib yuborildi</string>
-    <string name="batch_patch_saved_hint">Ta’mirlangan ilovalar saqlanadi. Ularni hozir yoki sozlamalardagi ta’mirlangan APK ro‘yxatidan keyinroq o‘rnating</string>
+    <string name="batch_patch_saved_hint">Patchlangan APKlar saqlandi. Ularni hozir yoki keyinroq bosh ekranidan o´rnating</string>
+    <string name="batch_patch_not_kept_hint">Patchlangan APKlar saqlanmaydi. Ushbu ekranni yopishdan oldin ularni o´rnating yoki eksport qiling</string>
     <string name="batch_patch_multiple_sources">Ba’zi ilovalar bir nechta manbalardan patchlarni birlashtiradi, bu ziddiyatlarga olib kelishi mumkin</string>
     <string name="batch_patch_needs_apk">APK mavjud emas, faylni biriktiring</string>
     <string name="batch_patch_wrong_package">Biriktirilgan fayl %s ga tegishli</string>
@@ -504,22 +511,22 @@ Eng yaxshi natijalar uchun ushbu ilova to‘liq &lt;b&gt;APK&lt;/b&gt;ni patchla
     <string name="batch_patch_apk_selected">APK tanlandi</string>
     <string name="batch_patch_auto_download_stopped">APK fayllarini avtomatik yuklab olish to\'xtatildi</string>
     <string name="batch_patch_auto_download_stop">Yuklab olishni to\'xtatish</string>
-    <string name="batch_patch_auto_download_kept">Yuklab olingan APKdan foydalanib bo\'lmadi, shuning uchun avvalgisi saqlandi</string>
+    <string name="batch_patch_auto_download_kept">%s uchun yuklab olingan APKdan foydalanib bo´lmadi, shuning uchun avvalgi APK saqlandi</string>
     <string name="batch_patch_edit_patches">Patchlarni tanlang</string>
     <string name="batch_patch_state_no_apk">APK yo‘q</string>
     <string name="batch_patch_state_no_patches">Hozircha patch qilinmagan</string>
     <string name="batch_patch_state_no_selection">Hech biri tanlanmagan</string>
     <string name="batch_patch_no_selection">Mavjud patchlarning hech biri tanlanmagan.</string>
     <string name="batch_patch_policy_install">Tugagandan so‘ng o‘rnating</string>
-    <string name="batch_patch_policy_install_description">Har bir patchlangan ilova navbat tugagandan so‘ng darhol o‘rnatiladi. O‘chirilgan bo‘lsa, APKlar keyinroq foydalanish uchun saqlanadi</string>
+    <string name="batch_patch_policy_install_description">Navbat tugagandan so´ng har bir patchlangan ilovani o´rnatadi. O´chirilgan bo´lsa, APKlar ushbu ekranda qoladi</string>
     <string name="batch_patch_policy_mount">Tugagach mount qilish</string>
-    <string name="batch_patch_policy_mount_description">Navbat tugagach, har bir patchlangan ilovani mount qiladi. O\'chirilgan bo\'lsa, APK\'larni keyinroq uchun saqlaydi.</string>
+    <string name="batch_patch_policy_mount_description">Navbat tugagandan so‘ng har bir patchlangan ilovani o‘rnatadi. O‘chirilgan bo‘lsa, APKlar ushbu ekranda qoladi</string>
     <string name="batch_patch_policy_install_mount">Tugagach o\'rnatish yoki mount qilish</string>
-    <string name="batch_patch_policy_install_mount_description">Navbat tugagach, har bir patchlangan ilovani o\'rnatadi yoki mount qiladi. O\'chirilgan bo\'lsa, APK\'larni keyinroq uchun saqlaydi.</string>
+    <string name="batch_patch_policy_install_mount_description">Navbat tugagach, har bir patchlangan ilova o´rnatiladi yoki ulanadi. O´chirilgan bo´lsa, APKlar ushbu ekranda qoladi</string>
     <!-- Label of a footer button beside "Close". Keep it short, a longer one moves the buttons onto two rows -->
     <string name="batch_patch_start">Boshlash</string>
     <string name="batch_patch_stop_title">Ommaviy ta’mirlashni to‘xtatmoqchimisiz?</string>
-    <string name="batch_patch_stop_description">Hozir patchlanayotgan ilova va hali navbatda turgan hamma narsa bekor qilinadi.</string>
+    <string name="batch_patch_stop_description">Hozirgi ilova va navbatning qolgan qismi bekor qilinadi</string>
     <!-- Label of a footer button beside "Done". Keep it short, a longer one moves the buttons onto two rows -->
     <string name="batch_patch_install_all">Hammasini o‘rnatish</string>
     <string name="batch_patch_install_failed">O‘rnatish muvaffaqiyatsiz</string>
@@ -530,7 +537,7 @@ Eng yaxshi natijalar uchun ushbu ilova to‘liq &lt;b&gt;APK&lt;/b&gt;ni patchla
     <string name="batch_queue_clear_title">Navbatni tozalaysizmi?</string>
     <string name="batch_queue_clear_description">Barcha ilovalar navbatdan olib tashlanadi.</string>
     <string name="batch_queue_keep_title">Navbatni saqlash kerakmi?</string>
-    <string name="batch_queue_keep_description">Navbatdagi ilovalar keyinroq ishga tushirilishini kutish uchun bosh ekranda qoladi</string>
+    <string name="batch_queue_keep_description">Siz uni boshlaguningizcha, navbat bosh ekranda kutadi</string>
     <string name="batch_queue_keep">Saqlash</string>
     <string name="shortcut_repatch_short">Qayta ta’mirlash</string>
     <string name="shortcut_repatch_long">Eski ilovalarni qayta ta’mirlash</string>
@@ -664,6 +671,8 @@ Eng yaxshi natijalar uchun ushbu ilova to‘liq &lt;b&gt;APK&lt;/b&gt;ni patchla
     <string name="patcher_conflict_title">Paketlar o‘rtasida ziddiyat</string>
     <string name="patcher_conflict_subtitle">Mavjud versiyani o‘chirib tashlashingiz kerak</string>
     <string name="patcher_conflict_hint">Patchlangan ilova o‘rnatilgan versiyadan boshqa sertifikatdan foydalanadi. Ilova ma\'lumotlarini o‘chirish barcha ilova ma\'lumotlarini o‘chiradi</string>
+    <!-- The patched APK is for another kind of device, such as TV or Wear OS, so it may not start on this one -->
+    <string name="patcher_built_for_other_device">%s uchun yaratilgan, shuning uchun bu yerda ishga tushmasligi mumkin. Uni o\'sha qurilmaga o\'rnatish uchun saqlang</string>
     <string name="patcher_installed_conflict_title">O‘chirish talab qilinadi</string>
     <string name="patcher_installed_conflict_body">"Morphe patchlangan ilovalarni o‘z sertifikati bilan imzolaydi, bu aslidan farq qiladi. Android patchlangan ilovani o‘rnatishdan oldin mavjud versiyani olib tashlashni talab qiladi.
 
@@ -759,7 +768,7 @@ O‘chirish barcha ilova ma'lumotlarini butunlay o‘chirib tashlaydi"</string>
     <string name="plugin_activity_dialog_body">Ushbu plagin bilan davom etish uchun foydalanuvchi aralashuvi kerak</string>
     <string name="patcher_process_killed_message">Tizim patcherni tugashidan oldin to\'xtatdi, odatda xotirani bo\'shatish uchun. Boshqa ilovalarni yoping va qayta urinib ko\'ring.</string>
     <!-- Shown once Morphe is back after it was closed in the middle of patching, for a reason other than low memory. -->
-    <string name="patcher_interrupted_message">Patch jarayoni yakunlanmasdan Morphe yopildi, shuning uchun hech narsa yangilanmadi. Qayta urinib ko\"ring</string>
+    <string name="patcher_interrupted_message">Patchlash yakunlanmasdan oldin Morphe yopildi. Qayta urinib ko´ring</string>
     <!-- "%1$s" is where the setting is, such as "Settings > Patcher > Use embedded VM", built from the names on those screens. -->
     <string name="patcher_process_crashed_message">Patcher yakunlanmasdan oldin ishdan chiqdi. Agar bu yana takrorlansa, %1$s ni o\'chiring va muammoni log fayli bilan birga xabar qiling</string>
     <!-- Shown when a run fills the heap it was given. "%1$s" is the heap in megabytes. -->
@@ -868,14 +877,17 @@ O‘chirish barcha ilova ma'lumotlarini butunlay o‘chirib tashlaydi"</string>
     <string name="settings_appearance_translations_info_title">Ba\'zi tillar uchun tarjimaning yo\'qligi yoki to\'liq bo\'lmasligi mumkin</string>
     <!-- Settings - Appearance Tab - Interface Scale -->
     <string name="settings_appearance_ui_scale">Interfeys masshtabi</string>
-    <!-- Settings - Appearance Tab - Home Screen Section -->
+    <!-- Settings - Appearance Tab - Screens Section -->
     <string name="settings_appearance_home_screen">Bosh ekran</string>
+    <string name="settings_appearance_screens">Ekranlar</string>
     <string name="settings_appearance_greeting_phrases">Salomlashish iborasi</string>
     <string name="settings_appearance_greeting_phrases_subtitle">Tabrik xabarini ko\'rsatadi.</string>
     <string name="settings_appearance_repatch_notice">Qayta yamash bildirishnomasi</string>
     <string name="settings_appearance_repatch_notice_description">Patchlangan ilovalar qayta patchlanishi mumkin bo\'lganda banner ko\'rsatadi.</string>
     <string name="settings_appearance_more_apps_card">Yana ko\'proq ilovalar kartasi</string>
     <string name="settings_appearance_more_apps_card_description">Ilovalar ostida hamjamiyat yamoqlariga olib boruvchi kartani ko\'rsatadi</string>
+    <string name="settings_appearance_games_button">O\'yinlar tugmasi</string>
+    <string name="settings_appearance_games_button_description">Patch jarayonida va natijada mini-o\'yinlar tugmasini ko\'rsatadi</string>
     <string name="settings_appearance_app_card_colors">Karta ranglari</string>
     <string name="settings_appearance_app_card_colors_default">Standart</string>
     <string name="settings_appearance_app_card_colors_default_description">Har bir ilova va manbaga o\'zining shaxsiy rangini bering</string>
@@ -1246,7 +1258,7 @@ Ma’lumotlar: %2$s"</string>
     <string name="settings_system_apks_delete_all_confirm">Bu yerda ko‘rsatilgan saqlangan APK fayllarini butunlay o‘chirib tashlaydi</string>
     <string name="settings_system_apks_delete_selected_title">Tanlangan APKlarni o‘chirilsinmi?</string>
     <string name="settings_system_apks_delete_selected_confirm">Tanlangan APK fayllari butunlay o‘chirib tashlanadi</string>
-    <string name="settings_system_apks_deleted_all">APKlar muvaffaqiyatli o‘chirildi</string>
+    <string name="settings_system_apks_deleted_all">APKlar o´chirildi</string>
     <string name="settings_system_apks_delete_failed">Baʼzi APK fayllarini oʻchirib boʻlmadi</string>
     <string name="settings_system_apks_export_zip_success">Tanlangan APKlar eksport qilindi</string>
     <string name="settings_system_apks_export_zip_failed">Tanlangan APKlarni eksport qilishda xatolik</string>
@@ -1269,8 +1281,8 @@ Ma’lumotlar: %2$s"</string>
     <string name="settings_system_storage_temporary_title">Vaqtinchalik fayllar</string>
     <string name="settings_system_storage_temporary_description">Patchlash paytida yaratilgan ishchi fayllar</string>
     <string name="settings_system_storage_clear_all">Barcha keshni tozalash</string>
-    <string name="settings_system_storage_clear_all_description">Qayta olinadigan barcha kesh joyini bir vaqtning o‘zida bo‘shatadi</string>
-    <string name="settings_system_storage_clear_all_confirm">Bu tarmoq javoblari keshini, o‘rnatuvchi nusxalarini va vaqtinchalik fayllarni tozalaydi. Asl va patchlangan APKlar saqlanib qoladi</string>
+    <string name="settings_system_storage_clear_all_description">Yuqorida sanab o\'tilgan barcha keshlar</string>
+    <string name="settings_system_storage_clear_all_confirm">Yuqoridagi barcha keshlar tozalanadi. Asl va patch qilingan APKlar saqlanib qoladi</string>
     <string name="settings_system_storage_cleared">%s bo‘shatildi</string>
     <string name="settings_system_storage_patch_running_warning">Patch ishlamoqda va bu fayllardan foydalanmoqda. Ularni hozir tozalash uning muvaffaqiyatsiz bo\'lishiga olib keladi.</string>
     <string name="settings_system_storage_clear_anyway">Baribir tozalash</string>
@@ -1278,14 +1290,14 @@ Ma’lumotlar: %2$s"</string>
     <string name="settings_system_storage_open_app_info_title">Android ilova xotirasini ochish</string>
     <string name="settings_system_storage_open_app_info_description">Morphe ning barcha ma\'lumotlarini tizim sozlamalari orqali boshqarish yoki tozalash</string>
     <string name="settings_system_save_original_apks_title">Asl APK fayllarni saqlab qoling</string>
-    <string name="settings_system_save_original_apks_description">Qayta tuzash uchun faylni yana tanlashni oldini olish uchun tuzashdan oldingi APK ni saqlang</string>
+    <string name="settings_system_save_original_apks_description">Qayta patch qilishda faylni qayta tanlamasdan, asl APKdan foydalaning</string>
     <string name="settings_system_save_patched_apks_title">Tuzatilgan APK fayllarni saqlab qoling</string>
-    <string name="settings_system_save_patched_apks_description">Keyinchalik eksport qilish yoki menejer orqali qayta o‘rnatish uchun tuzatilgan APK ning nusxasini saqlang</string>
+    <string name="settings_system_save_patched_apks_description">Keyinchalik eksport qilish yoki qayta o\'rnatish uchun nusxasini saqlang</string>
     <!-- Settings - System Tab - Storage Management - Patched APKs Management -->
     <string name="settings_system_patched_apks_title">Patchlangan APKlar</string>
     <string name="settings_system_patched_apks_empty">Hali saqlangan patchlangan APKlar yo‘q</string>
     <string name="settings_system_patched_apks_delete_title">Tuzatilgan APKni o‘chirib tashlash?</string>
-    <string name="settings_system_patched_apks_deleted">Tuzatilgan APK muvaffaqiyatli o‘chirildi</string>
+    <string name="settings_system_patched_apks_deleted">Patch qilingan APK o\'chirildi</string>
     <string name="settings_system_patched_apks_delete_all_title">Barcha patchlangan APKlarni o‘chirilsinmi?</string>
     <!-- Settings - System Tab - Storage Management - Original APKs Management -->
     <string name="settings_system_original_apks_title">Asl APKlar</string>

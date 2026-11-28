@@ -9,6 +9,8 @@
     <string name="home_app_status_newer_patches">Nuove patch</string>
     <!-- Mark on the card of an app built for a device other than a phone -->
     <string name="form_factor_tv">TV</string>
+    <!-- Named beside the other marks when one app has a build for a phone and for another device -->
+    <string name="form_factor_mobile">Telefono</string>
     <string name="form_factor_automotive">Automobile</string>
     <string name="home_no_patches_available">Nessuna modifica disponibile</string>
     <string name="home_app_hide_title">Nascondere questa app?</string>
@@ -359,6 +361,10 @@ Scegli da dove scaricare l'APK."</string>
     <string name="expert_mode_recommended">Patch consigliate</string>
     <string name="expert_mode_reset_to_default_done">Patch consigliate applicate</string>
     <string name="expert_mode_selected_count">%1$s su %2$s selezionati</string>
+    <!-- Which build of an app with builds for several devices the patches are for, such as TV or Wear OS -->
+    <string name="expert_mode_form_factor">Per la build %s</string>
+    <!-- The same for the phone build, named as a common noun rather than by its mark -->
+    <string name="expert_mode_form_factor_mobile">Per la build del telefono</string>
     <string name="expert_mode_saved_selection">Selezione salvata</string>
     <string name="expert_mode_restore_saved_done">Selezione salvata ripristinata</string>
     <string name="expert_mode_copy_from_bundle_no_patches">Nessuna patch corrispondente in questo pacchetto</string>
@@ -489,7 +495,8 @@ Per ottenere i risultati migliori, questa app raccomanda di applicare una patch 
     <string name="batch_patch_preparing_next">Preparazione dell\'app successiva…</string>
     <string name="batch_patch_progress_counter">Applicazione della patch %1$s di %2$s</string>
     <string name="batch_patch_summary">%1$s patchati, %2$s non riusciti, %3$s saltati</string>
-    <string name="batch_patch_saved_hint">Le app modificate sono state salvate. Installale ora o in seguito dall\'elenco APK modificate nelle impostazioni</string>
+    <string name="batch_patch_saved_hint">Gli APK patchati sono salvati. Installali ora o più tardi dalla schermata home</string>
+    <string name="batch_patch_not_kept_hint">Gli APK patchati non vengono conservati. Installali o esportali prima di chiudere questa schermata</string>
     <string name="batch_patch_multiple_sources">Alcune app combinano patch da più fonti, il che può causare conflitti</string>
     <string name="batch_patch_needs_apk">Nessun APK disponibile, allega un file</string>
     <string name="batch_patch_wrong_package">Il file allegato appartiene a %s</string>
@@ -504,22 +511,22 @@ Per ottenere i risultati migliori, questa app raccomanda di applicare una patch 
     <string name="batch_patch_apk_selected">APK selezionata</string>
     <string name="batch_patch_auto_download_stopped">Download automatici di APK interrotti</string>
     <string name="batch_patch_auto_download_stop">Interrompi download</string>
-    <string name="batch_patch_auto_download_kept">L\'APK scaricato non potrebbe essere utilizzato, quindi è stato mantenuto quello precedente</string>
+    <string name="batch_patch_auto_download_kept">L\'APK scaricato per %s non poteva essere utilizzato, quindi è stato mantenuto quello precedente</string>
     <string name="batch_patch_edit_patches">Scegli patch</string>
     <string name="batch_patch_state_no_apk">Nessun APK</string>
     <string name="batch_patch_state_no_patches">Nessuna patch</string>
     <string name="batch_patch_state_no_selection">Nessuna selezionata</string>
     <string name="batch_patch_no_selection">Nessuna delle patch disponibili è selezionata</string>
     <string name="batch_patch_policy_install">Installa al termine</string>
-    <string name="batch_patch_policy_install_description">Installa ogni app modificata subito dopo che la coda è terminata. Disattivato mantiene gli APK per dopo</string>
+    <string name="batch_patch_policy_install_description">Installa ogni app patchata una volta terminata la coda. Se disattivato, gli APK rimangono in questa schermata</string>
     <string name="batch_patch_policy_mount">Monta al termine</string>
-    <string name="batch_patch_policy_mount_description">Monta ogni app patchata una volta terminata la coda. Se disattivato, conserva gli APK per dopo.</string>
+    <string name="batch_patch_policy_mount_description">Monta ogni app patchata una volta terminata la coda. Se disattivato, gli APK rimangono in questa schermata</string>
     <string name="batch_patch_policy_install_mount">Installa o monta al termine</string>
-    <string name="batch_patch_policy_install_mount_description">Installa o monta ogni app patchata una volta terminata la coda. Se disattivato, conserva gli APK per dopo.</string>
+    <string name="batch_patch_policy_install_mount_description">Installa o monta ogni app patchata una volta terminata la coda. Disattivando l\'opzione, gli APK rimarranno in questa schermata</string>
     <!-- Label of a footer button beside "Close". Keep it short, a longer one moves the buttons onto two rows -->
     <string name="batch_patch_start">Inizio</string>
     <string name="batch_patch_stop_title">Interrompi la modifica in batch?</string>
-    <string name="batch_patch_stop_description">L\'app in fase di patching in questo momento e tutto ciò che è ancora in coda verrà annullato</string>
+    <string name="batch_patch_stop_description">L\'app corrente e il resto della coda verranno annullati</string>
     <!-- Label of a footer button beside "Done". Keep it short, a longer one moves the buttons onto two rows -->
     <string name="batch_patch_install_all">Installa tutto</string>
     <string name="batch_patch_install_failed">Installazione non riuscita</string>
@@ -530,7 +537,7 @@ Per ottenere i risultati migliori, questa app raccomanda di applicare una patch 
     <string name="batch_queue_clear_title">Eliminare la coda?</string>
     <string name="batch_queue_clear_description">Tutte le app verranno rimosse dalla coda</string>
     <string name="batch_queue_keep_title">Conservare la coda?</string>
-    <string name="batch_queue_keep_description">Le app in coda rimarranno nella schermata home in attesa di essere avviate in seguito</string>
+    <string name="batch_queue_keep_description">La coda attende nella schermata home finché non la avvii</string>
     <string name="batch_queue_keep">Conserva</string>
     <string name="shortcut_repatch_short">Modifica di nuovo</string>
     <string name="shortcut_repatch_long">Modifica di nuovo le app obsolete</string>
@@ -664,6 +671,8 @@ Per ottenere i risultati migliori, questa app raccomanda di applicare una patch 
     <string name="patcher_conflict_title">Conflitto del pacchetto</string>
     <string name="patcher_conflict_subtitle">Devi disinstallare la versione già presente</string>
     <string name="patcher_conflict_hint">L\'app modificata utilizza un certificato diverso rispetto alla versione installata. La disinstallazione cancellerà tutti i dati dell\'app</string>
+    <!-- The patched APK is for another kind of device, such as TV or Wear OS, so it may not start on this one -->
+    <string name="patcher_built_for_other_device">Creato per %s, quindi potrebbe non avviarsi qui. Salvalo per installarlo su quel dispositivo</string>
     <string name="patcher_installed_conflict_title">Disinstallazione richiesta</string>
     <string name="patcher_installed_conflict_body">"Morphe firma le applicazioni modificate con il proprio certificato, che è diverso da quello originale. Android richiede la rimozione della versione esistente prima che l'app patchata possa essere installata.
 
@@ -759,7 +768,7 @@ La disinstallazione cancellerà definitivamente tutti i dati dell'app."</string>
     <string name="plugin_activity_dialog_body">È richiesta l\'interazione dell\'utente per procedere con questo plugin</string>
     <string name="patcher_process_killed_message">Il sistema ha interrotto il patcher prima del termine, solitamente per liberare memoria. Chiudi altre app e riprova</string>
     <!-- Shown once Morphe is back after it was closed in the middle of patching, for a reason other than low memory. -->
-    <string name="patcher_interrupted_message">Morphe è stata chiusa prima del completamento del patching, quindi nulla è stato aggiornato. Riprova</string>
+    <string name="patcher_interrupted_message">Morphe è stata chiusa prima che il patching terminasse. Riprova</string>
     <!-- "%1$s" is where the setting is, such as "Settings > Patcher > Use embedded VM", built from the names on those screens. -->
     <string name="patcher_process_crashed_message">Il patcher è crashato prima di terminare. Se accade di nuovo, disattiva %1$s e segnala il problema includendo il log</string>
     <!-- Shown when a run fills the heap it was given. "%1$s" is the heap in megabytes. -->
@@ -868,14 +877,17 @@ La disinstallazione cancellerà definitivamente tutti i dati dell'app."</string>
     <string name="settings_appearance_translations_info_title">Le traduzioni per alcune lingue potrebbero essere incomplete o mancanti</string>
     <!-- Settings - Appearance Tab - Interface Scale -->
     <string name="settings_appearance_ui_scale">Scala dell\'interfaccia</string>
-    <!-- Settings - Appearance Tab - Home Screen Section -->
+    <!-- Settings - Appearance Tab - Screens Section -->
     <string name="settings_appearance_home_screen">Schermata home</string>
+    <string name="settings_appearance_screens">Schermi</string>
     <string name="settings_appearance_greeting_phrases">Frasi di saluto</string>
     <string name="settings_appearance_greeting_phrases_subtitle">Mostra un messaggio di saluto</string>
     <string name="settings_appearance_repatch_notice">Avviso di re-patch</string>
     <string name="settings_appearance_repatch_notice_description">Mostra un banner quando le applicazioni modificate possono essere rimodificate</string>
     <string name="settings_appearance_more_apps_card">Scheda Altre applicazioni</string>
     <string name="settings_appearance_more_apps_card_description">Mostra una scheda sotto le app che conduce alle patch della community</string>
+    <string name="settings_appearance_games_button">Pulsante Giochi</string>
+    <string name="settings_appearance_games_button_description">Mostra un pulsante per i mini-giochi durante il patching e nel risultato</string>
     <string name="settings_appearance_app_card_colors">Colori della scheda</string>
     <string name="settings_appearance_app_card_colors_default">Predefinita</string>
     <string name="settings_appearance_app_card_colors_default_description">Assegna a ogni app e fonte un colore specifico</string>
@@ -1246,7 +1258,7 @@ Dettagli: %2$s"</string>
     <string name="settings_system_apks_delete_all_confirm">Questo cancellerà permanentemente i file APK salvati mostrati qui</string>
     <string name="settings_system_apks_delete_selected_title">Cancellare gli APK selezionati?</string>
     <string name="settings_system_apks_delete_selected_confirm">Questo cancellerà permanentemente i file APK selezionati</string>
-    <string name="settings_system_apks_deleted_all">APK eliminati correttamente</string>
+    <string name="settings_system_apks_deleted_all">APK eliminati</string>
     <string name="settings_system_apks_delete_failed">Alcuni file APK non sono stati eliminati</string>
     <string name="settings_system_apks_export_zip_success">APK esportati con successo</string>
     <string name="settings_system_apks_export_zip_failed">Esportazione degli APK selezionati non riuscita</string>
@@ -1269,8 +1281,8 @@ Dettagli: %2$s"</string>
     <string name="settings_system_storage_temporary_title">File temporanei</string>
     <string name="settings_system_storage_temporary_description">File di lavoro creati durante l\'applicazione di patch</string>
     <string name="settings_system_storage_clear_all">Cancella tutte le cache</string>
-    <string name="settings_system_storage_clear_all_description">Libera tutto lo spazio cache recuperabile in una sola volta</string>
-    <string name="settings_system_storage_clear_all_confirm">Questa operazione cancella le risposte di rete messe in cache, le copie dell\'installer in fase di preparazione e i file temporanei. Gli APK originali e patchati vengono conservati</string>
+    <string name="settings_system_storage_clear_all_description">Ogni cache elencata sopra</string>
+    <string name="settings_system_storage_clear_all_confirm">Ogni cache sopra verrà svuotata. Gli APK originali e patchati verranno conservati</string>
     <string name="settings_system_storage_cleared">Liberati %s</string>
     <string name="settings_system_storage_patch_running_warning">È in esecuzione una patch e utilizza questi file. Eliminarli ora causa il fallimento</string>
     <string name="settings_system_storage_clear_anyway">Elimina comunque</string>
@@ -1278,14 +1290,14 @@ Dettagli: %2$s"</string>
     <string name="settings_system_storage_open_app_info_title">Apri l\'archiviazione dell\'app Android</string>
     <string name="settings_system_storage_open_app_info_description">Gestisci o cancella tutti i dati di Morphe tramite le impostazioni di sistema</string>
     <string name="settings_system_save_original_apks_title">Conserva gli APK originali</string>
-    <string name="settings_system_save_original_apks_description">Salva l\'APK pre-patch in modo che possa essere riutilizzato per il ri-patching senza dover selezionare nuovamente il file</string>
+    <string name="settings_system_save_original_apks_description">Riutilizza l\'APK originale durante il repatching, senza selezionare nuovamente il file</string>
     <string name="settings_system_save_patched_apks_title">Conserva gli APK patchati</string>
-    <string name="settings_system_save_patched_apks_description">Salva una copia dell\'APK patchato per un\'esportazione successiva o per la reinstallazione tramite il gestore</string>
+    <string name="settings_system_save_patched_apks_description">Conserva una copia per esportarla o reinstallarla in seguito</string>
     <!-- Settings - System Tab - Storage Management - Patched APKs Management -->
     <string name="settings_system_patched_apks_title">APK patchati</string>
     <string name="settings_system_patched_apks_empty">Non ci sono APK patchati salvati</string>
     <string name="settings_system_patched_apks_delete_title">Cancellare l\'APK patchato?</string>
-    <string name="settings_system_patched_apks_deleted">L\'APK patchato è stato eliminato correttamente </string>
+    <string name="settings_system_patched_apks_deleted">File APK patchato eliminato</string>
     <string name="settings_system_patched_apks_delete_all_title">Eliminare tutti gli APK modificati?</string>
     <!-- Settings - System Tab - Storage Management - Original APKs Management -->
     <string name="settings_system_original_apks_title">APK originali</string>

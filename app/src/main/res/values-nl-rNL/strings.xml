@@ -9,6 +9,8 @@
     <string name="home_app_status_newer_patches">Nieuwe patches</string>
     <!-- Mark on the card of an app built for a device other than a phone -->
     <string name="form_factor_tv">TV</string>
+    <!-- Named beside the other marks when one app has a build for a phone and for another device -->
+    <string name="form_factor_mobile">Telefoon</string>
     <string name="form_factor_automotive">Auto</string>
     <string name="home_no_patches_available">Geen patches beschikbaar</string>
     <string name="home_app_hide_title">Deze app verbergen?</string>
@@ -359,6 +361,10 @@ Kies waar de APK vandaan moet worden gehaald"</string>
     <string name="expert_mode_recommended">Aanbevolen patches</string>
     <string name="expert_mode_reset_to_default_done">Aanbevolen patches toegepast</string>
     <string name="expert_mode_selected_count">%1$s van %2$s geselecteerd</string>
+    <!-- Which build of an app with builds for several devices the patches are for, such as TV or Wear OS -->
+    <string name="expert_mode_form_factor">Voor de %s-build</string>
+    <!-- The same for the phone build, named as a common noun rather than by its mark -->
+    <string name="expert_mode_form_factor_mobile">Voor de telefoonbuild</string>
     <string name="expert_mode_saved_selection">Opgeslagen selectie</string>
     <string name="expert_mode_restore_saved_done">Opgeslagen selectie hersteld</string>
     <string name="expert_mode_copy_from_bundle_no_patches">Geen bijpassende patches in deze bundel</string>
@@ -489,7 +495,8 @@ Voor de beste resultaten beveelt deze app aan om een &lt;b&gt;volledig APK&lt;/b
     <string name="batch_patch_preparing_next">De volgende app wordt voorbereid…</string>
     <string name="batch_patch_progress_counter">Patchen van %1$s van %2$s</string>
     <string name="batch_patch_summary">%1$s gepatcht, %2$s mislukt, %3$s overgeslagen</string>
-    <string name="batch_patch_saved_hint">De gepatchte apps zijn opgeslagen. Installeer ze nu, of later vanuit de lijst met gepatchte APK\'s in de instellingen</string>
+    <string name="batch_patch_saved_hint">Gepatchte APK\'s zijn opgeslagen. Installeer ze nu of later vanaf het startscherm</string>
+    <string name="batch_patch_not_kept_hint">Gepatchte APK\'s worden niet bewaard. Installeer of exporteer ze voordat u dit scherm sluit</string>
     <string name="batch_patch_multiple_sources">Sommige apps combineren patches uit meer dan één bron, wat conflicten kan veroorzaken</string>
     <string name="batch_patch_needs_apk">Geen APK beschikbaar, voeg een bestand toe</string>
     <string name="batch_patch_wrong_package">Het bijgevoegde bestand behoort tot %s</string>
@@ -504,22 +511,22 @@ Voor de beste resultaten beveelt deze app aan om een &lt;b&gt;volledig APK&lt;/b
     <string name="batch_patch_apk_selected">APK geselecteerd</string>
     <string name="batch_patch_auto_download_stopped">Automatische APK-downloads zijn gestopt</string>
     <string name="batch_patch_auto_download_stop">Downloads stoppen</string>
-    <string name="batch_patch_auto_download_kept">De gedownloade APK kon niet worden gebruikt, dus de vorige is behouden</string>
+    <string name="batch_patch_auto_download_kept">De APK die is gedownload voor %s kon niet worden gebruikt, dus de vorige wordt bewaard</string>
     <string name="batch_patch_edit_patches">Patches kiezen</string>
     <string name="batch_patch_state_no_apk">Geen APK</string>
     <string name="batch_patch_state_no_patches">Geen patches</string>
     <string name="batch_patch_state_no_selection">Niets geselecteerd</string>
     <string name="batch_patch_no_selection">Geen van de beschikbare patches is geselecteerd</string>
     <string name="batch_patch_policy_install">Installeren na afronding</string>
-    <string name="batch_patch_policy_install_description">Installeert elke gepatchte app direct na het afronden van de wachtrij. Uitgeschakeld bewaart de APK\'s voor later</string>
+    <string name="batch_patch_policy_install_description">Installeert elke gepatchte app zodra de wachtrij is voltooid. Uit laat de APK\'s op dit scherm staan</string>
     <string name="batch_patch_policy_mount">Koppelen wanneer voltooid</string>
-    <string name="batch_patch_policy_mount_description">Koppelt elke gepatchte app zodra de wachtrij is voltooid. Uitgeschakeld bewaart de APK\'s voor later</string>
+    <string name="batch_patch_policy_mount_description">Koppelt elke gepatchte app zodra de wachtrij is voltooid. Uit laat de APK\'s op dit scherm staan</string>
     <string name="batch_patch_policy_install_mount">Installeren of koppelen wanneer voltooid</string>
-    <string name="batch_patch_policy_install_mount_description">Installeert of koppelt elke gepatchte app zodra de wachtrij is voltooid. Uit bewaart de APK\'s voor later</string>
+    <string name="batch_patch_policy_install_mount_description">Installeert of koppelt elke gepatchte app zodra de wachtrij is voltooid. Uit laat de APK\'s op dit scherm</string>
     <!-- Label of a footer button beside "Close". Keep it short, a longer one moves the buttons onto two rows -->
     <string name="batch_patch_start">Start</string>
     <string name="batch_patch_stop_title">Batch patchen stoppen?</string>
-    <string name="batch_patch_stop_description">De app die momenteel wordt gepatcht en alle nog in de wachtrij staande taken worden geannuleerd</string>
+    <string name="batch_patch_stop_description">De huidige app en de rest van de wachtrij worden geannuleerd</string>
     <!-- Label of a footer button beside "Done". Keep it short, a longer one moves the buttons onto two rows -->
     <string name="batch_patch_install_all">Alles installeren</string>
     <string name="batch_patch_install_failed">Installatie mislukt</string>
@@ -530,7 +537,7 @@ Voor de beste resultaten beveelt deze app aan om een &lt;b&gt;volledig APK&lt;/b
     <string name="batch_queue_clear_title">Wachtrij wissen?</string>
     <string name="batch_queue_clear_description">Alle apps worden uit de wachtrij verwijderd</string>
     <string name="batch_queue_keep_title">Wachtrij behouden?</string>
-    <string name="batch_queue_keep_description">De apps in de wachtrij wachten op het startscherm om later te worden gestart</string>
+    <string name="batch_queue_keep_description">De wachtrij wacht op het startscherm tot u deze start</string>
     <string name="batch_queue_keep">Behouden</string>
     <string name="shortcut_repatch_short">Opnieuw patchen</string>
     <string name="shortcut_repatch_long">Oude apps opnieuw patchen</string>
@@ -664,6 +671,8 @@ Voor de beste resultaten beveelt deze app aan om een &lt;b&gt;volledig APK&lt;/b
     <string name="patcher_conflict_title">Pakketconflict</string>
     <string name="patcher_conflict_subtitle">Je moet de bestaande versie verwijderen</string>
     <string name="patcher_conflict_hint">De aangepaste app gebruikt een ander certificaat dan de geïnstalleerde versie. Door het verwijderen worden alle app-gegevens gewist.</string>
+    <!-- The patched APK is for another kind of device, such as TV or Wear OS, so it may not start on this one -->
+    <string name="patcher_built_for_other_device">Gebouwd voor %s, dus het start hier mogelijk niet. Sla het op om op dat apparaat te installeren</string>
     <string name="patcher_installed_conflict_title">Vereiste deïnstallatie</string>
     <string name="patcher_installed_conflict_body">"Morphe ondertekent gepatchte apps met zijn eigen certificaat, dat verschilt van het origineel. Android vereist dat de bestaande versie wordt verwijderd voordat de gepatchte app kan worden geïnstalleerd.
 
@@ -759,7 +768,7 @@ Deïnstalleren wist alle app-gegevens permanent."</string>
     <string name="plugin_activity_dialog_body">Gebruikersinteractie is vereist om te kunnen doorgaan met deze plugin</string>
     <string name="patcher_process_killed_message">Het systeem heeft de patcher gestopt voordat deze klaar was, meestal om geheugen vrij te maken. Sluit andere apps en probeer opnieuw</string>
     <!-- Shown once Morphe is back after it was closed in the middle of patching, for a reason other than low memory. -->
-    <string name="patcher_interrupted_message">Morphe werd gesloten voordat het patchen was voltooid, dus er is niets gepatcht. Probeer het opnieuw</string>
+    <string name="patcher_interrupted_message">Morphe werd gesloten voordat het patchen was voltooid. Probeer het opnieuw</string>
     <!-- "%1$s" is where the setting is, such as "Settings > Patcher > Use embedded VM", built from the names on those screens. -->
     <string name="patcher_process_crashed_message">De patcher is gecrasht voordat deze klaar was. Als dit opnieuw gebeurt, schakel %1$s uit en rapporteer het probleem met het logboek</string>
     <!-- Shown when a run fills the heap it was given. "%1$s" is the heap in megabytes. -->
@@ -868,14 +877,17 @@ Deïnstalleren wist alle app-gegevens permanent."</string>
     <string name="settings_appearance_translations_info_title">Vertalingen voor sommige talen kunnen ontbreken of onvolledig zijn</string>
     <!-- Settings - Appearance Tab - Interface Scale -->
     <string name="settings_appearance_ui_scale">Interfaceschaal</string>
-    <!-- Settings - Appearance Tab - Home Screen Section -->
+    <!-- Settings - Appearance Tab - Screens Section -->
     <string name="settings_appearance_home_screen">Startscherm</string>
+    <string name="settings_appearance_screens">Schermen</string>
     <string name="settings_appearance_greeting_phrases">Begroetingszinnen</string>
     <string name="settings_appearance_greeting_phrases_subtitle">Toont een begroetingsbericht</string>
     <string name="settings_appearance_repatch_notice">Melding over opnieuw patchen</string>
     <string name="settings_appearance_repatch_notice_description">Toont een banner wanneer gepatchte apps opnieuw kunnen worden gepatcht</string>
     <string name="settings_appearance_more_apps_card">Kaart Meer apps</string>
     <string name="settings_appearance_more_apps_card_description">Toont een kaart onder de apps die leidt naar community-patches</string>
+    <string name="settings_appearance_games_button">Games-knop</string>
+    <string name="settings_appearance_games_button_description">Toont een knop naar de mini-games tijdens het patchen en op het resultaat</string>
     <string name="settings_appearance_app_card_colors">Kaartkleuren</string>
     <string name="settings_appearance_app_card_colors_default">Standaard</string>
     <string name="settings_appearance_app_card_colors_default_description">Geef elke app en bron een eigen kleur</string>
@@ -1246,7 +1258,7 @@ Details: %2$s"</string>
     <string name="settings_system_apks_delete_all_confirm">Dit verwijdert de opgeslagen APK-bestanden die hier worden weergegeven permanent.</string>
     <string name="settings_system_apks_delete_selected_title">Geselecteerde APK\'s verwijderen?</string>
     <string name="settings_system_apks_delete_selected_confirm">Dit verwijdert de geselecteerde APK-bestanden permanent.</string>
-    <string name="settings_system_apks_deleted_all">APK\'s zijn succesvol verwijderd.</string>
+    <string name="settings_system_apks_deleted_all">APK\'s verwijderd</string>
     <string name="settings_system_apks_delete_failed">Sommige APK-bestanden konden niet worden verwijderd</string>
     <string name="settings_system_apks_export_zip_success">Geselecteerde APK\'s geëxporteerd</string>
     <string name="settings_system_apks_export_zip_failed">Kon geselecteerde APK\'s niet exporteren</string>
@@ -1269,8 +1281,8 @@ Details: %2$s"</string>
     <string name="settings_system_storage_temporary_title">Tijdelijke bestanden</string>
     <string name="settings_system_storage_temporary_description">Werkbestanden die tijdens het patchen zijn gemaakt</string>
     <string name="settings_system_storage_clear_all">Alle caches wissen</string>
-    <string name="settings_system_storage_clear_all_description">Maakt alle terugwinbare cache ruimte in één keer vrij</string>
-    <string name="settings_system_storage_clear_all_confirm">Hiermee worden gecachte netwerkantwoorden, staged installatiekopieën en tijdelijke bestanden gewist. Originele en gepatchte APK\'s worden bewaard</string>
+    <string name="settings_system_storage_clear_all_description">Elke hierboven vermelde cache</string>
+    <string name="settings_system_storage_clear_all_confirm">Alle bovenstaande caches worden gewist. Originele en gepatchte APK\'s worden bewaard</string>
     <string name="settings_system_storage_cleared">%s vrijgemaakt</string>
     <string name="settings_system_storage_patch_running_warning">Er wordt een patch uitgevoerd en deze bestanden gebruikt. Het nu wissen zal de bewerking laten mislukken</string>
     <string name="settings_system_storage_clear_anyway">Toch wissen</string>
@@ -1278,9 +1290,9 @@ Details: %2$s"</string>
     <string name="settings_system_storage_open_app_info_title">Open Android-app opslag</string>
     <string name="settings_system_storage_open_app_info_description">Beheer of wis alle Morphe-gegevens via de systeeminstellingen</string>
     <string name="settings_system_save_original_apks_title">Bewaar originele APK\'s</string>
-    <string name="settings_system_save_original_apks_description">Bewaar de APK vóór het patchen, zodat deze opnieuw kan worden gebruikt voor het opnieuw patchen zonder het bestand opnieuw te selecteren</string>
+    <string name="settings_system_save_original_apks_description">Hergebruik de originele APK bij het opnieuw patchen, zonder het bestand opnieuw te selecteren</string>
     <string name="settings_system_save_patched_apks_title">Bewaar gepatchte APK\'s</string>
-    <string name="settings_system_save_patched_apks_description">Bewaar een kopie van de gepatchte APK voor later exporteren of opnieuw installeren vanuit de manager</string>
+    <string name="settings_system_save_patched_apks_description">Bewaar een kopie om later te exporteren of opnieuw te installeren</string>
     <!-- Settings - System Tab - Storage Management - Patched APKs Management -->
     <string name="settings_system_patched_apks_title">Gepatchte APK\'s</string>
     <string name="settings_system_patched_apks_empty">Nog geen gepatchte APK\'s opgeslagen</string>

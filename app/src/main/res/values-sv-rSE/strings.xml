@@ -9,6 +9,8 @@
     <string name="home_app_status_newer_patches">Nya patchar</string>
     <!-- Mark on the card of an app built for a device other than a phone -->
     <string name="form_factor_tv">TV</string>
+    <!-- Named beside the other marks when one app has a build for a phone and for another device -->
+    <string name="form_factor_mobile">Telefon</string>
     <string name="form_factor_automotive">Bil</string>
     <string name="home_no_patches_available">Inga tillägg är tillgängliga</string>
     <string name="home_app_hide_title">Dölj den här appen?</string>
@@ -359,6 +361,10 @@ Välj var dess APK ska hämtas ifrån"</string>
     <string name="expert_mode_recommended">Rekommenderade tillägg</string>
     <string name="expert_mode_reset_to_default_done">Rekommenderade tillägg har tillämpats</string>
     <string name="expert_mode_selected_count">%1$s av %2$s har valts</string>
+    <!-- Which build of an app with builds for several devices the patches are for, such as TV or Wear OS -->
+    <string name="expert_mode_form_factor">För %s-versionen</string>
+    <!-- The same for the phone build, named as a common noun rather than by its mark -->
+    <string name="expert_mode_form_factor_mobile">För telefonversionen</string>
     <string name="expert_mode_saved_selection">Sparat urval</string>
     <string name="expert_mode_restore_saved_done">Det sparade urvalet har återställts</string>
     <string name="expert_mode_copy_from_bundle_no_patches">Inga matchande tillägg i det här paketet</string>
@@ -489,7 +495,8 @@ För bästa resultat rekommenderar den här appen att du modifierar en &lt;b&gt;
     <string name="batch_patch_preparing_next">Förbereder nästa app …</string>
     <string name="batch_patch_progress_counter">Modifierar %1$s av %2$s</string>
     <string name="batch_patch_summary">%1$s modifierades, %2$s misslyckades, %3$s hoppades över</string>
-    <string name="batch_patch_saved_hint">De modifierade apparna har sparats. Installera dem nu eller senare från listan över modifierade APK-filer i inställningarna</string>
+    <string name="batch_patch_saved_hint">Modifierade APK-filer har sparats. Installera dem nu eller senare från startskärmen</string>
+    <string name="batch_patch_not_kept_hint">Modifierade APK-filer sparas inte. Installera eller exportera dem innan du stänger den här skärmen</string>
     <string name="batch_patch_multiple_sources">Vissa appar kombinerar tillägg från fler än en källa, vilket kan orsaka konflikter</string>
     <string name="batch_patch_needs_apk">Ingen APK-fil är tillgänglig, ange en fil</string>
     <string name="batch_patch_wrong_package">Den angivna filen hör till %s</string>
@@ -504,22 +511,22 @@ För bästa resultat rekommenderar den här appen att du modifierar en &lt;b&gt;
     <string name="batch_patch_apk_selected">APK-fil har valts</string>
     <string name="batch_patch_auto_download_stopped">Automatiska APK-nedladdningar har stoppats</string>
     <string name="batch_patch_auto_download_stop">Stoppa nedladdningar</string>
-    <string name="batch_patch_auto_download_kept">Den nedladdade APK-filen kunde inte användas, så den tidigare behålls</string>
+    <string name="batch_patch_auto_download_kept">APK-filen som laddades ner för %s kunde inte användas, så den föregående behålls</string>
     <string name="batch_patch_edit_patches">Välj tillägg</string>
     <string name="batch_patch_state_no_apk">Ingen APK-fil</string>
     <string name="batch_patch_state_no_patches">Inga tillägg</string>
     <string name="batch_patch_state_no_selection">Inget har valts</string>
     <string name="batch_patch_no_selection">Inget av de tillgängliga tilläggen har valts</string>
     <string name="batch_patch_policy_install">Installera när modifieringen är klar</string>
-    <string name="batch_patch_policy_install_description">Installerar alla modifierade appar direkt efter att kön är klar. Om det här alternativet är inaktiverat sparas APK-filerna till senare.</string>
+    <string name="batch_patch_policy_install_description">Installerar varje modifierad app när kön är klar. Om alternativet är avstängt lämnas APK-filerna på den här skärmen</string>
     <string name="batch_patch_policy_mount">Montera när det är klart</string>
-    <string name="batch_patch_policy_mount_description">Monterar alla modifierade appar när kön är klar. Om det här alternativet är inaktiverat sparas APK-filerna till senare</string>
+    <string name="batch_patch_policy_mount_description">Monterar alla modifierade appar när kön är klar. Om det här alternativet är inaktiverat lämnas APK-filerna kvar på den här skärmen</string>
     <string name="batch_patch_policy_install_mount">Installera eller montera när det är klart</string>
-    <string name="batch_patch_policy_install_mount_description">Installerar eller monterar alla modifierade appar när kön är klar. Om det här alternativet är inaktiverat sparas APK-filerna till senare</string>
+    <string name="batch_patch_policy_install_mount_description">Installerar eller monterar alla modifierade appar när kön är klar. Om det här alternativet är inaktiverat lämnas APK-filerna på den här skärmen</string>
     <!-- Label of a footer button beside "Close". Keep it short, a longer one moves the buttons onto two rows -->
     <string name="batch_patch_start">Starta</string>
     <string name="batch_patch_stop_title">Stoppa gruppmodifiering?</string>
-    <string name="batch_patch_stop_description">Den app som modifieras just nu och allt som fortfarande står i kön avbryts</string>
+    <string name="batch_patch_stop_description">Den aktuella appen och resten av kön kommer att avbrytas</string>
     <!-- Label of a footer button beside "Done". Keep it short, a longer one moves the buttons onto two rows -->
     <string name="batch_patch_install_all">Installera alla</string>
     <string name="batch_patch_install_failed">Installationen misslyckades</string>
@@ -530,7 +537,7 @@ För bästa resultat rekommenderar den här appen att du modifierar en &lt;b&gt;
     <string name="batch_queue_clear_title">Rensa kön?</string>
     <string name="batch_queue_clear_description">Alla appar tas bort från kön</string>
     <string name="batch_queue_keep_title">Behåll kön?</string>
-    <string name="batch_queue_keep_description">De köade apparna kommer att vänta på startskärmen för att startas senare</string>
+    <string name="batch_queue_keep_description">Kön väntar på startskärmen tills du startar den</string>
     <string name="batch_queue_keep">Behåll</string>
     <string name="shortcut_repatch_short">Modifiera igen</string>
     <string name="shortcut_repatch_long">Modifiera inaktuella appar igen</string>
@@ -664,6 +671,8 @@ För bästa resultat rekommenderar den här appen att du modifierar en &lt;b&gt;
     <string name="patcher_conflict_title">Paketkonflikt</string>
     <string name="patcher_conflict_subtitle">Du måste avinstallera den befintliga versionen</string>
     <string name="patcher_conflict_hint">Den modifierade appen använder ett annat certifikat än den installerade versionen. Om du avinstallerar raderas alla appdata</string>
+    <!-- The patched APK is for another kind of device, such as TV or Wear OS, so it may not start on this one -->
+    <string name="patcher_built_for_other_device">Byggd för %s, så den startar kanske inte här. Spara den för att installera på den enheten</string>
     <string name="patcher_installed_conflict_title">Avinstallation krävs</string>
     <string name="patcher_installed_conflict_body">"Morphe signerar modifierade appar med sitt eget certifikat som skiljer sig från det ursprungliga. Android kräver att du tar bort den befintliga versionen innan den modifierade appen kan installeras.
 
@@ -759,7 +768,7 @@ Om du avinstallerar raderas alla appdata permanent"</string>
     <string name="plugin_activity_dialog_body">Användarinteraktion krävs för att fortsätta med den här insticksmodulen</string>
     <string name="patcher_process_killed_message">Systemet stoppade modifieringsverktyget innan det var klart, oftast för att frigöra minne. Stäng andra appar och försök igen</string>
     <!-- Shown once Morphe is back after it was closed in the middle of patching, for a reason other than low memory. -->
-    <string name="patcher_interrupted_message">Morphe stängdes innan patchningen var klar, så inget patchades. Försök igen</string>
+    <string name="patcher_interrupted_message">Morphe stängdes innan modifieringen var klar. Försök igen</string>
     <!-- "%1$s" is where the setting is, such as "Settings > Patcher > Use embedded VM", built from the names on those screens. -->
     <string name="patcher_process_crashed_message">Modifieringsverktyget kraschade innan det var klart. Om det händer igen, inaktivera %1$s och rapportera problemet med loggen</string>
     <!-- Shown when a run fills the heap it was given. "%1$s" is the heap in megabytes. -->
@@ -868,14 +877,17 @@ Om du avinstallerar raderas alla appdata permanent"</string>
     <string name="settings_appearance_translations_info_title">Översättningar till vissa språk kan saknas eller vara ofullständiga</string>
     <!-- Settings - Appearance Tab - Interface Scale -->
     <string name="settings_appearance_ui_scale">Gränssnittsskala</string>
-    <!-- Settings - Appearance Tab - Home Screen Section -->
+    <!-- Settings - Appearance Tab - Screens Section -->
     <string name="settings_appearance_home_screen">Startskärm</string>
+    <string name="settings_appearance_screens">Skärmar</string>
     <string name="settings_appearance_greeting_phrases">Hälsningsfraser</string>
     <string name="settings_appearance_greeting_phrases_subtitle">Visar ett hälsningsmeddelande</string>
     <string name="settings_appearance_repatch_notice">Meddelande om att modifiera igen</string>
     <string name="settings_appearance_repatch_notice_description">Visa en banner när modifierade appar kan modifieras igen</string>
     <string name="settings_appearance_more_apps_card">Kortet Fler appar</string>
     <string name="settings_appearance_more_apps_card_description">Visar ett kort under apparna som leder till tillägg från communityn</string>
+    <string name="settings_appearance_games_button">Knappen Spel</string>
+    <string name="settings_appearance_games_button_description">Visar en knapp till minispelen under patchning och på resultatet</string>
     <string name="settings_appearance_app_card_colors">Färger för appkort</string>
     <string name="settings_appearance_app_card_colors_default">Standard</string>
     <string name="settings_appearance_app_card_colors_default_description">Ge varje app och källa en egen färg</string>
@@ -1246,7 +1258,7 @@ Information: %2$s"</string>
     <string name="settings_system_apks_delete_all_confirm">Det här raderar de sparade APK-filerna som visas här permanent</string>
     <string name="settings_system_apks_delete_selected_title">Radera markerade APK-filer?</string>
     <string name="settings_system_apks_delete_selected_confirm">Det här raderar de markerade APK-filerna permanent</string>
-    <string name="settings_system_apks_deleted_all">APK-filerna har raderats</string>
+    <string name="settings_system_apks_deleted_all">APK-filer raderade</string>
     <string name="settings_system_apks_delete_failed">Vissa APK-filer kunde inte tas bort</string>
     <string name="settings_system_apks_export_zip_success">De markerade APK-filerna har exporterats</string>
     <string name="settings_system_apks_export_zip_failed">Det gick inte att exportera de markerade APK-filerna</string>
@@ -1269,8 +1281,8 @@ Information: %2$s"</string>
     <string name="settings_system_storage_temporary_title">Tillfälliga filer</string>
     <string name="settings_system_storage_temporary_description">Arbetsfiler som skapas under modifiering</string>
     <string name="settings_system_storage_clear_all">Rensa alla cacheminnen</string>
-    <string name="settings_system_storage_clear_all_description">Frigör allt återtagbart cacheutrymme på en gång</string>
-    <string name="settings_system_storage_clear_all_confirm">Detta rensar cachelagrade nätverkssvar, tillfälligt lagrade installerarkopior och tillfälliga filer. Ursprungliga och modifierade APK-filer behålls</string>
+    <string name="settings_system_storage_clear_all_description">Varje cache som listas ovan</string>
+    <string name="settings_system_storage_clear_all_confirm">Alla ovanstående cacher kommer att rensas. Original- och modifierade APK-filer behålls</string>
     <string name="settings_system_storage_cleared">Frigjorde %s</string>
     <string name="settings_system_storage_patch_running_warning">Ett tillägg körs och använder dessa filer. Om du rensar dem nu så slutar det att fungera</string>
     <string name="settings_system_storage_clear_anyway">Rensa ändå</string>
@@ -1278,14 +1290,14 @@ Information: %2$s"</string>
     <string name="settings_system_storage_open_app_info_title">Öppna Android-appens lagring</string>
     <string name="settings_system_storage_open_app_info_description">Hantera eller rensa alla data för Morphe i systeminställningarna</string>
     <string name="settings_system_save_original_apks_title">Spara ursprungliga APK-filer</string>
-    <string name="settings_system_save_original_apks_description">Spara den omodifierade APK-filen så att du kan modifiera den igen utan att behöva välja filen på nytt</string>
+    <string name="settings_system_save_original_apks_description">Återanvänd den omodifierade APK-filen vid ommodifiering, utan att behöva välja filen på nytt</string>
     <string name="settings_system_save_patched_apks_title">Spara modifierade APK-filer</string>
-    <string name="settings_system_save_patched_apks_description">Spara en kopia av den modifierade APK-filen för senare export eller ominstallation via Manager</string>
+    <string name="settings_system_save_patched_apks_description">Behåll en kopia för att exportera eller installera om senare</string>
     <!-- Settings - System Tab - Storage Management - Patched APKs Management -->
     <string name="settings_system_patched_apks_title">Modifierade APK-filer</string>
     <string name="settings_system_patched_apks_empty">Inga modifierade APK-filer har sparats än</string>
     <string name="settings_system_patched_apks_delete_title">Radera modifierad APK-fil?</string>
-    <string name="settings_system_patched_apks_deleted">Modifierad APK-fil har raderats</string>
+    <string name="settings_system_patched_apks_deleted">Modifierad APK raderad</string>
     <string name="settings_system_patched_apks_delete_all_title">Radera alla modifierade APK-filer?</string>
     <!-- Settings - System Tab - Storage Management - Original APKs Management -->
     <string name="settings_system_original_apks_title">Ursprungliga APK-filer</string>

@@ -9,6 +9,8 @@
     <string name="home_app_status_newer_patches">Νέες τροποποιήσεις</string>
     <!-- Mark on the card of an app built for a device other than a phone -->
     <string name="form_factor_tv">Τηλεόραση</string>
+    <!-- Named beside the other marks when one app has a build for a phone and for another device -->
+    <string name="form_factor_mobile">Τηλέφωνο</string>
     <string name="form_factor_automotive">Αυτοκίνητο</string>
     <string name="home_no_patches_available">Δεν υπάρχουν διαθέσιμες τροποποιήσεις</string>
     <string name="home_app_hide_title"> Απόκρυψη αυτής της εφαρμογής;</string>
@@ -359,6 +361,10 @@
     <string name="expert_mode_recommended">Συνιστώμενες τροποποιήσεις</string>
     <string name="expert_mode_reset_to_default_done">Εφαρμόστηκαν οι προτεινόμενες διορθώσεις</string>
     <string name="expert_mode_selected_count">%1$s από τα %2$s επιλέχθηκαν</string>
+    <!-- Which build of an app with builds for several devices the patches are for, such as TV or Wear OS -->
+    <string name="expert_mode_form_factor">Για την έκδοση %s</string>
+    <!-- The same for the phone build, named as a common noun rather than by its mark -->
+    <string name="expert_mode_form_factor_mobile">Για την έκδοση τηλεφώνου</string>
     <string name="expert_mode_saved_selection">Αποθηκευμένη επιλογή</string>
     <string name="expert_mode_restore_saved_done">Επαναφορά επιλεγμένων αποθηκευμένων στοιχείων</string>
     <string name="expert_mode_copy_from_bundle_no_patches">Δεν βρέθηκαν αντίστοιχες τροποποιήσεις σε αυτό το πακέτο</string>
@@ -489,7 +495,8 @@
     <string name="batch_patch_preparing_next">Προετοιμασία της επόμενης εφαρμογής…</string>
     <string name="batch_patch_progress_counter">Τροποποίηση %1$s από %2$s</string>
     <string name="batch_patch_summary">%1$s επιδιορθώθηκε, %2$s απέτυχε, %3$s παρακάμφθηκαν</string>
-    <string name="batch_patch_saved_hint">Οι διορθωμένες εφαρμογές έχουν αποθηκευτεί. Εγκαταστήστε τες τώρα, ή αργότερα από τη λίστα των διορθωμένων APK στις ρυθμίσεις</string>
+    <string name="batch_patch_saved_hint">Τα τροποποιημένα APK αποθηκεύτηκαν. Εγκαταστήστε τα τώρα ή αργότερα από την αρχική οθόνη</string>
+    <string name="batch_patch_not_kept_hint">Τα τροποποιημένα APK δεν διατηρούνται. Εγκαταστήστε ή εξάγετε τα πριν κλείσετε αυτή την οθόνη</string>
     <string name="batch_patch_multiple_sources">Ορισμένες εφαρμογές συνδυάζουν διορθώσεις από περισσότερες από μία πηγές, κάτι που μπορεί να προκαλέσει συγκρούσεις</string>
     <string name="batch_patch_needs_apk">Δεν είναι διαθέσιμο APK, επισυνάψτε ένα αρχείο</string>
     <string name="batch_patch_wrong_package">Το επισυναπτόμενο αρχείο ανήκει στο %s</string>
@@ -504,22 +511,22 @@
     <string name="batch_patch_apk_selected">Επιλέχτηκε APK</string>
     <string name="batch_patch_auto_download_stopped">Οι αυτόματες λήψεις APK σταμάτησαν</string>
     <string name="batch_patch_auto_download_stop">Διακοπή λήψεις</string>
-    <string name="batch_patch_auto_download_kept">Το ληφθέν APK δεν μπορούσε να χρησιμοποιηθεί, οπότε διατηρήθηκε το προηγούμενο</string>
+    <string name="batch_patch_auto_download_kept">Το APK που λήφθηκε για το %s δεν μπορούσε να χρησιμοποιηθεί, επομένως διατηρείται το προηγούμενο</string>
     <string name="batch_patch_edit_patches">Επιλέξτε διορθώσεις</string>
     <string name="batch_patch_state_no_apk">Δεν υπάρχει APK</string>
     <string name="batch_patch_state_no_patches">Δεν υπάρχουν διορθώσεις</string>
     <string name="batch_patch_state_no_selection">Καμία επιλογή</string>
     <string name="batch_patch_no_selection">Κανένα από τα διαθέσιμα patches δεν έχει επιλεγεί</string>
     <string name="batch_patch_policy_install">Εγκατάσταση μετά την ολοκλήρωση</string>
-    <string name="batch_patch_policy_install_description">Εγκαθιστά κάθε διορθωμένη εφαρμογή αμέσως μετά την ολοκλήρωση της ουράς. Η απενεργοποίηση διατηρεί τα APK για αργότερα</string>
+    <string name="batch_patch_policy_install_description">Εγκατασταίνει κάθε τροποποιημένη εφαρμογή μόλις ολοκληρωθεί η ουρά. Η απενεργοποίηση αφήνει τα APK σε αυτή την οθόνη</string>
     <string name="batch_patch_policy_mount">Προσάρτηση κατά την ολοκλήρωση</string>
-    <string name="batch_patch_policy_mount_description">Προσαρτά κάθε τροποποιημένη εφαρμογή μόλις ολοκληρωθεί η ουρά. Η απενεργοποίηση διατηρεί τα APK για αργότερα</string>
+    <string name="batch_patch_policy_mount_description">Προσαρτά κάθε τροποποιημένη εφαρμογή μόλις ολοκληρωθεί η ουρά. Η απενεργοποίηση αφήνει τα APK σε αυτήν την οθόνη</string>
     <string name="batch_patch_policy_install_mount">Εγκατάσταση ή προσάρτηση κατά την ολοκλήρωση</string>
-    <string name="batch_patch_policy_install_mount_description">Εγκαθιστά ή προσαρτά κάθε τροποποιημένη εφαρμογή μόλις ολοκληρωθεί η ουρά. Η επιλογή Off διατηρεί τα APK για αργότερα.</string>
+    <string name="batch_patch_policy_install_mount_description">Εγκαθιστά ή προσαρτά κάθε τροποποιημένη εφαρμογή μόλις ολοκληρωθεί η ουρά. Η απενεργοποίηση αφήνει τα APK σε αυτήν την οθόνη</string>
     <!-- Label of a footer button beside "Close". Keep it short, a longer one moves the buttons onto two rows -->
     <string name="batch_patch_start">Αρχή</string>
     <string name="batch_patch_stop_title">Διακοπή ομαδικής διόρθωσης;</string>
-    <string name="batch_patch_stop_description">Η εφαρμογή που επιδιορθώνεται αυτή τη στιγμή και όλα όσα είναι ακόμα σε ουρά θα ακυρωθούν</string>
+    <string name="batch_patch_stop_description">Η τρέχουσα εφαρμογή και το υπόλοιπο της ουράς θα ακυρωθούν</string>
     <!-- Label of a footer button beside "Done". Keep it short, a longer one moves the buttons onto two rows -->
     <string name="batch_patch_install_all">Εγκατάσταση όλων</string>
     <string name="batch_patch_install_failed">Η εγκατάσταση απέτυχε</string>
@@ -530,7 +537,7 @@
     <string name="batch_queue_clear_title">Καθαρισμός ουράς;</string>
     <string name="batch_queue_clear_description">Όλες οι εφαρμογές θα αφαιρεθούν από την ουρά</string>
     <string name="batch_queue_keep_title">Να διατηρηθεί η ουρά;</string>
-    <string name="batch_queue_keep_description">Οι εφαρμογές στην ουρά θα περιμένουν στην αρχική οθόνη για να ξεκινήσουν αργότερα</string>
+    <string name="batch_queue_keep_description">Η ουρά αναμένει στην αρχική οθόνη μέχρι να την ξεκινήσετε</string>
     <string name="batch_queue_keep">Διατήρηση</string>
     <string name="shortcut_repatch_short">Επανάληψη διόρθωσης</string>
     <string name="shortcut_repatch_long">Επανάληψη διόρθωσης ξεπερασμένων εφαρμογών</string>
@@ -664,6 +671,8 @@
     <string name="patcher_conflict_title">Σύγκρουση πακέτου</string>
     <string name="patcher_conflict_subtitle">Πρέπει να απεγκαταστήσετε την υπάρχουσα έκδοση</string>
     <string name="patcher_conflict_hint">Η τροποποιημένη εφαρμογή χρησιμοποιεί διαφορετικό πιστοποιητικό από την εγκατεστημένη έκδοση. Η απεγκατάσταση θα διαγράψει όλα τα δεδομένα της εφαρμογής.</string>
+    <!-- The patched APK is for another kind of device, such as TV or Wear OS, so it may not start on this one -->
+    <string name="patcher_built_for_other_device">Δημιουργήθηκε για %s, οπότε ενδέχεται να μην ξεκινήσει εδώ. Αποθηκεύστε το για να το εγκαταστήσετε σε τη συσκευή εκείνη</string>
     <string name="patcher_installed_conflict_title">Απαιτείται απεγκατάσταση</string>
     <string name="patcher_installed_conflict_body">"Η Morphe υπογράφει τις τροποποιημένες εφαρμογές με το δικό της πιστοποιητικό, το οποίο διαφέρει από το αρχικό. Το Android απαιτεί την κατάργηση της υπάρχουσας έκδοσης πριν από την εγκατάσταση της τροποποιημένης εφαρμογής.
 
@@ -759,7 +768,7 @@
     <string name="plugin_activity_dialog_body">Απαιτείται αλληλεπίδραση χρήστη για να συνεχίσετε με αυτό το πρόσθετο.</string>
     <string name="patcher_process_killed_message">Το σύστημα σταμάτησε τον patcher πριν ολοκληρωθεί, συνήθως για να ελευθερώσει μνήμη. Κλείστε άλλες εφαρμογές και δοκιμάστε ξανά</string>
     <!-- Shown once Morphe is back after it was closed in the middle of patching, for a reason other than low memory. -->
-    <string name="patcher_interrupted_message">Το Morphe έκλεισε πριν ολοκληρωθεί η εφαρμογή των διορθώσεων, επομένως δεν εφαρμόστηκε τίποτα. Δοκιμάστε ξανά</string>
+    <string name="patcher_interrupted_message">Το Morphe έκλεισε πριν ολοκληρωθεί η τροποποίηση. Δοκιμάστε ξανά</string>
     <!-- "%1$s" is where the setting is, such as "Settings > Patcher > Use embedded VM", built from the names on those screens. -->
     <string name="patcher_process_crashed_message">Ο τροποποιητής κατέρρευσε πριν ολοκληρωθεί. Εάν συμβεί ξανά, απενεργοποιήστε το %1$s και αναφέρετε το πρόβλημα με το αρχείο καταγραφής</string>
     <!-- Shown when a run fills the heap it was given. "%1$s" is the heap in megabytes. -->
@@ -868,14 +877,17 @@
     <string name="settings_appearance_translations_info_title">Οι μεταφράσεις για ορισμένες γλώσσες μπορεί να λείπουν ή να μην είναι ολοκληρωμένες</string>
     <!-- Settings - Appearance Tab - Interface Scale -->
     <string name="settings_appearance_ui_scale">Κλίμακα διεπαφής</string>
-    <!-- Settings - Appearance Tab - Home Screen Section -->
+    <!-- Settings - Appearance Tab - Screens Section -->
     <string name="settings_appearance_home_screen">Αρχική οθόνη</string>
+    <string name="settings_appearance_screens">Οθόνες</string>
     <string name="settings_appearance_greeting_phrases">Φράσεις υποδοχής</string>
     <string name="settings_appearance_greeting_phrases_subtitle">Εμφανίζει ένα μήνυμα χαιρετισμού</string>
     <string name="settings_appearance_repatch_notice">Ειδοποίηση επανάληψης τροποποιήσεων</string>
     <string name="settings_appearance_repatch_notice_description">Εμφανίζει banner όταν οι διορθωμένες εφαρμογές μπορούν να επαναδιορθωθούν</string>
     <string name="settings_appearance_more_apps_card">Κάρτα περισσότερων εφαρμογών</string>
     <string name="settings_appearance_more_apps_card_description">Εμφανίζει μια κάρτα κάτω από τις εφαρμογές που οδηγεί σε κοινοτικά διορθώματα</string>
+    <string name="settings_appearance_games_button">Κουμπί \"Παιχνίδια\"</string>
+    <string name="settings_appearance_games_button_description">Εμφανίζει ένα κουμπί για τα μίνι παιχνίδια κατά την εφαρμογή διορθώσεων και στο αποτέλεσμα</string>
     <string name="settings_appearance_app_card_colors">Χρώματα καρτών</string>
     <string name="settings_appearance_app_card_colors_default">Προεπιλογή</string>
     <string name="settings_appearance_app_card_colors_default_description">Δώστε σε κάθε εφαρμογή και πηγή το δικό της χρώμα</string>
@@ -1246,7 +1258,7 @@ morphe_header_custom_dark.png
     <string name="settings_system_apks_delete_all_confirm">Αυτό θα διαγράψει οριστικά τα αποθηκευμένα αρχεία APK που εμφανίζονται εδώ</string>
     <string name="settings_system_apks_delete_selected_title">Διαγραφή επιλεγμένων APK;</string>
     <string name="settings_system_apks_delete_selected_confirm">Αυτό θα διαγράψει οριστικά τα επιλεγμένα αρχεία APK</string>
-    <string name="settings_system_apks_deleted_all">APK διαγράφηκαν με επιτυχία</string>
+    <string name="settings_system_apks_deleted_all">Τα APK διαγράφηκαν</string>
     <string name="settings_system_apks_delete_failed">Ορισμένα αρχεία APK δεν ήταν δυνατό να διαγραφούν</string>
     <string name="settings_system_apks_export_zip_success">Εξαγωγή επιλεγμένων APK</string>
     <string name="settings_system_apks_export_zip_failed">Αποτυχία εξαγωγής επιλεγμένων APK</string>
@@ -1269,8 +1281,8 @@ morphe_header_custom_dark.png
     <string name="settings_system_storage_temporary_title">Προσωρινά αρχεία</string>
     <string name="settings_system_storage_temporary_description">Αρχεία εργασίας που δημιουργούνται κατά τη διάρκεια της επιδιόρθωσης</string>
     <string name="settings_system_storage_clear_all">Εκκαθάριση όλων των κρυφών μνημών</string>
-    <string name="settings_system_storage_clear_all_description">Απελευθερώνει όλο τον χώρο κρυφής μνήμης που μπορεί να ανακτηθεί ταυτόχρονα</string>
-    <string name="settings_system_storage_clear_all_confirm">Αυτό θα διαγράψει τις αποθηκευμένες στην κρυφή μνήμη απαντήσεις δικτύου, τα αντίγραφα εγκαταστάτη που έχουν τοποθετηθεί σε προσωρινή αποθήκευση και τα προσωρινά αρχεία. Τα αρχικά και τα επιδιορθωμένα APK θα διατηρηθούν</string>
+    <string name="settings_system_storage_clear_all_description">Κάθε προσωρινή μνήμη που αναγράφεται παραπάνω</string>
+    <string name="settings_system_storage_clear_all_confirm">Κάθε προσωρινή μνήμη παραπάνω θα εκκαθαριστεί. Τα αρχικά και τα τροποποιημένα APK διατηρούνται</string>
     <string name="settings_system_storage_cleared">Απελευθερώθηκαν %s</string>
     <string name="settings_system_storage_patch_running_warning">Ένα patch εκτελείται και χρησιμοποιεί αυτά τα αρχεία. Η διαγραφή τους τώρα θα προκαλέσει σφάλμα</string>
     <string name="settings_system_storage_clear_anyway">Καθαρισμός παρόλα αυτά</string>
@@ -1278,14 +1290,14 @@ morphe_header_custom_dark.png
     <string name="settings_system_storage_open_app_info_title">Άνοιγμα αποθήκευσης εφαρμογής Android</string>
     <string name="settings_system_storage_open_app_info_description">Διαχείριση ή εκκαθάριση όλων των δεδομένων του Morphe μέσω των ρυθμίσεων του συστήματος</string>
     <string name="settings_system_save_original_apks_title">Διατήρηση αρχικών APK</string>
-    <string name="settings_system_save_original_apks_description">Αποθηκεύστε το αρχικό APK πριν από την τροποποίηση, ώστε να μπορεί να χρησιμοποιηθεί ξανά για νέα τροποποίηση χωρίς να χρειαστεί να επιλέξετε ξανά το αρχείο</string>
+    <string name="settings_system_save_original_apks_description">Επαναχρησιμοποίηση του αρχικού APK κατά την τροποποίηση, χωρίς να χρειαστεί να επιλέξετε ξανά το αρχείο</string>
     <string name="settings_system_save_patched_apks_title">Διατήρηση τροποποιημένων APK</string>
-    <string name="settings_system_save_patched_apks_description">Αποθηκεύστε ένα αντίγραφο του τροποποιημένου APK για μεταγενέστερη εξαγωγή ή επανεγκατάσταση από το διαχειριστή</string>
+    <string name="settings_system_save_patched_apks_description">Διατήρηση ενός αντίγραφου για εξαγωγή ή επανεγκατάσταση αργότερα</string>
     <!-- Settings - System Tab - Storage Management - Patched APKs Management -->
     <string name="settings_system_patched_apks_title">Τροποποιημένα αρχεία APK</string>
     <string name="settings_system_patched_apks_empty">Δεν υπάρχουν αποθηκευμένες τροποποιημένες APKs ακόμα</string>
     <string name="settings_system_patched_apks_delete_title">Διαγραφή τροποποιημένης APK;</string>
-    <string name="settings_system_patched_apks_deleted">Επιτυχής διαγραφή</string>
+    <string name="settings_system_patched_apks_deleted">Το τροποποιημένο APK διαγράφηκε</string>
     <string name="settings_system_patched_apks_delete_all_title">Διαγραφή όλων των τροποποιημένων APK;</string>
     <!-- Settings - System Tab - Storage Management - Original APKs Management -->
     <string name="settings_system_original_apks_title">Αρχικά αρχεία APK</string>

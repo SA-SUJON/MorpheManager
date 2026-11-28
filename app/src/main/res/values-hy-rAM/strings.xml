@@ -9,6 +9,8 @@
     <string name="home_app_status_newer_patches">Նոր պատչեր</string>
     <!-- Mark on the card of an app built for a device other than a phone -->
     <string name="form_factor_tv">ՀՏՀ</string>
+    <!-- Named beside the other marks when one app has a build for a phone and for another device -->
+    <string name="form_factor_mobile">Հեռախոս</string>
     <string name="form_factor_automotive">Ավտոմոբիլային</string>
     <string name="home_no_patches_available">Հասանելի փոփոխություններ չկան</string>
     <string name="home_app_hide_title">Թաքցնե՞լ այս հավելվածը։</string>
@@ -359,6 +361,10 @@
     <string name="expert_mode_recommended">Խորհուրդ տրվող փաթեթներ</string>
     <string name="expert_mode_reset_to_default_done">Հանձնարարված փեթչերը կիրառված են</string>
     <string name="expert_mode_selected_count">ընտրված է %1$s-ը %2$s-ից</string>
+    <!-- Which build of an app with builds for several devices the patches are for, such as TV or Wear OS -->
+    <string name="expert_mode_form_factor">%s սարքի կառուցվածքի համար</string>
+    <!-- The same for the phone build, named as a common noun rather than by its mark -->
+    <string name="expert_mode_form_factor_mobile">Հեռախոսի կառուցվածքի համար</string>
     <string name="expert_mode_saved_selection">Պահպանված ընտրություն</string>
     <string name="expert_mode_restore_saved_done">Պահպանված ընտրությունը վերականգնված է</string>
     <string name="expert_mode_copy_from_bundle_no_patches">Այս փաթեթում չկան համապատասխան փոփոխություններ</string>
@@ -489,7 +495,8 @@
     <string name="batch_patch_preparing_next">Հաջորդ հավելվածը պատրաստվում է…</string>
     <string name="batch_patch_progress_counter">Փոփոխվում է %1$s-րդը %2$s-ից</string>
     <string name="batch_patch_summary">%1$s-ը փոփոխվեց, %2$s-ը ձախողվեց, %3$s-ը բաց թողնվեց</string>
-    <string name="batch_patch_saved_hint">Փոփոխված հավելվածները պահպանված են: Տեղադրեք դրանք հիմա կամ ավելի ուշ՝ կարգավորումների փոփոխված APK-ների ցուցակից</string>
+    <string name="batch_patch_saved_hint">Փոփոխված APK-ները պահպանված են: Տեղադրեք դրանք հիմա կամ ավելի ուշ՝ գլխավոր էկրանից</string>
+    <string name="batch_patch_not_kept_hint">Փոփոխված APK-ները չեն պահպանվում: Տեղադրեք կամ արտահանեք դրանք նախքան այս էկրանը փակելը</string>
     <string name="batch_patch_multiple_sources">Որոշ հավելվածներ համատեղում են փոփոխումներ մեկից ավելի աղբյուրից, ինչը կարող է առաջացնել կոնֆլիկտներ</string>
     <string name="batch_patch_needs_apk">APK հասանելի չէ, կցեք ֆայլ</string>
     <string name="batch_patch_wrong_package">Կցված ֆայլը պատկանում է %s-ին</string>
@@ -504,22 +511,22 @@
     <string name="batch_patch_apk_selected">APK-ն ընտրված է</string>
     <string name="batch_patch_auto_download_stopped">APK-ների ավտոմատ ներբեռնումները դադարեցվել են</string>
     <string name="batch_patch_auto_download_stop">Դադարեցնել ներբեռնումները</string>
-    <string name="batch_patch_auto_download_kept">Ներբեռնված APK-ն հնարավոր չէր օգտագործել, ուստի պահվել է նախորդը</string>
+    <string name="batch_patch_auto_download_kept">%s-ի համար ներբեռնված APK-ն հնարավոր չէր օգտագործել, ուստի պահպանվել է նախորդը</string>
     <string name="batch_patch_edit_patches">Ընտրել փաթեթները</string>
     <string name="batch_patch_state_no_apk">Առանց APK-ի</string>
     <string name="batch_patch_state_no_patches">Պատչեր չկան</string>
     <string name="batch_patch_state_no_selection">Ոչինչ չի ընտրվել</string>
     <string name="batch_patch_no_selection">Հասանելի փաթեթներից ոչ մեկը ընտրված չէ</string>
     <string name="batch_patch_policy_install">Տեղադրել ավարտելիս</string>
-    <string name="batch_patch_policy_install_description">Տեղադրում է յուրաքանչյուր պատչված հավելված հերթի ավարտից անմիջապես հետո: Անջատված վիճակում APK-ները պահվում են հետագայի համար</string>
+    <string name="batch_patch_policy_install_description">Տեղադրում է յուրաքանչյուր փոփոխված հավելված, երբ հերթն ավարտվում է: Անջատված լինելու դեպքում APK-ները մնում են այս էկրանին</string>
     <string name="batch_patch_policy_mount">Միացնել ավարտելուց հետո</string>
-    <string name="batch_patch_policy_mount_description">Միացնում է յուրաքանչյուր փոփոխված հավելված հերթի ավարտից հետո: Անջատված վիճակում APK-ները պահվում են հետագայի համար</string>
+    <string name="batch_patch_policy_mount_description">Միացնում է յուրաքանչյուր փոփոխված հավելված, երբ հերթն ավարտվում է: Անջատված լինելու դեպքում APK-ները մնում են այս էկրանին</string>
     <string name="batch_patch_policy_install_mount">Տեղադրել կամ միացնել ավարտից հետո</string>
-    <string name="batch_patch_policy_install_mount_description">Տեղադրում կամ միացնում է յուրաքանչյուր փոփոխված հավելված հերթի ավարտից հետո: Անջատված վիճակում APK-ները պահվում են հետագայի համար</string>
+    <string name="batch_patch_policy_install_mount_description">Տեղադրում կամ մոնտաժում է բոլոր փոփոխված հավելվածները հերթի ավարտից հետո: Անջատելու դեպքում APK-ները մնում են այս էկրանին</string>
     <!-- Label of a footer button beside "Close". Keep it short, a longer one moves the buttons onto two rows -->
     <string name="batch_patch_start">Սկսել</string>
     <string name="batch_patch_stop_title">Դադարեցնել խմբաքանակային պատչավորումը:</string>
-    <string name="batch_patch_stop_description">Այս պահին փոփոխվող հավելվածը և հերթագրված բոլոր մնացած գործողությունները կչեղարկվեն</string>
+    <string name="batch_patch_stop_description">Ընթացիկ հավելվածը և հերթի մնացած մասը կչեղարկվեն</string>
     <!-- Label of a footer button beside "Done". Keep it short, a longer one moves the buttons onto two rows -->
     <string name="batch_patch_install_all">Տեղադրել բոլորը</string>
     <string name="batch_patch_install_failed">Տեղադրումը ձախողվեց</string>
@@ -530,7 +537,7 @@
     <string name="batch_queue_clear_title">Մաքրե՞լ հերթը։</string>
     <string name="batch_queue_clear_description">Բոլոր հավելվածները կհեռացվեն հերթից</string>
     <string name="batch_queue_keep_title">Պահպանե՞լ հերթը։</string>
-    <string name="batch_queue_keep_description">Հերթի դրված հավելվածները կսպասեն գլխավոր էկրանին՝ հետագայում գործարկվելու համար</string>
+    <string name="batch_queue_keep_description">Հերթը սպասում է գլխավոր էկրանին, մինչև դուք այն միացնեք</string>
     <string name="batch_queue_keep">Պահպանել</string>
     <string name="shortcut_repatch_short">Վերապատչել</string>
     <string name="shortcut_repatch_long">Վերապատչել հնացած հավելվածները</string>
@@ -664,6 +671,8 @@
     <string name="patcher_conflict_title">Փաթեթի կոնֆլիկտ</string>
     <string name="patcher_conflict_subtitle">Դուք պետք է հեռացնեք գոյություն ունեցող տարբերակը</string>
     <string name="patcher_conflict_hint">Թարմացված հավելվածն օգտագործում է այլ սերտիֆիկատ, քան տեղադրված տարբերակը: Հեռացումը կջնջի հավելվածի բոլոր տվյալները</string>
+    <!-- The patched APK is for another kind of device, such as TV or Wear OS, so it may not start on this one -->
+    <string name="patcher_built_for_other_device">Ստեղծված է %s-ի համար, ուստի այն կարող է չաշխատել այստեղ: Պահպանեք այն տվյալ սարքի վրա տեղադրելու համար</string>
     <string name="patcher_installed_conflict_title">Պահանջվում է հեռացում</string>
     <string name="patcher_installed_conflict_body">"Morphe-ը ստորագրում է փոփոխված հավելվածները իր սեփական սերտիֆիկատով, որը տարբերվում է բնօրինակից: Android-ը պահանջում է հեռացնել առկա տարբերակը, նախքան փոփոխված հավելվածը հնարավոր կլինի տեղադրել:
 
@@ -759,7 +768,7 @@
     <string name="plugin_activity_dialog_body">Այս պլագինի հետ շարունակելու համար անհրաժեշտ է օգտատիրոջ միջամտությունը</string>
     <string name="patcher_process_killed_message">Համակարգը կանգնեցրեց փաթեթավորողը նախքան դրա ավարտը, սովորաբար հիշողությունը ազատելու համար: Փակեք մյուս հավելվածները և փորձեք նորից</string>
     <!-- Shown once Morphe is back after it was closed in the middle of patching, for a reason other than low memory. -->
-    <string name="patcher_interrupted_message">Morphe-ը փակվել է նախքան թարմացման ավարտը, ուստի ոչինչ չի թարմացվել: Փորձեք նորից</string>
+    <string name="patcher_interrupted_message">Morphe-ն փակվել է նախքան փոփոխումն ավարտելը: Փորձեք նորից</string>
     <!-- "%1$s" is where the setting is, such as "Settings > Patcher > Use embedded VM", built from the names on those screens. -->
     <string name="patcher_process_crashed_message">Փաթեթավորողը խափանվեց նախքան ավարտելը: Եթե դա կրկնվի, անջատեք %1$s-ը և հայտեք խնդրի մասին՝ կցելով լոգը</string>
     <!-- Shown when a run fills the heap it was given. "%1$s" is the heap in megabytes. -->
@@ -868,14 +877,17 @@
     <string name="settings_appearance_translations_info_title">Որոշ լեզուների համար թարգմանությունները կարող են բացակայել կամ լինել թերի</string>
     <!-- Settings - Appearance Tab - Interface Scale -->
     <string name="settings_appearance_ui_scale">Ինտերֆեյսի մասշտաբ</string>
-    <!-- Settings - Appearance Tab - Home Screen Section -->
+    <!-- Settings - Appearance Tab - Screens Section -->
     <string name="settings_appearance_home_screen">Գլխավոր էկրան</string>
+    <string name="settings_appearance_screens">Էկրաններ</string>
     <string name="settings_appearance_greeting_phrases">Ողջույնի արտահայտություններ</string>
     <string name="settings_appearance_greeting_phrases_subtitle">Ցուցադրում է ողջունման հաղորդագրություն</string>
     <string name="settings_appearance_repatch_notice">Վերապատչավորման ծանուցում</string>
     <string name="settings_appearance_repatch_notice_description">Ցուցադրում է բաններ, երբ փոփոխված հավելվածները կարող են նորից փոփոխվել</string>
     <string name="settings_appearance_more_apps_card">Ավելի շատ հավելվածների քարտ</string>
     <string name="settings_appearance_more_apps_card_description">Ցույց է տալիս քարտ հավելվածների տակ, որը տանում է դեպի համայնքային ուղղումները</string>
+    <string name="settings_appearance_games_button">Խաղերի կոճակ</string>
+    <string name="settings_appearance_games_button_description">Ցուցադրում է մինի-խաղերի կոճակը թարմացման ժամանակ և արդյունքի էջում</string>
     <string name="settings_appearance_app_card_colors">Քարտերի գույներ</string>
     <string name="settings_appearance_app_card_colors_default">Լռելյայն</string>
     <string name="settings_appearance_app_card_colors_default_description">Յուրաքանչյուր հավելվածին և աղբյուրին տվեք իր սեփական գույնը</string>
@@ -1246,7 +1258,7 @@ morphe_header_custom_dark.png
     <string name="settings_system_apks_delete_all_confirm">Սա մշտապես կջնջի այստեղ ցուցադրված պահպանված APK ֆայլերը</string>
     <string name="settings_system_apks_delete_selected_title">Ջնջե՞լ ընտրված APK-ները։</string>
     <string name="settings_system_apks_delete_selected_confirm">Սա մշտապես կջնջի ընտրված APK ֆայլերը</string>
-    <string name="settings_system_apks_deleted_all">APK-ները հաջողությամբ ջնջվեցին</string>
+    <string name="settings_system_apks_deleted_all">APK-ները ջնջված են</string>
     <string name="settings_system_apks_delete_failed">Որոշ APK ֆայլեր չհաջողվեց ջնջել</string>
     <string name="settings_system_apks_export_zip_success">Ընտրված APK-ները արտահանվեցին</string>
     <string name="settings_system_apks_export_zip_failed">Չհաջողվեց արտահանել ընտրված APK-ները</string>
@@ -1269,8 +1281,8 @@ morphe_header_custom_dark.png
     <string name="settings_system_storage_temporary_title">Ժամանակավոր ֆայլեր</string>
     <string name="settings_system_storage_temporary_description">Փոփոխման ժամանակ ստեղծված աշխատանքային ֆայլեր</string>
     <string name="settings_system_storage_clear_all">Մաքրել բոլոր քեշերը</string>
-    <string name="settings_system_storage_clear_all_description">Միանգամից ազատում է քեշի ողջ վերականգնելի տարածությունը</string>
-    <string name="settings_system_storage_clear_all_confirm">Սա մաքրում է ցանցային պատասխանների քեշը, տեղադրողի պատրաստի պատճենները և ժամանակավոր ֆայլերը: Բնօրինակ և փոփոխված APK-ները պահպանվում են</string>
+    <string name="settings_system_storage_clear_all_description">Վերը նշված բոլոր քեշերը</string>
+    <string name="settings_system_storage_clear_all_confirm">Վերը նշված բոլոր քեշերը կմաքրվեն: Բնօրինակ և փոփոխված APK-ները կպահվեն</string>
     <string name="settings_system_storage_cleared">Ազատվել է %s</string>
     <string name="settings_system_storage_patch_running_warning">Փոփոխության գործընթացը ակտիվ է և օգտագործում է այս ֆայլերը: Դրանց հեռացումն այս պահին կհանգեցնի սխալի</string>
     <string name="settings_system_storage_clear_anyway">Այնուամենայնիվ, մաքրել</string>
@@ -1278,14 +1290,14 @@ morphe_header_custom_dark.png
     <string name="settings_system_storage_open_app_info_title">Բացել Android հավելվածի տվյալները</string>
     <string name="settings_system_storage_open_app_info_description">Կառավարեք կամ մաքրեք Morphe-ի բոլոր տվյալները համակարգի կարգավորումների միջոցով</string>
     <string name="settings_system_save_original_apks_title">Պահպանել բնօրինակ APK-ները</string>
-    <string name="settings_system_save_original_apks_description">Պահպանել նախնական փաթեթավորված APK-ն, որպեսզի այն կարողանա օգտագործվել կրկնակի փաթեթավորման համար առանց ֆայլը նորից ընտրելու</string>
+    <string name="settings_system_save_original_apks_description">Վերապատչելիս օգտագործել բնօրինակ APK-ն՝ առանց ֆայլը նորից ընտրելու</string>
     <string name="settings_system_save_patched_apks_title">Պահպանել փաթեթավորված APK-ները</string>
-    <string name="settings_system_save_patched_apks_description">Պահպանել փաթեթավորված APK-ի պատճենը հետագայում արտահանելու կամ կառավարիչից վերակայացնելու համար</string>
+    <string name="settings_system_save_patched_apks_description">Պահպանել պատճենը հետագայում արտահանելու կամ վերատեղադրելու համար</string>
     <!-- Settings - System Tab - Storage Management - Patched APKs Management -->
     <string name="settings_system_patched_apks_title">Փոփոխված APK-ներ</string>
     <string name="settings_system_patched_apks_empty">Փոփոխված APK-ներ դեռ պահպանված չեն</string>
     <string name="settings_system_patched_apks_delete_title">Ջնջե՞լ փոփոխված APK-ն։</string>
-    <string name="settings_system_patched_apks_deleted">Փոփոխված APK-ն հաջողությամբ ջնջվեց</string>
+    <string name="settings_system_patched_apks_deleted">Պատչված APK-ն ջնջված է</string>
     <string name="settings_system_patched_apks_delete_all_title">Ջնջե՞լ բոլոր փոփոխված APK-ները։</string>
     <!-- Settings - System Tab - Storage Management - Original APKs Management -->
     <string name="settings_system_original_apks_title">Օրիգինալ APK-ներ</string>

@@ -9,6 +9,8 @@
     <string name="home_app_status_newer_patches">Novi popravki</string>
     <!-- Mark on the card of an app built for a device other than a phone -->
     <string name="form_factor_tv">TV</string>
+    <!-- Named beside the other marks when one app has a build for a phone and for another device -->
+    <string name="form_factor_mobile">Telefon</string>
     <string name="form_factor_automotive">Avtomobil</string>
     <string name="home_no_patches_available">Na voljo ni nobenih popravkov</string>
     <string name="home_app_hide_title">Skrijem to aplikacijo?</string>
@@ -359,6 +361,10 @@ Izberite,  iz kje izbrati APK"</string>
     <string name="expert_mode_recommended">Priporočeni popravki</string>
     <string name="expert_mode_reset_to_default_done">Uporabljeni priporočeni popravki</string>
     <string name="expert_mode_selected_count">%1$s od %2$s izbrano</string>
+    <!-- Which build of an app with builds for several devices the patches are for, such as TV or Wear OS -->
+    <string name="expert_mode_form_factor">Za različico %s</string>
+    <!-- The same for the phone build, named as a common noun rather than by its mark -->
+    <string name="expert_mode_form_factor_mobile">Za telefonsko različico</string>
     <string name="expert_mode_saved_selection">Shranjena izbira</string>
     <string name="expert_mode_restore_saved_done">Obnovljena shranjena izbira</string>
     <string name="expert_mode_copy_from_bundle_no_patches">Ni ujemajočih popravkov v tem paketu</string>
@@ -489,7 +495,8 @@ Za najboljše rezultate ta aplikacija priporoča popravljanje &lt;b&gt;polnega A
     <string name="batch_patch_preparing_next">Pripravljam naslednji program…</string>
     <string name="batch_patch_progress_counter">Popravljanje %1$s od %2$s</string>
     <string name="batch_patch_summary">%1$s popravljenih, %2$s neuspelih, %3$s preskočenih</string>
-    <string name="batch_patch_saved_hint">Popravljene aplikacije so shranjene. Namestite jih zdaj ali pozneje iz seznama popravljenih APK-jev v nastavitvah</string>
+    <string name="batch_patch_saved_hint">Popravljeni APK-ji so shranjeni. Namestite jih zdaj ali pozneje s početnega zaslona</string>
+    <string name="batch_patch_not_kept_hint">Popravljeni APK-ji niso shranjeni. Pred zaprtjem tega zaslona jih namestite ali izvozite</string>
     <string name="batch_patch_multiple_sources">Nekatere aplikacije združujejo popravke iz več virov, kar lahko povzroči konflikte</string>
     <string name="batch_patch_needs_apk">Ni na voljo APK-ja, priložite datoteko</string>
     <string name="batch_patch_wrong_package">Priložena datoteka pripada %s</string>
@@ -504,22 +511,22 @@ Za najboljše rezultate ta aplikacija priporoča popravljanje &lt;b&gt;polnega A
     <string name="batch_patch_apk_selected">APK izbran</string>
     <string name="batch_patch_auto_download_stopped">Samodejni prenosov APK je ustavljen</string>
     <string name="batch_patch_auto_download_stop">Ustavi prenose</string>
-    <string name="batch_patch_auto_download_kept">Prenesene datoteke APK ni bilo mogoče uporabiti, zato je bila ohranjena prejšnja</string>
+    <string name="batch_patch_auto_download_kept">Preneseni APK za %s ni bil uporaben, zato je ohranjen prejšnji</string>
     <string name="batch_patch_edit_patches">Izberite popravke</string>
     <string name="batch_patch_state_no_apk">Ni APK-ja</string>
     <string name="batch_patch_state_no_patches">Ni popravkov</string>
     <string name="batch_patch_state_no_selection">Nič izbranega</string>
     <string name="batch_patch_no_selection">Noben od razpoložljivih popravkov ni izbran</string>
     <string name="batch_patch_policy_install">Namestite po končanem postopku</string>
-    <string name="batch_patch_policy_install_description">Vsaka popravljena aplikacija se namesti takoj po končanem postopku. Izklopljeno shrani APK-je za kasnejšo uporabo</string>
+    <string name="batch_patch_policy_install_description">Namesti vsako popravljeno aplikacijo, ko se vrstica konča. Če je izklopljeno, ostanejo APK-ji na tem zaslonu</string>
     <string name="batch_patch_policy_mount">Priklopi po zaključku</string>
-    <string name="batch_patch_policy_mount_description">Priklopi vsako zakrpano aplikacijo, ko se čakalna vrsta zaključi. Izklopljeno ohrani APK-je za pozneje</string>
+    <string name="batch_patch_policy_mount_description">Namesti vsako popravljeno aplikacijo, ko se vrstica konča. Če je izklopljeno, ostanejo APK-ji na tem zaslonu</string>
     <string name="batch_patch_policy_install_mount">Namesti ali priklopi po zaključku</string>
-    <string name="batch_patch_policy_install_mount_description">Namesti ali priklopi vsako zakrpano aplikacijo, ko se čakalna vrsta zaključi. Izklopljeno ohrani APK-je za pozneje</string>
+    <string name="batch_patch_policy_install_mount_description">Namesti ali priklopi vsako popravljeno aplikacijo, ko se vrsta konča. Izklop pusti datoteke APK na tem zaslonu</string>
     <!-- Label of a footer button beside "Close". Keep it short, a longer one moves the buttons onto two rows -->
     <string name="batch_patch_start">Začetek</string>
     <string name="batch_patch_stop_title">Ustavite množično popravljanje?</string>
-    <string name="batch_patch_stop_description">Aplikacija, ki se trenutno popravlja, in vse še čakajoče operacije bodo prekinjene</string>
+    <string name="batch_patch_stop_description">Trenutna aplikacija in ostanek vrste bodo preklicani</string>
     <!-- Label of a footer button beside "Done". Keep it short, a longer one moves the buttons onto two rows -->
     <string name="batch_patch_install_all">Namestite vse</string>
     <string name="batch_patch_install_failed">Namestitev je spodletela</string>
@@ -530,7 +537,7 @@ Za najboljše rezultate ta aplikacija priporoča popravljanje &lt;b&gt;polnega A
     <string name="batch_queue_clear_title">Počistiti čakalno vrsto?</string>
     <string name="batch_queue_clear_description">Vse aplikacije bodo odstranjene iz čakalne vrste</string>
     <string name="batch_queue_keep_title">Ohraniti vrsto?</string>
-    <string name="batch_queue_keep_description">Aplikacije v vrsti bodo počakale na začetnem zaslonu, da bodo pozneje zagnane</string>
+    <string name="batch_queue_keep_description">Vrsta počaka na začetnem zaslonu, dokler je ne zagnete</string>
     <string name="batch_queue_keep">Ohrani</string>
     <string name="shortcut_repatch_short">Ponovno popravite</string>
     <string name="shortcut_repatch_long">Ponovno popravite zastarele aplikacije</string>
@@ -664,6 +671,8 @@ Za najboljše rezultate ta aplikacija priporoča popravljanje &lt;b&gt;polnega A
     <string name="patcher_conflict_title">Konflikt paketov</string>
     <string name="patcher_conflict_subtitle">Obstoječo različico morate odstraniti</string>
     <string name="patcher_conflict_hint">Popravljena aplikacija uporablja drug certifikat kot nameščena različica. Odstranitev bo izbrisala vse podatke aplikacije.</string>
+    <!-- The patched APK is for another kind of device, such as TV or Wear OS, so it may not start on this one -->
+    <string name="patcher_built_for_other_device">Zgrajeno za %s, zato morda ne bo delovalo tukaj. Shranite datoteko, da jo namestite na tisto napravo</string>
     <string name="patcher_installed_conflict_title">Zahtevana je odstranitev</string>
     <string name="patcher_installed_conflict_body">"Morphe podpisuje spremenjene aplikacije z lastnim potrdilom, ki se razlikuje od prvotnega. Android zahteva odstranitev obstoječe različice, preden je mogoče namestiti spremenjeno aplikacijo.
 
@@ -759,7 +768,7 @@ Odstranitev bo trajno izbrisala vse podatke aplikacije."</string>
     <string name="plugin_activity_dialog_body">Za nadaljevanje s tem dodatkom je potrebna uporabniško sodelovanje.</string>
     <string name="patcher_process_killed_message">Sistem je ustavil popravnik preden je končal, običajno da sprostili pomnilnik. Zaprite druge aplikacije in poskusite znova</string>
     <!-- Shown once Morphe is back after it was closed in the middle of patching, for a reason other than low memory. -->
-    <string name="patcher_interrupted_message">Morphe je bilo zaprto pred koncem posodabljanja, zato nič ni bilo posodobljeno. Poskusite znova</string>
+    <string name="patcher_interrupted_message">Morphe je bil zaprt pred koncem popravljanja. Poskusite znova</string>
     <!-- "%1$s" is where the setting is, such as "Settings > Patcher > Use embedded VM", built from the names on those screens. -->
     <string name="patcher_process_crashed_message">Popravljalnik se je sesul, preden je končal. Če se to ponovi, izklopite %1$s in prijavite težavo z dnevnikom</string>
     <!-- Shown when a run fills the heap it was given. "%1$s" is the heap in megabytes. -->
@@ -868,14 +877,17 @@ Odstranitev bo trajno izbrisala vse podatke aplikacije."</string>
     <string name="settings_appearance_translations_info_title">Prevodi za nekatera jezika so lahko manjkajoči ali nepopolni</string>
     <!-- Settings - Appearance Tab - Interface Scale -->
     <string name="settings_appearance_ui_scale">Razmerje vmesnika</string>
-    <!-- Settings - Appearance Tab - Home Screen Section -->
+    <!-- Settings - Appearance Tab - Screens Section -->
     <string name="settings_appearance_home_screen">Začetni zaslon</string>
+    <string name="settings_appearance_screens">Zasloni</string>
     <string name="settings_appearance_greeting_phrases">Pozdravna sporočila</string>
     <string name="settings_appearance_greeting_phrases_subtitle">Prikaži pozdravno sporočilo</string>
     <string name="settings_appearance_repatch_notice">Obvestilo o ponovnem popravljanju</string>
     <string name="settings_appearance_repatch_notice_description">Prikaži pasico, ko je mogoče ponovno popraviti že popravljene aplikacije</string>
     <string name="settings_appearance_more_apps_card">Ploščica Več aplikacij</string>
     <string name="settings_appearance_more_apps_card_description">Pod aplikacijami prikaže kartico, ki vodi do skupnostnih popravkov</string>
+    <string name="settings_appearance_games_button">Gumb Igre</string>
+    <string name="settings_appearance_games_button_description">Prikaže gumb za mini-igre med posodabljanjem in na rezultatu</string>
     <string name="settings_appearance_app_card_colors">Barve kartic</string>
     <string name="settings_appearance_app_card_colors_default">Privzeto</string>
     <string name="settings_appearance_app_card_colors_default_description">Vsaki aplikaciji in viru dodelite svojo barvo</string>
@@ -1246,7 +1258,7 @@ Podrobnosti: %2$s"</string>
     <string name="settings_system_apks_delete_all_confirm">To bo trajno izbrisalo shranjene datoteke APK, ki so prikazane tukaj</string>
     <string name="settings_system_apks_delete_selected_title">Izbrisati izbrane datoteke APK?</string>
     <string name="settings_system_apks_delete_selected_confirm">To bo trajno izbrisalo izbrane datoteke APK</string>
-    <string name="settings_system_apks_deleted_all">Datoteke APK so bile uspešno izbrisane</string>
+    <string name="settings_system_apks_deleted_all">Datoteke APK izbrisane</string>
     <string name="settings_system_apks_delete_failed">Nekatere datoteke APK ni bilo mogoče izbrisati</string>
     <string name="settings_system_apks_export_zip_success">Izbrane datoteke APK so bile izvožene</string>
     <string name="settings_system_apks_export_zip_failed">Izvoz izbranih datotek APK je spodletel</string>
@@ -1269,8 +1281,8 @@ Podrobnosti: %2$s"</string>
     <string name="settings_system_storage_temporary_title">Začasne datoteke</string>
     <string name="settings_system_storage_temporary_description">Delovne datoteke, ustvarjene med popravljanjem</string>
     <string name="settings_system_storage_clear_all">Počisti vse predpomnilnike</string>
-    <string name="settings_system_storage_clear_all_description">Naenkrat izbriše ves prostor predpomnilnika, ki ga je mogoče povrniti</string>
-    <string name="settings_system_storage_clear_all_confirm">To počisti predpomnjene omrežne odzive, pripravljene kopije namestitvenih programov in začasne datoteke. Izvorne in popravljene datoteke APK ostanejo nedotaknjene</string>
+    <string name="settings_system_storage_clear_all_description">Vse zgoraj navedene predpomnišnice</string>
+    <string name="settings_system_storage_clear_all_confirm">Vsak zgoraj navedeni predpomnilnik bo izbrisan. Originalni in popravljeni APK-ji bodo ohranjeni</string>
     <string name="settings_system_storage_cleared">Sproščenih %s</string>
     <string name="settings_system_storage_patch_running_warning">Popravek se izvaja in uporablja te datoteke. Če jih zdaj počistite, ta spodleti</string>
     <string name="settings_system_storage_clear_anyway">Vseeno počisti</string>
@@ -1278,14 +1290,14 @@ Podrobnosti: %2$s"</string>
     <string name="settings_system_storage_open_app_info_title">Odprite shranjevanje aplikacije Android</string>
     <string name="settings_system_storage_open_app_info_description">Upravljajte ali izbrišite vse podatke Morphe prek sistemskih nastavitev</string>
     <string name="settings_system_save_original_apks_title">Shrani originalne datoteke APK</string>
-    <string name="settings_system_save_original_apks_description">Shrani datoteko APK pred popravkom, da jo je mogoče ponovno uporabiti za ponovni popravek brez ponovnega izbiranja datoteke</string>
+    <string name="settings_system_save_original_apks_description">Pri ponovnem popravku ponovno uporabite originalni APK, brez ponovnega izbiranja datoteke</string>
     <string name="settings_system_save_patched_apks_title">Shrani spremenjene datoteke APK</string>
-    <string name="settings_system_save_patched_apks_description">Shrani kopijo spremenjene datoteke APK za kasnejši izvoz ali ponovno namestitev iz upravitelja</string>
+    <string name="settings_system_save_patched_apks_description">Ohranite kopijo za kasnejši izvoz ali ponovno namestitev</string>
     <!-- Settings - System Tab - Storage Management - Patched APKs Management -->
     <string name="settings_system_patched_apks_title">Popravljeni APK-ji</string>
     <string name="settings_system_patched_apks_empty">Ni shranjenih popravljenih APK-jev</string>
     <string name="settings_system_patched_apks_delete_title">Izbrišem popravljeni APK?</string>
-    <string name="settings_system_patched_apks_deleted">Uspešno izbrisan popravljen APK</string>
+    <string name="settings_system_patched_apks_deleted">Popravljeni APK izbrisan</string>
     <string name="settings_system_patched_apks_delete_all_title">Izbrišem vse popravljene datoteke APK?</string>
     <!-- Settings - System Tab - Storage Management - Original APKs Management -->
     <string name="settings_system_original_apks_title">Izvirni APK-ji</string>

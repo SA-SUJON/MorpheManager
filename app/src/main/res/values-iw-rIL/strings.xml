@@ -9,6 +9,8 @@
     <string name="home_app_status_newer_patches">תיקונים חדשים</string>
     <!-- Mark on the card of an app built for a device other than a phone -->
     <string name="form_factor_tv">טלוויזיה</string>
+    <!-- Named beside the other marks when one app has a build for a phone and for another device -->
+    <string name="form_factor_mobile">טלפון</string>
     <string name="form_factor_automotive">רכב</string>
     <string name="home_no_patches_available">אין תיקונים זמינים</string>
     <string name="home_app_hide_title">להסתיר את האפליקציה הזאת?</string>
@@ -359,6 +361,10 @@
     <string name="expert_mode_recommended">תיקונים מומלצים</string>
     <string name="expert_mode_reset_to_default_done">התיקונים המומלצים הוחלו</string>
     <string name="expert_mode_selected_count">%1$s מתוך %2$s נבחר</string>
+    <!-- Which build of an app with builds for several devices the patches are for, such as TV or Wear OS -->
+    <string name="expert_mode_form_factor">עבור גרסת %s</string>
+    <!-- The same for the phone build, named as a common noun rather than by its mark -->
+    <string name="expert_mode_form_factor_mobile">עבור גרסת הטלפון</string>
     <string name="expert_mode_saved_selection">בחירה שמורה</string>
     <string name="expert_mode_restore_saved_done">שחזור הבחירה השמורה הסתיים</string>
     <string name="expert_mode_copy_from_bundle_no_patches">לא נמצאו תיקונים תואמים בחבילה זו</string>
@@ -489,7 +495,8 @@
     <string name="batch_patch_preparing_next">מכין את האפליקציה הבאה…</string>
     <string name="batch_patch_progress_counter">מתבצע תיקון %1$s מתוך %2$s</string>
     <string name="batch_patch_summary">%1$s תוקנו, %2$s נכשלו, %3$s דולגו</string>
-    <string name="batch_patch_saved_hint">האפליקציות שעברו תיקון נשמרו. התקן אותן עכשיו, או מאוחר יותר מרשימת ה-APK המתוקנים בהגדרות</string>
+    <string name="batch_patch_saved_hint">קבצי APK שעברו פריצה נשמרו. התקינו אותם כעת או מאוחר יותר ממסך הבית</string>
+    <string name="batch_patch_not_kept_hint">קבצי APK שעברו פריצה לא נשמרים. התקינו או ייצאו אותם לפני סגירת מסך זה</string>
     <string name="batch_patch_multiple_sources">אפליקציות מסוימות משלבות טלאים ממקורות שונים, מה שעלול לגרום להתנגשויות</string>
     <string name="batch_patch_needs_apk">אין APK זמין, צרף קובץ</string>
     <string name="batch_patch_wrong_package">הקובץ המצורף שייך ל-%s</string>
@@ -504,22 +511,22 @@
     <string name="batch_patch_apk_selected">APK נבחר</string>
     <string name="batch_patch_auto_download_stopped">הורדות APK אוטומטיות הופסקו</string>
     <string name="batch_patch_auto_download_stop">עצור הורדות</string>
-    <string name="batch_patch_auto_download_kept">לא ניתן היה להשתמש ב-APK שהורד, לכן הקובץ הקודם נשמר</string>
+    <string name="batch_patch_auto_download_kept">לא ניתן היה להשתמש ב-APK שהורד עבור %s, לכן הקובץ הקודם נשמר</string>
     <string name="batch_patch_edit_patches">בחר טלאים</string>
     <string name="batch_patch_state_no_apk">אין APK</string>
     <string name="batch_patch_state_no_patches">אין טלאים</string>
     <string name="batch_patch_state_no_selection">לא נבחר כלום</string>
     <string name="batch_patch_no_selection">אף אחד מהתיקונים הזמינים לא נבחר</string>
     <string name="batch_patch_policy_install">התקן לאחר סיום</string>
-    <string name="batch_patch_policy_install_description">מתקין כל אפליקציה שעברה תיקון מיד לאחר סיום התור. כבוי שומר את ה-APKs לשימוש מאוחר יותר</string>
+    <string name="batch_patch_policy_install_description">מתקין כל אפליקציה שעברה פריצה ברגע שהתור מסתיים. מצב \'כבוי\' משאיר את קבצי ה-APK במסך זה</string>
     <string name="batch_patch_policy_mount">בצע Mount בסיום</string>
-    <string name="batch_patch_policy_mount_description">מבצע Mount לכל אפליקציה שעברה פאטץ\' ברגע שהתור מסתיים. כיבוי ישמור את קבצי ה-APK להמשך</string>
+    <string name="batch_patch_policy_mount_description">מעגן כל אפליקציה שעברה פריצה ברגע שהתור מסתיים. מצב \'כבוי\' משאיר את קבצי ה-APK במסך זה</string>
     <string name="batch_patch_policy_install_mount">התקן או בצע Mount בסיום</string>
-    <string name="batch_patch_policy_install_mount_description">מתקין או מרכיב כל אפליקציה שעברה פאטץ\' ברגע שהתור מסתיים. מצב \'כבוי\' שומר את קבצי ה-APK להמשך</string>
+    <string name="batch_patch_policy_install_mount_description">מתקין או מעמיס כל אפליקציה שעברה פאטץ\' ברגע שהתור מסתיים. מצב \'כבוי\' משאיר את קבצי ה-APK במסך זה</string>
     <!-- Label of a footer button beside "Close". Keep it short, a longer one moves the buttons onto two rows -->
     <string name="batch_patch_start">התחלה</string>
     <string name="batch_patch_stop_title">עצור תיקון באצווה?</string>
-    <string name="batch_patch_stop_description">האפליקציה שעוברת תיקון כרגע וכל מה שעדיין בתור יבוטל</string>
+    <string name="batch_patch_stop_description">האפליקציה הנוכחית ושאר התור יבטלו</string>
     <!-- Label of a footer button beside "Done". Keep it short, a longer one moves the buttons onto two rows -->
     <string name="batch_patch_install_all">התקן הכל</string>
     <string name="batch_patch_install_failed">ההתקנה נכשלה</string>
@@ -530,7 +537,7 @@
     <string name="batch_queue_clear_title">לנקות את התור?</string>
     <string name="batch_queue_clear_description">כל האפליקציות יוסרו מהתור</string>
     <string name="batch_queue_keep_title">לשמור את התור?</string>
-    <string name="batch_queue_keep_description">האפליקציות בתור ימתינו במסך הבית כדי להיות מופעלות מאוחר יותר</string>
+    <string name="batch_queue_keep_description">התור ממתין במסך הבית עד שתפעיל אותו</string>
     <string name="batch_queue_keep">שמור</string>
     <string name="shortcut_repatch_short">תקן מחדש</string>
     <string name="shortcut_repatch_long">תקן מחדש אפליקציות מיושנות</string>
@@ -664,6 +671,8 @@
     <string name="patcher_conflict_title">התנגשות חבילה</string>
     <string name="patcher_conflict_subtitle">עליך להסיר את ההתקנה של הגרסה הקיימת</string>
     <string name="patcher_conflict_hint">האפליקציה שעברה תיקון משתמשת בתעודה שונה מזו של הגרסה המותקנת. הסרת ההתקנה תמחק את כל נתוני האפליקציה.</string>
+    <!-- The patched APK is for another kind of device, such as TV or Wear OS, so it may not start on this one -->
+    <string name="patcher_built_for_other_device">נבנה עבור %s, לכן ייתכן שהוא לא יופעל כאן. שמור אותו כדי להתקינו במכשיר ההוא</string>
     <string name="patcher_installed_conflict_title">יש להסיר התקנה</string>
     <string name="patcher_installed_conflict_body">"Morphe חותם על אפליקציות שעברו שינוי באמצעות תעודה משלו, השונה מהמקורית. Android דורש הסרת הגרסה הקיימת לפני שאפשר להתקין את האפליקציה שעברה שינוי.
 
@@ -759,7 +768,7 @@
     <string name="plugin_activity_dialog_body">נדרש אינטראקציה של המשתמש כדי להמשיך עם תוסף זה</string>
     <string name="patcher_process_killed_message">המערכת עצרה את המתקן לפני השלמתו, בדרך כלל כדי לשחרר זיכרון. סגור אפליקציות אחרות ונסה שוב</string>
     <!-- Shown once Morphe is back after it was closed in the middle of patching, for a reason other than low memory. -->
-    <string name="patcher_interrupted_message">Morphe נסגרה לפני שההטרייה הסתיימה, לכן שום דבר לא הוטריא. נסה שוב</string>
+    <string name="patcher_interrupted_message">Morphe נסגרה לפני שפעולת הפאטץ\' הסתיימה. נסה שוב</string>
     <!-- "%1$s" is where the setting is, such as "Settings > Patcher > Use embedded VM", built from the names on those screens. -->
     <string name="patcher_process_crashed_message">המתקן קרס לפני שסיים. אם זה קורה שוב, כבה את %1$s ודווח על הבעיה עם הלוג</string>
     <!-- Shown when a run fills the heap it was given. "%1$s" is the heap in megabytes. -->
@@ -868,14 +877,17 @@
     <string name="settings_appearance_translations_info_title">ייתכן שתרגומים עבור חלק מהשפות חסרים או לא שלמים</string>
     <!-- Settings - Appearance Tab - Interface Scale -->
     <string name="settings_appearance_ui_scale">קנה מידה של הממשק</string>
-    <!-- Settings - Appearance Tab - Home Screen Section -->
+    <!-- Settings - Appearance Tab - Screens Section -->
     <string name="settings_appearance_home_screen">מסך הבית</string>
+    <string name="settings_appearance_screens">מסכים</string>
     <string name="settings_appearance_greeting_phrases">משפטי פתיחה</string>
     <string name="settings_appearance_greeting_phrases_subtitle">מציג הודעת ברכה</string>
     <string name="settings_appearance_repatch_notice">הודעת תיקון מחדש</string>
     <string name="settings_appearance_repatch_notice_description">מציג באנר כאשר ניתן להחזיר תיקון לאפליקציות שתוקנו</string>
     <string name="settings_appearance_more_apps_card">כרטיס עוד אפליקציות</string>
     <string name="settings_appearance_more_apps_card_description">מציג כרטיס מתחת לאפליקציות המוביל לתיקוני קהילה</string>
+    <string name="settings_appearance_games_button">לחצן משחקים</string>
+    <string name="settings_appearance_games_button_description">מציג לחצן למשחקים קטנים בזמן עדכון ובתוצאה</string>
     <string name="settings_appearance_app_card_colors">צבעי כרטיסים</string>
     <string name="settings_appearance_app_card_colors_default">ברירת מחדל</string>
     <string name="settings_appearance_app_card_colors_default_description">הענק לכל אפליקציה ומקור צבע משלהם</string>
@@ -1256,7 +1268,7 @@ drawable-xxhdpi: 387x144 פיקסלים
     <string name="settings_system_apks_delete_all_confirm">זה ימחק לצמיתות את קבצי ה-APK השמורים המוצגים כאן</string>
     <string name="settings_system_apks_delete_selected_title">למחוק קבצי APK שנבחרו?</string>
     <string name="settings_system_apks_delete_selected_confirm">זה ימחק לצמיתות את קבצי ה-APK שנבחרו</string>
-    <string name="settings_system_apks_deleted_all">קבצי APK נמחקו בהצלחה</string>
+    <string name="settings_system_apks_deleted_all">קבצי APK נמחקו</string>
     <string name="settings_system_apks_delete_failed">חלק מקבצי ה-APK לא נמחקו</string>
     <string name="settings_system_apks_export_zip_success">קבצי APK שנבחרו יוצאו</string>
     <string name="settings_system_apks_export_zip_failed">ייצוא קבצי APK שנבחרו נכשל</string>
@@ -1279,8 +1291,8 @@ drawable-xxhdpi: 387x144 פיקסלים
     <string name="settings_system_storage_temporary_title">קבצים זמניים</string>
     <string name="settings_system_storage_temporary_description">קבצי עבודה שנוצרו במהלך תיקון</string>
     <string name="settings_system_storage_clear_all">נקה את כל המטמונים</string>
-    <string name="settings_system_storage_clear_all_description">משחרר את כל שטח המטמון הניתן לשחזור בבת אחת</string>
-    <string name="settings_system_storage_clear_all_confirm">פעולה זו מנקה תגובות רשת שמורות במטמון, עותקי מתקינים מאוחסנים וקבצים זמניים. קבצי APK מקוריים ומטופלים נשמרים</string>
+    <string name="settings_system_storage_clear_all_description">כל זיכרון מטמון המופיע לעיל</string>
+    <string name="settings_system_storage_clear_all_confirm">כל זיכרון מטמון לעיל ינוקה. קבצי APK מקוריים ועברו פאטץ\' יישמרו</string>
     <string name="settings_system_storage_cleared">שוחרר %s</string>
     <string name="settings_system_storage_patch_running_warning">תיקון פועל ומשתמש בקבצים האלה. מחיקתם כעת תגרום לו להיכשל</string>
     <string name="settings_system_storage_clear_anyway">נקה בכל זאת</string>
@@ -1288,14 +1300,14 @@ drawable-xxhdpi: 387x144 פיקסלים
     <string name="settings_system_storage_open_app_info_title">פתח אחסון אפליקציות Android</string>
     <string name="settings_system_storage_open_app_info_description">נהל או נקה את כל נתוני Morphe דרך הגדרות המערכת</string>
     <string name="settings_system_save_original_apks_title">שמור APKs מקוריים</string>
-    <string name="settings_system_save_original_apks_description">שמור את קובץ ה-APK לפני התיקון, כך שניתן יהיה להשתמש בו מחדש לתיקון חוזר מבלי לבחור את הקובץ שוב</string>
+    <string name="settings_system_save_original_apks_description">השתמש שוב ב-APK המקורי בעת ביצוע תיקון חוזר, מבלי לבחור את הקובץ שוב</string>
     <string name="settings_system_save_patched_apks_title">שמור APKs מתוקנים</string>
-    <string name="settings_system_save_patched_apks_description">שמור עותק של קובץ ה-APK המתוקן לייצוא מאוחר יותר או להתקנה מחדש מהמנהל</string>
+    <string name="settings_system_save_patched_apks_description">שמור עותק לייצוא או להתקנה מחדש מאוחר יותר</string>
     <!-- Settings - System Tab - Storage Management - Patched APKs Management -->
     <string name="settings_system_patched_apks_title">APKs מתוקנים</string>
     <string name="settings_system_patched_apks_empty">עדיין לא נשמרו קבצי APK מתוקנים</string>
     <string name="settings_system_patched_apks_delete_title">למחוק את ה-APK המתוקן?</string>
-    <string name="settings_system_patched_apks_deleted">קובץ ה-APK המתוקן נמחק בהצלחה</string>
+    <string name="settings_system_patched_apks_deleted">קובץ APK מתוקן נמחק</string>
     <string name="settings_system_patched_apks_delete_all_title">למחוק את כל קבצי ה-APK שעברו תיקון?</string>
     <!-- Settings - System Tab - Storage Management - Original APKs Management -->
     <string name="settings_system_original_apks_title">קבצי APK מקוריים</string>

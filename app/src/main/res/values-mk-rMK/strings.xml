@@ -9,6 +9,8 @@
     <string name="home_app_status_newer_patches">Нови поправки</string>
     <!-- Mark on the card of an app built for a device other than a phone -->
     <string name="form_factor_tv">ТВ</string>
+    <!-- Named beside the other marks when one app has a build for a phone and for another device -->
+    <string name="form_factor_mobile">Телефон</string>
     <string name="form_factor_automotive">Автомобил</string>
     <string name="home_no_patches_available">Нема поправки достапно</string>
     <string name="home_app_hide_title">Скриј ја оваа апликација?</string>
@@ -359,6 +361,10 @@
     <string name="expert_mode_recommended">Препорачани закрпи</string>
     <string name="expert_mode_reset_to_default_done">Препорачани закрпи применети</string>
     <string name="expert_mode_selected_count">%1$s од %2$s избрани</string>
+    <!-- Which build of an app with builds for several devices the patches are for, such as TV or Wear OS -->
+    <string name="expert_mode_form_factor">За %s верзија</string>
+    <!-- The same for the phone build, named as a common noun rather than by its mark -->
+    <string name="expert_mode_form_factor_mobile">За верзија за телефон</string>
     <string name="expert_mode_saved_selection">Зачуван избор</string>
     <string name="expert_mode_restore_saved_done">Зачувана селекција вратена</string>
     <string name="expert_mode_copy_from_bundle_no_patches">Нема одговарачки закрпи во овој пакет</string>
@@ -488,7 +494,8 @@
     <string name="batch_patch_preparing_next">Подготовка на следната апликација…</string>
     <string name="batch_patch_progress_counter">Крпење %1$s од %2$s</string>
     <string name="batch_patch_summary">%1$s закрпени, %2$s неуспешни, %3$s прескокнати</string>
-    <string name="batch_patch_saved_hint">Модифицираните апликации се зачувани. Инсталирајте ги сега или подоцна од листата на модифицирани APK во поставките</string>
+    <string name="batch_patch_saved_hint">Зачуваните модифицирани APK датотеки се зачуvani. Инсталирајте ги сега или подоцна од почетниот екран</string>
+    <string name="batch_patch_not_kept_hint">Модифицираните APK не се чуваат. Инсталирајте ги или извезете ги пред да го затворите овој екран</string>
     <string name="batch_patch_multiple_sources">Некои апликации комбинираат модификации од повеќе од еден извор, што може да предизвика конфликти</string>
     <string name="batch_patch_needs_apk">Нема достапен APK, прикачете датотека</string>
     <string name="batch_patch_wrong_package">Прикачената датотека припаѓа на %s</string>
@@ -503,22 +510,22 @@
     <string name="batch_patch_apk_selected">APK избрано</string>
     <string name="batch_patch_auto_download_stopped">Автоматското преземање на APK фајлови е запрено</string>
     <string name="batch_patch_auto_download_stop">Запреми преземање</string>
-    <string name="batch_patch_auto_download_kept">Преземениот APK не можеше да се користи, па затоа е задржан претходниот</string>
+    <string name="batch_patch_auto_download_kept">APK датотеката преземање за %s не можеше да се користи, па затоа е зачувана претходната</string>
     <string name="batch_patch_edit_patches">Избери поправки</string>
     <string name="batch_patch_state_no_apk">Нема APK</string>
     <string name="batch_patch_state_no_patches">Нема поправки</string>
     <string name="batch_patch_state_no_selection">Ништо не е избрано</string>
     <string name="batch_patch_no_selection">Ниту една од достапните поправки не е избрана</string>
     <string name="batch_patch_policy_install">Инсталирај кога ќе заврши</string>
-    <string name="batch_patch_policy_install_description">Ги инсталира сите крпени апликации веднаш по завршувањето на редот. Исклученото ги чува APK-ата за подоцна</string>
+    <string name="batch_patch_policy_install_description">Инсталира секоја модифицирана апликација штом заврши редоследот. Кога е исклучено, APK датотеките остануваат на овој екран</string>
     <string name="batch_patch_policy_mount">Монтирај кога ќе заврши</string>
-    <string name="batch_patch_policy_mount_description">Монтира секоја крпана апликација штом редот ќе заврши. Исклученото ги чува APK датотеките за подоцна</string>
+    <string name="batch_patch_policy_mount_description">Ги монтира секоја модифицирана апликација штом заврши редоследот. Кога е исклучено, APK датотеките остануваат на овој екран</string>
     <string name="batch_patch_policy_install_mount">Инсталирај или монтирај кога ќе заврши</string>
-    <string name="batch_patch_policy_install_mount_description">Инсталира или монтира секоја крпана апликација штом редот ќе заврши. Исклученото ги чува APK датотеките за подоцна</string>
+    <string name="batch_patch_policy_install_mount_description">Инсталира или монтира секоја модифицирана апликација штом редата ќе заврши. Опцијата „Исклучено“ ги остава APK датотеките на овој екран</string>
     <!-- Label of a footer button beside "Close". Keep it short, a longer one moves the buttons onto two rows -->
     <string name="batch_patch_start">Започни</string>
     <string name="batch_patch_stop_title">Прекини го групното закрпување?</string>
-    <string name="batch_patch_stop_description">Апликацијата што се закрпува во моментов и сè што е сè уште во редица ќе биде откажано</string>
+    <string name="batch_patch_stop_description">Тековната апликација и остатокот од редата ќе бидат откажани</string>
     <!-- Label of a footer button beside "Done". Keep it short, a longer one moves the buttons onto two rows -->
     <string name="batch_patch_install_all">Инсталирај сите</string>
     <string name="batch_patch_install_failed">Инсталацијата неуспеа</string>
@@ -529,7 +536,7 @@
     <string name="batch_queue_clear_title">Да се исчисти редот?</string>
     <string name="batch_queue_clear_description">Сите апликации ќе бидат отстранети од редот</string>
     <string name="batch_queue_keep_title">Да се задржи редот?</string>
-    <string name="batch_queue_keep_description">Апликациите во редот ќе чекаат на почетниот екран за да бидат стартувани подоцна</string>
+    <string name="batch_queue_keep_description">Редата чека на почетниот екран додека не ја стартувате</string>
     <string name="batch_queue_keep">Задржи</string>
     <string name="shortcut_repatch_short">Повторно закрпи</string>
     <string name="shortcut_repatch_long">Повторно закрпи ги застарените апликации</string>
@@ -663,6 +670,8 @@
     <string name="patcher_conflict_title">Конфликт на пакети</string>
     <string name="patcher_conflict_subtitle">Мора да ја деинсталирате постоечката верзија</string>
     <string name="patcher_conflict_hint">Закрпената апликација користи поинаков сертификат од инсталираната верзија. Отстранувањето ќе ги избрише сите податоци од апликацијата</string>
+    <!-- The patched APK is for another kind of device, such as TV or Wear OS, so it may not start on this one -->
+    <string name="patcher_built_for_other_device">Создадено за %s, па можеби нема да стартува овде. Зачувајте го за да го инсталирате на тој уред</string>
     <string name="patcher_installed_conflict_title">Задолжително отстранување</string>
     <string name="patcher_installed_conflict_body">"Morphe ги потпишува закрпените апликации со сопствен сертификат, кој се разликува од оригиналниот. Android бара отстранување на постоечката верзија пред да може да се инсталира закрпената апликација.
 
@@ -758,7 +767,7 @@
     <string name="plugin_activity_dialog_body">За да продолжите со овој приклучок, потребна е корисничка интеракција.</string>
     <string name="patcher_process_killed_message">Системот го прекина пачерот пред да заврши, обично за да ослободи меморија. Затворете ги другите апликации и обидете се повторно</string>
     <!-- Shown once Morphe is back after it was closed in the middle of patching, for a reason other than low memory. -->
-    <string name="patcher_interrupted_message">Morphe беше затворена пред да заврши закрпувањето, па ништо не беше закрпено. Обидете се повторно</string>
+    <string name="patcher_interrupted_message">Morphe беше затворен пред модификацијата да заврши. Обидете се повторно</string>
     <!-- "%1$s" is where the setting is, such as "Settings > Patcher > Use embedded VM", built from the names on those screens. -->
     <string name="patcher_process_crashed_message">Закрпувачот се сруши пред да заврши. Ако се случи повторно, исклучете го %1$s и пријавете го проблемот со дневникот</string>
     <!-- Shown when a run fills the heap it was given. "%1$s" is the heap in megabytes. -->
@@ -867,14 +876,17 @@
     <string name="settings_appearance_translations_info_title">Преводите за некои јазици може да бидат отсутни или нецелосни</string>
     <!-- Settings - Appearance Tab - Interface Scale -->
     <string name="settings_appearance_ui_scale">Скалирање на интерфејсот</string>
-    <!-- Settings - Appearance Tab - Home Screen Section -->
+    <!-- Settings - Appearance Tab - Screens Section -->
     <string name="settings_appearance_home_screen">Почетен екран</string>
+    <string name="settings_appearance_screens">Екрани</string>
     <string name="settings_appearance_greeting_phrases">Поздрави</string>
     <string name="settings_appearance_greeting_phrases_subtitle">Прикажува порака за поздрав</string>
     <string name="settings_appearance_repatch_notice">Известување за повторно закрпување</string>
     <string name="settings_appearance_repatch_notice_description">Прикажува банер кога зафлакираните апликации можат повторно да се зафлакираат</string>
     <string name="settings_appearance_more_apps_card">Картичка за повеќе апликации</string>
     <string name="settings_appearance_more_apps_card_description">Прикажува картичка под апликациите која води до закрпи од заедницата</string>
+    <string name="settings_appearance_games_button">Копче за игри</string>
+    <string name="settings_appearance_games_button_description">Прикажува копче за мини-игри за време на закрпувањето и на резултатот</string>
     <string name="settings_appearance_app_card_colors">Бои на картичките</string>
     <string name="settings_appearance_app_card_colors_default">Стандардно</string>
     <string name="settings_appearance_app_card_colors_default_description">Доделете посебна боја за секоја апликација и извор</string>
@@ -1245,7 +1257,7 @@ morphe_header_custom_dark.png
     <string name="settings_system_apks_delete_all_confirm">Ова трајно ќе ги избрише зачуваните APK датотеки прикажани овде</string>
     <string name="settings_system_apks_delete_selected_title">Избриши ги избраните APK?</string>
     <string name="settings_system_apks_delete_selected_confirm">Ова трајно ќе ги избрише избраните APK датотеки</string>
-    <string name="settings_system_apks_deleted_all">APK датотеките се избришани успешно</string>
+    <string name="settings_system_apks_deleted_all">APK датотеките се избришани</string>
     <string name="settings_system_apks_delete_failed">Некои APK датотеки не можеа да се избришат</string>
     <string name="settings_system_apks_export_zip_success">Извезени се избраните APK-а</string>
     <string name="settings_system_apks_export_zip_failed">Неуспешен извоз на избраните APK-а</string>
@@ -1268,8 +1280,8 @@ morphe_header_custom_dark.png
     <string name="settings_system_storage_temporary_title">Привремени датотеки</string>
     <string name="settings_system_storage_temporary_description">Работни датотеки создадени за време на закрпувањето</string>
     <string name="settings_system_storage_clear_all">Исчисти ги сите кеш мемории</string>
-    <string name="settings_system_storage_clear_all_description">Однаш го ослободува целиот кеш простор што може да се врати</string>
-    <string name="settings_system_storage_clear_all_confirm">Ова ги брише кешираните мрежни одговори, подготвените копии на инсталаторот и привремените датотеки. Оригиналните и закрпените APK се зачувуваат</string>
+    <string name="settings_system_storage_clear_all_description">Секоја кеш меморија наведена погоре</string>
+    <string name="settings_system_storage_clear_all_confirm">Секоја кеш меморија погоре ќе биде испразнета. Оригиналните и модифицираните APK датотеки се зачувуваат</string>
     <string name="settings_system_storage_cleared">Ослободено %s</string>
     <string name="settings_system_storage_patch_running_warning">Во тек е крпење кое ги користи овие датотеки. Нивното бришење сега ќе предизвика грешка</string>
     <string name="settings_system_storage_clear_anyway">Сепак исчисти</string>
@@ -1277,14 +1289,14 @@ morphe_header_custom_dark.png
     <string name="settings_system_storage_open_app_info_title">Отвори ја складиштето на Android апликацијата</string>
     <string name="settings_system_storage_open_app_info_description">Управувајте или исчистете ги сите податоци на Morphe преку системските поставки</string>
     <string name="settings_system_save_original_apks_title">Зачувај ги оригиналните APK-а</string>
-    <string name="settings_system_save_original_apks_description">Зачувај го APK-то пред крпењето за да може повторно да се користи за ре-крпење без повторно избирање на датотеката</string>
+    <string name="settings_system_save_original_apks_description">Повторно користете го оригиналниот APK при повторно закрпување, без повторно избирање на датотеката</string>
     <string name="settings_system_save_patched_apks_title">Зачувај ги крпените APK-а</string>
-    <string name="settings_system_save_patched_apks_description">Зачувај копија од крпеното APK за подоцнешен извоз или повторна инсталација од менаџерот</string>
+    <string name="settings_system_save_patched_apks_description">Зачувајте копија за извоз или за повторна инсталација подоцна</string>
     <!-- Settings - System Tab - Storage Management - Patched APKs Management -->
     <string name="settings_system_patched_apks_title">Закрпени APK-а</string>
     <string name="settings_system_patched_apks_empty">Сè уште нема зачувани закрпени APK-а</string>
     <string name="settings_system_patched_apks_delete_title">Дали да се избрише закрпениот APK?</string>
-    <string name="settings_system_patched_apks_deleted">Закрпениот APK е успешно избришан</string>
+    <string name="settings_system_patched_apks_deleted">Закрпениот APK е избришан</string>
     <string name="settings_system_patched_apks_delete_all_title">Избриши ги сите закрпени APK-а?</string>
     <!-- Settings - System Tab - Storage Management - Original APKs Management -->
     <string name="settings_system_original_apks_title">Оригинални APK-а</string>

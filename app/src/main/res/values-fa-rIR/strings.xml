@@ -9,6 +9,8 @@
     <string name="home_app_status_newer_patches">پچ‌های جدید</string>
     <!-- Mark on the card of an app built for a device other than a phone -->
     <string name="form_factor_tv">تلویزیون</string>
+    <!-- Named beside the other marks when one app has a build for a phone and for another device -->
+    <string name="form_factor_mobile">تلفن</string>
     <string name="form_factor_automotive">خودرویی</string>
     <string name="home_no_patches_available">هیچ پچی در دسترس نیست</string>
     <string name="home_app_hide_title">این برنامه پنهان شود؟ </string>
@@ -359,6 +361,10 @@
     <string name="expert_mode_recommended">پچ‌های پیشنهادی</string>
     <string name="expert_mode_reset_to_default_done">پچ‌های پیشنهادی اعمال شدند</string>
     <string name="expert_mode_selected_count">%1$s از %2$s انتخاب شده است</string>
+    <!-- Which build of an app with builds for several devices the patches are for, such as TV or Wear OS -->
+    <string name="expert_mode_form_factor">برای بیلد %s</string>
+    <!-- The same for the phone build, named as a common noun rather than by its mark -->
+    <string name="expert_mode_form_factor_mobile">برای بیلد گوشی</string>
     <string name="expert_mode_saved_selection">انتخاب ذخیره شده</string>
     <string name="expert_mode_restore_saved_done">انتخاب ذخیره‌شده بازیابی شد</string>
     <string name="expert_mode_copy_from_bundle_no_patches">پچ منطبقی در این بسته وجود ندارد</string>
@@ -489,7 +495,8 @@
     <string name="batch_patch_preparing_next">در حال آماده‌سازی برنامهٔ بعدی…</string>
     <string name="batch_patch_progress_counter">در حال پچ کردن %1$s از %2$s</string>
     <string name="batch_patch_summary">%1$s پچ شد، %2$s شکست خورد، %3$s رد شد</string>
-    <string name="batch_patch_saved_hint">برنامه‌های پچ‌شده ذخیره شدند. همین حالا نصبشان کنید یا بعداً از فهرست APKهای پچ‌شده در تنظیمات نصب کنید</string>
+    <string name="batch_patch_saved_hint">APKهای پچ‌شده ذخیره شدند. همین حالا یا بعداً از صفحه اصلی آن‌ها را نصب کنید</string>
+    <string name="batch_patch_not_kept_hint">APKهای پچ‌شده ذخیره نمی‌شوند. پیش از بستن این صفحه، آن‌ها را نصب یا خروجی بگیرید</string>
     <string name="batch_patch_multiple_sources">بعضی برنامه‌ها پچ‌هایی را از بیش از یک منبع ترکیب می‌کنند که ممکن است باعث تداخل شود</string>
     <string name="batch_patch_needs_apk">APKای در دسترس نیست؛ یک فایل پیوست کنید</string>
     <string name="batch_patch_wrong_package">فایل پیوست‌شده متعلق به %s است</string>
@@ -504,22 +511,22 @@
     <string name="batch_patch_apk_selected">APK انتخاب شده است</string>
     <string name="batch_patch_auto_download_stopped">دانلود خودکار APKها متوقف شد</string>
     <string name="batch_patch_auto_download_stop">توقف دانلودها</string>
-    <string name="batch_patch_auto_download_kept">APK دانلود شده قابل استفاده نبود، بنابراین نسخه قبلی حفظ شد</string>
+    <string name="batch_patch_auto_download_kept">APK دانلود شده برای %s قابل استفاده نبود، بنابراین نسخه قبلی حفظ شد</string>
     <string name="batch_patch_edit_patches">انتخاب پچ‌ها</string>
     <string name="batch_patch_state_no_apk">بدون APK</string>
     <string name="batch_patch_state_no_patches">بدون پچ</string>
     <string name="batch_patch_state_no_selection">هیچ‌کدام انتخاب نشده‌اند</string>
     <string name="batch_patch_no_selection">هیچ‌یک از پچ‌های موجود انتخاب نشده‌اند</string>
     <string name="batch_patch_policy_install">پس از پایان نصب شود</string>
-    <string name="batch_patch_policy_install_description">هر برنامهٔ پچ‌شده را بلافاصله پس از پایان صف نصب می‌کند. خاموش‌کردن آن APKها را برای بعد نگه می‌دارد</string>
+    <string name="batch_patch_policy_install_description">هر برنامهٔ پچ‌شده را پس از پایان صف نصب می‌کند. خاموش‌کردن آن، APKها را در این صفحه باقی می‌گذارد</string>
     <string name="batch_patch_policy_mount">پس از پایان مونت شود</string>
-    <string name="batch_patch_policy_mount_description">هر برنامهٔ پچ‌شده را پس از پایان صف مونت می‌کند. خاموش‌کردن آن APKها را برای بعد نگه می‌دارد</string>
+    <string name="batch_patch_policy_mount_description">هر برنامهٔ پچ‌شده را پس از پایان صف مونت می‌کند. خاموش‌کردن آن، APKها را در این صفحه باقی می‌گذارد</string>
     <string name="batch_patch_policy_install_mount">پس از پایان نصب یا مونت شود</string>
-    <string name="batch_patch_policy_install_mount_description">هر برنامهٔ پچ‌شده را پس از پایان صف نصب یا مانت می‌کند. خاموش‌کردن آن APKها را برای بعد نگه می‌دارد</string>
+    <string name="batch_patch_policy_install_mount_description">هر برنامهٔ پچ‌شده را پس از پایان صف نصب یا مونت می‌کند. خاموش‌کردن آن APKها را در این صفحه نگه می‌دارد</string>
     <!-- Label of a footer button beside "Close". Keep it short, a longer one moves the buttons onto two rows -->
     <string name="batch_patch_start">آغاز</string>
     <string name="batch_patch_stop_title">پچ‌کردن گروهی متوقف شود؟</string>
-    <string name="batch_patch_stop_description">برنامه‌ای که هم‌اکنون در حال پچ است و همهٔ موارد باقی‌مانده در صف لغو می‌شوند</string>
+    <string name="batch_patch_stop_description">برنامهٔ فعلی و بقیهٔ صف لغو خواهند شد</string>
     <!-- Label of a footer button beside "Done". Keep it short, a longer one moves the buttons onto two rows -->
     <string name="batch_patch_install_all">نصب همه</string>
     <string name="batch_patch_install_failed">نصب ناموفق بود</string>
@@ -530,7 +537,7 @@
     <string name="batch_queue_clear_title">صف پاک شود؟</string>
     <string name="batch_queue_clear_description">تمام برنامه‌ها از صف حذف خواهند شد</string>
     <string name="batch_queue_keep_title">صف حفظ شود؟</string>
-    <string name="batch_queue_keep_description">برنامه‌های موجود در صف در صفحه اصلی منتظر می‌مانند تا بعداً اجرا شوند</string>
+    <string name="batch_queue_keep_description">صف در صفحهٔ اصلی منتظر می‌ماند تا آن را شروع کنید</string>
     <string name="batch_queue_keep">حفظ</string>
     <string name="shortcut_repatch_short">دوباره پچ کن</string>
     <string name="shortcut_repatch_long">دوباره پچ‌کردن برنامه‌های قدیمی</string>
@@ -664,6 +671,8 @@
     <string name="patcher_conflict_title">تداخل بسته</string>
     <string name="patcher_conflict_subtitle">باید نسخهٔ موجود را حذف کنید</string>
     <string name="patcher_conflict_hint">برنامهٔ پچ‌شده از گواهی متفاوتی نسبت به نسخهٔ نصب‌شده استفاده می‌کند. حذف برنامه همهٔ داده‌های آن را پاک می‌کند</string>
+    <!-- The patched APK is for another kind of device, such as TV or Wear OS, so it may not start on this one -->
+    <string name="patcher_built_for_other_device">برای %s ساخته شده است، بنابراین ممکن است اینجا اجرا نشود. آن را برای نصب روی آن دستگاه ذخیره کنید</string>
     <string name="patcher_installed_conflict_title">حذف لازم است</string>
     <string name="patcher_installed_conflict_body">"Morphe برنامه‌های پچ‌شده را با گواهی خودش امضا می‌کند که با گواهی اصلی متفاوت است. Android پیش از نصب برنامهٔ پچ‌شده، حذف نسخهٔ موجود را الزامی می‌کند.
 
@@ -759,7 +768,7 @@
     <string name="plugin_activity_dialog_body">برای ادامهٔ کار این افزونه، تعامل کاربر لازم است</string>
     <string name="patcher_process_killed_message">سیستم قبل از اتمام فرایند پچر آن را متوقف کرد، معمولاً برای آزادسازی حافظه. برنامه‌های دیگر را ببندید و دوباره تلاش کنید</string>
     <!-- Shown once Morphe is back after it was closed in the middle of patching, for a reason other than low memory. -->
-    <string name="patcher_interrupted_message">Morphe قبل از اتمام وصله کردن بسته شد، بنابراین هیچ چیزی وصله نشد. دوباره تلاش کنید</string>
+    <string name="patcher_interrupted_message">Morphe پیش از پایان پچ‌کردن بسته شد. دوباره تلاش کنید</string>
     <!-- "%1$s" is where the setting is, such as "Settings > Patcher > Use embedded VM", built from the names on those screens. -->
     <string name="patcher_process_crashed_message">پچر پیش از اتمام کرش کرد. اگر دوباره اتفاق افتاد، %1$s را خاموش کرده و مشکل را همراه با لاگ گزارش دهید</string>
     <!-- Shown when a run fills the heap it was given. "%1$s" is the heap in megabytes. -->
@@ -868,14 +877,17 @@
     <string name="settings_appearance_translations_info_title">ترجمهٔ بعضی زبان‌ها ممکن است ناقص یا موجود نباشد</string>
     <!-- Settings - Appearance Tab - Interface Scale -->
     <string name="settings_appearance_ui_scale">مقیاس رابط کاربری</string>
-    <!-- Settings - Appearance Tab - Home Screen Section -->
+    <!-- Settings - Appearance Tab - Screens Section -->
     <string name="settings_appearance_home_screen">صفحهٔ اصلی</string>
+    <string name="settings_appearance_screens">صفحه‌ها</string>
     <string name="settings_appearance_greeting_phrases">عبارت‌های خوشامدگویی</string>
     <string name="settings_appearance_greeting_phrases_subtitle">نمایش پیام خوش‌آمدگویی</string>
     <string name="settings_appearance_repatch_notice">اعلان پچ دوباره</string>
     <string name="settings_appearance_repatch_notice_description">نمایش بنر هنگامی که برنامه‌های پچ‌شده را می‌توان دوباره پچ کرد</string>
     <string name="settings_appearance_more_apps_card">کارت برنامه‌های بیشتر</string>
     <string name="settings_appearance_more_apps_card_description">یک کارت را زیر برنامه‌ها نمایش می‌دهد که به وصله‌های جامعه منجر می‌شود</string>
+    <string name="settings_appearance_games_button">دکمهٔ بازی‌ها</string>
+    <string name="settings_appearance_games_button_description">نمایش دکمه‌ای برای مینی‌بازی‌ها هنگام وصله کردن و در صفحهٔ نتیجه</string>
     <string name="settings_appearance_app_card_colors">رنگ کارت برنامه‌ها</string>
     <string name="settings_appearance_app_card_colors_default">پیش‌فرض</string>
     <string name="settings_appearance_app_card_colors_default_description">برای هر برنامه و منبع، رنگ مخصوص به خود را تعیین کنید</string>
@@ -1246,7 +1258,7 @@ morphe_header_custom_dark.png
     <string name="settings_system_apks_delete_all_confirm">فایل‌های APK ذخیره‌شدهٔ نمایش‌داده‌شده برای همیشه حذف می‌شوند</string>
     <string name="settings_system_apks_delete_selected_title">APKهای انتخاب‌شده حذف شوند؟</string>
     <string name="settings_system_apks_delete_selected_confirm">فایل‌های APK انتخاب‌شده برای همیشه حذف می‌شوند</string>
-    <string name="settings_system_apks_deleted_all">APKها با موفقیت حذف شدند</string>
+    <string name="settings_system_apks_deleted_all">APKها حذف شدند</string>
     <string name="settings_system_apks_delete_failed">حذف بعضی فایل‌های APK ممکن نشد</string>
     <string name="settings_system_apks_export_zip_success">از APKهای انتخاب‌شده خروجی گرفته شد</string>
     <string name="settings_system_apks_export_zip_failed">خروجی‌گرفتن از APKهای انتخاب‌شده ناموفق بود</string>
@@ -1269,8 +1281,8 @@ morphe_header_custom_dark.png
     <string name="settings_system_storage_temporary_title">فایل‌های موقت</string>
     <string name="settings_system_storage_temporary_description">فایل‌های کاری ایجادشده هنگام پچ‌کردن</string>
     <string name="settings_system_storage_clear_all">پاک‌کردن همهٔ کش‌ها</string>
-    <string name="settings_system_storage_clear_all_description">همهٔ فضای قابل‌بازیابی کش را یک‌جا آزاد می‌کند</string>
-    <string name="settings_system_storage_clear_all_confirm">پاسخ‌های کش‌شدهٔ شبکه، نسخه‌های آماده‌شدهٔ نصب‌کننده و فایل‌های موقت پاک می‌شوند. APKهای اصلی و پچ‌شده نگه داشته می‌شوند</string>
+    <string name="settings_system_storage_clear_all_description">تمام کش‌های لیست شده در بالا</string>
+    <string name="settings_system_storage_clear_all_confirm">تمام کش‌های بالا پاک خواهند شد. APKهای اصلی و پچ‌شده حفظ می‌شوند</string>
     <string name="settings_system_storage_cleared">%s آزاد شد</string>
     <string name="settings_system_storage_patch_running_warning">یک پچ در حال اجرا است و از این فایل‌ها استفاده می‌کند. پاک کردن آن‌ها اکنون باعث شکست عملیات می‌شود</string>
     <string name="settings_system_storage_clear_anyway">در هر صورت پاک کن</string>
@@ -1278,14 +1290,14 @@ morphe_header_custom_dark.png
     <string name="settings_system_storage_open_app_info_title">بازکردن فضای ذخیره‌سازی برنامهٔ Android</string>
     <string name="settings_system_storage_open_app_info_description">همهٔ داده‌های Morphe را از طریق تنظیمات سیستم مدیریت یا پاک کنید</string>
     <string name="settings_system_save_original_apks_title">نگه‌داشتن APKهای اصلی</string>
-    <string name="settings_system_save_original_apks_description">APK پیش از پچ را ذخیره می‌کند تا برای پچ‌کردن دوباره، بدون انتخاب مجدد فایل، استفاده شود</string>
+    <string name="settings_system_save_original_apks_description">استفاده مجدد از APK اصلی هنگام پچ‌کردن دوباره، بدون انتخاب مجدد فایل</string>
     <string name="settings_system_save_patched_apks_title">نگه‌داشتن APKهای پچ‌شده</string>
-    <string name="settings_system_save_patched_apks_description">یک نسخه از APK پچ‌شده را برای خروجی‌گرفتن یا نصب دوباره از مدیر ذخیره می‌کند</string>
+    <string name="settings_system_save_patched_apks_description">نگه داشتن یک نسخه برای خروجی گرفتن یا نصب مجدد در آینده</string>
     <!-- Settings - System Tab - Storage Management - Patched APKs Management -->
     <string name="settings_system_patched_apks_title">APKهای پچ‌شده</string>
     <string name="settings_system_patched_apks_empty">هنوز APK پچ‌شده‌ای ذخیره نشده است</string>
     <string name="settings_system_patched_apks_delete_title">APK پچ‌شده حذف شود؟</string>
-    <string name="settings_system_patched_apks_deleted">APK پچ‌شده با موفقیت حذف شد</string>
+    <string name="settings_system_patched_apks_deleted">APK پچ‌شده حذف شد</string>
     <string name="settings_system_patched_apks_delete_all_title">همهٔ APKهای پچ‌شده حذف شوند؟</string>
     <!-- Settings - System Tab - Storage Management - Original APKs Management -->
     <string name="settings_system_original_apks_title">APKهای اصلی</string>

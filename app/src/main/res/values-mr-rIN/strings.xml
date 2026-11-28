@@ -9,6 +9,8 @@
     <string name="home_app_status_newer_patches">नवीन पॅचेस</string>
     <!-- Mark on the card of an app built for a device other than a phone -->
     <string name="form_factor_tv">टीव्ही</string>
+    <!-- Named beside the other marks when one app has a build for a phone and for another device -->
+    <string name="form_factor_mobile">फोन</string>
     <string name="form_factor_automotive">ऑटोमोटिव</string>
     <string name="home_no_patches_available">सुधारणा उपलब्ध नाहीत</string>
     <string name="home_app_hide_title">हे ॲप लपवायचे का</string>
@@ -359,6 +361,10 @@
     <string name="expert_mode_recommended">सुचवलेले पॅचेस</string>
     <string name="expert_mode_reset_to_default_done">शिफारस केलेले पॅच लागू केले</string>
     <string name="expert_mode_selected_count">%2$s पैकी %1$s निवडले</string>
+    <!-- Which build of an app with builds for several devices the patches are for, such as TV or Wear OS -->
+    <string name="expert_mode_form_factor">%s बिल्डसाठी</string>
+    <!-- The same for the phone build, named as a common noun rather than by its mark -->
+    <string name="expert_mode_form_factor_mobile">फोन बिल्डसाठी</string>
     <string name="expert_mode_saved_selection">जतन केलेली निवड</string>
     <string name="expert_mode_restore_saved_done">जतन केलेली निवड पुनर्स्थापित केली</string>
     <string name="expert_mode_copy_from_bundle_no_patches">या बंडलमध्ये जुळणारे पॅच नाहीत</string>
@@ -488,7 +494,8 @@
     <string name="batch_patch_preparing_next">पुढील ॲप तयार करत आहे…</string>
     <string name="batch_patch_progress_counter">%2$s पैकी %1$s पॅचिंग करत आहे</string>
     <string name="batch_patch_summary">%1$s पॅच केले, %2$s अयशस्वी, %3$s वगळले</string>
-    <string name="batch_patch_saved_hint">पॅच केलेले ॲप्स सेव्ह झाले आहेत. ते आता इंस्टॉल करा किंवा सेटिंग्जमधील पॅच केलेल्या APK सूचीमधून नंतर इंस्टॉल करा.</string>
+    <string name="batch_patch_saved_hint">पॅच केलेले APK जतन केले आहेत. ते आता किंवा नंतर होम स्क्रीनवरून इंस्टॉल करा</string>
+    <string name="batch_patch_not_kept_hint">पॅच केलेले APK ठेवले जात नाहीत. ही स्क्रीन बंद करण्यापूर्वी ते इंस्टॉल किंवा एक्सपोर्ट करा</string>
     <string name="batch_patch_multiple_sources">काही ॲप्स एकापेक्षा जास्त स्रोतांकडून पॅच एकत्र करतात, ज्यामुळे संघर्ष होऊ शकतात.</string>
     <string name="batch_patch_needs_apk">APK उपलब्ध नाही, फाइल जोडा</string>
     <string name="batch_patch_wrong_package">जोडलेली फाइल %s शी संबंधित आहे.</string>
@@ -503,22 +510,22 @@
     <string name="batch_patch_apk_selected">APK निवडली</string>
     <string name="batch_patch_auto_download_stopped">स्वयंचलित APK डाउनलोड थांबवले</string>
     <string name="batch_patch_auto_download_stop">डाउनलोड थांबवा</string>
-    <string name="batch_patch_auto_download_kept">डाउनलोड केलेले APK वापरता आले नाही, त्यामुळे मागील APK ठेवले आहे</string>
+    <string name="batch_patch_auto_download_kept">%s साठी डाउनलोड केलेले APK वापरता आले नाही, त्यामुळे मागील APK ठेवला आहे</string>
     <string name="batch_patch_edit_patches">पॅच निवडा</string>
     <string name="batch_patch_state_no_apk">APK नाही</string>
     <string name="batch_patch_state_no_patches">पॅच नाहीत</string>
     <string name="batch_patch_state_no_selection">काहीही निवडले नाही</string>
     <string name="batch_patch_no_selection">उपलब्ध पॅचेसपैकी एकही निवडलेला नाही</string>
     <string name="batch_patch_policy_install">पूर्ण झाल्यावर इंस्टॉल करा</string>
-    <string name="batch_patch_policy_install_description">रांग पूर्ण झाल्यावर लगेच प्रत्येक पॅच केलेले ॲप इंस्टॉल करते. बंद केल्यास APK नंतरसाठी जतन केले जातात.</string>
+    <string name="batch_patch_policy_install_description">रांग पूर्ण झाल्यावर प्रत्येक पॅच केलेले ॲप इंस्टॉल करते. \'बंद\' केल्यास APK या स्क्रीनवर राहतात</string>
     <string name="batch_patch_policy_mount">पूर्ण झाल्यावर माउंट करा</string>
-    <string name="batch_patch_policy_mount_description">रांग पूर्ण झाल्यावर प्रत्येक पॅच केलेले ॲप माउंट करते. \'बंद\' केल्यास APK नंतरसाठी जतन केले जातात</string>
+    <string name="batch_patch_policy_mount_description">रांग पूर्ण झाल्यावर प्रत्येक पॅच केलेले ॲप माउंट करते. \'बंद\' केल्यास APKs या स्क्रीनवर राहतात</string>
     <string name="batch_patch_policy_install_mount">पूर्ण झाल्यावर इंस्टॉल किंवा माउंट करा</string>
-    <string name="batch_patch_policy_install_mount_description">रांग पूर्ण झाल्यावर प्रत्येक पॅच केलेले ॲप इंस्टॉल किंवा माउंट करते. \'बंद\' केल्यास APK नंतरसाठी जतन केले जातात</string>
+    <string name="batch_patch_policy_install_mount_description">रांग पूर्ण झाल्यावर प्रत्येक पॅच केलेले ॲप इंस्टॉल किंवा माउंट करते. \'बंद\' केल्यास APK या स्क्रीनवर राहतात</string>
     <!-- Label of a footer button beside "Close". Keep it short, a longer one moves the buttons onto two rows -->
     <string name="batch_patch_start">सुरू करा</string>
     <string name="batch_patch_stop_title">बॅच पॅचिंग थांबवायचे?</string>
-    <string name="batch_patch_stop_description">सध्या पॅच केले जाणारे ॲप आणि रांगेत असलेले सर्व पॅचेस रद्द केले जातील</string>
+    <string name="batch_patch_stop_description">सध्याचे ॲप आणि रांगेतील उर्वरित प्रक्रिया रद्द केल्या जातील</string>
     <!-- Label of a footer button beside "Done". Keep it short, a longer one moves the buttons onto two rows -->
     <string name="batch_patch_install_all">सर्व इंस्टॉल करा</string>
     <string name="batch_patch_install_failed">इंस्टॉल करण्यात अयशस्वी</string>
@@ -529,7 +536,7 @@
     <string name="batch_queue_clear_title">रांग रिकामी करायची?</string>
     <string name="batch_queue_clear_description">सर्व ॲप्स रांगेतून काढून टाकले जातील</string>
     <string name="batch_queue_keep_title">रांग ठेवायची आहे का?</string>
-    <string name="batch_queue_keep_description">रांगेतील ॲप्स नंतर सुरू करण्यासाठी होम स्क्रीनवर थांबतील</string>
+    <string name="batch_queue_keep_description">तुम्ही सुरुवात करेपर्यंत रांग होम स्क्रीनवर प्रतीक्षा करेल</string>
     <string name="batch_queue_keep">ठेवा</string>
     <string name="shortcut_repatch_short">पुन्हा पॅच करा</string>
     <string name="shortcut_repatch_long">जुने झालेले ॲप्स पुन्हा पॅच करा</string>
@@ -663,6 +670,8 @@
     <string name="patcher_conflict_title">पॅकेज संघर्ष</string>
     <string name="patcher_conflict_subtitle">तुम्हाला सध्याचे व्हर्जन अनइंस्टॉल करणे आवश्यक आहे</string>
     <string name="patcher_conflict_hint">पॅच केलेले ॲप इंस्टॉल केलेल्या आवृत्तीपेक्षा वेगळे प्रमाणपत्र वापरते. अनइंस्टॉल केल्याने ॲपचा सर्व डेटा पुसला जाईल.</string>
+    <!-- The patched APK is for another kind of device, such as TV or Wear OS, so it may not start on this one -->
+    <string name="patcher_built_for_other_device">%s साठी तयार केले आहे, त्यामुळे ते येथे सुरू होणार नाही. त्या डिव्हाइसवर इंस्टॉल करण्यासाठी ते सेव्ह करा</string>
     <string name="patcher_installed_conflict_title">अनइंस्टॉल करणे आवश्यक आहे</string>
     <string name="patcher_installed_conflict_body">"Morphe पॅच केलेल्या ॲप्सवर स्वतःच्या प्रमाणपत्राने स्वाक्षरी करते, जे मूळ प्रमाणपत्रापेक्षा वेगळे आहे. पॅच केलेले ॲप स्थापित करण्यापूर्वी Android ला विद्यमान आवृत्ती काढणे आवश्यक आहे.
 
@@ -758,7 +767,7 @@
     <string name="plugin_activity_dialog_body">या प्लगइनसह पुढे जाण्यासाठी वापरकर्त्याच्या इंटरॅक्शनची आवश्यकता आहे</string>
     <string name="patcher_process_killed_message">सिस्टमने पॅचर पूर्ण होण्यापूर्वीच थांबवले, सहसा मेमरी मोकळी करण्यासाठी. इतर अ‍ॅप्स बंद करा आणि पुन्हा प्रयत्न करा</string>
     <!-- Shown once Morphe is back after it was closed in the middle of patching, for a reason other than low memory. -->
-    <string name="patcher_interrupted_message">पॅचिंग पूर्ण होण्यापूर्वी Morphe बंद झाले, त्यामुळे काहीही पॅच झाले नाही. पुन्हा प्रयत्न करा</string>
+    <string name="patcher_interrupted_message">पॅचिंग पूर्ण होण्यापूर्वी Morphe बंद झाले होते. पुन्हा प्रयत्न करा</string>
     <!-- "%1$s" is where the setting is, such as "Settings > Patcher > Use embedded VM", built from the names on those screens. -->
     <string name="patcher_process_crashed_message">पॅचर पूर्ण होण्यापूर्वी क्रॅश झाले. जर असे पुन्हा घडले, तर %1$s बंद करा आणि लॉगसह समस्या कळवा</string>
     <!-- Shown when a run fills the heap it was given. "%1$s" is the heap in megabytes. -->
@@ -867,14 +876,17 @@
     <string name="settings_appearance_translations_info_title">काही भाषांसाठी भाषांतरे गहाळ किंवा अपूर्ण असू शकतात</string>
     <!-- Settings - Appearance Tab - Interface Scale -->
     <string name="settings_appearance_ui_scale">इंटरफेस स्केल</string>
-    <!-- Settings - Appearance Tab - Home Screen Section -->
+    <!-- Settings - Appearance Tab - Screens Section -->
     <string name="settings_appearance_home_screen">मुख्य स्क्रीन</string>
+    <string name="settings_appearance_screens">स्क्रीन्ज</string>
     <string name="settings_appearance_greeting_phrases">शुभेच्छा संदेश</string>
     <string name="settings_appearance_greeting_phrases_subtitle">अभिवादन संदेश दाखवते</string>
     <string name="settings_appearance_repatch_notice">री-पॅच सूचना</string>
     <string name="settings_appearance_repatch_notice_description">जेव्हा पॅच केलेल्या ॲप्स पुन्हा-पॅच केले जाऊ शकतात, तेव्हा एक बॅनर दाखवते</string>
     <string name="settings_appearance_more_apps_card">अधिक ॲप्स कार्ड</string>
     <string name="settings_appearance_more_apps_card_description">ॲप्सच्या खाली एक कार्ड दाखवते जे समुदाय पॅचेसकडे घेऊन जाते</string>
+    <string name="settings_appearance_games_button">गेम्स बटण</string>
+    <string name="settings_appearance_games_button_description">पॅचिंग दरम्यान आणि रिझल्टवर मिनी-गेम्ससाठी बटण दर्शवते</string>
     <string name="settings_appearance_app_card_colors">कार्डचे रंग</string>
     <string name="settings_appearance_app_card_colors_default">डीफॉल्ट</string>
     <string name="settings_appearance_app_card_colors_default_description">प्रत्येक ॲप आणि स्त्रोताला स्वतःचा वेगळा रंग द्या</string>
@@ -1245,7 +1257,7 @@ morphe_header_custom_dark.png
     <string name="settings_system_apks_delete_all_confirm">हे येथे दाखवलेल्या जतन केलेल्या APK फाइल्स कायमच्या हटवतील</string>
     <string name="settings_system_apks_delete_selected_title">निवडलेले APKs हटवायचे?</string>
     <string name="settings_system_apks_delete_selected_confirm">हे निवडलेल्या APK फाइल्स कायमच्या हटवतील</string>
-    <string name="settings_system_apks_deleted_all">APKs यशस्वीरित्या हटवले</string>
+    <string name="settings_system_apks_deleted_all">APK हटवले</string>
     <string name="settings_system_apks_delete_failed">काही APK फाइल्स हटवल्या जाऊ शकल्या नाहीत</string>
     <string name="settings_system_apks_export_zip_success">निवडलेले APK निर्यात केले</string>
     <string name="settings_system_apks_export_zip_failed">निवडलेले APK निर्यात करण्यात अयशस्वी</string>
@@ -1268,8 +1280,8 @@ morphe_header_custom_dark.png
     <string name="settings_system_storage_temporary_title">अस्थायी फाइल्स</string>
     <string name="settings_system_storage_temporary_description">पॅचिंग दरम्यान तयार केलेल्या कार्यरत फाइल्स</string>
     <string name="settings_system_storage_clear_all">सर्व कॅशे साफ करा</string>
-    <string name="settings_system_storage_clear_all_description">एकाच वेळी सर्व पुनर्प्राप्त करण्यायोग्य कॅशे जागा मोकळी करते</string>
-    <string name="settings_system_storage_clear_all_confirm">हे कॅशे केलेले नेटवर्क प्रतिसाद, स्टेज केलेले इंस्टॉलर प्रती आणि अस्थायी फाइल्स साफ करते. मूळ आणि पॅच केलेले APK ठेवले जातात</string>
+    <string name="settings_system_storage_clear_all_description">वर सूचीबद्ध केलेला प्रत्येक कॅशे</string>
+    <string name="settings_system_storage_clear_all_confirm">वरील प्रत्येक कॅशे साफ केला जाईल. मूळ आणि पॅच केलेले APKs ठेवले जातील</string>
     <string name="settings_system_storage_cleared">मोकळी जागा %s</string>
     <string name="settings_system_storage_patch_running_warning">एक पॅच चालू आहे आणि या फायलींचा वापर करत आहे. त्या आता हटवल्यास प्रक्रिया अयशस्वी होईल</string>
     <string name="settings_system_storage_clear_anyway">तरीही हटवा</string>
@@ -1277,14 +1289,14 @@ morphe_header_custom_dark.png
     <string name="settings_system_storage_open_app_info_title">Android ॲप स्टोरेज उघडा</string>
     <string name="settings_system_storage_open_app_info_description">सिस्टम सेटिंग्जद्वारे सर्व Morphe डेटा व्यवस्थापित किंवा साफ करा</string>
     <string name="settings_system_save_original_apks_title">मूळ APKs ठेवा</string>
-    <string name="settings_system_save_original_apks_description">पॅचिंगपूर्वीची APK फाइल पुन्हा निवडावी लागू नये म्हणून जतन करा, जेणेकरून ती पुन्हा पॅचिंगसाठी वापरता येईल</string>
+    <string name="settings_system_save_original_apks_description">फाइल पुन्हा न निवडता, पुन्हा पॅचिंग करताना मूळ APK चा पुनर्वापर करा</string>
     <string name="settings_system_save_patched_apks_title">पॅच केलेले APKs ठेवा</string>
-    <string name="settings_system_save_patched_apks_description">नंतर निर्यात करण्यासाठी किंवा व्यवस्थापकातून पुन्हा स्थापित करण्यासाठी पॅच केलेल्या APK ची एक प्रत जतन करा.</string>
+    <string name="settings_system_save_patched_apks_description">नंतर एक्सपोर्ट करण्यासाठी किंवा पुन्हा इंस्टॉल करण्यासाठी एक प्रत ठेवा</string>
     <!-- Settings - System Tab - Storage Management - Patched APKs Management -->
     <string name="settings_system_patched_apks_title">पॅच केलेले APK</string>
     <string name="settings_system_patched_apks_empty">अद्याप कोणतेही पॅच केलेले APK जतन केलेले नाहीत</string>
     <string name="settings_system_patched_apks_delete_title">पॅच केलेले APK डिलीट करायचे?</string>
-    <string name="settings_system_patched_apks_deleted">पॅच केलेले APK यशस्वीरित्या डिलीट केले</string>
+    <string name="settings_system_patched_apks_deleted">पॅच केलेला APK हटवला</string>
     <string name="settings_system_patched_apks_delete_all_title">सर्व पॅच केलेले APKs हटवायचे?</string>
     <!-- Settings - System Tab - Storage Management - Original APKs Management -->
     <string name="settings_system_original_apks_title">मूळ APK</string>

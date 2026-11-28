@@ -9,6 +9,8 @@
     <string name="home_app_status_newer_patches">नए पैच</string>
     <!-- Mark on the card of an app built for a device other than a phone -->
     <string name="form_factor_tv">टीवी</string>
+    <!-- Named beside the other marks when one app has a build for a phone and for another device -->
+    <string name="form_factor_mobile">फ़ोन</string>
     <string name="form_factor_automotive">ऑटोमोटिव</string>
     <string name="home_no_patches_available">कोई पैच उपलब्ध नहीं है</string>
     <string name="home_app_hide_title">इस ऐप को छुपाएं?</string>
@@ -359,6 +361,10 @@
     <string name="expert_mode_recommended">अनुशंसित पैच</string>
     <string name="expert_mode_reset_to_default_done">अनुशंसित पैच लागू किए गए</string>
     <string name="expert_mode_selected_count">%2$s में से %1$s चुने गए</string>
+    <!-- Which build of an app with builds for several devices the patches are for, such as TV or Wear OS -->
+    <string name="expert_mode_form_factor">%s बिल्ड के लिए</string>
+    <!-- The same for the phone build, named as a common noun rather than by its mark -->
+    <string name="expert_mode_form_factor_mobile">फ़ोन बिल्ड के लिए</string>
     <string name="expert_mode_saved_selection">सुरक्षित चयन</string>
     <string name="expert_mode_restore_saved_done">सहेजे गए चयन को पुनर्स्थापित किया गया</string>
     <string name="expert_mode_copy_from_bundle_no_patches">इस बंडल में कोई मिलान करने वाला पैच नहीं है</string>
@@ -489,7 +495,8 @@
     <string name="batch_patch_preparing_next">अगला ऐप तैयार किया जा रहा है…</string>
     <string name="batch_patch_progress_counter">%2$s में से %1$s को पैच किया जा रहा है</string>
     <string name="batch_patch_summary">%1$s पैच किए गए, %2$s विफल रहे, %3$s को छोड़ दिया गया</string>
-    <string name="batch_patch_saved_hint">पैच किए गए ऐप्स सहेजे गए हैं। उन्हें अभी इंस्टॉल करें, या सेटिंग्स में पैच किए गए APK सूची से बाद में इंस्टॉल करें</string>
+    <string name="batch_patch_saved_hint">Patched APKs सहेज लिए गए हैं। उन्हें अभी या बाद में होम स्क्रीन से इंस्टॉल करें</string>
+    <string name="batch_patch_not_kept_hint">Patched APKs रखे नहीं जाते हैं। इस स्क्रीन को बंद करने से पहले उन्हें इंस्टॉल या एक्सपोर्ट करें</string>
     <string name="batch_patch_multiple_sources">कुछ ऐप एक से अधिक स्रोत से पैच को जोड़ते हैं, जिससे टकराव हो सकता है</string>
     <string name="batch_patch_needs_apk">कोई APK उपलब्ध नहीं है, एक फ़ाइल संलग्न करें</string>
     <string name="batch_patch_wrong_package">संलग्न फ़ाइल %s से संबंधित है</string>
@@ -504,22 +511,22 @@
     <string name="batch_patch_apk_selected">APK चुना गया</string>
     <string name="batch_patch_auto_download_stopped">ऑटोमैटिक APK डाउनलोड रुक गए</string>
     <string name="batch_patch_auto_download_stop">डाउनलोड रोकें</string>
-    <string name="batch_patch_auto_download_kept">डाउनलोड किए गए APK का उपयोग नहीं किया जा सका, इसलिए पिछला वाला रखा गया है</string>
+    <string name="batch_patch_auto_download_kept">%s के लिए डाउनलोड किया गया APK उपयोग नहीं किया जा सका, इसलिए पिछला वाला रखा गया है</string>
     <string name="batch_patch_edit_patches">पैच चुनें</string>
     <string name="batch_patch_state_no_apk">कोई APK नहीं</string>
     <string name="batch_patch_state_no_patches">कोई पैच नहीं</string>
     <string name="batch_patch_state_no_selection">कोई नहीं चुना गया</string>
     <string name="batch_patch_no_selection">सब उपलब्ध पैच में से कोई भी नहीं चुना गया है</string>
     <string name="batch_patch_policy_install">पूरा होने पर इंस्टॉल करें</string>
-    <string name="batch_patch_policy_install_description">क्यू खत्म होने के तुरंत बाद हर पैच किए गए ऐप को इंस्टॉल करता है। बंद रखने से APK बाद के लिए बच जाते हैं</string>
+    <string name="batch_patch_policy_install_description">एक बार कतार समाप्त होने के बाद हर पैच किए गए ऐप को इंस्टॉल करता है। Off करने पर APKs इस स्क्रीन पर ही रहते हैं</string>
     <string name="batch_patch_policy_mount">पूरा होने पर माउंट करें</string>
-    <string name="batch_patch_policy_mount_description">कतार समाप्त होने के बाद हर पैच किए गए ऐप को माउंट करता है। बंद रखने पर APKs बाद के लिए सुरक्षित रहते हैं</string>
+    <string name="batch_patch_policy_mount_description">एक बार कतार समाप्त होने के बाद हर पैच किए गए ऐप को माउंट करता है। Off करने पर APKs इस स्क्रीन पर ही रहते हैं</string>
     <string name="batch_patch_policy_install_mount">पूरा होने पर इंस्टॉल या माउंट करें</string>
-    <string name="batch_patch_policy_install_mount_description">एक बार जब क्यू पूरी हो जाती है, तो हर पैच किए गए ऐप को इंस्टॉल या माउंट करता है। Off रखने पर APKs बाद के लिए सुरक्षित रहते हैं</string>
+    <string name="batch_patch_policy_install_mount_description">कतार समाप्त होने के बाद प्रत्येक पैच किए गए ऐप को इंस्टॉल या माउंट करता है। \'बंद\' करने पर APK इस स्क्रीन पर रहेंगे</string>
     <!-- Label of a footer button beside "Close". Keep it short, a longer one moves the buttons onto two rows -->
     <string name="batch_patch_start">शुरू करें</string>
     <string name="batch_patch_stop_title">बैच पैचिंग रोकें?</string>
-    <string name="batch_patch_stop_description">जो ऐप अभी पैच किया जा रहा है और सब कुछ कतार में है, वह रद्द कर दिया जाएगा</string>
+    <string name="batch_patch_stop_description">वर्तमान ऐप और कतार के बाकी सभी रद्द कर दिए जाएंगे</string>
     <!-- Label of a footer button beside "Done". Keep it short, a longer one moves the buttons onto two rows -->
     <string name="batch_patch_install_all">सब इंस्टॉल करें</string>
     <string name="batch_patch_install_failed">इंस्टॉल करने में विफल</string>
@@ -530,7 +537,7 @@
     <string name="batch_queue_clear_title">कतार साफ़ करें?</string>
     <string name="batch_queue_clear_description">सभी ऐप्स कतार से हटा दिए जाएंगे</string>
     <string name="batch_queue_keep_title">क्यू को रखें?</string>
-    <string name="batch_queue_keep_description">क्यू किए गए ऐप्स बाद में शुरू होने के लिए होम स्क्रीन पर प्रतीक्षा करेंगे</string>
+    <string name="batch_queue_keep_description">जब तक आप इसे शुरू नहीं करते, कतार होम स्क्रीन पर प्रतीक्षा करती है</string>
     <string name="batch_queue_keep">रखें</string>
     <string name="shortcut_repatch_short">पुन: पैच करें</string>
     <string name="shortcut_repatch_long">आउटडेटेड ऐप्स को पुन: पैच करें</string>
@@ -664,6 +671,8 @@
     <string name="patcher_conflict_title">पैकेज टकराव</string>
     <string name="patcher_conflict_subtitle">आपको मौजूदा संस्करण अनइंस्टॉल करना होगा</string>
     <string name="patcher_conflict_hint">पैच किया गया ऐप इंस्टॉल किए गए संस्करण से अलग प्रमाणपत्र का उपयोग करता है। अनइंस्टॉल करने से सभी ऐप डेटा मिट जाएगा।</string>
+    <!-- The patched APK is for another kind of device, such as TV or Wear OS, so it may not start on this one -->
+    <string name="patcher_built_for_other_device">%s के लिए बनाया गया है, इसलिए यह यहाँ शुरू नहीं हो सकता है। उस डिवाइस पर इंस्टॉल करने के लिए इसे सेव करें</string>
     <string name="patcher_installed_conflict_title">अनइंस्टॉल आवश्यक है</string>
     <string name="patcher_installed_conflict_body">"Morphe अपने स्वयं के प्रमाणपत्र के साथ पैच्ड ऐप्स पर हस्ताक्षर करता है, जो मूल से अलग है। Android को पैच्ड ऐप को इंस्टॉल करने से पहले मौजूदा संस्करण को हटाने की आवश्यकता होती है।
 
@@ -759,7 +768,7 @@
     <string name="plugin_activity_dialog_body">इस प्लगइन के लिए आगे बढ़ने के लिए उपयोगकर्ता इंटरैक्शन आवश्यक है।</string>
     <string name="patcher_process_killed_message">सिस्टम ने पैचर को पूरा होने से पहले ही बंद कर दिया, आमतौर पर मेमोरी खाली करने के लिए। अन्य ऐप्स बंद करें और फिर से प्रयास करें</string>
     <!-- Shown once Morphe is back after it was closed in the middle of patching, for a reason other than low memory. -->
-    <string name="patcher_interrupted_message">पैचिंग समाप्त होने से पहले Morphe बंद कर दिया गया था, इसलिए कुछ भी पैच नहीं किया गया। फिर से प्रयास करें</string>
+    <string name="patcher_interrupted_message">पैचिंग समाप्त होने से पहले Morphe बंद कर दिया गया था। पुनः प्रयास करें</string>
     <!-- "%1$s" is where the setting is, such as "Settings > Patcher > Use embedded VM", built from the names on those screens. -->
     <string name="patcher_process_crashed_message">पैचर पूरा होने से पहले क्रैश हो गया। यदि ऐसा फिर से होता है, तो %1$s बंद करें और लॉग के साथ समस्या की रिपोर्ट करें</string>
     <!-- Shown when a run fills the heap it was given. "%1$s" is the heap in megabytes. -->
@@ -868,14 +877,17 @@
     <string name="settings_appearance_translations_info_title">कुछ भाषाओं के लिए अनुवाद या अपूर्ण अनुवाद उपलब्ध हो सकते हैं</string>
     <!-- Settings - Appearance Tab - Interface Scale -->
     <string name="settings_appearance_ui_scale">इंटरफ़ेस स्केल</string>
-    <!-- Settings - Appearance Tab - Home Screen Section -->
+    <!-- Settings - Appearance Tab - Screens Section -->
     <string name="settings_appearance_home_screen">मुखपृष्ठ</string>
+    <string name="settings_appearance_screens">स्क्रीन</string>
     <string name="settings_appearance_greeting_phrases">अभिवादन वाक्यांश</string>
     <string name="settings_appearance_greeting_phrases_subtitle">अभिवादन संदेश दिखाता है</string>
     <string name="settings_appearance_repatch_notice">पुनः पैच सूचना</string>
     <string name="settings_appearance_repatch_notice_description">जब पैच किए गए ऐप्स को फिर से पैच किया जा सकता है, तब बैनर दिखाता है</string>
     <string name="settings_appearance_more_apps_card">और ऐप्स कार्ड</string>
     <string name="settings_appearance_more_apps_card_description">ऐप्स के नीचे एक कार्ड दिखाता है जो कम्युनिटी पैच की ओर ले जाता है</string>
+    <string name="settings_appearance_games_button">गेम्स बटन</string>
+    <string name="settings_appearance_games_button_description">पैचिंग के दौरान और परिणाम पर मिनी-गेम्स के लिए एक बटन दिखाता है</string>
     <string name="settings_appearance_app_card_colors">कार्ड रंग</string>
     <string name="settings_appearance_app_card_colors_default">डिफ़ॉल्ट</string>
     <string name="settings_appearance_app_card_colors_default_description">प्रत्येक ऐप और स्रोत को अपना अलग रंग दें</string>
@@ -1246,7 +1258,7 @@ morphe_header_custom_dark.png
     <string name="settings_system_apks_delete_all_confirm">यह सहेजी गई APK फ़ाइलों को यहाँ दिखाए गए अनुसार स्थायी रूप से हटा देगा</string>
     <string name="settings_system_apks_delete_selected_title">चयनित APK हटाएं?</string>
     <string name="settings_system_apks_delete_selected_confirm">यह चयनित APK फ़ाइलों को स्थायी रूप से हटा देगा</string>
-    <string name="settings_system_apks_deleted_all">APK सफलतापूर्वक हटाए गए</string>
+    <string name="settings_system_apks_deleted_all">APK हटा दिए गए</string>
     <string name="settings_system_apks_delete_failed">कुछ APK फ़ाइलें हटाई नहीं जा सकीं</string>
     <string name="settings_system_apks_export_zip_success">निर्यात किए गए APK</string>
     <string name="settings_system_apks_export_zip_failed">चयनित APK निर्यात करने में विफल।</string>
@@ -1269,8 +1281,8 @@ morphe_header_custom_dark.png
     <string name="settings_system_storage_temporary_title">अस्थायी फाइलें</string>
     <string name="settings_system_storage_temporary_description">पैचिंग के दौरान बनाई गई कार्य फाइलें</string>
     <string name="settings_system_storage_clear_all">सभी कैश साफ़ करें</string>
-    <string name="settings_system_storage_clear_all_description">एक साथ सभी पुनर्प्राप्त करने योग्य कैश स्थान को मुक्त करता है</string>
-    <string name="settings_system_storage_clear_all_confirm">यह कैश की गई नेटवर्क प्रतिक्रियाओं, स्टेज्ड इंस्टॉलर प्रतियों और अस्थायी फ़ाइलों को साफ़ करता है। मूल और पैच किए गए APK को रखा जाएगा।</string>
+    <string name="settings_system_storage_clear_all_description">ऊपर सूचीबद्ध प्रत्येक कैश</string>
+    <string name="settings_system_storage_clear_all_confirm">ऊपर का प्रत्येक कैश साफ़ कर दिया जाएगा। मूल और पैच किए गए APK रखे जाते हैं</string>
     <string name="settings_system_storage_cleared">मुक्त किया गया %s</string>
     <string name="settings_system_storage_patch_running_warning">एक पैच चल रहा है और इन फ़ाइलों का उपयोग कर रहा है। अब उन्हें साफ़ करने से यह विफल हो जाएगा</string>
     <string name="settings_system_storage_clear_anyway">फिर भी हटाएं</string>
@@ -1278,14 +1290,14 @@ morphe_header_custom_dark.png
     <string name="settings_system_storage_open_app_info_title">एंड्रॉइड ऐप स्टोरेज खोलें</string>
     <string name="settings_system_storage_open_app_info_description">सिस्टम सेटिंग से Morphe का सारा डेटा प्रबंधित या साफ़ करें</string>
     <string name="settings_system_save_original_apks_title">मूल APK सुरक्षित रखें</string>
-    <string name="settings_system_save_original_apks_description">पुनः पैचिंग के लिए APK को फिर से चुनने की आवश्यकता के बिना, पूर्व-पैच APK को सहेजें ताकि इसे फिर से इस्तेमाल किया जा सके</string>
+    <string name="settings_system_save_original_apks_description">दोबारा पैच करते समय मूल APK का पुनः उपयोग करें, बिना फ़ाइल को फिर से चुने</string>
     <string name="settings_system_save_patched_apks_title">पैच किए गए APK सुरक्षित रखें</string>
-    <string name="settings_system_save_patched_apks_description">प्रबंधक से बाद में निर्यात या पुनर्स्थापित करने के लिए पैच किए गए APK की एक प्रति सहेजें</string>
+    <string name="settings_system_save_patched_apks_description">बाद में निर्यात या पुन: इंस्टॉल करने के लिए एक प्रति रखें</string>
     <!-- Settings - System Tab - Storage Management - Patched APKs Management -->
     <string name="settings_system_patched_apks_title">पैच किए गए एपीके</string>
     <string name="settings_system_patched_apks_empty">अभी तक कोई सहेजा गया पैच किया गया एपीके नहीं है</string>
     <string name="settings_system_patched_apks_delete_title">सहेजे गए पैच किए गए एपीके को हटाएं?</string>
-    <string name="settings_system_patched_apks_deleted">Patched APK सफलतापूर्वक हटा दिया गया</string>
+    <string name="settings_system_patched_apks_deleted">पैच किया गया APK हटा दिया गया</string>
     <string name="settings_system_patched_apks_delete_all_title">क्या आप सभी पैच किए गए APK हटाना चाहते हैं?</string>
     <!-- Settings - System Tab - Storage Management - Original APKs Management -->
     <string name="settings_system_original_apks_title">अरिजनल एपीके</string>

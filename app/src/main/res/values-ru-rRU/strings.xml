@@ -9,6 +9,8 @@
     <string name="home_app_status_newer_patches">Новые патчи</string>
     <!-- Mark on the card of an app built for a device other than a phone -->
     <string name="form_factor_tv">ТВ</string>
+    <!-- Named beside the other marks when one app has a build for a phone and for another device -->
+    <string name="form_factor_mobile">Телефонный</string>
     <string name="form_factor_automotive">Автомобильный</string>
     <string name="home_no_patches_available">Нет доступных патчей</string>
     <string name="home_app_hide_title">Скрыть это приложение?</string>
@@ -359,6 +361,10 @@
     <string name="expert_mode_recommended">Рекомендуемые патчи</string>
     <string name="expert_mode_reset_to_default_done">Рекомендуемые патчи применены</string>
     <string name="expert_mode_selected_count">Выбрано %1$s из %2$s</string>
+    <!-- Which build of an app with builds for several devices the patches are for, such as TV or Wear OS -->
+    <string name="expert_mode_form_factor">Для сборки %s</string>
+    <!-- The same for the phone build, named as a common noun rather than by its mark -->
+    <string name="expert_mode_form_factor_mobile">Для телефонной сборки</string>
     <string name="expert_mode_saved_selection">Сохраненный выбор</string>
     <string name="expert_mode_restore_saved_done">Сохраненный выбор восстановлен</string>
     <string name="expert_mode_copy_from_bundle_no_patches">В этом пакете нет подходящих патчей</string>
@@ -489,7 +495,8 @@
     <string name="batch_patch_preparing_next">Подготовка следующего приложения…</string>
     <string name="batch_patch_progress_counter">Патчинг %1$s из %2$s</string>
     <string name="batch_patch_summary">%1$s пропатчено, %2$s с ошибкой, %3$s пропущено</string>
-    <string name="batch_patch_saved_hint">Сохраненные пропатченные приложения доступны для установки сейчас или позже из списка пропатченных APK в настройках</string>
+    <string name="batch_patch_saved_hint">Исправленные APK сохранены. Установите их сейчас или позже с главного экрана</string>
+    <string name="batch_patch_not_kept_hint">Исправленные APK не сохраняются. Установите или экспортируйте их перед закрытием этого экрана</string>
     <string name="batch_patch_multiple_sources">Некоторые приложения объединяют патчи из разных источников, что может привести к конфликтам</string>
     <string name="batch_patch_needs_apk">Нет APK, прикрепите файл</string>
     <string name="batch_patch_wrong_package">Прикрепленный файл принадлежит %s</string>
@@ -504,22 +511,22 @@
     <string name="batch_patch_apk_selected">APK выбраны</string>
     <string name="batch_patch_auto_download_stopped">Автоматическая загрузка APK остановлена</string>
     <string name="batch_patch_auto_download_stop">Остановить загрузку</string>
-    <string name="batch_patch_auto_download_kept">Загруженный APK не удалось использовать, поэтому сохранен предыдущий</string>
+    <string name="batch_patch_auto_download_kept">APK, скачанный для %s, не удалось использовать, поэтому сохранен предыдущий</string>
     <string name="batch_patch_edit_patches">Выбрать патчи</string>
     <string name="batch_patch_state_no_apk">Нет APK</string>
     <string name="batch_patch_state_no_patches">Нет патчей</string>
     <string name="batch_patch_state_no_selection">Не выбрано</string>
     <string name="batch_patch_no_selection">Ни один из доступных патчей не выбран</string>
     <string name="batch_patch_policy_install">Устанавливать по завершении</string>
-    <string name="batch_patch_policy_install_description">Устанавливает каждое пропатченное приложение сразу после завершения очереди. Выкл. сохраняет APK для последующей установки</string>
+    <string name="batch_patch_policy_install_description">Устанавливает каждое исправленное приложение после завершения очереди. Если выключено, APK остаются на этом экране</string>
     <string name="batch_patch_policy_mount">Смонтировать по завершении</string>
-    <string name="batch_patch_policy_mount_description">Смонтирует каждое пропатченное приложение после завершения очереди. Если выключено, APK-файлы сохраняются на потом.</string>
+    <string name="batch_patch_policy_mount_description">Монтирует каждое исправленное приложение после завершения очереди. Если выключено, APK остаются на этом экране</string>
     <string name="batch_patch_policy_install_mount">Установить или смонтировать по завершении</string>
-    <string name="batch_patch_policy_install_mount_description">Установит или смонтирует каждое пропатченное приложение после завершения очереди. Если выключено, APK-файлы сохраняются на потом.</string>
+    <string name="batch_patch_policy_install_mount_description">Устанавливает или монтирует каждое патченное приложение после завершения очереди. Выключенный вариант оставляет APK на этом экране</string>
     <!-- Label of a footer button beside "Close". Keep it short, a longer one moves the buttons onto two rows -->
     <string name="batch_patch_start">Начало</string>
     <string name="batch_patch_stop_title">Остановить массовый патчинг?</string>
-    <string name="batch_patch_stop_description">Патчинг текущего приложения и всего, что осталось в очереди, будет отменен</string>
+    <string name="batch_patch_stop_description">Текущее приложение и остальная часть очереди будут отменены</string>
     <!-- Label of a footer button beside "Done". Keep it short, a longer one moves the buttons onto two rows -->
     <string name="batch_patch_install_all">Установить все</string>
     <string name="batch_patch_install_failed">Ошибка установки</string>
@@ -530,7 +537,7 @@
     <string name="batch_queue_clear_title">Очистить очередь?</string>
     <string name="batch_queue_clear_description">Все приложения будут удалены из очереди</string>
     <string name="batch_queue_keep_title">Оставить очередь?</string>
-    <string name="batch_queue_keep_description">Приложения в очереди будут ждать запуска на главном экране</string>
+    <string name="batch_queue_keep_description">Очередь ожидает на главном экране, пока вы её не запустите</string>
     <string name="batch_queue_keep">Оставить</string>
     <string name="shortcut_repatch_short">Перепатчить</string>
     <string name="shortcut_repatch_long">Перепатчить устаревшие приложения</string>
@@ -664,6 +671,8 @@
     <string name="patcher_conflict_title">Конфликт пакетов</string>
     <string name="patcher_conflict_subtitle">Вам необходимо удалить существующую версию</string>
     <string name="patcher_conflict_hint">Пропатченное приложение использует другой сертификат, чем установленная версия. Удаление приведет к удалению всех данных приложения</string>
+    <!-- The patched APK is for another kind of device, such as TV or Wear OS, so it may not start on this one -->
+    <string name="patcher_built_for_other_device">Собрано для %s, поэтому здесь может не запуститься. Сохраните файл, чтобы установить его на то устройство</string>
     <string name="patcher_installed_conflict_title">Требуется удаление</string>
     <string name="patcher_installed_conflict_body">"Morphe подписывает пропатченные приложения своим собственным сертификатом, который отличается от оригинального. Android требует удаления существующей версии перед установкой пропатченного приложения.
 
@@ -759,7 +768,7 @@
     <string name="plugin_activity_dialog_body">Требуется взаимодействие пользователя для продолжения работы с этим плагином</string>
     <string name="patcher_process_killed_message">Система остановила патчер до его завершения, обычно для освобождения памяти. Закройте другие приложения и попробуйте ещё раз</string>
     <!-- Shown once Morphe is back after it was closed in the middle of patching, for a reason other than low memory. -->
-    <string name="patcher_interrupted_message">Morphe было закрыто до завершения установки патчей, поэтому ничего не было обновлено. Попробуйте снова</string>
+    <string name="patcher_interrupted_message">Morphe было закрыто до завершения патчинга. Попробуйте снова</string>
     <!-- "%1$s" is where the setting is, such as "Settings > Patcher > Use embedded VM", built from the names on those screens. -->
     <string name="patcher_process_crashed_message">Патчер завершился с ошибкой до окончания работы. Если это повторится, выключите %1$s и сообщите о проблеме, приложив лог</string>
     <!-- Shown when a run fills the heap it was given. "%1$s" is the heap in megabytes. -->
@@ -868,14 +877,17 @@
     <string name="settings_appearance_translations_info_title">Переводы для некоторых языков могут отсутствовать или быть неполными</string>
     <!-- Settings - Appearance Tab - Interface Scale -->
     <string name="settings_appearance_ui_scale">Масштаб интерфейса</string>
-    <!-- Settings - Appearance Tab - Home Screen Section -->
+    <!-- Settings - Appearance Tab - Screens Section -->
     <string name="settings_appearance_home_screen">Главный экран</string>
+    <string name="settings_appearance_screens">Экраны</string>
     <string name="settings_appearance_greeting_phrases">Приветственные фразы</string>
     <string name="settings_appearance_greeting_phrases_subtitle">Показывает приветственное сообщение</string>
     <string name="settings_appearance_repatch_notice">Уведомление о перепатчивании</string>
     <string name="settings_appearance_repatch_notice_description">Показывает баннер когда пропатченные приложения могут быть перепатчены</string>
     <string name="settings_appearance_more_apps_card">Карточка «Другие приложения»</string>
     <string name="settings_appearance_more_apps_card_description">Показывает карточку под приложениями, ведущую к патчам сообщества</string>
+    <string name="settings_appearance_games_button">Кнопка игр</string>
+    <string name="settings_appearance_games_button_description">Показывает кнопку мини-игр во время патчинга и на результате</string>
     <string name="settings_appearance_app_card_colors">Card colors</string>
     <string name="settings_appearance_app_card_colors_default">По умолчанию</string>
     <string name="settings_appearance_app_card_colors_default_description">Предоставьте каждому приложению и источнику свой цвет</string>
@@ -1246,7 +1258,7 @@ morphe_header_custom_dark.png
     <string name="settings_system_apks_delete_all_confirm">Это навсегда удалит сохраненные APK-файлы, отображаемые здесь</string>
     <string name="settings_system_apks_delete_selected_title">Удалить выбранные APK-файлы?</string>
     <string name="settings_system_apks_delete_selected_confirm">Это навсегда удалит выбранные APK-файлы</string>
-    <string name="settings_system_apks_deleted_all">APK-файлы удалены успешно</string>
+    <string name="settings_system_apks_deleted_all">APK удалены</string>
     <string name="settings_system_apks_delete_failed">Не удалось удалить некоторые APK-файлы</string>
     <string name="settings_system_apks_export_zip_success">Выбранные APK экспортированы</string>
     <string name="settings_system_apks_export_zip_failed">Не удалось выгрузить выбранные APK</string>
@@ -1269,8 +1281,8 @@ morphe_header_custom_dark.png
     <string name="settings_system_storage_temporary_title">Временные файлы</string>
     <string name="settings_system_storage_temporary_description">Рабочие файлы, создаваемые во время патчинга</string>
     <string name="settings_system_storage_clear_all">Очистить все кэши</string>
-    <string name="settings_system_storage_clear_all_description">Освобождает все доступное место в кэше за один раз</string>
-    <string name="settings_system_storage_clear_all_confirm">Это очищает кэшированные сетевые ответы, подготовленные копии установщиков и временные файлы. Оригинальные и пропатченные APK сохраняются</string>
+    <string name="settings_system_storage_clear_all_description">Весь кэш, перечисленный выше</string>
+    <string name="settings_system_storage_clear_all_confirm">Весь указанный выше кэш будет очищен. Оригинальные и патченные APK будут сохранены</string>
     <string name="settings_system_storage_cleared">Освобождено %s</string>
     <string name="settings_system_storage_patch_running_warning">Выполнен патч, использующий эти файлы. Если их очистить сейчас, это приведет к сбою</string>
     <string name="settings_system_storage_clear_anyway">Очистить в любом случае</string>
@@ -1278,14 +1290,14 @@ morphe_header_custom_dark.png
     <string name="settings_system_storage_open_app_info_title">Открыть хранилище Android-приложения</string>
     <string name="settings_system_storage_open_app_info_description">Управление или очистка всех данных Morphe через системные настройки</string>
     <string name="settings_system_save_original_apks_title">Сохранять оригинальные APK</string>
-    <string name="settings_system_save_original_apks_description">Сохраните APK до патча, чтобы его можно было повторно использовать для повторного патчинга без повторного выбора файла</string>
+    <string name="settings_system_save_original_apks_description">Использовать оригинальный APK при повторном патчинге, не выбирая файл снова</string>
     <string name="settings_system_save_patched_apks_title">Сохранять пропатченные APK</string>
-    <string name="settings_system_save_patched_apks_description">Сохраните копию пропатченного APK для последующего экспорта или переустановки из менеджера</string>
+    <string name="settings_system_save_patched_apks_description">Сохранить копию для экспорта или последующей переустановки</string>
     <!-- Settings - System Tab - Storage Management - Patched APKs Management -->
     <string name="settings_system_patched_apks_title">Патченые APK</string>
     <string name="settings_system_patched_apks_empty">Патченые файлы APK еще не сохранены</string>
     <string name="settings_system_patched_apks_delete_title">Удалить патченный APK ?</string>
-    <string name="settings_system_patched_apks_deleted">Патченый APK удален успешно</string>
+    <string name="settings_system_patched_apks_deleted">Патченный APK удален</string>
     <string name="settings_system_patched_apks_delete_all_title">Удалить все пропатченные APK?</string>
     <!-- Settings - System Tab - Storage Management - Original APKs Management -->
     <string name="settings_system_original_apks_title">Оригинальные APK</string>

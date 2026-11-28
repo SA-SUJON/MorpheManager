@@ -9,6 +9,8 @@
     <string name="home_app_status_newer_patches">Жаңы патчтар</string>
     <!-- Mark on the card of an app built for a device other than a phone -->
     <string name="form_factor_tv">ТВ</string>
+    <!-- Named beside the other marks when one app has a build for a phone and for another device -->
+    <string name="form_factor_mobile">Телефон</string>
     <string name="form_factor_automotive">Автоунаа</string>
     <string name="home_no_patches_available">Патчтар жеткиликсиз</string>
     <string name="home_app_hide_title">Бул колдонмону жашыруу керекпи?</string>
@@ -359,6 +361,10 @@
     <string name="expert_mode_recommended">Сунушталган патчтар</string>
     <string name="expert_mode_reset_to_default_done">Сунушталган патчтер колдонулду</string>
     <string name="expert_mode_selected_count">%2$s ичинен %1$s тандалды</string>
+    <!-- Which build of an app with builds for several devices the patches are for, such as TV or Wear OS -->
+    <string name="expert_mode_form_factor">%s версиясы үчүн</string>
+    <!-- The same for the phone build, named as a common noun rather than by its mark -->
+    <string name="expert_mode_form_factor_mobile">Телефон версиясы үчүн</string>
     <string name="expert_mode_saved_selection">Сакталган тандоо</string>
     <string name="expert_mode_restore_saved_done">Сакталган тандоо калыбына келтирилди</string>
     <string name="expert_mode_copy_from_bundle_no_patches">Бул пакетте тиешелүү патчтар жок</string>
@@ -489,7 +495,8 @@
     <string name="batch_patch_preparing_next">Кийинки колдонмо даярдалууда…</string>
     <string name="batch_patch_progress_counter">%2$s ичинен %1$s патчталууда</string>
     <string name="batch_patch_summary">%1$s оңдолду, %2$s ката кетти, %3$s өткөрүлүп кетти</string>
-    <string name="batch_patch_saved_hint">Патчтелген колдонмолор сакталды. Аларды азыр же кийин жөндөөлөрдөгү патчтелген APK тизмесинен орнотуңуз</string>
+    <string name="batch_patch_saved_hint">Патчтелген APKлар сакталды. Аларды азыр же кийин башкы экрандан орнотуңуз</string>
+    <string name="batch_patch_not_kept_hint">Патчтелген APKлар сакталбайт. Бул экранды жабуудан мурун аларды орнотуңуз же экспорттоңуз</string>
     <string name="batch_patch_multiple_sources">Кээ бир колдонмолор бирден көп булактан патчтарды айкалыштырат, бул чыр-чатактарга алып келиши мүмкүн</string>
     <string name="batch_patch_needs_apk">APK жок, файлды тиркеңиз</string>
     <string name="batch_patch_wrong_package">Тиркелген файл %s пакетине таандык</string>
@@ -504,22 +511,22 @@
     <string name="batch_patch_apk_selected">APK тандалды</string>
     <string name="batch_patch_auto_download_stopped">APK файлдарын автоматтык түрдө жүктөө токтотулду</string>
     <string name="batch_patch_auto_download_stop">Жүктөөнү токтотуу</string>
-    <string name="batch_patch_auto_download_kept">Жүктөлгөн APK файлын колдонуу мүмкүн болгон жок, ошондуктан мурункусу сакталды</string>
+    <string name="batch_patch_auto_download_kept">%s үчүн жүктөлгөн APKны колдонуу мүмкүн болгон жок, ошондуктан мурункусу сакталды</string>
     <string name="batch_patch_edit_patches">Патчтарды тандоо</string>
     <string name="batch_patch_state_no_apk">APK жок</string>
     <string name="batch_patch_state_no_patches">Патчтар жок</string>
     <string name="batch_patch_state_no_selection">Эч нерсе тандалган жок</string>
     <string name="batch_patch_no_selection">Жеткиликтүү патчтардын эч бири тандалган жок</string>
     <string name="batch_patch_policy_install">Аяктаганда орнотуу</string>
-    <string name="batch_patch_policy_install_description">Кезек бүтөрү менен ар бир патчталган колдонмону орнотот. Өчүрүлгөн болсо, APK файлдары кийин колдонуу үчүн сакталат</string>
+    <string name="batch_patch_policy_install_description">Кезек аяктагандан кийин ар бир патчтелген колдонмону орнотот. Өчүрүлгөн болсо, APKлар ушул экранда калат</string>
     <string name="batch_patch_policy_mount">Аяктаганда монтаждоо</string>
-    <string name="batch_patch_policy_mount_description">Кезек аяктагандан кийин ар бир патчтелген колдонмону монтаждайт. Өчүрүлгөн болсо, APK файлдары кийин колдонуу үчүн сакталат</string>
+    <string name="batch_patch_policy_mount_description">Кезек аяктагандан кийин ар бир патчтелген колдонмону монтаждайт. Өчүрүлгөн болсо, APK файлдары ушул экранда калат</string>
     <string name="batch_patch_policy_install_mount">Аяктаганда орнотуу же монтаждоо</string>
-    <string name="batch_patch_policy_install_mount_description">Кезек аяктагандан кийин ар бир патчтелген колдонмону орнотот же монтаждайт. Өчүрүлгөн болсо, APK файлдары кийин колдонуу үчүн сакталат</string>
+    <string name="batch_patch_policy_install_mount_description">Кезек аяктагандан кийин ар бир патчтелген колдонмону орнотот же монтаждайт. Өчүрүлгөн болсо, APK файлдары ушул экранда калат</string>
     <!-- Label of a footer button beside "Close". Keep it short, a longer one moves the buttons onto two rows -->
     <string name="batch_patch_start">Баштоо</string>
     <string name="batch_patch_stop_title">Топтук патчтоону токтотуу керекпи?</string>
-    <string name="batch_patch_stop_description">Учурда патч жүгүртүлүп жаткан колдонмо жана кезекте турган бардык иштер токтотулат</string>
+    <string name="batch_patch_stop_description">Учурдагы колдонмо жана кезектеги калган колдонмолор токтотулат</string>
     <!-- Label of a footer button beside "Done". Keep it short, a longer one moves the buttons onto two rows -->
     <string name="batch_patch_install_all">Баарын орнотуу</string>
     <string name="batch_patch_install_failed">Орнотуу ишке ашкан жок</string>
@@ -530,7 +537,7 @@
     <string name="batch_queue_clear_title">Кезекти тазалоо керекпи?</string>
     <string name="batch_queue_clear_description">Бардык тиркемелер кезектен алынат</string>
     <string name="batch_queue_keep_title">Кезекти сактоо керекпи?</string>
-    <string name="batch_queue_keep_description">Кезекке алынган тиркемелер кийин баштоо үчүн башкы экранда күтөт</string>
+    <string name="batch_queue_keep_description">Сиз аны баштаганча кезек башкы экранда күтөт</string>
     <string name="batch_queue_keep">Сактоо</string>
     <string name="shortcut_repatch_short">Кайра патчилөө</string>
     <string name="shortcut_repatch_long">Эскирген колдонмолорду кайра патчилөө</string>
@@ -664,6 +671,8 @@
     <string name="patcher_conflict_title">Пакеттердин карама-каршылыгы</string>
     <string name="patcher_conflict_subtitle">Сиз учурдагы версияны өчүрүшүңүз керек</string>
     <string name="patcher_conflict_hint">Патчтелген тиркеме орнотулган версияга караганда башка сертификатты колдонот. Орнотууну алып салуу бардык тиркеме маалыматтарын өчүрөт</string>
+    <!-- The patched APK is for another kind of device, such as TV or Wear OS, so it may not start on this one -->
+    <string name="patcher_built_for_other_device">%s үчүн жасалган, ошондуктан бул жерде иштебеши мүмкүн. Ал түзүлүшкө орнотуу үчүн сактаңыз</string>
     <string name="patcher_installed_conflict_title">Орнотууну алып салуу талап кылынат</string>
     <string name="patcher_installed_conflict_body">"Morphe патчтелген тиркемелерди түп нускасынан айырмаланган өзүнүн сертификаты менен кол койот. Патчтелген тиркемени орнотуу үчүн Android mevcut версияны алып салууну талап кылат.
 
@@ -759,7 +768,7 @@
     <string name="plugin_activity_dialog_body">Бул плагин менен улантуу үчүн колдонуучунун өз ара аракеттенүүсү талап кылынат</string>
     <string name="patcher_process_killed_message">Система патчерди бүтөрүнө чейин токтотту, адатта бул эс тутумду бошотуу үчүн жасалат. Башка колдонмолорду жаап, кайра аракет кылып көрүңүз</string>
     <!-- Shown once Morphe is back after it was closed in the middle of patching, for a reason other than low memory. -->
-    <string name="patcher_interrupted_message">Morphe патч жасоо аяктаганга чейин жабылып калган, ошондуктан эч нерсе патчталган жок. Кайра аракет кылып көрүңүз</string>
+    <string name="patcher_interrupted_message">Патчтөө аяктаганга чейин Morphe жабылып калган. Кайра аракет кылыңыз</string>
     <!-- "%1$s" is where the setting is, such as "Settings > Patcher > Use embedded VM", built from the names on those screens. -->
     <string name="patcher_process_crashed_message">Патчер бүтө электе ката берип жабылды. Эгер бул кайрадан болсо, %1$s бөлүмүн өчүрүңүз жана лог менен бирге маселе жөнүндө билдириңиз</string>
     <!-- Shown when a run fills the heap it was given. "%1$s" is the heap in megabytes. -->
@@ -868,14 +877,17 @@
     <string name="settings_appearance_translations_info_title">Кээ бир тилдер үчүн котормолор жок болушу мүмкүн же толук эмес</string>
     <!-- Settings - Appearance Tab - Interface Scale -->
     <string name="settings_appearance_ui_scale">Интерфейстин масштабы</string>
-    <!-- Settings - Appearance Tab - Home Screen Section -->
+    <!-- Settings - Appearance Tab - Screens Section -->
     <string name="settings_appearance_home_screen">Башкы экран</string>
+    <string name="settings_appearance_screens">Экрандар</string>
     <string name="settings_appearance_greeting_phrases">Саламдашуу сөздөрү</string>
     <string name="settings_appearance_greeting_phrases_subtitle">Саламдашуу билдирүүсүн көрсөтөт</string>
     <string name="settings_appearance_repatch_notice">Кайра патчдоо боюнча билдирүү</string>
     <string name="settings_appearance_repatch_notice_description">Патчтелген тиркемелерди кайра патчтөө мүмкүн болгондо баннерди көрсөтөт</string>
     <string name="settings_appearance_more_apps_card">Көбүрөөк колдонмолор картасы</string>
     <string name="settings_appearance_more_apps_card_description">Колдонмолордун астында коомдук патчтарга алып баруучу картаны көрсөтөт</string>
+    <string name="settings_appearance_games_button">Оюндар баскычы</string>
+    <string name="settings_appearance_games_button_description">Патчинг учурунда жана жыйынтыкта мини-оюндарга баскычты көрсөтөт</string>
     <string name="settings_appearance_app_card_colors">Карточкалардын түстөрү</string>
     <string name="settings_appearance_app_card_colors_default">Негизги</string>
     <string name="settings_appearance_app_card_colors_default_description">Ар бир тиркемеге жана булакка өзүнүн түсүн бериңиз</string>
@@ -1246,7 +1258,7 @@ morphe_header_custom_dark.png
     <string name="settings_system_apks_delete_all_confirm">Бул жерде көрсөтүлгөн сакталган APK файлдарын биротоло өчүрөт</string>
     <string name="settings_system_apks_delete_selected_title">Тандалган APK файлдарын өчүрөсүзбү?</string>
     <string name="settings_system_apks_delete_selected_confirm">Бул тандалган APK файлдарын биротоло өчүрөт</string>
-    <string name="settings_system_apks_deleted_all">APK файлдары ийгиликтүү өчүрүлдү</string>
+    <string name="settings_system_apks_deleted_all">APK файлдары өчүрүлдү</string>
     <string name="settings_system_apks_delete_failed">Кээ бир APK файлдарын өчүрүү мүмкүн болбоду</string>
     <string name="settings_system_apks_export_zip_success">Тандалган APK файлдары экспорттолду</string>
     <string name="settings_system_apks_export_zip_failed">Тандалган APK-ларды экспорттоо мүмкүн болгон жок</string>
@@ -1269,8 +1281,8 @@ morphe_header_custom_dark.png
     <string name="settings_system_storage_temporary_title">Убактылуу файлдар</string>
     <string name="settings_system_storage_temporary_description">Патчтоо учурунда түзүлгөн жумушчу файлдар</string>
     <string name="settings_system_storage_clear_all">Бардык кэштерди тазалоо</string>
-    <string name="settings_system_storage_clear_all_description">Калыбына келтирилүүчү бардык кэш боштугун бир жолуна бошотот</string>
-    <string name="settings_system_storage_clear_all_confirm">Бул кэштелген тармак жоопторун, орнотуучунун даярдалган көчүрмөлөрүн жана убактылуу файлдарды тазалайт. Түп нуска жана патчтелген APK файлдары сакталат</string>
+    <string name="settings_system_storage_clear_all_description">Жогоруда берилген ар бир кэш</string>
+    <string name="settings_system_storage_clear_all_confirm">Жогорудагы ар бир кэш тазаланат. Түп нуска APKлар жана патчтелген APKлар сакталат</string>
     <string name="settings_system_storage_cleared">Бошотулду: %s</string>
     <string name="settings_system_storage_patch_running_warning">Патч иштеп жатат жана бул файлдарды колдонууда. Аларды азыр тазалоо катага алып келет</string>
     <string name="settings_system_storage_clear_anyway">Баары бир тазалоо</string>
@@ -1278,14 +1290,14 @@ morphe_header_custom_dark.png
     <string name="settings_system_storage_open_app_info_title">Android тиркемесинин стоктоосун ачуу</string>
     <string name="settings_system_storage_open_app_info_description">Системалык жөндөөлөр аркылуу Morphe маалыматтарын башкаруу же баарын тазалоо</string>
     <string name="settings_system_save_original_apks_title">Түпкүл APK-ларды сактоо</string>
-    <string name="settings_system_save_original_apks_description">Файлды кайра тандабай эле, кайра патчтөө үчүн алдын ала патчтелген APK-ны сактаңыз</string>
+    <string name="settings_system_save_original_apks_description">Кайра патчтөө учурунда файлды кайра тандабастан, түп нуска APKны колдонуу</string>
     <string name="settings_system_save_patched_apks_title">Патчтелген APKларды сактоо</string>
-    <string name="settings_system_save_patched_apks_description">Кийинки экспорттоо же менеджерден кайра орнотуу үчүн патчтелген APK нускасын сактаңыз</string>
+    <string name="settings_system_save_patched_apks_description">Кийин eksportтоо же кайра орнотуу үчүн көчүрмөсүн сактоо</string>
     <!-- Settings - System Tab - Storage Management - Patched APKs Management -->
     <string name="settings_system_patched_apks_title">Патчталган APK-лар</string>
     <string name="settings_system_patched_apks_empty">Азырынча сакталган патчтелген APKлар жок</string>
     <string name="settings_system_patched_apks_delete_title">Патчтелген APKны өчүрүү керекпи?</string>
-    <string name="settings_system_patched_apks_deleted">Патчтелген APK ийгиликтүү өчүрүлдү</string>
+    <string name="settings_system_patched_apks_deleted">Патчтелген APK өчүрүлдү</string>
     <string name="settings_system_patched_apks_delete_all_title">Бардык патчтелген APK-ларды өчүрүү?</string>
     <!-- Settings - System Tab - Storage Management - Original APKs Management -->
     <string name="settings_system_original_apks_title">Түп нуска APKлар</string>

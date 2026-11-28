@@ -5,6 +5,8 @@
     <string name="home_app_status_newer_patches">புதிய பேட்ச்கள்</string>
     <!-- Mark on the card of an app built for a device other than a phone -->
     <string name="form_factor_tv">டிவி</string>
+    <!-- Named beside the other marks when one app has a build for a phone and for another device -->
+    <string name="form_factor_mobile">தொலைபேசி</string>
     <string name="form_factor_automotive">ஆட்டோமோட்டிவ்</string>
     <!-- "%1$s" is where the setting is, such as "Settings > Appearance > Home screen", built from the names on those screens. -->
     <string name="home_more_apps_hide_message">உங்களால் இதை எப்போது வேண்டுமானாலும் %1$s மூலம் மீண்டும் கொண்டு வர முடியும்</string>
@@ -89,6 +91,10 @@
     <!-- Home Screen - Dialog 4: Expert Mode Dialog -->
     <string name="expert_mode_recommended">பரிந்துரைக்கப்பட்ட பேட்ச்கள்</string>
     <string name="expert_mode_selected_count">%2$s இல் %1$s தேர்ந்தெடுக்கப்பட்டது</string>
+    <!-- Which build of an app with builds for several devices the patches are for, such as TV or Wear OS -->
+    <string name="expert_mode_form_factor">%s பில்டுக்காக</string>
+    <!-- The same for the phone build, named as a common noun rather than by its mark -->
+    <string name="expert_mode_form_factor_mobile">போன் பில்டுக்காக</string>
     <string name="expert_mode_saved_selection">சேமிக்கப்பட்ட தேர்வு</string>
     <!-- Home Screen - Home Sub-Dialogs -->
     <string name="home_invalid_signature_broken_message">&lt;b&gt;%s&lt;/b&gt; க்காக நீங்கள் தேர்ந்தெடுத்த APK அதன் கையொப்பச் சரிபார்ப்பில் தோல்வியுற்றது. இது சேதமடைந்திருக்கலாம் அல்லது இன்னும் முழுமையாகப் பதிவிறக்கம் செய்யப்படவில்லை, எனவே மீண்டும் பதிவிறக்கவும் அல்லது மற்றொரு கோப்பைத் தேர்ந்தெடுக்கவும்</string>
@@ -114,13 +120,19 @@
     <!-- Caption under the launcher icon recolored by the system theme -->
     <!-- Header Creator -->
     <!-- Batch patching -->
+    <string name="batch_patch_saved_hint">பேட்ச் செய்யப்பட்ட APK-க்கள் சேமிக்கப்பட்டுள்ளன. அவற்றை இப்பொழுதோ அல்லது பின்னர் முகப்புத் திரையிலிருந்தோ நிறுவவும்</string>
+    <string name="batch_patch_not_kept_hint">பேட்ச் செய்யப்பட்ட APK-க்கள் சேமிக்கப்படாது. இந்தத் திரையை மூடுவதற்கு முன் அவற்றை நிறுவவும் அல்லது ஏற்றுமதி செய்யவும்</string>
     <string name="batch_patch_auto_download_stopped">தானியங்கி APK பதிவிறக்கங்கள் நிறுத்தப்பட்டன</string>
     <string name="batch_patch_auto_download_stop">பதிவிறக்கங்களை நிறுத்து</string>
-    <string name="batch_patch_auto_download_kept">பதிவிறக்கம் செய்யப்பட்ட APK-வை பயன்படுத்த முடியவில்லை, எனவே முந்தையது அப்படியே வைக்கப்பட்டுள்ளது</string>
+    <string name="batch_patch_auto_download_kept">%s க்காகப் பதிவிறக்கம் செய்யப்பட்ட APK-வை பயன்படுத்த முடியவில்லை, எனவே முந்தையது அப்படியே வைக்கப்பட்டுள்ளது</string>
+    <string name="batch_patch_policy_install_description">வரிசை முடிந்ததும் ஒவ்வொரு பேட்ச் செய்யப்பட்ட ஆப்பையும் நிறுவும். ஆஃப் செய்தால் APK-க்கள் இந்தத் திரையிலேயே இருக்கும்</string>
+    <string name="batch_patch_policy_mount_description">வரிசை முடிந்ததும் ஒவ்வொரு பேட்ச் செய்யப்பட்ட ஆப்பையும் மவுண்ட் செய்யும். ஆஃப் செய்தால் APK-க்கள் இந்தத் திரையிலேயே இருக்கும்</string>
+    <string name="batch_patch_policy_install_mount_description">வரிசை முடிந்தவுடன் ஒவ்வொரு பேட்ச் செய்யப்பட்ட ஆப்பையும் நிறுவும் அல்லது மவுண்ட் செய்யும். ஆஃப் செய்தால் APK-க்கள் இந்தத் திரையிலேயே இருக்கும்</string>
     <!-- Label of a footer button beside "Close". Keep it short, a longer one moves the buttons onto two rows -->
+    <string name="batch_patch_stop_description">தற்போதைய ஆப் மற்றும் வரிசையில் உள்ள மற்றவை ரத்து செய்யப்படும்</string>
     <!-- Label of a footer button beside "Done". Keep it short, a longer one moves the buttons onto two rows -->
     <string name="batch_queue_keep_title">வரிசையைத் தக்கவைக்க வேண்டுமா?</string>
-    <string name="batch_queue_keep_description">வரிசைப்படுத்தப்பட்ட செயலிகள் பின்னர் தொடங்குவதற்காக முகப்புத் திரையில் காத்திருக்கும்</string>
+    <string name="batch_queue_keep_description">நீங்கள் தொடங்கும் வரை வரிசை ஹோம் ஸ்கிரீனில் காத்திருக்கும்</string>
     <string name="batch_queue_keep">தக்கவை</string>
     <!-- Home Screen - App Info Screen -->
     <string name="home_app_info_install_type_root">ரூட் நிறுவல்</string>
@@ -145,6 +157,8 @@
     <!-- Fastest read or write rate reached while patching, in data per second -->
     <!-- Value of "Libraries": the libraries this device cannot use were dropped from the patched APK -->
     <!-- Value of "Libraries": every library was left in the patched APK -->
+    <!-- The patched APK is for another kind of device, such as TV or Wear OS, so it may not start on this one -->
+    <string name="patcher_built_for_other_device">இது %s காக உருவாக்கப்பட்டது, எனவே இங்கே தொடங்காமல் இருக்கலாம். அந்த சாதனத்தில் நிறுவுவதற்கு இதைச் சேமிக்கவும்</string>
     <!-- Patcher Screen - Patcher Steps -->
     <!-- Patcher Screen - Patcher Tasks -->
     <string name="patcher_task_decoding_dex">DEX கோப்புகளைப் படிக்கிறது</string>
@@ -166,7 +180,7 @@
     <!-- Expert patcher Screen -->
     <!-- Patcher Screen - Other hidden strings -->
     <!-- Shown once Morphe is back after it was closed in the middle of patching, for a reason other than low memory. -->
-    <string name="patcher_interrupted_message">பேட்ச் செய்தல் முடிவதற்கு முன்பே Morphe மூடப்பட்டது, எனவே எதுவும் பேட்ச் செய்யப்படவில்லை. மீண்டும் முயற்சிக்கவும்</string>
+    <string name="patcher_interrupted_message">பேட்ச் செய்த வேலை முடிவதற்கு முன்பே Morphe மூடப்பட்டது. மீண்டும் முயற்சிக்கவும்</string>
     <!-- "%1$s" is where the setting is, such as "Settings > Patcher > Use embedded VM", built from the names on those screens. -->
     <string name="patcher_process_crashed_message">பேட்சர் முடிவடைவதற்கு முன்பே செயலிழந்தது. இது மீண்டும் நடந்தால், %1$s-ஐ ஆஃப் செய்து லாக் உடன் பிரச்சனையைப் புகாரளிக்கவும்</string>
     <!-- Shown when a run fills the heap it was given. "%1$s" is the heap in megabytes. -->
@@ -189,7 +203,10 @@
     <!-- Settings - Appearance Tab - Theme -->
     <!-- Settings - Appearance Tab - Language Selector -->
     <!-- Settings - Appearance Tab - Interface Scale -->
-    <!-- Settings - Appearance Tab - Home Screen Section -->
+    <!-- Settings - Appearance Tab - Screens Section -->
+    <string name="settings_appearance_screens">திரைகள்</string>
+    <string name="settings_appearance_games_button">விளையாட்டுகள் பொத்தான்</string>
+    <string name="settings_appearance_games_button_description">பேட்ச் செய்யும் போதும் மற்றும் முடிவின் போதும் மினி-விளையாட்டுகளுக்கான பொத்தானைக் காட்டுகிறது</string>
     <!-- Settings - Appearance Tab - App Icon Selector -->
     <!-- %s is the name of the icon picked -->
     <!-- Label of a footer button beside "Cancel". Keep it short, a longer one moves the buttons onto two rows -->
@@ -258,9 +275,15 @@
     <string name="settings_system_auto_backup_footer">ஏதேனும் மாற்றங்களைச் செய்த பிறகு நீங்கள் Morphe-லிருந்து வெளியேறும்போது ஒரு நகல் சேமிக்கப்படுகிறது. சமீபத்திய %s பராமரிக்கப்படும்</string>
     <string name="settings_system_auto_backup_failed">கடைசி காப்புப்பிரதியைச் சேமிக்க முடியவில்லை. கோப்புறையை மீண்டும் தேர்வு செய்யவும்</string>
     <!-- Settings - System Tab - Files & Storage Section -->
+    <string name="settings_system_apks_deleted_all">APK-க்கள் நீக்கப்பட்டன</string>
     <!-- Settings - System Tab - Storage Management screen -->
     <!-- Shown under how much Morphe takes up. "%1$s" is the space still available on the device, already formatted with its unit. "Free" as in unused, not as in free of charge. -->
+    <string name="settings_system_storage_clear_all_description">மேலே பட்டியலிடப்பட்டுள்ள அனைத்து கேஷ்களும்</string>
+    <string name="settings_system_storage_clear_all_confirm">மேலே உள்ள அனைத்து கேஷ்களும் அழிக்கப்படும். ஒரிஜினல் மற்றும் பேட்ச் செய்யப்பட்ட APK-க்கள் அப்படியே இருக்கும்</string>
+    <string name="settings_system_save_original_apks_description">மீண்டும் பேட்ச் செய்யும்போது, கோப்பை மீண்டும் தேர்ந்தெடுக்காமல் அசல் APK-வை மீண்டும் பயன்படுத்தவும்</string>
+    <string name="settings_system_save_patched_apks_description">பிற்காலத்தில் ஏற்றுமதி செய்ய அல்லது மீண்டும் நிறுவ ஒரு நகலை வைத்திருங்கள்</string>
     <!-- Settings - System Tab - Storage Management - Patched APKs Management -->
+    <string name="settings_system_patched_apks_deleted">பேட்ச் செய்யப்பட்ட APK நீக்கப்பட்டது</string>
     <!-- Settings - System Tab - Storage Management - Original APKs Management -->
     <!-- Settings - System Tab - Storage Management - Patch Selection Management -->
     <!-- Selection panel: saved selection, sets and copies -->

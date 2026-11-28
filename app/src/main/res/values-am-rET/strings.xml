@@ -9,6 +9,8 @@
     <string name="home_app_status_newer_patches">አዲስ ፓቾች</string>
     <!-- Mark on the card of an app built for a device other than a phone -->
     <string name="form_factor_tv">ቲቪ</string>
+    <!-- Named beside the other marks when one app has a build for a phone and for another device -->
+    <string name="form_factor_mobile">ስልክ</string>
     <string name="form_factor_automotive">የመኪና</string>
     <string name="home_no_patches_available">የሚገኙ ፓቾች የሉም</string>
     <string name="home_app_hide_title">ይህንን መተግበሪያ ይደብቁ?</string>
@@ -359,6 +361,10 @@
     <string name="expert_mode_recommended">የሚመከሩ ፓቾች</string>
     <string name="expert_mode_reset_to_default_done">የሚመከሩት ፓቾች ተተግብረዋል</string>
     <string name="expert_mode_selected_count">%2$s ውስጥ %1$s ተመርጧል</string>
+    <!-- Which build of an app with builds for several devices the patches are for, such as TV or Wear OS -->
+    <string name="expert_mode_form_factor">ለ %s ግንባታ</string>
+    <!-- The same for the phone build, named as a common noun rather than by its mark -->
+    <string name="expert_mode_form_factor_mobile">ለስልክ ግንባታ</string>
     <string name="expert_mode_saved_selection">የተቀመጠ ምርጫ</string>
     <string name="expert_mode_restore_saved_done">የተቀመጠው ምርጫ ተመልሷል</string>
     <string name="expert_mode_copy_from_bundle_no_patches">በዚህ ባንድል ውስጥ የሚዛመዱ ፓቾች የሉም</string>
@@ -489,7 +495,8 @@
     <string name="batch_patch_preparing_next">ቀጣዩ መተግበሪያ እየተዘጋጀ ነው…</string>
     <string name="batch_patch_progress_counter">ከ%2$s ውስጥ %1$s እየተስተካከሉ ነው</string>
     <string name="batch_patch_summary">%1$s ተስተካክሏል፣ %2$s አልተሳካም፣ %3$s ተዘልሏል</string>
-    <string name="batch_patch_saved_hint">ፓች የተደረጉ መተግበሪያዎች ተቀምጠዋል። አሁኑኑ ይጫኑዋቸው፣ ወይም ቆይተው በቅንብሮች ውስጥ ካለው የፓች የተደረጉ APK ዝርዝር ውስጥ ይጫኑዋቸው</string>
+    <string name="batch_patch_saved_hint">የተስተካከሉ APKዎች ተቀምጠዋል። አሁን ወይም ቆይተው ከዋናው ስክሪን ይጫኑዋቸው</string>
+    <string name="batch_patch_not_kept_hint">የተስተካከሉ APKዎች አይቀመጡም። ይህንን ስክሪን ከመዝጋትዎ በፊት ይጫኑዋቸው ወይም ወደ ውጭ ይላኩዋቸው</string>
     <string name="batch_patch_multiple_sources">አንዳንድ መተግበሪያዎች ከአንድ በላይ ምንጭ የሆኑ ፓቾችን ያቀናጃሉ፣ ይህም ግጭቶችን ሊያስከትል ይችላል</string>
     <string name="batch_patch_needs_apk">የሚገኝ APK የለም፣ ፋይል አያይዙ</string>
     <string name="batch_patch_wrong_package">የተያያዘው ፋይል የ%s ነው</string>
@@ -504,22 +511,22 @@
     <string name="batch_patch_apk_selected">APK ተመርጧል</string>
     <string name="batch_patch_auto_download_stopped">አውቶማቲክ የAPK ውርዶዎች ቆመዋል</string>
     <string name="batch_patch_auto_download_stop">ውርዶችን አቁም</string>
-    <string name="batch_patch_auto_download_kept">የተወረደው APK ጥቅም ላይ ሊውል አልቻለም፣ ስለዚህ የቀድሞው ተጠብቋል</string>
+    <string name="batch_patch_auto_download_kept">ለ%s የተጫነው APK ጥቅም ላይ ሊውል አልቻለም፣ ስለዚህ የቀድሞው እንደቀጠለ ነው</string>
     <string name="batch_patch_edit_patches">ፓቾችን ይምረጡ</string>
     <string name="batch_patch_state_no_apk">APK የለም</string>
     <string name="batch_patch_state_no_patches">ፓቾች የሉም</string>
     <string name="batch_patch_state_no_selection">ምንም አልተመረጠም</string>
     <string name="batch_patch_no_selection">ከሚገኙት ፓቾች መካከል ምንም አልተመረጠም</string>
     <string name="batch_patch_policy_install">ሲያልቅ ይጫኑ</string>
-    <string name="batch_patch_policy_install_description">ወረፋው እንደተጠናቀቀ እያንዳንዱን ፓች የተደረገ መተግበሪያ ይጭናል። ማጥፋት APKዎችን ለበኋላ ያስቀምጣል</string>
+    <string name="batch_patch_policy_install_description">ወረፋው እንደተጠናቀቀ እያንዳንዱን ፓች የተደረገ መተግበሪያ ይጭናል። ማጥፋት APKዎችን በዚህ ስክሪን ላይ ያስቀራል</string>
     <string name="batch_patch_policy_mount">ሲጠናቀቅ Mount አድርግ</string>
-    <string name="batch_patch_policy_mount_description">ተራው ሲያልቅ እያንዳንዱን የተጠገነ መተግበሪያ Mount ያደርጋል። ማጥፋቱ APK-ዎችን ለበኋላ ያስቀምጣቸዋል</string>
+    <string name="batch_patch_policy_mount_description">ወረፋው እንደተጠናቀቀ እያንዳንዱን ፓች የተደረገ መተግበሪያ ይጭናል። ማጥፋት APKዎችን በዚህ ስክሪን ላይ ያስቀረ them</string>
     <string name="batch_patch_policy_install_mount">ሲጠናቀቅ ጫን ወይም Mount አድርግ</string>
-    <string name="batch_patch_policy_install_mount_description">ተራው ሲያልቅ እያንዳንዱን የተጠገነ መተግበሪያ ይጭናል ወይም Mount ያደርጋል። ማጥፋቱ APK-ዎችን ለበኋላ ያስቀምጣቸዋል</string>
+    <string name="batch_patch_policy_install_mount_description">ወረፋው እንደተጠናቀቀ እያንዳንዱን ፓች የተደረገ መተግበሪያ ይጭናል ወይም ይጭናል። ማጥፋት APKዎችን በዚህ ስክሪን ላይ ያስቀረዋል</string>
     <!-- Label of a footer button beside "Close". Keep it short, a longer one moves the buttons onto two rows -->
     <string name="batch_patch_start">ጀምር</string>
     <string name="batch_patch_stop_title">ባች ፓቺንግን ማቆም ይፈልጋሉ?</string>
-    <string name="batch_patch_stop_description">አሁን እየተስተካከለ ያለው መተግበሪያ እና ተራ በጠበቁ ነገሮች ሁሉ ይሰረዛሉ</string>
+    <string name="batch_patch_stop_description">የአሁኑ መተግበሪያ እና የተቀረው ወረፋ ይሰረዛሉ</string>
     <!-- Label of a footer button beside "Done". Keep it short, a longer one moves the buttons onto two rows -->
     <string name="batch_patch_install_all">ሁሉንም ይጫኑ</string>
     <string name="batch_patch_install_failed">መጫን አልተሳካም</string>
@@ -530,7 +537,7 @@
     <string name="batch_queue_clear_title">ተራውን ላጽዳው?</string>
     <string name="batch_queue_clear_description">ሁሉም መተግበሪያዎች ከተራው ይወገዳሉ</string>
     <string name="batch_queue_keep_title">ተራው ይቀጥል?</string>
-    <string name="batch_queue_keep_description">በተራ ላይ ያሉ መተግበሪያዎች ቆይተው በኋላ ላይ እንዲጀምሩ በዋናው ስክሪን ላይ ይጠበቃሉ</string>
+    <string name="batch_queue_keep_description">እርስዎ እስኪጀምሩት ድረስ ወረፋው በዋናው ስክሪን ላይ ይጠብቃል</string>
     <string name="batch_queue_keep">አቆይ</string>
     <string name="shortcut_repatch_short">እንደገና ፓች ያድርጉ</string>
     <string name="shortcut_repatch_long">ያረጁ መተግበሪያዎችን እንደገና ፓች ያድርጉ</string>
@@ -664,6 +671,8 @@
     <string name="patcher_conflict_title">የፓኬጅ ግጭት</string>
     <string name="patcher_conflict_subtitle">ያለውን ስሪት ማጥፋት አለብዎት</string>
     <string name="patcher_conflict_hint">የተጠገነው መተግበሪያ ከተጫነው ስሪት የተለየ ሰርተፍኬት ይጠቀማል። ማስወገድ ሁሉንም የመተግበሪያ መረጃዎች ያጠፋል</string>
+    <!-- The patched APK is for another kind of device, such as TV or Wear OS, so it may not start on this one -->
+    <string name="patcher_built_for_other_device">ለ %s የተገነባ ነው፣ ስለዚህ እዚህ ላይ ላይጀምር ይችላል። በዚያ መሳሪያ ላይ ለመጫን ያስቀምጡት</string>
     <string name="patcher_installed_conflict_title">ማስወገድ ያስፈልጋል</string>
     <string name="patcher_installed_conflict_body">"Morphe የተጠገኑ መተግበሪያዎችን በራሱ ሰርተፍኬት ነው የሚያስመዘግበው፣ ይህም ከመጀመሪያው ይለያል። የተጠገነው መተግበሪያ ሊጫን እንዲችል Android የነበረውን ስሪት ማስወገድን ይጠይቃል።
 
@@ -759,7 +768,7 @@
     <string name="plugin_activity_dialog_body">በዚህ ፕለጊን ለመቀጠል የተጠቃሚ መስተጋብር ያስፈልጋል</string>
     <string name="patcher_process_killed_message">ሲስተሙ ፓቸሩን ሳይጨርስ አቋርጦታል፣ አብዛኛውን ጊዜ ይህ የሚሆነው ሜሞሪን ነፃ ለማድረግ ነው። ሌሎች አፕሊኬሽኖችን ይዝጉ እና እንደገና ይሞክሩ</string>
     <!-- Shown once Morphe is back after it was closed in the middle of patching, for a reason other than low memory. -->
-    <string name="patcher_interrupted_message">Morphe ፓቺንግ ከመጠናቀቁ በፊት ተዘግቷል፣ ስለዚህ ምንም ነገር አልተስተካከለም። እባክዎ እንደገና ይሞክሩ</string>
+    <string name="patcher_interrupted_message">ፓቺንግ ከመጠናቀቁ በፊት Morphe ተዘግቶ ነበር። እንደገና ይሞክሩ</string>
     <!-- "%1$s" is where the setting is, such as "Settings > Patcher > Use embedded VM", built from the names on those screens. -->
     <string name="patcher_process_crashed_message">ፓቸሩ ከመጠናቀቁ በፊት ተቋርጧል። ይህ እንደገና ከተከሰተ፣ %1$s ያጥፉ እና ችግሩን በሎግ ሪፖርት ያድርጉ</string>
     <!-- Shown when a run fills the heap it was given. "%1$s" is the heap in megabytes. -->
@@ -868,14 +877,17 @@
     <string name="settings_appearance_translations_info_title">የአንዳንድ ቋንቋዎች ትርጉሞች ሊጠፉ ወይም ያልተሟሉ ሊሆኑ ይችላሉ</string>
     <!-- Settings - Appearance Tab - Interface Scale -->
     <string name="settings_appearance_ui_scale">የኢንተርፌስ መጠን</string>
-    <!-- Settings - Appearance Tab - Home Screen Section -->
+    <!-- Settings - Appearance Tab - Screens Section -->
     <string name="settings_appearance_home_screen">የቤት ስክሪን</string>
+    <string name="settings_appearance_screens">ስክሪኖች</string>
     <string name="settings_appearance_greeting_phrases">የሰላምታ ቃላት</string>
     <string name="settings_appearance_greeting_phrases_subtitle">የሰላምታ መልእክትን ያሳያል</string>
     <string name="settings_appearance_repatch_notice">እንደገና ፓች የማድረግ ማሳሰቢያ</string>
     <string name="settings_appearance_repatch_notice_description">የተስተካከሉ መተግበሪያዎች በድጋሚ ሊስተካከሉ የሚችሉበት ጊዜ ባነር ያሳያል</string>
     <string name="settings_appearance_more_apps_card">የተጨማሪ መተግበሪያዎች ካርድ</string>
     <string name="settings_appearance_more_apps_card_description">ወደ ማህበረሰብ ጥገናዎች የሚመራ ካርድ በመተግበሪያዎች ስር ያሳያል</string>
+    <string name="settings_appearance_games_button">የጨዋታዎች ቁልፍ</string>
+    <string name="settings_appearance_games_button_description">በማዘመን እና በውጤቱ ወቅት ወደ ትናንሽ ጨዋታዎች የሚወስድ ቁልፍ ያሳያል</string>
     <string name="settings_appearance_app_card_colors">የካርድ ቀለሞች</string>
     <string name="settings_appearance_app_card_colors_default">መደበኛ</string>
     <string name="settings_appearance_app_card_colors_default_description">ለእያንዳንዱ መተግበሪያ እና ምንጭ የራሱ የሆነ ቀለም ይስጡ</string>
@@ -1246,7 +1258,7 @@ morphe_header_custom_dark.png
     <string name="settings_system_apks_delete_all_confirm">ይህ እዚህ ላይ የሚታዩትን የተቀመጡ የAPK ፋይሎች በቋሚነት ይሰርዛል</string>
     <string name="settings_system_apks_delete_selected_title">የተመረጡትን APKዎች ይሰርዙ?</string>
     <string name="settings_system_apks_delete_selected_confirm">ይህ የተመረጡትን የAPK ፋይሎች በቋሚነት ይሰርዛል</string>
-    <string name="settings_system_apks_deleted_all">APKዎች በተሳካ ሁኔታ ተሰርዘዋል</string>
+    <string name="settings_system_apks_deleted_all">APKዎች ተሰርዘዋል</string>
     <string name="settings_system_apks_delete_failed">አንዳንድ የ APK ፋይሎች ሊሰረዙ አልቻሉም</string>
     <string name="settings_system_apks_export_zip_success">የተመረጡት APKዎች ተላክተዋል</string>
     <string name="settings_system_apks_export_zip_failed">የተመረጡትን APKዎች ወደ ውጭ ለማውጣት አልተቻለም</string>
@@ -1269,8 +1281,8 @@ morphe_header_custom_dark.png
     <string name="settings_system_storage_temporary_title">ጊዜያዊ ፋይሎች</string>
     <string name="settings_system_storage_temporary_description">በፓቺንግ ወቅት የተፈጠሩ የስራ ፋይሎች</string>
     <string name="settings_system_storage_clear_all">ሁሉንም ካሼዎች አጽዳ</string>
-    <string name="settings_system_storage_clear_all_description">ሊመለስ የሚችለውን የካሼ ቦታ ሁሉ በአንድ ጊዜ ነጻ ያደርጋል</string>
-    <string name="settings_system_storage_clear_all_confirm">ይህ የተቀመጡ የኔትወርክ ምላሾችን፣ የተዘጋጁ የጫኚ ቅጂዎችን እና ጊዜያዊ ፋይሎችን ያጸዳል። ኦሪጅናል እና ፓች የተደረጉ APKዎች ይቀመጣሉ</string>
+    <string name="settings_system_storage_clear_all_description">ከላይ የተዘረዘሩት ሁሉም ካሽዎች</string>
+    <string name="settings_system_storage_clear_all_confirm">ከላይ ያሉት ሁሉም ካሽዎች ይጠራረጋሉ። ኦሪጅናል እና ፓች የተደረጉ APKዎች ይቀጥላሉ</string>
     <string name="settings_system_storage_cleared">%s ተለቀቀ</string>
     <string name="settings_system_storage_patch_running_warning">አንድ ፓች እየሰራ ነው እና እነዚህን ፋይሎች ይጠቀማል። አሁን ማጽዳት ስህተት እንዲፈጠር ያደርጋል</string>
     <string name="settings_system_storage_clear_anyway">ቢሆንም አጽዳ</string>
@@ -1278,14 +1290,14 @@ morphe_header_custom_dark.png
     <string name="settings_system_storage_open_app_info_title">የአንድሮይድ መተግበሪያ ማከማቻን ክፈት</string>
     <string name="settings_system_storage_open_app_info_description">በሲስተም ቅንብሮች በኩል ሁሉንም የ Morphe ዳታ ያስተዳድሩ ወይም ያጽዱ</string>
     <string name="settings_system_save_original_apks_title">ኦሪጅናል APKዎችን አቆይ</string>
-    <string name="settings_system_save_original_apks_description">ፋይሉን እንደገና ሳይመርጡ ለድጋሚ ፓቺንግ ጥቅም ላይ እንዲውል ከፓች በፊት ያለውን APK ያስቀምጡ</string>
+    <string name="settings_system_save_original_apks_description">ፋይሉን እንደገና ሳይመርጡ፣ በድጋሚ ፓች በሚያደርጉበት ጊዜ ኦሪጅናል APKውን ይጠቀሙ</string>
     <string name="settings_system_save_patched_apks_title">ፓች የተደረጉ APKዎችን አቆይ</string>
-    <string name="settings_system_save_patched_apks_description">ለበኋላ ኤክስፖርት ለማድረግ ወይም ከማናጀሩ መልሶ ለመጫን የተስተካከለውን የ APK ኮፒ ያስቀምጡ</string>
+    <string name="settings_system_save_patched_apks_description">ለማስወጣት ወይም በኋላ ላይ እንደገና ለመጫን ቅጂ ያስቀምጡ</string>
     <!-- Settings - System Tab - Storage Management - Patched APKs Management -->
     <string name="settings_system_patched_apks_title">የተስተካከሉ APKዎች</string>
     <string name="settings_system_patched_apks_empty">እስካሁን ምንም የተስተካከሉ APKዎች አልተቀመጡም</string>
     <string name="settings_system_patched_apks_delete_title">የተስተካከለውን APK ያጥፉ?</string>
-    <string name="settings_system_patched_apks_deleted">የተስተካከለው APK በተሳካ ሁኔታ ተሰርዟል</string>
+    <string name="settings_system_patched_apks_deleted">ፓች የተደረገ APK ተሰርዟል</string>
     <string name="settings_system_patched_apks_delete_all_title">ሁሉንም የተስተካከሉ APKዎች ይሰርዙ?</string>
     <!-- Settings - System Tab - Storage Management - Original APKs Management -->
     <string name="settings_system_original_apks_title">ኦሪጅናል APKዎች</string>

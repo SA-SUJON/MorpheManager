@@ -9,6 +9,8 @@
     <string name="home_app_status_newer_patches">Nowe modyfikacje</string>
     <!-- Mark on the card of an app built for a device other than a phone -->
     <string name="form_factor_tv">Telewizor</string>
+    <!-- Named beside the other marks when one app has a build for a phone and for another device -->
+    <string name="form_factor_mobile">Telefonowy</string>
     <string name="form_factor_automotive">Samochód</string>
     <string name="home_no_patches_available">Brak dostępnych modyfikacji</string>
     <string name="home_app_hide_title">Ukryć tę aplikację?</string>
@@ -360,6 +362,10 @@
     <string name="expert_mode_recommended">Zalecane modyfikacje</string>
     <string name="expert_mode_reset_to_default_done">Zastosowano zalecane modyfikacje</string>
     <string name="expert_mode_selected_count">%1$s z %2$s wybranych</string>
+    <!-- Which build of an app with builds for several devices the patches are for, such as TV or Wear OS -->
+    <string name="expert_mode_form_factor">Dla wersji %s</string>
+    <!-- The same for the phone build, named as a common noun rather than by its mark -->
+    <string name="expert_mode_form_factor_mobile">Dla wersji na telefon</string>
     <string name="expert_mode_saved_selection">Zapisany wybór</string>
     <string name="expert_mode_restore_saved_done">Przywrócono zapisany wybór</string>
     <string name="expert_mode_copy_from_bundle_no_patches">Brak pasujących modyfikacji w tym pakiecie</string>
@@ -378,7 +384,7 @@
     <string name="home_invalid_signature_title">Niezweryfikowany plik APK</string>
     <string name="home_invalid_signature_message">Wybrany plik APK aplikacji &lt;b&gt;%s&lt;/b&gt; nie jest zgodny z oczekiwanym certyfikatem podpisu. Może być zmodyfikowany lub pochodzić z niezaufanego źródła</string>
     <string name="home_invalid_signature_badge">Ten plik APK może nie być oryginalny</string>
-    <string name="home_invalid_signature_broken_message">Wybrany plik APK dla &lt;b&gt;%s&lt;/b&gt; nie przeszedł weryfikacji podpisu. Jest on prawdopodobnie uszkodzony lub nie został w pełni pobrany, więc pobierz go ponownie lub wybierz inny plik</string>
+    <string name="home_invalid_signature_broken_message">Wybrany plik APK dla &lt;b&gt;%s&lt;/b&gt; nie przeszedł weryfikacji podpisu. Prawdopodobnie jest uszkodzony lub nie został jeszcze w pełni pobrany. Pobierz go ponownie lub wybierz inny plik</string>
     <string name="home_invalid_signature_broken_badge">Ten plik APK może być uszkodzony lub niekompletny</string>
     <string name="home_invalid_signature_expected">Oczekiwany certyfikat</string>
     <string name="home_invalid_signature_actual">Certyfikat pliku APK</string>
@@ -490,7 +496,8 @@ Aby uzyskać najlepszy efekt, zalecamy zmodyfikowanie &lt;b&gt;pełnego pliku AP
     <string name="batch_patch_preparing_next">Przygotowywanie następnej aplikacji…</string>
     <string name="batch_patch_progress_counter">Modyfikowanie %1$s z %2$s</string>
     <string name="batch_patch_summary">%1$s zmodyfikowano, %2$s nie powiodło się, %3$s pominięto</string>
-    <string name="batch_patch_saved_hint">Zmodyfikowane aplikacje zostały zapisane. Zainstaluj je teraz lub później z listy zmodyfikowanych plików APK w ustawieniach</string>
+    <string name="batch_patch_saved_hint">Zmodyfikowane pliki APK zostały zapisane. Zainstaluj je teraz lub później z ekranu głównego</string>
+    <string name="batch_patch_not_kept_hint">Zmodyfikowane pliki APK nie są przechowywane. Zainstaluj je lub wyeksportuj przed zamknięciem tego ekranu</string>
     <string name="batch_patch_multiple_sources">Niektóre aplikacje łączą modyfikacje z więcej niż jednego źródła, co może powodować konflikty</string>
     <string name="batch_patch_needs_apk">Brak dostępnego pliku APK, dołącz plik</string>
     <string name="batch_patch_wrong_package">Dołączony plik należy do %s</string>
@@ -505,22 +512,22 @@ Aby uzyskać najlepszy efekt, zalecamy zmodyfikowanie &lt;b&gt;pełnego pliku AP
     <string name="batch_patch_apk_selected">Wybrano plik APK</string>
     <string name="batch_patch_auto_download_stopped">Zatrzymano automatyczne pobieranie plików APK</string>
     <string name="batch_patch_auto_download_stop">Zatrzymaj pobieranie</string>
-    <string name="batch_patch_auto_download_kept">Nie można użyć pobranego pliku APK, dlatego zachowano poprzedni</string>
+    <string name="batch_patch_auto_download_kept">Pliku APK pobranego dla %s nie można było użyć, dlatego zachowano poprzedni</string>
     <string name="batch_patch_edit_patches">Wybierz modyfikacje</string>
     <string name="batch_patch_state_no_apk">Brak pliku APK</string>
     <string name="batch_patch_state_no_patches">Brak modyfikacji</string>
     <string name="batch_patch_state_no_selection">Nic nie wybrano</string>
     <string name="batch_patch_no_selection">Nie wybrano żadnej z dostępnych modyfikacji</string>
     <string name="batch_patch_policy_install">Zainstaluj po zakończeniu</string>
-    <string name="batch_patch_policy_install_description">Instaluje każdą zmodyfikowaną aplikację zaraz po zakończeniu kolejki. Wyłączenie zachowa pliki APK na później</string>
+    <string name="batch_patch_policy_install_description">Instaluje każdą zmodyfikowaną aplikację po zakończeniu kolejki. Wyłączenie tej opcji pozostawia pliki APK na tym ekranie</string>
     <string name="batch_patch_policy_mount">Zamontuj po zakończeniu</string>
-    <string name="batch_patch_policy_mount_description">Montuje każdą zmodyfikowaną aplikację po zakończeniu kolejki. Wyłączenie tej opcji zachowuje pliki APK na później</string>
+    <string name="batch_patch_policy_mount_description">Montuje każdą zmodyfikowaną aplikację po zakończeniu kolejki. Wyłączenie tej opcji pozostawia pliki APK na tym ekranie</string>
     <string name="batch_patch_policy_install_mount">Zainstaluj lub zamontuj po zakończeniu</string>
-    <string name="batch_patch_policy_install_mount_description">Instaluje lub montuje każdą zmodyfikowaną aplikację po zakończeniu kolejki. Wyłączenie tej opcji zachowuje pliki APK na później</string>
+    <string name="batch_patch_policy_install_mount_description">Instaluje lub montuje każdą zmodyfikowaną aplikację po zakończeniu kolejki. Wyłączenie tej opcji pozostawia pliki APK na tym ekranie</string>
     <!-- Label of a footer button beside "Close". Keep it short, a longer one moves the buttons onto two rows -->
     <string name="batch_patch_start">Start</string>
     <string name="batch_patch_stop_title">Zatrzymać modyfikowanie grupowe?</string>
-    <string name="batch_patch_stop_description">Aktualnie modyfikowana aplikacja i wszystkie pozostałe w kolejce zostaną anulowane</string>
+    <string name="batch_patch_stop_description">Aktualna aplikacja i reszta kolejki zostaną anulowane</string>
     <!-- Label of a footer button beside "Done". Keep it short, a longer one moves the buttons onto two rows -->
     <string name="batch_patch_install_all">Zainstaluj wszystkie</string>
     <string name="batch_patch_install_failed">Instalacja nie powiodła się</string>
@@ -531,7 +538,7 @@ Aby uzyskać najlepszy efekt, zalecamy zmodyfikowanie &lt;b&gt;pełnego pliku AP
     <string name="batch_queue_clear_title">Wyczyścić kolejkę?</string>
     <string name="batch_queue_clear_description">Wszystkie aplikacje zostaną usunięte z kolejki</string>
     <string name="batch_queue_keep_title">Zachować kolejkę?</string>
-    <string name="batch_queue_keep_description">Aplikacje w kolejce zaczekają na ekranie głównym, aby można je było uruchomić później</string>
+    <string name="batch_queue_keep_description">Kolejka czeka na ekranie głównym, aż ją uruchomisz</string>
     <string name="batch_queue_keep">Zachowaj</string>
     <string name="shortcut_repatch_short">Zmodyfikuj ponownie</string>
     <string name="shortcut_repatch_long">Zmodyfikuj ponownie nieaktualne aplikacje</string>
@@ -665,6 +672,8 @@ Aby uzyskać najlepszy efekt, zalecamy zmodyfikowanie &lt;b&gt;pełnego pliku AP
     <string name="patcher_conflict_title">Konflikt pakietów</string>
     <string name="patcher_conflict_subtitle">Musisz odinstalować obecną wersję</string>
     <string name="patcher_conflict_hint">Zmodyfikowana aplikacja używa innego certyfikatu niż zainstalowana wersja. Odinstalowanie wyczyści wszystkie dane aplikacji</string>
+    <!-- The patched APK is for another kind of device, such as TV or Wear OS, so it may not start on this one -->
+    <string name="patcher_built_for_other_device">Zbudowano dla %s, więc może nie uruchomić się tutaj. Zapisz plik, aby zainstalować go na tym urządzeniu</string>
     <string name="patcher_installed_conflict_title">Wymagane odinstalowanie</string>
     <string name="patcher_installed_conflict_body">"Morphe podpisuje zmodyfikowane aplikacje własnym certyfikatem, który różni się od oryginalnego. Android wymaga usunięcia istniejącej wersji, zanim będzie można zainstalować zmodyfikowaną aplikację.
 
@@ -760,7 +769,7 @@ Odinstalowanie bezpowrotnie usunie wszystkie dane aplikacji"</string>
     <string name="plugin_activity_dialog_body">Wymagana jest interakcja użytkownika, aby kontynuować działanie tej wtyczki</string>
     <string name="patcher_process_killed_message">System zatrzymał proces modyfikowania przed jego zakończeniem, zazwyczaj w celu zwolnienia pamięci. Zamknij inne aplikacje i spróbuj ponownie</string>
     <!-- Shown once Morphe is back after it was closed in the middle of patching, for a reason other than low memory. -->
-    <string name="patcher_interrupted_message">Morphe zostało zamknięte przed zakończeniem modyfikowania, więc nic nie zostało zmodyfikowane. Spróbuj ponownie</string>
+    <string name="patcher_interrupted_message">Morphe zostało zamknięte przed zakończeniem modyfikowania. Spróbuj ponownie</string>
     <!-- "%1$s" is where the setting is, such as "Settings > Patcher > Use embedded VM", built from the names on those screens. -->
     <string name="patcher_process_crashed_message">Proces modyfikowania uległ awarii przed zakończeniem pracy. Jeśli sytuacja się powtórzy, wyłącz opcję %1$s i zgłoś problem, dołączając dziennik zdarzeń</string>
     <!-- Shown when a run fills the heap it was given. "%1$s" is the heap in megabytes. -->
@@ -869,14 +878,17 @@ Odinstalowanie bezpowrotnie usunie wszystkie dane aplikacji"</string>
     <string name="settings_appearance_translations_info_title">Tłumaczenia dla niektórych języków mogą być niekompletne lub może ich brakować</string>
     <!-- Settings - Appearance Tab - Interface Scale -->
     <string name="settings_appearance_ui_scale">Skala interfejsu</string>
-    <!-- Settings - Appearance Tab - Home Screen Section -->
+    <!-- Settings - Appearance Tab - Screens Section -->
     <string name="settings_appearance_home_screen">Ekran główny</string>
+    <string name="settings_appearance_screens">Ekrany</string>
     <string name="settings_appearance_greeting_phrases">Powitania</string>
     <string name="settings_appearance_greeting_phrases_subtitle">Wyświetla wiadomość powitalną</string>
     <string name="settings_appearance_repatch_notice">Powiadomienie o ponownym modyfikowaniu</string>
     <string name="settings_appearance_repatch_notice_description">Wyświetla baner, gdy można ponownie zmodyfikować aplikacje</string>
     <string name="settings_appearance_more_apps_card">Karta \"Więcej aplikacji\"</string>
     <string name="settings_appearance_more_apps_card_description">Wyświetla kartę pod listą aplikacji, prowadzącą do modyfikacji społeczności</string>
+    <string name="settings_appearance_games_button">Przycisk gier</string>
+    <string name="settings_appearance_games_button_description">Wyświetla przycisk do minigier podczas modyfikowania i na ekranie wyników</string>
     <string name="settings_appearance_app_card_colors">Kolory kart</string>
     <string name="settings_appearance_app_card_colors_default">Domyślne</string>
     <string name="settings_appearance_app_card_colors_default_description">Nadaj każdej aplikacji i źródłu własny kolor</string>
@@ -1247,7 +1259,7 @@ Wymagane są następujące wymiary obrazów:
     <string name="settings_system_apks_delete_all_confirm">Spowoduje to trwałe usunięcie zapisanych plików APK</string>
     <string name="settings_system_apks_delete_selected_title">Usunąć wybrane pliki APK?</string>
     <string name="settings_system_apks_delete_selected_confirm">Spowoduje to trwałe usunięcie wybranych plików APK</string>
-    <string name="settings_system_apks_deleted_all">Usunięto pliki APK</string>
+    <string name="settings_system_apks_deleted_all">Pliki APK zostały usunięte</string>
     <string name="settings_system_apks_delete_failed">Nie udało się usunąć niektórych plików APK</string>
     <string name="settings_system_apks_export_zip_success">Wyeksportowano wybrane pliki APK</string>
     <string name="settings_system_apks_export_zip_failed">Nie udało się wyeksportować wybranych plików APK</string>
@@ -1270,8 +1282,8 @@ Wymagane są następujące wymiary obrazów:
     <string name="settings_system_storage_temporary_title">Pliki tymczasowe</string>
     <string name="settings_system_storage_temporary_description">Pliki robocze tworzone podczas modyfikowania</string>
     <string name="settings_system_storage_clear_all">Wyczyść całą pamięć podręczną</string>
-    <string name="settings_system_storage_clear_all_description">Zwalnia za jednym razem całe miejsce w pamięci podręcznej, które można odzyskać</string>
-    <string name="settings_system_storage_clear_all_confirm">To usunie zapisane odpowiedzi sieciowe, przygotowane kopie instalatora i pliki tymczasowe. Oryginalne i zmodyfikowane pliki APK zostaną zachowane</string>
+    <string name="settings_system_storage_clear_all_description">Każda z wymienionych powyżej pamięci podręcznych</string>
+    <string name="settings_system_storage_clear_all_confirm">Każda z powyższych pamięci podręcznych zostanie wyczyszczona. Oryginalne i zmodyfikowane pliki APK zostaną zachowane</string>
     <string name="settings_system_storage_cleared">Zwolniono %s</string>
     <string name="settings_system_storage_patch_running_warning">Trwa modyfikowanie, które korzysta z tych plików. Wyczyszczenie ich teraz spowoduje błąd</string>
     <string name="settings_system_storage_clear_anyway">Wyczyść mimo to</string>
@@ -1279,14 +1291,14 @@ Wymagane są następujące wymiary obrazów:
     <string name="settings_system_storage_open_app_info_title">Otwórz ustawienia pamięci aplikacji w Androidzie</string>
     <string name="settings_system_storage_open_app_info_description">Zarządzaj wszystkimi danymi Morphe lub usuń je przez ustawienia systemowe</string>
     <string name="settings_system_save_original_apks_title">Zachowaj oryginalne pliki APK</string>
-    <string name="settings_system_save_original_apks_description">Zapisz plik APK sprzed modyfikacji, aby można było go ponownie użyć do modyfikowania bez konieczności wskazywania pliku od nowa</string>
+    <string name="settings_system_save_original_apks_description">Ponownie użyj oryginalnego pliku APK podczas ponownego modyfikowania, bez konieczności ponownego wskazywania pliku</string>
     <string name="settings_system_save_patched_apks_title">Zachowaj zmodyfikowane pliki APK</string>
-    <string name="settings_system_save_patched_apks_description">Zapisz kopię zmodyfikowanego pliku APK w celu późniejszego wyeksportowania lub ponownej instalacji z poziomu menedżera</string>
+    <string name="settings_system_save_patched_apks_description">Zachowaj kopię, aby móc ją wyeksportować lub zainstalować ponownie w późniejszym terminie</string>
     <!-- Settings - System Tab - Storage Management - Patched APKs Management -->
     <string name="settings_system_patched_apks_title">Zmodyfikowane pliki APK</string>
     <string name="settings_system_patched_apks_empty">Brak zapisanych plików APK</string>
     <string name="settings_system_patched_apks_delete_title">Usunąć zmodyfikowany plik APK?</string>
-    <string name="settings_system_patched_apks_deleted">Zmodyfikowany plik APK usunięty pomyślnie</string>
+    <string name="settings_system_patched_apks_deleted">Zmodyfikowany plik APK został usunięty</string>
     <string name="settings_system_patched_apks_delete_all_title">Usunąć wszystkie zmodyfikowane pliki APK?</string>
     <!-- Settings - System Tab - Storage Management - Original APKs Management -->
     <string name="settings_system_original_apks_title">Oryginalne pliki APK</string>

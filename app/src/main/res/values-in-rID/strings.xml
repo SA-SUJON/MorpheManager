@@ -9,6 +9,8 @@
     <string name="home_app_status_newer_patches">Tambalan baru</string>
     <!-- Mark on the card of an app built for a device other than a phone -->
     <string name="form_factor_tv">TV</string>
+    <!-- Named beside the other marks when one app has a build for a phone and for another device -->
+    <string name="form_factor_mobile">Ponsel</string>
     <string name="form_factor_automotive">Otomotif</string>
     <string name="home_no_patches_available">Tidak ada tambalan yang tersedia</string>
     <string name="home_app_hide_title">Sembunyikan aplikasi ini?</string>
@@ -359,6 +361,10 @@ Pilih dari mana Anda ingin mengambil APK-nya"</string>
     <string name="expert_mode_recommended">Tambalan yang direkomendasikan</string>
     <string name="expert_mode_reset_to_default_done">Tambalan yang direkomendasikan diterapkan</string>
     <string name="expert_mode_selected_count">%1$s dari %2$s dipilih</string>
+    <!-- Which build of an app with builds for several devices the patches are for, such as TV or Wear OS -->
+    <string name="expert_mode_form_factor">Untuk build %s</string>
+    <!-- The same for the phone build, named as a common noun rather than by its mark -->
+    <string name="expert_mode_form_factor_mobile">Untuk build ponsel</string>
     <string name="expert_mode_saved_selection">Pilihan yang disimpan</string>
     <string name="expert_mode_restore_saved_done">Pilihan yang disimpan dikembalikan</string>
     <string name="expert_mode_copy_from_bundle_no_patches">Tidak ada tambalan yang cocok dalam paket ini</string>
@@ -489,7 +495,8 @@ Untuk hasil terbaik, aplikasi ini merekomendasikan untuk menambal &lt;b&gt;APK l
     <string name="batch_patch_preparing_next">Mempersiapkan aplikasi selanjutnya…</string>
     <string name="batch_patch_progress_counter">Menambal %1$s dari %2$s</string>
     <string name="batch_patch_summary">%1$s ditambal, %2$s gagal, %3$s dilewati</string>
-    <string name="batch_patch_saved_hint">Aplikasi yang telah ditambal telah tersimpan. Pasang sekarang, atau nanti dari daftar APK yang telah ditambal di setelan.</string>
+    <string name="batch_patch_saved_hint">APK yang telah ditambal telah tersimpan. Pasang sekarang atau nanti dari layar utama</string>
+    <string name="batch_patch_not_kept_hint">APK yang telah ditambal tidak disimpan. Pasang atau ekspor sebelum menutup layar ini</string>
     <string name="batch_patch_multiple_sources">Beberapa aplikasi menggabungkan tambalan dari lebih dari satu sumber, yang dapat menyebabkan konflik</string>
     <string name="batch_patch_needs_apk">Tidak ada APK yang tersedia, lampirkan berkas</string>
     <string name="batch_patch_wrong_package">Berkas terlampir milik %s</string>
@@ -504,22 +511,22 @@ Untuk hasil terbaik, aplikasi ini merekomendasikan untuk menambal &lt;b&gt;APK l
     <string name="batch_patch_apk_selected">APK dipilih</string>
     <string name="batch_patch_auto_download_stopped">Unduhan APK otomatis dihentikan</string>
     <string name="batch_patch_auto_download_stop">Hentikan unduhan</string>
-    <string name="batch_patch_auto_download_kept">APK yang diunduh tidak dapat digunakan, jadi APK sebelumnya tetap dipertahankan</string>
+    <string name="batch_patch_auto_download_kept">APK yang diunduh untuk %s tidak dapat digunakan, jadi APK sebelumnya tetap disimpan</string>
     <string name="batch_patch_edit_patches">Pilih tambalan</string>
     <string name="batch_patch_state_no_apk">Tidak ada APK</string>
     <string name="batch_patch_state_no_patches">Tidak ada tambalan</string>
     <string name="batch_patch_state_no_selection">Tidak ada yang dipilih</string>
     <string name="batch_patch_no_selection">Tidak ada patch yang tersedia yang dipilih</string>
     <string name="batch_patch_policy_install">Pasang setelah selesai</string>
-    <string name="batch_patch_policy_install_description">Pasang setiap aplikasi yang ditambal segera setelah antrean selesai. Jika nonaktif, APK akan disimpan untuk nanti</string>
+    <string name="batch_patch_policy_install_description">Memasang setiap aplikasi yang ditambal segera setelah antrean selesai. Nonaktif akan membiarkan APK tetap berada di layar ini</string>
     <string name="batch_patch_policy_mount">Mount setelah selesai</string>
-    <string name="batch_patch_policy_mount_description">Pasang setiap aplikasi yang ditambal segera setelah antrean selesai. Jika nonaktif, APK akan disimpan untuk nanti</string>
+    <string name="batch_patch_policy_mount_description">Pasang setiap aplikasi yang ditambal setelah antrean selesai. Jika nonaktif, APK akan tetap berada di layar ini</string>
     <string name="batch_patch_policy_install_mount">Instal atau mount setelah selesai</string>
-    <string name="batch_patch_policy_install_mount_description">Pasang atau muat setiap aplikasi yang ditambal segera setelah antrean selesai. Jika nonaktif, APK akan disimpan untuk nanti</string>
+    <string name="batch_patch_policy_install_mount_description">Pasang atau muat setiap aplikasi yang ditambal segera setelah antrean selesai. Jika nonaktif, APK akan tetap berada di layar ini</string>
     <!-- Label of a footer button beside "Close". Keep it short, a longer one moves the buttons onto two rows -->
     <string name="batch_patch_start">Mulai</string>
     <string name="batch_patch_stop_title">Hentikan penambalan massal?</string>
-    <string name="batch_patch_stop_description">Aplikasi yang sedang ditambal saat ini dan semua yang masih dalam antrean akan dibatalkan</string>
+    <string name="batch_patch_stop_description">Aplikasi saat ini dan sisa antrean akan dibatalkan</string>
     <!-- Label of a footer button beside "Done". Keep it short, a longer one moves the buttons onto two rows -->
     <string name="batch_patch_install_all">Pasang semua</string>
     <string name="batch_patch_install_failed">Pemasangan gagal</string>
@@ -530,7 +537,7 @@ Untuk hasil terbaik, aplikasi ini merekomendasikan untuk menambal &lt;b&gt;APK l
     <string name="batch_queue_clear_title">Bersihkan antrean?</string>
     <string name="batch_queue_clear_description">Semua aplikasi akan dihapus dari antrean</string>
     <string name="batch_queue_keep_title">Tetap simpan antrean?</string>
-    <string name="batch_queue_keep_description">Aplikasi yang masuk antrean akan menunggu di layar utama untuk dijalankan nanti</string>
+    <string name="batch_queue_keep_description">Antrean menunggu di layar utama sampai Anda memulainya</string>
     <string name="batch_queue_keep">Simpan</string>
     <string name="shortcut_repatch_short">Tambal ulang</string>
     <string name="shortcut_repatch_long">Tambal ulang aplikasi usang</string>
@@ -664,6 +671,8 @@ Untuk hasil terbaik, aplikasi ini merekomendasikan untuk menambal &lt;b&gt;APK l
     <string name="patcher_conflict_title">Paket konflik</string>
     <string name="patcher_conflict_subtitle">Anda perlu mencopot versi yang terpasang saat ini</string>
     <string name="patcher_conflict_hint">Aplikasi ditambal menggunakan sertifikat yang berbeda dari versi yang terpasang. Mencopot akan menghapus semua data aplikasi</string>
+    <!-- The patched APK is for another kind of device, such as TV or Wear OS, so it may not start on this one -->
+    <string name="patcher_built_for_other_device">Dibuat untuk %s, jadi mungkin tidak dapat dimulai di sini. Simpan untuk menginstal di perangkat tersebut</string>
     <string name="patcher_installed_conflict_title">Copot diperlukan</string>
     <string name="patcher_installed_conflict_body">"Morphe menandatangani aplikasi yang ditambal dengan sertifikatnya sendiri, yang berbeda dari yang asli. Android mengharuskan penghapusan versi yang sudah ada sebelum aplikasi yang ditambal dapat dipasang.
 
@@ -759,7 +768,7 @@ Mencopot akan menghapus semua data aplikasi secara permanen"</string>
     <string name="plugin_activity_dialog_body">Interaksi pengguna diperlukan untuk melanjutkan plugin ini</string>
     <string name="patcher_process_killed_message">Sistem menghentikan patcher sebelum selesai, biasanya untuk membebaskan memori. Tutup aplikasi lain dan coba lagi</string>
     <!-- Shown once Morphe is back after it was closed in the middle of patching, for a reason other than low memory. -->
-    <string name="patcher_interrupted_message">Morphe ditutup sebelum proses patching selesai, sehingga tidak ada yang dipatch. Coba lagi</string>
+    <string name="patcher_interrupted_message">Morphe ditutup sebelum penambalan selesai. Coba lagi</string>
     <!-- "%1$s" is where the setting is, such as "Settings > Patcher > Use embedded VM", built from the names on those screens. -->
     <string name="patcher_process_crashed_message">Penambal mengalami kerusakan sebelum selesai. Jika hal ini terjadi lagi, nonaktifkan %1$s dan laporkan masalah ini beserta log-nya</string>
     <!-- Shown when a run fills the heap it was given. "%1$s" is the heap in megabytes. -->
@@ -868,14 +877,17 @@ Mencopot akan menghapus semua data aplikasi secara permanen"</string>
     <string name="settings_appearance_translations_info_title">Terjemahan untuk beberapa bahasa mungkin belum tersedia atau belum lengkap</string>
     <!-- Settings - Appearance Tab - Interface Scale -->
     <string name="settings_appearance_ui_scale">Skala antarmuka</string>
-    <!-- Settings - Appearance Tab - Home Screen Section -->
+    <!-- Settings - Appearance Tab - Screens Section -->
     <string name="settings_appearance_home_screen">Layar beranda</string>
+    <string name="settings_appearance_screens">Layar</string>
     <string name="settings_appearance_greeting_phrases">Frasa sapaan</string>
     <string name="settings_appearance_greeting_phrases_subtitle">Menampilkan pesan sapaan</string>
     <string name="settings_appearance_repatch_notice">Notifikasi penambalan ulang</string>
     <string name="settings_appearance_repatch_notice_description">Menampilkan spanduk ketika aplikasi yang telah ditambal dapat ditambal ulang</string>
     <string name="settings_appearance_more_apps_card">Kartu lebih banyak aplikasi</string>
     <string name="settings_appearance_more_apps_card_description">Menampilkan kartu di bawah aplikasi yang mengarah ke tambalan komunitas</string>
+    <string name="settings_appearance_games_button">Tombol Game</string>
+    <string name="settings_appearance_games_button_description">Menampilkan tombol ke mini-game saat patching dan pada hasil</string>
     <string name="settings_appearance_app_card_colors">Warna kartu</string>
     <string name="settings_appearance_app_card_colors_default">Bawaan</string>
     <string name="settings_appearance_app_card_colors_default_description">Berikan warna tersendiri untuk setiap aplikasi dan sumber</string>
@@ -1246,7 +1258,7 @@ Rincian: %2$s"</string>
     <string name="settings_system_apks_delete_all_confirm">Ini akan menghapus secara permanen berkas APK yang disimpan yang ditampilkan di sini</string>
     <string name="settings_system_apks_delete_selected_title">Hapus APK yang dipilih?</string>
     <string name="settings_system_apks_delete_selected_confirm">Ini akan menghapus secara permanen berkas APK yang dipilih</string>
-    <string name="settings_system_apks_deleted_all">APK berhasil dihapus</string>
+    <string name="settings_system_apks_deleted_all">APK dihapus</string>
     <string name="settings_system_apks_delete_failed">Beberapa berkas APK tidak dapat dihapus</string>
     <string name="settings_system_apks_export_zip_success">APK yang dipilih telah diekspor</string>
     <string name="settings_system_apks_export_zip_failed">Gagal mengekspor APK yang dipilih</string>
@@ -1269,8 +1281,8 @@ Rincian: %2$s"</string>
     <string name="settings_system_storage_temporary_title">Berkas sementara</string>
     <string name="settings_system_storage_temporary_description">Berkas yang masih dapat digunakan dibuat selama penambalan</string>
     <string name="settings_system_storage_clear_all">Hapus semua cache</string>
-    <string name="settings_system_storage_clear_all_description">Mengosongkan semua ruang cache yang dapat digunakan kembali sekaligus</string>
-    <string name="settings_system_storage_clear_all_confirm">Ini akan menghapus respons jaringan yang di-cache, salinan pemasang yang disimpan, dan berkas sementara. APK asli dan yang telah ditambal tetap disimpan</string>
+    <string name="settings_system_storage_clear_all_description">Setiap cache yang terdaftar di atas</string>
+    <string name="settings_system_storage_clear_all_confirm">Setiap cache di atas akan dihapus. APK asli dan yang telah ditambal tetap disimpan</string>
     <string name="settings_system_storage_cleared">Dikosongkan %s</string>
     <string name="settings_system_storage_patch_running_warning">Sebuah tambalan sedang berjalan dan menggunakan berkas ini. Membersihkannya sekarang akan membuatnya gagal</string>
     <string name="settings_system_storage_clear_anyway">Bersihkan saja</string>
@@ -1278,14 +1290,14 @@ Rincian: %2$s"</string>
     <string name="settings_system_storage_open_app_info_title">Buka penyimpanan aplikasi Android</string>
     <string name="settings_system_storage_open_app_info_description">Kelola atau bersihkan semua data Morphe melalui setelan sistem</string>
     <string name="settings_system_save_original_apks_title">Simpan APK asli</string>
-    <string name="settings_system_save_original_apks_description">Simpan APK sebelum ditambal agar dapat digunakan kembali untuk penambalan ulang tanpa memilih berkas lagi</string>
+    <string name="settings_system_save_original_apks_description">Gunakan kembali APK asli saat penambalan ulang, tanpa memilih berkas lagi</string>
     <string name="settings_system_save_patched_apks_title">Simpan APK yang ditambal</string>
-    <string name="settings_system_save_patched_apks_description">Simpan salinan APK yang ditambal untuk diekspor atau dipasang kembali nanti dari pengelola</string>
+    <string name="settings_system_save_patched_apks_description">Simpan salinan untuk diekspor atau diinstal ulang nanti</string>
     <!-- Settings - System Tab - Storage Management - Patched APKs Management -->
     <string name="settings_system_patched_apks_title">APK yang ditambal</string>
     <string name="settings_system_patched_apks_empty">Belum ada APK yang ditambal tersimpan</string>
     <string name="settings_system_patched_apks_delete_title">Hapus APK yang ditambal?</string>
-    <string name="settings_system_patched_apks_deleted">APK yang ditambal berhasil dihapus</string>
+    <string name="settings_system_patched_apks_deleted">APK yang telah ditambal dihapus</string>
     <string name="settings_system_patched_apks_delete_all_title">Hapus semua APK yang ditambal?</string>
     <!-- Settings - System Tab - Storage Management - Original APKs Management -->
     <string name="settings_system_original_apks_title">APK asli</string>

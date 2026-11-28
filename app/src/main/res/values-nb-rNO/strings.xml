@@ -9,6 +9,8 @@
     <string name="home_app_status_newer_patches">Nye patcher</string>
     <!-- Mark on the card of an app built for a device other than a phone -->
     <string name="form_factor_tv">TV</string>
+    <!-- Named beside the other marks when one app has a build for a phone and for another device -->
+    <string name="form_factor_mobile">Telefon</string>
     <string name="form_factor_automotive">Bil</string>
     <string name="home_no_patches_available">Ingen patcher tilgjengelig</string>
     <string name="home_app_hide_title">Skjul denne appen?</string>
@@ -359,6 +361,10 @@ Velg hvor APK-filen skal hentes fra"</string>
     <string name="expert_mode_recommended">Anbefalte patcher</string>
     <string name="expert_mode_reset_to_default_done">Anbefalte patcher er brukt</string>
     <string name="expert_mode_selected_count">%1$s av %2$s valgt</string>
+    <!-- Which build of an app with builds for several devices the patches are for, such as TV or Wear OS -->
+    <string name="expert_mode_form_factor">For %s-bygg</string>
+    <!-- The same for the phone build, named as a common noun rather than by its mark -->
+    <string name="expert_mode_form_factor_mobile">For mobilbygg</string>
     <string name="expert_mode_saved_selection">Lagret valg</string>
     <string name="expert_mode_restore_saved_done">Lagret utvalg gjenopprettet</string>
     <string name="expert_mode_copy_from_bundle_no_patches">Ingen matchede patcher i denne pakken</string>
@@ -489,7 +495,8 @@ For de beste resultatene anbefaler denne appen å patche en &lt;b&gt;full APK-fi
     <string name="batch_patch_preparing_next">Forbereder neste app…</string>
     <string name="batch_patch_progress_counter">Patcher %1$s av %2$s</string>
     <string name="batch_patch_summary">%1$s patchet, %2$s feilet, %3$s hoppet over</string>
-    <string name="batch_patch_saved_hint">De patchede appene er lagret. Installer dem nå, eller senere fra listen over patchede APK-er i innstillinger</string>
+    <string name="batch_patch_saved_hint">Patchede APK-er er lagret. Installer dem nå eller senere fra hjemskjermen</string>
+    <string name="batch_patch_not_kept_hint">Patchede APK-er blir ikke beholdt. Installer eller eksporter dem før du lukker denne skjermen</string>
     <string name="batch_patch_multiple_sources">Noen apper kombinerer patcher fra mer enn én kilde, noe som kan føre til konflikter</string>
     <string name="batch_patch_needs_apk">Ingen APK tilgjengelig, legg ved en fil</string>
     <string name="batch_patch_wrong_package">Den vedlagte filen tilhører %s</string>
@@ -504,22 +511,22 @@ For de beste resultatene anbefaler denne appen å patche en &lt;b&gt;full APK-fi
     <string name="batch_patch_apk_selected">APK valgt</string>
     <string name="batch_patch_auto_download_stopped">Automatiske APK-nedlastinger stoppet</string>
     <string name="batch_patch_auto_download_stop">Stopp nedlastinger</string>
-    <string name="batch_patch_auto_download_kept">Den nedlastede APK-filen kunne ikke brukes, så den forrige blir beholdt</string>
+    <string name="batch_patch_auto_download_kept">APK-en som ble lastet ned for %s kunne ikke brukes, så den forrige blir beholdt</string>
     <string name="batch_patch_edit_patches">Velg patcher</string>
     <string name="batch_patch_state_no_apk">Ingen APK</string>
     <string name="batch_patch_state_no_patches">Ingen patcher</string>
     <string name="batch_patch_state_no_selection">Ingen valgt</string>
     <string name="batch_patch_no_selection">Ingen av de tilgjengelige patchene er valgt</string>
     <string name="batch_patch_policy_install">Installer når ferdig</string>
-    <string name="batch_patch_policy_install_description">Installerer hver patchede app rett etter at køen er ferdig. Når av, beholdes APK-ene til senere</string>
+    <string name="batch_patch_policy_install_description">Installerer hver patchede app når køen er ferdig. Av lar APK-ene bli på denne skjermen</string>
     <string name="batch_patch_policy_mount">Monter når ferdig</string>
-    <string name="batch_patch_policy_mount_description">Monterer alle patchede apper når køen er ferdig. Av beholder APK-ene til senere</string>
+    <string name="batch_patch_policy_mount_description">Monterer hver patchede app når køen er ferdig. Av lar APK-ene bli på denne skjermen</string>
     <string name="batch_patch_policy_install_mount">Installer eller monter når ferdig</string>
-    <string name="batch_patch_policy_install_mount_description">Installerer eller monterer alle patchede apper når køen er ferdig. Av beholder APK-ene til senere</string>
+    <string name="batch_patch_policy_install_mount_description">Installerer eller monterer hver patchede app når køen er ferdig. Av lar APK-ene bli værende på denne skjermen</string>
     <!-- Label of a footer button beside "Close". Keep it short, a longer one moves the buttons onto two rows -->
     <string name="batch_patch_start">Start</string>
     <string name="batch_patch_stop_title">Stopp batch-patching?</string>
-    <string name="batch_patch_stop_description">Appen som akkurat blir patchet, og alt som fortsatt står i kø, vil bli avbrutt</string>
+    <string name="batch_patch_stop_description">Den gjeldende appen og resten av køen vil bli avbrutt</string>
     <!-- Label of a footer button beside "Done". Keep it short, a longer one moves the buttons onto two rows -->
     <string name="batch_patch_install_all">Installer alle</string>
     <string name="batch_patch_install_failed">Installering mislyktes</string>
@@ -530,7 +537,7 @@ For de beste resultatene anbefaler denne appen å patche en &lt;b&gt;full APK-fi
     <string name="batch_queue_clear_title">Tøm køen?</string>
     <string name="batch_queue_clear_description">Alle appene blir fjernet fra køen</string>
     <string name="batch_queue_keep_title">Beholde køen?</string>
-    <string name="batch_queue_keep_description">Appene i køen vil vente på startskjermen for å bli startet senere</string>
+    <string name="batch_queue_keep_description">Køen venter på hjemskjermen til du starter den</string>
     <string name="batch_queue_keep">Behold</string>
     <string name="shortcut_repatch_short">Repatch</string>
     <string name="shortcut_repatch_long">Repatch utdaterte apper</string>
@@ -664,6 +671,8 @@ For de beste resultatene anbefaler denne appen å patche en &lt;b&gt;full APK-fi
     <string name="patcher_conflict_title">Pakkekonflikt</string>
     <string name="patcher_conflict_subtitle">Du må avinstallere den eksisterende versjonen</string>
     <string name="patcher_conflict_hint">Den patchede appen bruker et annet sertifikat enn den installerte versjonen. Avinstallering vil slette alle appdata</string>
+    <!-- The patched APK is for another kind of device, such as TV or Wear OS, so it may not start on this one -->
+    <string name="patcher_built_for_other_device">Bygget for %s, så det starter kanskje ikke her. Lagre det for å installere på den enheten</string>
     <string name="patcher_installed_conflict_title">Avinstallasjon kreves</string>
     <string name="patcher_installed_conflict_body">"Morphe signerer patched apper med sitt eget sertifikat, som er forskjellig fra det originale. Android krever at du fjerner den eksisterende versjonen før den patched appen kan installeres.
 
@@ -759,7 +768,7 @@ Avinstallering vil permanent slette alle appdata"</string>
     <string name="plugin_activity_dialog_body">Brukerinteraksjon er nødvendig for å fortsette med dette pluginet</string>
     <string name="patcher_process_killed_message">Systemet stoppet patcheren før den ble ferdig, vanligvis for å frigjøre minne. Lukk andre apper og prøv igjen</string>
     <!-- Shown once Morphe is back after it was closed in the middle of patching, for a reason other than low memory. -->
-    <string name="patcher_interrupted_message">Morphe ble lukket før oppdateringen var fullført, så ingenting ble oppdatert. Prøv igjen</string>
+    <string name="patcher_interrupted_message">Morphe ble lukket før patching var ferdig. Prøv igjen</string>
     <!-- "%1$s" is where the setting is, such as "Settings > Patcher > Use embedded VM", built from the names on those screens. -->
     <string name="patcher_process_crashed_message">Patcheren krasjet før den var ferdig. Hvis dette skjer igjen, slå av %1$s og rapporter problemet med loggen</string>
     <!-- Shown when a run fills the heap it was given. "%1$s" is the heap in megabytes. -->
@@ -868,14 +877,17 @@ Avinstallering vil permanent slette alle appdata"</string>
     <string name="settings_appearance_translations_info_title">Oversettelser for noen språk mangler eller er ufullstendige</string>
     <!-- Settings - Appearance Tab - Interface Scale -->
     <string name="settings_appearance_ui_scale">Grensesnittskala</string>
-    <!-- Settings - Appearance Tab - Home Screen Section -->
+    <!-- Settings - Appearance Tab - Screens Section -->
     <string name="settings_appearance_home_screen">Hjemmeskjerm</string>
+    <string name="settings_appearance_screens">Skjermer</string>
     <string name="settings_appearance_greeting_phrases">Hilsenfraser</string>
     <string name="settings_appearance_greeting_phrases_subtitle">Viser en hilsen</string>
     <string name="settings_appearance_repatch_notice">Varsel om å lappe på nytt</string>
     <string name="settings_appearance_repatch_notice_description">Viser en banner når patched apper kan patches på nytt</string>
     <string name="settings_appearance_more_apps_card">Flere apper-kort</string>
     <string name="settings_appearance_more_apps_card_description">Viser et kort under appene som fører til fellesskapspatcher</string>
+    <string name="settings_appearance_games_button">Spillknapp</string>
+    <string name="settings_appearance_games_button_description">Viser en knapp til minispill under patching og på resultatet</string>
     <string name="settings_appearance_app_card_colors">Kortfarger</string>
     <string name="settings_appearance_app_card_colors_default">Standard</string>
     <string name="settings_appearance_app_card_colors_default_description">Gi hver app og kilde sin egen farge</string>
@@ -1246,7 +1258,7 @@ Detaljer: %2$s"</string>
     <string name="settings_system_apks_delete_all_confirm">Dette vil slette de lagrede APK-filene som vises her permanent.</string>
     <string name="settings_system_apks_delete_selected_title">Slette valgte APK-er?</string>
     <string name="settings_system_apks_delete_selected_confirm">Dette vil slette de valgte APK-filene permanent.</string>
-    <string name="settings_system_apks_deleted_all">APK-er slettet.</string>
+    <string name="settings_system_apks_deleted_all">APK-er slettet</string>
     <string name="settings_system_apks_delete_failed">Noen APK-filer kunne ikke slettes</string>
     <string name="settings_system_apks_export_zip_success">Valgte APK-er eksportert</string>
     <string name="settings_system_apks_export_zip_failed">Kunne ikke eksportere valgte APK-er</string>
@@ -1269,8 +1281,8 @@ Detaljer: %2$s"</string>
     <string name="settings_system_storage_temporary_title">Midlertidige filer</string>
     <string name="settings_system_storage_temporary_description">Arbeidsfiler opprettet under patching</string>
     <string name="settings_system_storage_clear_all">Tøm alle buffere</string>
-    <string name="settings_system_storage_clear_all_description">Frigjør alt tilgjengelig bufferlagring på en gang</string>
-    <string name="settings_system_storage_clear_all_confirm">Dette tømmer bufret nettverksrespons, installasjonskopier i kø og midlertidige filer. Originale og patchede APK-er beholdes</string>
+    <string name="settings_system_storage_clear_all_description">Hver hurtigbuffer oppført ovenfor</string>
+    <string name="settings_system_storage_clear_all_confirm">Alle cacher ovenfor vil bli tømt. Originale og patchede APK-filer bevares</string>
     <string name="settings_system_storage_cleared">Frigjort %s</string>
     <string name="settings_system_storage_patch_running_warning">En patch kjører og bruker disse filene. Å tømme dem nå vil gjøre det feile</string>
     <string name="settings_system_storage_clear_anyway">Tall uansett</string>
@@ -1278,9 +1290,9 @@ Detaljer: %2$s"</string>
     <string name="settings_system_storage_open_app_info_title">Åpne Android-applagring</string>
     <string name="settings_system_storage_open_app_info_description">Administrer eller tøm alle Morphe-data via systeminnstillinger</string>
     <string name="settings_system_save_original_apks_title">Behold originale APK-filer</string>
-    <string name="settings_system_save_original_apks_description">Lagre den forhåndspatchede APK-filen slik at den kan brukes på nytt for oppdatering uten å måtte velge filen på nytt</string>
+    <string name="settings_system_save_original_apks_description">Gjenbruk den originale APK-filen ved ny patching, uten å måtte velge filen på nytt</string>
     <string name="settings_system_save_patched_apks_title">Behold patchede APK-filer</string>
-    <string name="settings_system_save_patched_apks_description">Lagre en kopi av den patchede APK-filen for senere eksport eller installasjon fra behandleren</string>
+    <string name="settings_system_save_patched_apks_description">Behold en kopi for å eksportere eller installere på nytt senere</string>
     <!-- Settings - System Tab - Storage Management - Patched APKs Management -->
     <string name="settings_system_patched_apks_title">Patchede APK-er</string>
     <string name="settings_system_patched_apks_empty">Ingen patchede APK-er lagret ennå</string>
