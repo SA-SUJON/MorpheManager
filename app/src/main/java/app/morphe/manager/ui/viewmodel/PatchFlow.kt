@@ -26,6 +26,7 @@ import app.morphe.manager.domain.bundles.*
 import app.morphe.manager.domain.installer.InstallerManager
 import app.morphe.manager.domain.manager.*
 import app.morphe.manager.domain.repository.*
+import app.morphe.manager.domain.selection.PickedConfiguration
 import app.morphe.manager.domain.selection.RunPlan
 import app.morphe.manager.domain.selection.RunPlanner
 import app.morphe.manager.domain.selection.RunRequest
@@ -138,7 +139,6 @@ class PatchFlow(
     private val app: Application,
     private val messages: UserMessages,
     private val patchBundleRepository: PatchBundleRepository,
-    private val patchSelectionRepository: PatchSelectionRepository,
     private val sourceMuteRepository: SourceMuteRepository,
     private val savedConfiguration: SavedPatchConfiguration,
     private val prefs: PreferencesManager,
@@ -922,7 +922,8 @@ class PatchFlow(
     private suspend fun startPatchingWithApp(
         selectedApp: SelectedApp,
         allowIncompatible: Boolean,
-        bundleUid: Int? = chosenBundleUidFor(selectedApp)
+        bundleUid: Int? = chosenBundleUidFor(selectedApp),
+        picked: PickedConfiguration? = null
     ) {
         val plan = runPlanner.plan(
             RunRequest(
@@ -931,7 +932,8 @@ class PatchFlow(
                 allowIncompatible = allowIncompatible,
                 bundleUid = bundleUid,
                 versionPicked = session?.versionPicked == true,
-                repatchPackageName = session?.repatchPackageName
+                repatchPackageName = session?.repatchPackageName,
+                picked = picked
             )
         )
         when (plan) {
@@ -981,17 +983,6 @@ class PatchFlow(
     }
 
     /**
-     * The package the run reads its saved patches and options from.
-     *
-     * Patches belong to the install they were applied to, so rebuilding one reads what that
-     * install was built with. Anything else reads the app itself: a run producing a separate
-     * install starts from what the app was last patched with, and so does an install that
-     * predates configurations of their own.
-     */
-    private suspend fun configurationKeyFor(originalPackageName: String): String =
-        patchSelectionRepository.configurationKeyFor(originalPackageName, session?.repatchPackageName)
-
-    /**
      * Hands the run to the patcher, which takes it from here.
      *
      * @param scope The sources the run was offered, see [Patcher.ViewModelParams.sourceScope].
@@ -1027,7 +1018,8 @@ class PatchFlow(
 
     /**
      * Reopens the selection a failed [run] was started from, so the patch that failed it can be
-     * dropped without picking the APK again. The selection itself was saved before the run.
+     * dropped without picking the APK again. A selection picked by hand comes back as the run
+     * had it, saved or not.
      */
     fun reopenPatchSelection(run: Patcher.ViewModelParams) {
         // A failed run leaves its input in place, but storage cleanup may have taken it since
@@ -1038,7 +1030,11 @@ class PatchFlow(
         session = sessionFor(run.selectedApp.packageName, run.targetPackageName)
         usingMountInstall = run.useMount
         scope.launch {
-            startPatchingWithApp(run.selectedApp, run.allowIncompatible)
+            startPatchingWithApp(
+                run.selectedApp,
+                run.allowIncompatible,
+                picked = run.takeIf { it.selectedByHand }?.let { PickedConfiguration(it.selectedPatches, it.options) }
+            )
         }
     }
 
@@ -1070,18 +1066,25 @@ class PatchFlow(
             return@moveOn
         }
 
-        // Saved before patching runs so a long selection survives a failed run. It lands on the
-        // install being rebuilt, and follows it from there if patching renames it. Only the
-        // bundles offered by the dialog are covered by this selection, so bundles that were
-        // disabled or held back at patch time keep whatever the user saved for them earlier
-        savedConfiguration.save(
-            configurationKey = configurationKeyFor(selectedApp.packageName),
-            selection = finalPatches,
-            scope = scope,
-            options = finalOptions,
-            seenPatches = bundles.patchNamesByUid(),
-            otherBuildPatches = bundles.otherBuildPatchesByUid()
-        )
+        // Saved before patching runs so a long selection survives a failed run, under the install
+        // the run will save it to anyway. A copy yet to be built has none, and writing it to the
+        // app instead would hand the app the copy's patches. Only the bundles offered by the
+        // dialog are covered by this selection, so bundles that were disabled or held back at
+        // patch time keep whatever the user saved for them earlier
+        pendingConfigurationKey(
+            originalPackageName = selectedApp.packageName,
+            repatchedPackageName = session?.repatchPackageName,
+            selectsRename = finalPatches.selectsRename(bundles::patchDeclaresPackageName)
+        )?.let { configurationKey ->
+            savedConfiguration.save(
+                configurationKey = configurationKey,
+                selection = finalPatches,
+                scope = scope,
+                options = finalOptions,
+                seenPatches = bundles.patchNamesByUid(),
+                otherBuildPatches = bundles.otherBuildPatchesByUid()
+            )
+        }
 
         proceedWithPatching(selectedApp, finalPatches, patcherOptions, selectedByHand = true, allowIncompatible, scope)
         expertMode.clear()

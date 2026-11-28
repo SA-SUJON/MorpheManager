@@ -210,9 +210,8 @@ class PatcherViewModel(
         patchBundleRepository.scopedBundleInfoFlow(
             packageName,
             input.selectedApp.version,
-            input.selectedApp.versionCode,
-            { apkFormFactor.await() }
-        ).first().associateBy { it.uid }
+            input.selectedApp.versionCode
+        ) { apkFormFactor.await() }.first().associateBy { it.uid }
 
     /**
      * Whether this run built a clone rather than the app's own install, judged the same way here
@@ -226,9 +225,7 @@ class PatcherViewModel(
         originalPackageName = packageName,
         resultPackageName = resultPackageName,
         selection = selection,
-        declaresPackageName = { bundleUid, patchName ->
-            bundles[bundleUid]?.patches?.firstOrNull { it.name == patchName }?.declaresPackageName == true
-        }
+        declaresPackageName = bundles.values::patchDeclaresPackageName
     )
 
     /** [producedClone] with the selection this run was built with. */
@@ -819,9 +816,7 @@ class PatcherViewModel(
         )
 
         persistConfiguration(
-            // A copy keeps a configuration of its own, while the app's install reads and writes
-            // the app's, whichever package name the patches ended up building it under
-            configurationPackageName = if (isClone) finalPackageName else packageName,
+            configurationPackageName = builtConfigurationKey(packageName, finalPackageName, isClone),
             selection = sanitizedSelection,
             options = sanitizedOptions,
             bundles = scopedBundlesForSelection

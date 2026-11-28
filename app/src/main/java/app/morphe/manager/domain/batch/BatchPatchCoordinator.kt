@@ -27,6 +27,7 @@ import app.morphe.manager.patcher.worker.PatcherWorker
 import app.morphe.manager.service.ForegroundWork
 import app.morphe.manager.ui.model.PatchRunProgress
 import app.morphe.manager.ui.model.SelectedApp
+import app.morphe.manager.ui.model.builtConfigurationKey
 import app.morphe.manager.util.ApkExportData
 import app.morphe.manager.util.AppCoroutineScope
 import app.morphe.manager.util.CompletionSound
@@ -792,9 +793,7 @@ class BatchPatchCoordinator(
         if (!mergedApkKept) saveOriginalApk(item, selectedApp, version)
 
         val isClone = item.producesCloneAs(currentPackageName)
-        // A configuration belongs to the card it was built from, which is the app itself unless
-        // the run produced a copy, whatever package name the patches settled on
-        val configurationKey = if (isClone) currentPackageName else item.configurationKey
+        val configurationKey = builtConfigurationKey(item.packageName, currentPackageName, isClone)
 
         // Only an APK that cannot be read leaves the build to be named after the queued app
         val exportData = patchedInfo?.let { pm.exportData(it, item.patchSources, isClone, item.version) }

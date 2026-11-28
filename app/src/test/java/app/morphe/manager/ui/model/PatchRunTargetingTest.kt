@@ -12,6 +12,7 @@ import kotlin.reflect.typeOf
 import kotlin.test.Test
 import kotlin.test.assertEquals
 import kotlin.test.assertFalse
+import kotlin.test.assertNull
 import kotlin.test.assertTrue
 
 private const val CAKE = "me.mycake"
@@ -68,6 +69,45 @@ class ConfigurationKeyTest {
                 repatchedHasOwnConfiguration = false
             )
         )
+    }
+}
+
+class BuiltConfigurationKeyTest {
+    @Test
+    fun `a copy keeps a configuration of its own`() {
+        assertEquals(CLONE, builtConfigurationKey(CAKE, CLONE, isClone = true))
+    }
+
+    @Test
+    fun `the app's install writes the app's whatever it was named`() {
+        assertEquals(CAKE, builtConfigurationKey(CAKE, RENAMED, isClone = false))
+    }
+}
+
+class PendingConfigurationKeyTest {
+    @Test
+    fun `a run renaming nothing saves to the app`() {
+        assertEquals(CAKE, pendingConfigurationKey(CAKE, repatchedPackageName = null, selectsRename = false))
+    }
+
+    @Test
+    fun `a copy yet to be built has nowhere to save before the run`() {
+        assertNull(pendingConfigurationKey(CAKE, repatchedPackageName = null, selectsRename = true))
+    }
+
+    @Test
+    fun `rebuilding the app's own install into a copy builds a new one`() {
+        assertNull(pendingConfigurationKey(CAKE, repatchedPackageName = CAKE, selectsRename = true))
+    }
+
+    @Test
+    fun `rebuilding a copy saves to that copy`() {
+        assertEquals(CLONE, pendingConfigurationKey(CAKE, repatchedPackageName = CLONE, selectsRename = true))
+    }
+
+    @Test
+    fun `a copy rebuilt without its renaming patch is the app's own install`() {
+        assertEquals(CAKE, pendingConfigurationKey(CAKE, repatchedPackageName = CLONE, selectsRename = false))
     }
 }
 

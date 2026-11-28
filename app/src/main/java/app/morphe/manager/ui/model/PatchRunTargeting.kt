@@ -5,6 +5,7 @@
 
 package app.morphe.manager.ui.model
 
+import app.morphe.manager.patcher.patch.PatchBundleInfo
 import app.morphe.manager.patcher.patch.PatchInfo
 import app.morphe.manager.util.PatchSelection
 
@@ -19,8 +20,8 @@ val PatchInfo.declaresPackageName: Boolean
     get() = options?.any { it.key == PACKAGE_NAME_OPTION_KEY } == true
 
 /**
- * Whether this patch names the app it builds without being asked to, so selecting it is by itself
- * enough to produce a clone.
+ * Whether this patch names the app it builds on its own, so selecting it is by itself enough to
+ * produce a clone.
  *
  * A patch that picks the name itself ships a default to fall back on, while one taking the name
  * only as an override leaves it unset and reads the app's own instead. Patch authors are free to
@@ -42,10 +43,18 @@ internal fun producesClone(
     resultPackageName: String,
     selection: PatchSelection,
     declaresPackageName: (bundleUid: Int, patchName: String) -> Boolean
-): Boolean = resultPackageName != originalPackageName &&
-        selection.any { (bundleUid, patchNames) ->
-            patchNames.any { declaresPackageName(bundleUid, it) }
-        }
+): Boolean = resultPackageName != originalPackageName && selection.selectsRename(declaresPackageName)
+
+/**
+ * Whether this selection picks a patch that builds the app under a package name of its own, the
+ * half of [producesClone] that is already known before the run.
+ */
+internal fun PatchSelection.selectsRename(declaresPackageName: (bundleUid: Int, patchName: String) -> Boolean) =
+    any { (bundleUid, patchNames) -> patchNames.any { declaresPackageName(bundleUid, it) } }
+
+/** Whether the patch [patchName] of source [bundleUid] is one of [PatchInfo.declaresPackageName]. */
+internal fun Iterable<PatchBundleInfo.Scoped>.patchDeclaresPackageName(bundleUid: Int, patchName: String) =
+    any { bundle -> bundle.uid == bundleUid && bundle.patches.any { it.name == patchName && it.declaresPackageName } }
 
 /**
  * A finished build that answers to a package the run was not aimed at, so installing it adds a
@@ -79,4 +88,33 @@ internal fun configurationKey(
     repatchedPackageName == null || repatchedPackageName == originalPackageName -> originalPackageName
     repatchedHasOwnConfiguration -> repatchedPackageName
     else -> originalPackageName
+}
+
+/**
+ * The package a finished run saves its patches and options under: the copy it built keeps a
+ * configuration of its own, and the app's own install writes to the app's configuration, whatever
+ * package name it ended up with.
+ */
+internal fun builtConfigurationKey(
+    originalPackageName: String,
+    resultPackageName: String,
+    isClone: Boolean
+): String = if (isClone) resultPackageName else originalPackageName
+
+/**
+ * The package [builtConfigurationKey] will name, as far as it can be told before the run. Null
+ * when the run builds a copy that does not exist yet: its package name is only read off the
+ * finished APK, and the configuration it starts from belongs to another install.
+ *
+ * @param selectsRename See [selectsRename]. Without such a patch the build is the app's own
+ *   install, see [producesClone].
+ */
+internal fun pendingConfigurationKey(
+    originalPackageName: String,
+    repatchedPackageName: String?,
+    selectsRename: Boolean
+): String? = when {
+    !selectsRename -> originalPackageName
+    repatchedPackageName != null && repatchedPackageName != originalPackageName -> repatchedPackageName
+    else -> null
 }

@@ -35,6 +35,8 @@ import kotlinx.coroutines.withContext
  *   by hand, unless the others are shown again in the expert dialog.
  * @param versionPicked Whether the user picked the version, which is a pick of its source too.
  * @param repatchPackageName The install a rebuild is for, whose saved patches it starts from.
+ * @param picked What an earlier run of the same APK was picked with by hand, which the expert
+ *   dialog reopens on in place of anything saved.
  */
 data class RunRequest(
     val app: SelectedApp,
@@ -42,8 +44,12 @@ data class RunRequest(
     val allowIncompatible: Boolean,
     val bundleUid: Int?,
     val versionPicked: Boolean,
-    val repatchPackageName: String?
+    val repatchPackageName: String?,
+    val picked: PickedConfiguration? = null
 )
+
+/** Patches and options picked by hand for a run, see [RunRequest.picked]. */
+data class PickedConfiguration(val patches: PatchSelection, val options: Options)
 
 /** What a single-app run does next once it has its APK, see [RunPlanner.plan]. */
 sealed interface RunPlan {
@@ -170,9 +176,8 @@ class RunPlanner(
             .scopedBundleInfoFlow(
                 app.packageName,
                 app.version,
-                app.versionCode,
-                { ApkFormFactorResolver.resolve(app, pm) }
-            )
+                app.versionCode
+            ) { ApkFormFactorResolver.resolve(app, pm) }
             .first()
         if (availableBundles.isEmpty()) return RunPlan.NoPatches
 
@@ -222,19 +227,24 @@ class RunPlanner(
             removedCount = removedCount
         )
 
-        if (expertMode) {
-            val saved = savedConfiguration.selection(
-                configurationKey,
-                contributingBundles,
-                target.installerType,
-                target.apkArchitecture
-            )
+        val picked = request.picked
+        if (expertMode || picked != null) {
             // A hidden source keeps what was saved for it, so offering it back brings that along.
             // Set apart, since the run does not reach it: what it holds decides nothing about the
             // patches of the sources the run starts with
             val heldBackSelections = savedConfiguration.validSelection(
                 configurationKey,
                 availableBundles.filter { it.uid in heldBackSources }
+            )
+
+            // Nothing saved can stand in for it: a run building a copy saves only once it is over
+            if (picked != null) return expert(heldBackSelections + picked.patches, picked.options)
+
+            val saved = savedConfiguration.selection(
+                configurationKey,
+                contributingBundles,
+                target.installerType,
+                target.apkArchitecture
             )
 
             // No saved selections - use default for the contributing bundles
